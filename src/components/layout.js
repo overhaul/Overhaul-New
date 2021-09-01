@@ -6,13 +6,13 @@ import {
   navLinks,
   navLinkItem,
   navLinkText
-} from './layout.module.css'
+} from './layout.module.scss'
 
 
 const Layout = ({ pageTitle, children }) => {
   return (
     <div className={container}>
-      <title>{pageTitle}</title>
+      <title className={heading}>{pageTitle}</title>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
