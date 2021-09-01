@@ -5,8 +5,7 @@ import {
   heading,
   navLinks,
   navLinkItem,
-  navLinkText,
-  myclass
+  navLinkText
 } from './layout.module.css'
 
 
@@ -22,8 +21,8 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
-              About
+            <Link to="/contact" className={navLinkText}>
+              Contact
             </Link>
           </li>
         </ul>
