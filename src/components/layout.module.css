@@ -4,14 +4,6 @@
   font-family: sans-serif;
 }
 
-.myclass{
-  color: #efefef;
-}
-
-.myclass:hover{
-  color:  #440044;
-}
-
 .heading {
   color: rebeccapurple;
 }
