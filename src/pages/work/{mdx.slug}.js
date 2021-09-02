@@ -4,7 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
 
-const BlogPost = ({ data }) => {
+const WorkPost = ({ data }) => {
 
   const image = getImage(data.mdx.frontmatter.hero_image)
 
@@ -48,4 +48,4 @@ export const query = graphql `
   }
 `
 
-export default BlogPost
+export default WorkPost

@@ -1,14 +1,17 @@
-// Step 1: Import React
 import * as React from 'react'
-// Step 2: Define your component
+import Layout from '../components/layout'
+import { StaticImage } from 'gatsby-plugin-image'
+
 const AboutPage = () => {
-  return (
-    <main>
-      <title>About Me</title>
-      <h1>About Roman</h1>
-      <p>Hi there! Im Roman, the proud creator of this site, which I built with Gatsby.</p>
-    </main>
-  )
+    return (
+        <Layout pageTitle="About Us">
+          <p>Overhaul about Page.</p>
+          <StaticImage
+            alt="Corporate flower needs"
+            src="../images/hero-corporate.jpg"
+          />
+        </Layout>
+    )
 }
-// Step 3: Export your component
+
 export default AboutPage

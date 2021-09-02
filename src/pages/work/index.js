@@ -2,14 +2,14 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 
-const BlogPage = ({ data }) => {
+const WorkPage = ({ data }) => {
     return (
-        <Layout pageTitle="My Blog Posts">
+        <Layout pageTitle="Our Work">
        {
         data.allMdx.nodes.map((node) => (
           <article key={node.id}>
-             <h2 class="newclass">
-              <Link to={`/blog/${node.slug}`}>
+             <h2 className="newclass">
+              <Link to={`/work/${node.slug}`}>
                 {node.frontmatter.title}
               </Link>
             </h2>
@@ -35,4 +35,4 @@ export const query = graphql `
     }
   }
 `
-export default BlogPage
+export default WorkPage
