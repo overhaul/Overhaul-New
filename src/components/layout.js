@@ -3,7 +3,9 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { 
   container,
   heading,
-} from './layout.module.scss'
+} from '../styles/layout.scss'
+
+import '../styles/styles.scss'
 
 import NavDesk from '../components/NavDesk'
 import NavMob from '../components/NavMob'

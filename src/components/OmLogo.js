@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { logo } from './navigation.module.scss'
+import '../styles/navigation.scss'
 
 function OmLogo(){
 
 	return(
-		<Link to="/" className={logo}>
+		<Link to="/" className="logo">
 				<svg id="OM_Logo">
 				<g>
 					<path d="M10.3,9.4H8c-2.7,0-4.8,1.4-6.1,3.4c-1.3,2-1.9,4.6-1.9,7.1c0,2.5,0.6,5.1,1.9,7.1c1.3,2,3.4,3.4,6.1,3.4h2.3
