@@ -1,4 +1,40 @@
-$max-width: 1920px;
+@import '../styles/variables.scss';
+
+//Dark body class
+
+.dark{
+  background: #000;
+
+  .desk-nav{
+
+    .logo{
+      fill: $white;
+    }
+
+    .nav-link{
+
+      &_text{
+        color: $white;
+      }
+    }
+  }
+
+  .mob-nav{
+
+    .logo{
+      fill: $white;
+    }
+
+    .nav-burger{
+
+      span{
+        background-color: $white;
+      }
+    }
+  }
+}
+
+//Basics
 
 .container {
   margin: auto;
@@ -12,12 +48,14 @@ $max-width: 1920px;
 
 }
 main{
+
     .heading {
       color: #efefef;
     }
 }
 
 header{
+  
   &.site-title {
       font-size: 3rem;
       color: gray;
