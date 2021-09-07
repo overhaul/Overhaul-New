@@ -1,0 +1,40 @@
+$white: #ffffff;
+$grey: #4E4E4E;
+$red: #F40009;
+$tablet: 992px;
+$ease: 0.2s ease;
+$max-width: 1920px;
+
+body{
+	font-family: sans-serif;
+}
+
+h1{
+	font-weight: inherit;
+
+	@media(max-width: $tablet){
+		font-family: Helvetica;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 36px;
+		line-height: 40px;
+		letter-spacing: -1.5px;
+		margin: 0;
+	}
+}
+
+p{
+	font-family: Helvetica;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 30px;
+
+	@media(max-width: $tablet){
+		font-family: Helvetica;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 22px;
+	}
+}
