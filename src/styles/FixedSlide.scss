@@ -31,6 +31,10 @@
     height: 100%;
   }
 
+  &__title {
+    color: $white;
+  }
+
   &__bg,
   &__content,
   &__link {
