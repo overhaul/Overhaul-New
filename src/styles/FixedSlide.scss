@@ -32,12 +32,16 @@
   }
 
   &__title {
-    color: $white;
+    max-width: 756px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: currentColor;
   }
 
   &__bg,
-  &__content,
-  &__link {
+  &__content {
     position: absolute;
     top: 0;
     left: 0;
@@ -45,13 +49,9 @@
     height: 100%;
   }
 
-  &__link {
-    display: block;
-    opacity: 0;
-  }
-
   &__content {
-    padding: 50px;
+    padding-top: 160px;
+    color: $white;
   }
 
   &__bg {
