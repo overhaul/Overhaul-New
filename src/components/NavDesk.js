@@ -6,21 +6,21 @@ import OmLogo from '../components/OmLogo'
 function NavDesk(){
 
 	return(
-		<nav className="om-desk-nav">
+		<nav id="desk_nav" className="desk-nav">
 		<OmLogo/>
         <ul className="nav-links">
-           <li className="nav-link-item">
-            <Link to="/work" className="nav-link-text">
+           <li className="nav-link_item">
+            <Link to="/work" className="nav-link_text">
               Work
             </Link>
           </li>
-          <li className="nav-link-item">
-            <Link to="/about" className="nav-link-text">
+          <li className="nav-link_item">
+            <Link to="/about" className="nav-link_text">
               About
             </Link>
           </li>
-          <li className="nav-link-item">
-            <Link to="/contact" className="nav-link-text">
+          <li className="nav-linkitem">
+            <Link to="/contact" className="nav-link_text">
               Contact
             </Link>
           </li>
@@ -28,6 +28,9 @@ function NavDesk(){
       </nav>
       )
 }
+
+// When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar 
+
 
 export default NavDesk
 

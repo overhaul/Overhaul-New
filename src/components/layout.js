@@ -21,7 +21,6 @@ const Layout = ({ pageTitle, children }) => {
       <NavDesk/>
       <NavMob/>
       <main>
-        {/* <h1 className="heading">{pageTitle}</h1> */}
         {children}
       </main>
     </div>
