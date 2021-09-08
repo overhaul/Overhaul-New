@@ -1,7 +1,6 @@
 
 import * as React from 'react'
 import Layout from '../components/Layout'
-import { StaticImage } from 'gatsby-plugin-image'
 import FixedSlides from '../components/FixedSlides'
 
 // Temporary content

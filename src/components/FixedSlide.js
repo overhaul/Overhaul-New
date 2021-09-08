@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { GatsbyImage } from 'gatsby-plugin-image'
 
 class FixedSlide extends Component {
   render () {
@@ -20,7 +19,9 @@ class FixedSlide extends Component {
             </div>
           </div>
         </div>
-        <a href={link} className="fixed-slide__link"></a>
+        <a href={link} className="fixed-slide__link">
+          view project
+        </a>
       </div>
     )
   }
