@@ -1,28 +1,41 @@
-$white: #ffffff;
-$tablet: 992px;
-$ease: 0.2s ease;
+@import '../styles/variables.scss';
 
-.om-desk-nav{
 
-    display: flex;
-    flex-direction: row;
-    height: 45px;
-    justify-content: space-between;
-    align-items: center;
+//Desktop Navigation
 
-    @media(max-width: $tablet){
-      display: none;
-    }
+.desk-nav{
+  max-width: $max-width;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: calc(100%- 70px);
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 0 35px;
+
+  @media(max-width: $tablet){
+    display: none;
+  }
 
   .logo{
     display: flex;
+    position: relative;
     align-items: center;
-    height: 2em;
-    width: 9em;
+    height: 50px;
+    width: 128px;
     fill: #000;
 
     svg{
-      height: 35px;
+      height: auto;
+    }
+
+    .scaling-svg {
+     position: absolute; 
+     height: 100%; 
+     width: 100%; 
+     left: 0; 
+     top: 0;
     }
   }
 
@@ -33,50 +46,78 @@ $ease: 0.2s ease;
     padding: 0px;
   }
 
-  .nav-link-item {
-    padding-right: 2rem;
-  }
+  .nav-link{
 
-  .nav-link-text {
-    color: black;
-  }
+    &_item {
+      padding-right: 4em;
 
+      &:last-child{
+        padding-right: 0em
+      }
+    }
+
+    &_text {
+      color: black;
+      text-decoration: none;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 30px;
+
+      &:hover{
+        color: $red;
+      }
+    }
+  }
 }
 
-.om-mob-nav{
-
+//Mobile Navigation
+.mob-nav{
     display: none;
 
     @media(max-width: $tablet){
 
       display: flex;
       flex-direction: row;
-      height: 45px;
+      height: 50px;
       justify-content: space-between;
       align-items: center;
 
-    }
+      .logo{
+        display: flex;
+        align-items: center;
+        height: 1.2em;
+        width: 6em;
+        fill: #000;
+        padding: 0 0.5em;
 
-    .logo{
-      display: flex;
-      align-items: center;
-      height: 2em;
-      width: 9em;
-      fill: #000;
-
-      svg{
-        height: 35px;
+        svg{
+          height: 35px;
+        }
       }
     }
 
-    .nav-burger{
+    &.light{
 
+      .logo{
+        fill: $white;
+      }
+
+      .nav-burger{
+        span{
+          background-color: $white;
+        }
+      }
+
+    }
+
+    .nav-burger{
       position: absolute;
       display: block;
       width: 45px;
       height: 45px;
       right: 0em;
-      top: 1.5em;
+      top: 17px;
       cursor: pointer;
       z-index: 99;
 
@@ -85,6 +126,7 @@ $ease: 0.2s ease;
         height:2px;
         position: absolute;
         background: #000;
+        transition: $ease;
 
         &:nth-of-type(1){
           top:0.4em;
@@ -100,15 +142,13 @@ $ease: 0.2s ease;
       }
 
       &.open{
-        transform: translateX(0vw);
-        transition: $ease;
 
         span{
           background-color: $white;
 
           &:nth-of-type(1){
-            top:0.4em;
-            transform: rotate(35deg);
+            top:0.5em;
+            transform: rotate(45deg);
             transition: $ease;
           }
           &:nth-of-type(2){
@@ -116,8 +156,8 @@ $ease: 0.2s ease;
             transition: $ease;
           }
           &:nth-of-type(3){
-            top: 0.79em;
-            transform: rotate(-35deg);
+            top: 0.5em;
+            transform: rotate(-45deg);
             transition: $ease;
           }
         }
@@ -136,8 +176,6 @@ $ease: 0.2s ease;
       z-index: 1;
 
       &.open{
-        transform: translateX(0vw);
-        transition: $ease;
 
         span{
 
@@ -157,29 +195,75 @@ $ease: 0.2s ease;
           }
         }
       }
+    }
 
+    &.open{
+  
+      .hidden-nav{
+        transform: translateX(0vw);
+        transition: $ease;
+      }
 
+      .logo{
+        fill: $white;
+        z-index: 998;
+
+      }
     }
 
     .nav-links {
       display: flex;
       list-style: none;
       height: auto;
-      padding: 0px;
+      padding: 0 1em;
+      flex-direction: column;
+      color:$white;
+      margin-top: 5em;
+
+      a{
+        text-decoration: none;
+        font-weight: 400;
+      }
     }
 
-    .nav-link-item {
-      padding-right: 2rem;
-    }
+    .nav-link{
 
-    .nav-link-text {
-      color: black;
+      &_item {
+        
+      }
+
+      &_text {
+        color: $white;
+
+        &:hover{
+          color: $red;
+        }
+
+        h1{
+          margin-bottom: 15px;
+        }
+      }
     }
 
     .more-links{
-      position: relative;
-    }
+      position: absolute;
+      bottom: 0em;
+      display: flex;
+      flex-direction: column;
+      padding: 0.5em;
 
-}
+      a{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 22px;
+        color:$grey;
+        text-decoration: none;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+
 
 
