@@ -3,15 +3,7 @@ import image2 from '../src/images/hero-corporate.jpg'
 
 const slides = [
   {
-    title: 'Slide 1',
-    link: '/contact',
-    image: {
-      src: image1,
-      alt: 'Slide 1'
-    }
-  },
-  {
-    title: 'Slide 2',
+    title: 'Rebranding for two distinct audiences',
     link: '/contact',
     image: {
       src: image2,
@@ -19,7 +11,7 @@ const slides = [
     }
   },
   {
-    title: 'Slide 3',
+    title: 'An eye for the finer things in life',
     link: '/contact',
     image: {
       src: image1,
@@ -27,7 +19,31 @@ const slides = [
     }
   },
   {
-    title: 'Slide 4',
+    title: 'History in the re-making',
+    link: '/contact',
+    image: {
+      src: image2,
+      alt: 'Slide 4'
+    }
+  },
+  {
+    title: 'Within Reach',
+    link: '/contact',
+    image: {
+      src: image1,
+      alt: 'Slide 4'
+    }
+  },
+  {
+    title: 'Short description of the project',
+    link: '/contact',
+    image: {
+      src: image2,
+      alt: 'Slide 4'
+    }
+  },
+  {
+    title: 'Where it all comes together',
     link: '/contact',
     image: {
       src: image2,
