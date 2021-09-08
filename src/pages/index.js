@@ -8,7 +8,7 @@ import slides from '../../mock-data/fixed-slides'
 
 const IndexPage = () => {
   return (
-     <Layout pageTitle="Home Page">
+    <Layout pageTitle="Home Page">
       <FixedSlides slides={slides} />
     </Layout>
   )
