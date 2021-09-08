@@ -1,0 +1,70 @@
+.fixed-slide {
+  position: relative;
+  display: block;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+
+  &:last-child {
+    z-index: 0;
+    height: 200vh;
+    margin-top: -100vh;
+
+    .fixed-slide__inner {
+      position: absolute;
+    }
+
+    .fixed-slide__clip {
+      position: sticky;
+      height: 100vh;
+      clip: none;
+    }
+  }
+
+  &__inner {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__link {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__bg,
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    padding: 50px;
+  }
+
+  &__bg {
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  &__clip {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    // clip-path: inset(0px 0px);
+    clip: rect(0,auto,auto,0);
+  }
+}
