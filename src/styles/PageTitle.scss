@@ -1,0 +1,15 @@
+.page-title{
+	margin-top: 16.25em;
+
+	@media(max-width: $tablet){
+		margin-top: 5.6875em;
+	}
+
+	h1{
+		margin-bottom: 0.2em;
+	}
+
+	h2{
+		margin-bottom: 3.125em;
+	}
+}
