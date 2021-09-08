@@ -42,6 +42,10 @@
   font-family: sans-serif;
   padding: 0 20px;
 
+  @media(max-width: $tablet){
+    padding: 0px;
+  }
+
     .heading {
       color: #efefef;
   }
@@ -55,7 +59,7 @@ main{
 }
 
 header{
-  
+
   &.site-title {
       font-size: 3rem;
       color: gray;
