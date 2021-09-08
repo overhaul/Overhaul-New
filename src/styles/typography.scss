@@ -1,0 +1,91 @@
+body {
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {}
+
+h1 {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -1.5px;
+  margin: 0;
+
+  @media(max-width: $tablet) {
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: -1.5px;
+      margin: 0;
+  }
+}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+p {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
+
+  @media(max-width: $tablet) {
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 22px;
+  }
+}
+
+a {}
+
+.container {
+  margin: auto;
+  max-width: $max-width;
+  font-family: sans-serif;
+  padding: 0 20px;
+
+  @media(max-width: $tablet) {
+      padding: 0px;
+  }
+
+  .heading {
+      color: #efefef;
+  }
+
+}
+
+main {
+
+  .heading {
+      color: #efefef;
+  }
+}
+
+header {
+
+  &.site-title {
+      font-size: 3rem;
+      color: gray;
+      font-weight: 700;
+      margin: 3rem 0;
+  }
+}
