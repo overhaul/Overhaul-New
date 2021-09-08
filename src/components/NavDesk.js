@@ -19,7 +19,7 @@ function NavDesk(){
               About
             </Link>
           </li>
-          <li className="nav-linkitem">
+          <li className="nav-link_item">
             <Link to="/contact" className="nav-link_text">
               Contact
             </Link>
