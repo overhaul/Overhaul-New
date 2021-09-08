@@ -1,81 +1,80 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { 
-  navLinks,
-  navLinkItem,
-  navLinkText,
-  omMobNav,
-  navBurger,
-  hiddenNav,
-  moreLinks,
-} from './navigation.module.scss'
 import { Component } from "react";
 
 import OmLogo from '../components/OmLogo'
 
-function NavDesk(){
+class NavMob extends Component {
 
-	return(
-		<nav className={omMobNav}>
-    <BurgerMenu/>
-  		<OmLogo/>
-      <div className={hiddenNav}>
-        <ul className={navLinks}>
-           <li className={navLinkItem}>
-            <Link to="/work" className={navLinkText}>
-              Work
+  constructor() {
+        super()
+        this.state = {
+          menuIsOpen: false
+        }
+        this.toggleMenu = this.toggleMenu.bind(this)
+    }
+
+  toggleMenu() {
+
+        this.setState( 
+            function(prevState){
+                return{
+                  menuIsOpen: !prevState.menuIsOpen
+                }
+            }
+         )
+    }
+  
+  render(){
+
+    return (
+        <nav className={`mob-nav ${this.state.menuIsOpen ? 'open' : ''}`}>
+         <div
+            onClick={this.toggleMenu}
+            onKeyDown={this.toggleMenu}
+            className={`nav-burger ${this.state.menuIsOpen ? 'open' : ''}`}
+            id="navBurger"
+            role="navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      <OmLogo/>
+      <div className="hidden-nav">
+        <ul className="nav-links">
+           <li className="nav-link_item">
+            <Link to="/work" className="nav-link_text">
+              <h1>Work</h1>
             </Link>
           </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
-              About
+          <li className="nav-link_item">
+            <Link to="/about" className="nav-link_text">
+              <h1>About</h1>
             </Link>
           </li>
-          <li className={navLinkItem}>
-            <Link to="/contact" className={navLinkText}>
-              Contact
+          <li className="nav-link_item">
+            <Link to="/contact" className="nav-link_text">
+              <h1>Contact</h1>
             </Link>
           </li>
         </ul>
-        <div className={moreLinks}>
-          <Link to="/careers" className={navLinkText}>
+        <div className="more-links">
+          <Link to="/careers" className="nav-link_text">
               Careers
           </Link>
-          <a href="tel:7807588642" rel="noreferrer" target="_blank" className={navLinkText}>
+          <a href="tel:7807588642" rel="noreferrer" target="_blank" className="nav-link_text">
               780 758 8642
           </a>
-          <a href="mailto:hello@overhaulmedia.com" target="_blank" rel="noreferrer" className={navLinkText}>
+          <a href="mailto:hello@overhaulmedia.com" target="_blank" rel="noreferrer" className="nav-link_text">
               hello@overhaulmedia.com
           </a>
         </div>
-        </div>
+      </div>
     </nav>
-      )
-}
-
-export default NavDesk
-
-class BurgerMenu extends Component {
-
-  burgerMenu() {
-
-    const burger = document.getElementById('navBurger');
-
-    if(burger.classList.contains('open')){
-      burger.classList.remove('open')
-    }else{
-      burger.classList.add('open')
-    }
-  }
-
-  render() {
-    return  <div onClick={this.burgerMenu} onKeyDown={this.burgerMenu} className={navBurger} id="navBurger" role="navigation">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+    )
   }
 }
 
-
+export default NavMob
 
