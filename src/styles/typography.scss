@@ -1,5 +1,7 @@
+// Font Styles
+
 body {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 h1,
@@ -10,21 +12,22 @@ h5,
 h6 {}
 
 h1 {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 72px;
-  line-height: 84px;
-  letter-spacing: -2px;
-
-  @media(max-width: $tablet) {
-      font-size: 36px;
-      line-height: 40px;
-      letter-spacing: -1.5px;
-  }
+    font-size: 72px;
+    line-height: 84px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: 300;
+    font-weight: inherit;
+    letter-spacing: -2px;
 }
 
-h2 {}
+h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: -0.5px;
+}
 
 h3 {}
 
@@ -35,52 +38,115 @@ h5 {}
 h6 {}
 
 p {
-  font-family: Helvetica;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 30px;
-
-  @media(max-width: $tablet) {
-      font-family: Helvetica;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 22px;
-  }
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 33px;
 }
 
-a {}
+ol{}
+ul {
+    list-style: none;
+    position: relative;
 
-.container {
-  margin: auto;
-  max-width: $max-width;
-  font-family: sans-serif;
-  padding: 0 20px;
+    li {
+      
+        &:before {
+            content: '—';
+            position: absolute;
+            left: -1.5em;
 
-  @media(max-width: $tablet) {
-      padding: 0px;
-  }
+        }
+    }
+}
 
-  .heading {
-      color: #efefef;
-  }
+ul, ol{
+    margin-left: 3.5em;
+
+    li {
+        font-size: 22px;
+        line-height: 33px;
+    }
+}
+
+a{
+    color: $black;
+
+    &:hover{
+        color: $red;
+    }
+}
+
+::-moz-selection {
+    color: $white;
+    background: $red;
+}
+
+::selection {
+    color: $white;
+    background: $red;
+}
+//Tablet Large 1440px
+
+@media(max-width: $tablet-large){
+
+    h1{
+        font-size: 64px;
+        line-height: 74px;
+    }
+
+    h2{
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: 0px;
+    }
+
+    p{
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    ul, ol{
+
+        margin-left: 2.5em;
+
+        li {
+
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
 
 }
 
-main {
+//Tablet 1024px
 
-  .heading {
-      color: #efefef;
-  }
-}
+@media(max-width: $tablet) {
 
-header {
+    h1{
+        font-size: 52px;
+        line-height: 62px;
+    }
 
-  &.site-title {
-      font-size: 3rem;
-      color: gray;
-      font-weight: 700;
-      margin: 3rem 0;
-  }
+    h2{
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0px;
+    }
+
+    p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    ul, ol{
+
+        margin-left: 2.5em;
+
+        li {
+
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
 }
