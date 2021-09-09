@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="container">
+    <div>
       <header>
         <NavDesk/>
         <NavMob/>
