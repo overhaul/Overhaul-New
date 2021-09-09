@@ -1,15 +1,11 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
-import { StaticImage } from 'gatsby-plugin-image'
+import PageHero from '../components/PageHero'
 
 const AboutPage = () => {
     return (
-        <Layout pageTitle="About Us">
-          <p>Overhaul about Page.</p>
-          <StaticImage
-            alt="Corporate flower needs"
-            src="../images/hero-corporate.jpg"
-          />
+        <Layout>
+         <PageHero image='../images/corporate-services-3.jpg' title='This is the Title' subTitle="This will be the Subtitle"/>
         </Layout>
     )
 }
