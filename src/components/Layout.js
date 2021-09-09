@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
       <header>
         <NavDesk/>
         <NavMob/>
-        </header>
+      </header>
       <main>
         {children}
       </main>
