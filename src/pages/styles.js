@@ -1,10 +1,12 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import PageTitle from '../components/PageTitle'
 
 const StylesPage = () => {
     return (
-        <Layout pageTitle="Styles (h1)" class="wrapper">
+        <Layout class="wrapper">
+        <PageTitle title="The Styles Page" subTitle="A good place to check styles"/>
           <section class="row">
             <StaticImage
               class="col-xs-12 col-md-6"

@@ -1,10 +1,12 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import NavDesk from '../components/NavDesk'
-import NavMob from '../components/NavMob'
+import '../styles/layout.scss'
 import '../styles/styles.scss'
 
-const Layout = ({ pageTitle, children }) => {
+import NavDesk from '../components/NavDesk'
+import NavMob from '../components/NavMob'
+
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -17,9 +19,10 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div>
-      <title className="heading">{pageTitle} | {data.site.siteMetadata.title}</title>
-      <NavDesk/>
-      <NavMob/>
+      <header>
+        <NavDesk/>
+        <NavMob/>
+      </header>
       <main>
         {children}
       </main>
