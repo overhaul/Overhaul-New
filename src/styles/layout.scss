@@ -1,7 +1,7 @@
-@import '../styles/variables.scss';
-@import '../styles/reset.scss';
-@import '../styles/typography.scss';
-@import '../styles/grid.scss';
+@import './variables.scss';
+@import './reset.scss';
+@import './typography.scss';
+@import './grid.scss';
 
 section {
     margin-bottom: 1.5em;
@@ -24,20 +24,18 @@ section {
     .heading {
         
     }
-
 }
 
-main {
-    width: calc(100% - 30px);
-    margin: auto;
-    position: relative;
-    z-index: 1;
+// main {
+//     width: calc(100% - 30px);
+//     margin: auto;
+//     position: relative;
+//     z-index: 1;
 
-    @media(max-width: $tablet) {
-        width: calc(100% - 20px);
-    }
-
-}
+//     @media(max-width: $tablet) {
+//         width: calc(100% - 20px);
+//     }
+// }
 
 header {
 
