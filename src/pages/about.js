@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
 import PageHero from '../components/PageHero'
+import PageTitle from '../components/PageTitle'
 
 const AboutPage = () => {
     return (
@@ -10,6 +11,10 @@ const AboutPage = () => {
            title='This is the Title' 
            subTitle="This will be the Subtitle"
            />
+           <PageTitle
+            title="this is a Title Test"
+            subTitle="Subtitle Test too,"
+            />
         </Layout>
     )
 }
