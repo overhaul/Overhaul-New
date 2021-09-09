@@ -10,7 +10,6 @@ class PageHero extends React.Component {
                     alt={ title } 
                     className="page-hero_img"
                 />
-                {console.log(image)}
                 <div className="container page-hero_container">
                     { title ? <h1>{ title }</h1> : ''}
                     { subTitle ? <h2>{ subTitle }</h2> : ''}
