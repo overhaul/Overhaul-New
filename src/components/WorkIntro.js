@@ -31,8 +31,13 @@ class WorkIntro extends React.Component {
                     </div>
                     <div className="work-intro_paragraph col-xs-12 col-md-6 col-md-offset-2">
                         { paragraph ? <p>{ paragraph }</p> : ''}
-                        <div className={`work-intro_read-more-content ${this.state.toggleIsOpen ? 'open' : ''}`}>
-                            <p>Dummy for testing</p>
+                        <div className={`work-intro_read-more-content row ${this.state.toggleIsOpen ? 'open' : ''}`}>
+                            {this.props.taxonomies.map((list) => (
+                                <ul className="work-intro_read-more-list col-xs-6 col-md-5">
+                                <li><strong>{list.title}</strong></li>
+                                {list.items.map((item) => <li>{item}</li>)}
+                                </ul>
+                                ))}
                         </div>
                         <button onClick={this.toggleMore}
                                 onKeyDown={this.toggleMore}
