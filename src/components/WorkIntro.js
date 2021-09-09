@@ -22,7 +22,7 @@ class WorkIntro extends React.Component {
     }
 
     render() {
-        const { title, paragraph, credits } = this.props
+        const { title, paragraph, taxonomies } = this.props
         return (
             <div className="container">
                 <div className="work-intro row">
@@ -32,10 +32,10 @@ class WorkIntro extends React.Component {
                     <div className="work-intro_paragraph col-xs-12 col-md-6 col-md-offset-2">
                         { paragraph ? <p>{ paragraph }</p> : ''}
                         <div className={`work-intro_read-more-content row ${this.state.toggleIsOpen ? 'open' : ''}`}>
-                            {this.props.taxonomies.map((list) => (
-                                <ul className="work-intro_read-more-list col-xs-6 col-md-5">
+                            {taxonomies.map((list, i) => (
+                                <ul key={i} className="work-intro_read-more-list col-xs-6 col-md-5">
                                 <li><strong>{list.title}</strong></li>
-                                {list.items.map((item) => <li>{item}</li>)}
+                                {list.items.map((item, j) => <li key={`${i}_${j}`}>{item}</li>)}
                                 </ul>
                                 ))}
                         </div>
