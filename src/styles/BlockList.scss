@@ -1,0 +1,112 @@
+.block-list {
+  position: relative;
+  background: $white;
+  color: $black;
+  padding: 1em 0;
+
+  &_title {
+    position: relative;
+    max-height: 76px;
+    display: flex;
+    align-items: center;
+
+    h2{
+    	margin-bottom: 0em;
+    }
+
+    .close{
+    	display: none;
+    }
+  }
+
+  svg {
+    fill: $black;
+  }
+
+  h2{
+  	margin-bottom: 0.3em;
+  }
+
+  .container {
+    border-top: 1px solid $black;
+    padding: 1em 0em;
+  }
+
+  .scaling-svg {
+    position: relative;
+    height: 100%;
+    width: 75px;
+    padding-right: 1em;
+    left: 0;
+    top: 0;
+  }
+
+  @media(max-width: $tablet){
+
+  	&_title{
+  		max-height: 25px;
+  		margin-bottom: 1em;
+
+  		h2{
+  			margin-bottom: 0em;
+  		}
+  	}
+  	.accordion{
+  		height: 0;
+	    overflow: hidden;
+	    opacity: 0;
+	    visibility: hidden;
+	    transition: 0.1s ease;
+
+	    &.open{
+	    	height: auto;
+		    opacity: 1;
+		    transition: 0.1s ease;
+		    visibility: visible;
+		    margin-top: 0.5em;
+	    }
+	  }
+  	.scaling-svg{
+  		width: 25px;
+  	}
+	  .close{
+			display: flex;
+			content: '';
+			width:20px;
+			height: 20px;
+			background: $icon-plus-blk;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+	    top: 0px;
+	    right: 0px;
+	    transform: rotate(45deg);
+	    transition: 0.1s ease;
+	    cursor: pointer;
+
+	    &.open{
+	    	transform: rotate(0deg);
+	    	transition: 0.1s ease;
+	    }
+	  }
+	}
+}
+
+//Dark Mode
+
+.dark {
+  .block-list {
+    background-color: $black;
+    color: $white;
+
+    svg{
+    	fill: $white;
+    }
+    .container {
+        border-top: 1px solid $white;
+    }
+    .close{
+    	background: $icon-plus;
+    }
+  }
+}
