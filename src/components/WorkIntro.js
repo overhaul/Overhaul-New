@@ -37,7 +37,7 @@ class WorkIntro extends React.Component {
                                 <li><strong>{list.title}</strong></li>
                                 {list.items.map((item, j) => <li key={`${i}_${j}`}>{item}</li>)}
                                 </ul>
-                                ))}
+                            ))}
                         </div>
                         <button onClick={this.toggleMore}
                                 onKeyDown={this.toggleMore}

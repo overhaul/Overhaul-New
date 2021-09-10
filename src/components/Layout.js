@@ -4,6 +4,7 @@ import '../styles/styles.scss'
 
 import NavDesk from '../components/NavDesk'
 import NavMob from '../components/NavMob'
+import Footer from '../components/Footer'
 
 const Layout = ({ children }) => {
 
@@ -16,6 +17,11 @@ const Layout = ({ children }) => {
       <main>
         {children}
       </main>
+      <Footer
+        address="7347 104 Street NW Edmonton, AB T6E 4B9"
+        phone="780 758 8642"
+        email="hello@overhaulmedia.com"
+        />
     </div>
   )
 }
