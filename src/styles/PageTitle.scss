@@ -1,8 +1,12 @@
 .page-title{
-	margin-top: 16.25em;
+	padding-top: 16.25em;
+    background: #fff;
+    position: relative;
+    display: flex;
+    z-index: 3;
 
 	@media(max-width: $tablet){
-		margin-top: 5.6875em;
+		padding-top: 5.6875em;
 	}
 
 	h1{
