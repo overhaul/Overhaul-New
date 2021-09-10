@@ -1,0 +1,43 @@
+footer{
+	background-color: $white;
+	position: relative;
+	min-height: 100px;
+	padding-bottom: 1em;
+
+	overflow-wrap: anywhere;
+  word-break: break-word;
+
+	.copyright{
+		display: flex;
+    flex-direction: column-reverse;
+	}
+
+	a{
+		text-decoration: none;
+		display: flex;
+		font-size: 22px;
+		line-height: 33px;
+
+		@media(max-width: $tablet-large){
+			font-size: 18px;
+      line-height: 25px;
+		}
+
+		@media(max-width: $tablet){
+			font-size: 16px;
+      line-height: 24px;
+		}
+	}
+
+	@media(max-width: 1200px){
+		.col-md-4, .col-md-2{
+			width: 50% !important;
+	    max-width: 50%!important;
+	    flex-basis: 50%;
+	    margin-bottom: 1em;
+		}
+		.col-md-2{
+			margin-bottom: 0em;
+		}
+	}
+}
