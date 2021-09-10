@@ -5,7 +5,9 @@ import PageHero from '../components/PageHero'
 import PageTitle from '../components/PageTitle'
 import FullWidthImage from '../components/FUllWidthImage'
 import DualImages from '../components/DualImages'
-import images from '../../mock-data/work-content'
+import BlockList from '../components/BlockList'
+import { images } from '../../mock-data/work-content'
+import { listItems } from '../../mock-data/work-content'
 
 const AboutPage = () => {
 
@@ -56,6 +58,10 @@ const AboutPage = () => {
                 paragraph="<p>Solamente necesito tomar cereales con leche. El queso está bueno, y también lo están las galletas. Me encanta mojar mis nachos en chocolate. Las bufandas son útiles para mantenerte caliente, también tienen estilo. Solo necesito tirarme desde un avión con una bufanda para no coger un catarro. Mi perro es negro, mi rata es blanca. Mis padres quieren que tenga un hijo. El colegio es útil si te quieres morir.</p>
                 <p>Las bufandas son útiles para mantenerte caliente, también tienen estilo. Solo necesito tirarme desde un avión con una bufanda para no coger un catarro. Mi perro es negro, mi rata es blanca. Mis padres quieren que tenga un hijo. El colegio es útil si te quieres morir.</p>"
                 taxonomies={lists}
+            />
+            <BlockList 
+                title="Our Values"
+                listItems={listItems}
             />
         </Layout>
     )

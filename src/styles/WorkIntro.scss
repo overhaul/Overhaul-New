@@ -55,3 +55,23 @@
 		}
 	}
 }
+
+//Dark Mode
+
+.dark {
+	.work-intro {
+		background: $black;  
+		color: $white;
+
+		&_read-more{
+
+			&-button{
+				color: $white;
+
+				&:hover{
+					color: $red;
+				}
+			}
+		}
+	}
+}
