@@ -24,8 +24,8 @@ class WorkIntro extends React.Component {
     render() {
         const { title, paragraph, taxonomies } = this.props
         return (
-            <div className="container">
-                <div className="work-intro row">
+            <div className="work-intro">
+                <div className="container row">
                     <div className="work-intro_title col-xs-12 col-md-4">
                         { title ? <h1>{ title }</h1> : ''}
                     </div>

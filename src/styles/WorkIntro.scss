@@ -1,5 +1,9 @@
 .work-intro{
-	margin-top:4.6875em;
+  padding-top: 4.6875em;
+  padding-bottom: 4.6875em;
+  display: flex;
+  position: relative;
+  background: $white;
 
 	&_read-more{
 
