@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <Footer
-        address="7347 104 Street NW Edmonton, AB T6E 4B9"
+        address="<p>7347 104 Street NW</p><p>Edmonton, AB T6E 4B9</p>"
         phone="780 758 8642"
         email="hello@overhaulmedia.com"
         />

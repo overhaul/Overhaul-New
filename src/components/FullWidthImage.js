@@ -5,7 +5,7 @@ class FullWidthImage extends React.Component {
         const {image, alt} = this.props
         return (
             <div className="full-width-image">
-                <div className="container col-xs-12">
+                <div className="container">
                     <img
                         src={ image } 
                         alt={ alt } 
