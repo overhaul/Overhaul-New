@@ -1,0 +1,57 @@
+.work-intro{
+  padding-top: 4.6875em;
+  padding-bottom: 4.6875em;
+  display: flex;
+  position: relative;
+  background: $white;
+
+	&_read-more{
+
+		&-button{
+			// margin-top:2em;
+		    appearance: none;
+		    border: none;
+		    background: none;
+		    padding: 0px;
+		    text-decoration: underline;
+
+		    &:hover{
+		    	color:$red;
+		    	cursor: pointer;
+		    }
+		}
+
+		&-content{
+			margin-top: 2em;
+			height:0;
+			opacity: 0;
+			transition: 0.1s ease;
+			pointer-events: none;
+			visibility: hidden;
+
+			&.open{
+				height: auto;
+				opacity: 1;
+				transition: 0.1s ease;
+				visibility: visible;
+				margin-bottom: 2em;
+			}
+		}
+
+		&-list{
+			list-style: none;
+			margin-left: 0px;
+			margin-bottom: 1.5em;
+
+			li{
+				&:before{
+					display: none;
+				}
+
+				strong{
+					color:$light-grey;
+				}
+			}
+		}
+	}
+}
