@@ -7,6 +7,7 @@ import DualImages from '../components/DualImages'
 import images from '../../mock-data/work-content'
 
 const AboutPage = () => {
+
     const lists = [{
             title: 'Services',
             items: [
@@ -28,7 +29,7 @@ const AboutPage = () => {
             items: [
                 'Retail',
             ],
-        }
+        },
     ]
 
     return (
@@ -50,7 +51,7 @@ const AboutPage = () => {
                 paragraph="Solamente necesito tomar cereales con leche. El queso está bueno, y también lo están las galletas. Me encanta mojar mis nachos en chocolate. Las bufandas son útiles para mantenerte caliente, también tienen estilo. Solo necesito tirarme desde un avión con una bufanda para no coger un catarro. Mi perro es negro, mi rata es blanca. Mis padres quieren que tenga un hijo. El colegio es útil si te quieres morir.
                 Las bufandas son útiles para mantenerte caliente, también tienen estilo. Solo necesito tirarme desde un avión con una bufanda para no coger un catarro. Mi perro es negro, mi rata es blanca. Mis padres quieren que tenga un hijo. El colegio es útil si te quieres morir."
                 taxonomies={lists}
-                />
+            />
         </Layout>
     )
 }
