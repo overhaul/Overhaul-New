@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import WorkIntro from '../components/WorkIntro'
 import PageHero from '../components/PageHero'
 import PageTitle from '../components/PageTitle'
+import FullWidthImage from '../components/FUllWidthImage'
 import DualImages from '../components/DualImages'
 import images from '../../mock-data/work-content'
 
@@ -46,6 +47,9 @@ const AboutPage = () => {
             <DualImages
                 images={images}
             />
+            <FullWidthImage
+            image="https://images.unsplash.com/photo-1583483425070-cb9ce8fc51b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3889&q=80"
+            alt="This is an Image i found on The internet"
             <WorkIntro 
                 title="An eye for the finer things in life"
                 paragraph="Solamente necesito tomar cereales con leche. El queso está bueno, y también lo están las galletas. Me encanta mojar mis nachos en chocolate. Las bufandas son útiles para mantenerte caliente, también tienen estilo. Solo necesito tirarme desde un avión con una bufanda para no coger un catarro. Mi perro es negro, mi rata es blanca. Mis padres quieren que tenga un hijo. El colegio es útil si te quieres morir.
