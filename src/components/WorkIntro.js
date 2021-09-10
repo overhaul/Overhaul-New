@@ -30,7 +30,7 @@ class WorkIntro extends React.Component {
                         { title ? <h1>{ title }</h1> : ''}
                     </div>
                     <div className="work-intro_paragraph col-xs-12 col-md-6 col-md-offset-2">
-                        { paragraph ? <p>{ paragraph }</p> : ''}
+                        { paragraph ? <div dangerouslySetInnerHTML={{ __html:paragraph}}></div> : ''}
                         <div className={`work-intro_read-more-content row ${this.state.toggleIsOpen ? 'open' : ''}`}>
                             {taxonomies.map((list, i) => (
                                 <ul key={i} className="work-intro_read-more-list col-xs-6 col-md-5">
