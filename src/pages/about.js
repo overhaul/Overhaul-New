@@ -6,10 +6,13 @@ import PageTitle from '../components/PageTitle'
 import FullWidthImage from '../components/FUllWidthImage'
 import DualImages from '../components/DualImages'
 import BlockList from '../components/BlockList'
+import BlockClients from '../components/BlockClients'
 import BlockServices from '../components/BlockServices'
 import { images } from '../../mock-data/work-content'
 import { listItems } from '../../mock-data/work-content'
 import { serviceAbilities } from '../../mock-data/work-content'
+import { clients } from '../../mock-data/work-content'
+
 
 const AboutPage = () => {
 
@@ -64,6 +67,10 @@ const AboutPage = () => {
             <BlockList 
                 title="Our Values"
                 listItems={listItems}
+            />
+            <BlockClients 
+                title="Selected Clients"
+                clients={ clients }
             />
             <BlockServices
                 title="Services"
