@@ -1,12 +1,12 @@
-.block-list {
+.block-services {
   position: relative;
   background: $white;
   color: $black;
   padding: 1em 0;
 
-    @media(max-width: $tablet){
-      padding:0em;
-    }
+  	@media(max-width: $tablet){
+  		padding:0em;
+  	}
 
   &_title {
     position: relative;
@@ -21,6 +21,44 @@
     .close{
     	display: none;
     }
+  }
+
+  &_subtitle{
+  	border-bottom: 1px solid $black;
+    padding: 1em 0em;
+  }
+
+  &_list{
+  	padding: 1em 0em;
+  	ul{
+  		margin: 0em;
+  		columns: 3;
+		  -webkit-columns: 3;
+		  -moz-columns: 3;
+		  position: relative;
+
+		  @media(max-width: $tablet){
+			  columns: 2;
+			  -webkit-columns: 2;
+			  -moz-columns: 2;
+		  }
+		   @media(max-width: $mobile){
+			  columns: 1;
+			  -webkit-columns: 1;
+			  -moz-columns: 1;
+		  }
+
+			li{
+
+		 		&:before{
+		 			display: none;
+		 		}
+		 	}
+  	}
+
+  	&_cta{
+  		padding: 1em 0.5em;
+  	}
   }
 
   svg {
@@ -55,6 +93,11 @@
   			margin-bottom: 0em;
   		}
   	}
+
+  	&_subtitle{
+  		padding-top: 0em;
+  	}
+
   	.accordion{
   		height: 0;
 	    overflow: hidden;
@@ -99,7 +142,7 @@
 //Dark Mode
 
 .dark {
-  .block-list {
+  .block-services {
     background-color: $black;
     color: $white;
 
@@ -111,6 +154,14 @@
     }
     .close{
     	background: $icon-plus;
+    }
+
+    a{
+    	color: $white;
+
+    	&:hover{
+    		color: $red;
+    	}
     }
   }
 }

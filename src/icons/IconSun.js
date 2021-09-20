@@ -7,7 +7,7 @@ class IconSun extends Component {
         return (
             <svg className="scaling-svg" viewBox="0 0 80 80">
 				<g>
-					<rect x="37" classNameName="st0" width="2" height="12.7"/>
+					<rect x="37" className="st0" width="2" height="12.7"/>
 				</g>
 				<g>
 					<rect x="34.5" y="12.8" transform="matrix(0.9914 -0.1305 0.1305 0.9914 -2.1971 4.7992)" className="st0" width="2" height="12.7"/>
