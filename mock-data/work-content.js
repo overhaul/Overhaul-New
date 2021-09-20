@@ -39,8 +39,61 @@ export const listItems =[
     },
     {
         title: 'Enterprise.',
-    },
+    }
+]
 
+export const serviceAbilities =[
+    {
+        title: 'Naming',
+    },
+    {
+        title: 'Strategy',
+    },
+    {
+        title: 'Concept Development',
+    },
+    {
+        title: 'Visual Identity',
+    },
+    {
+        title: 'Creative & Art Direction',
+    },
+    {
+        title: 'Print',
+    },
+    {
+        title: 'Packaging',
+    },
+    {
+        title: 'Content',
+    },
+    {
+        title: 'Advertising',
+    },
+    {
+        title: 'Environment',
+    },
+    {
+        title: 'Signage',
+    },
+    {
+        title: 'Digital',
+    },
+    {
+        title: 'eCommerce',
+    },
+    {
+        title: 'Photography',
+    },
+    {
+        title: 'Motion',
+    },
+    {
+        title: 'Video',
+    },
+    {
+        title: 'Writing',
+    }
 ]
 
 export const clients =[
