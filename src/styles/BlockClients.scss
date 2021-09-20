@@ -4,6 +4,10 @@
   color: $black;
   padding: 1em 0;
 
+	  @media(max-width: $tablet){
+	    padding:0em;
+	  }
+
   &_title {
     position: relative;
     max-height: 76px;
@@ -74,7 +78,7 @@
 
   	&_title{
   		max-height: 25px;
-  		margin-bottom: 1em;
+  		margin-bottom: 0em;
 
   		h2{
   			margin-bottom: 0em;
