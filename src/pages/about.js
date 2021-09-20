@@ -6,8 +6,10 @@ import PageTitle from '../components/PageTitle'
 import FullWidthImage from '../components/FUllWidthImage'
 import DualImages from '../components/DualImages'
 import BlockList from '../components/BlockList'
+import BlockServices from '../components/BlockServices'
 import { images } from '../../mock-data/work-content'
 import { listItems } from '../../mock-data/work-content'
+import { serviceAbilities } from '../../mock-data/work-content'
 
 const AboutPage = () => {
 
@@ -50,8 +52,8 @@ const AboutPage = () => {
                 images={images}
             />
             <FullWidthImage
-            image="https://images.unsplash.com/photo-1583483425070-cb9ce8fc51b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3889&q=80"
-            alt="This is an Image i found on The internet"
+                image="https://images.unsplash.com/photo-1583483425070-cb9ce8fc51b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3889&q=80"
+                alt="This is an Image i found on The internet"
             />
             <WorkIntro 
                 title="An eye for the finer things in life"
@@ -62,6 +64,12 @@ const AboutPage = () => {
             <BlockList 
                 title="Our Values"
                 listItems={listItems}
+            />
+            <BlockServices
+                title="Services"
+                subTitle="Every business decision is a brand opportunity."
+                paragraph="Branding doesn't stop with a visual identity or advertising campaign. Every aspect of your company is an opportunity to make your business better for your customers. With that in mind, we've built a team that lets us contribute wherever we can make the biggest impact. "
+                serviceItems={serviceAbilities}
             />
         </Layout>
     )
