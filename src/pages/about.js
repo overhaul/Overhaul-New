@@ -9,12 +9,11 @@ import BlockList from '../components/BlockList'
 import BlockClients from '../components/BlockClients'
 import BlockServices from '../components/BlockServices'
 import BlockAwards from '../components/BlockAwards'
-import { images } from '../../mock-data/work-content'
-import { listItems } from '../../mock-data/work-content'
-import { serviceAbilities } from '../../mock-data/work-content'
-import { clients } from '../../mock-data/work-content'
+import BlockApproach from '../components/BlockApproach'
+import { images, listItems, serviceAbilities, clients, ourApproach } from '../../mock-data/work-content'
 import { awards } from '../../mock-data/work-awards'
 
+import approachImage from '/src/images/our-approach.jpg'
 
 const AboutPage = () => {
 
@@ -65,6 +64,12 @@ const AboutPage = () => {
                 paragraph="<p>Solamente necesito tomar cereales con leche. El queso está bueno, y también lo están las galletas. Me encanta mojar mis nachos en chocolate. Las bufandas son útiles para mantenerte caliente, también tienen estilo. Solo necesito tirarme desde un avión con una bufanda para no coger un catarro. Mi perro es negro, mi rata es blanca. Mis padres quieren que tenga un hijo. El colegio es útil si te quieres morir.</p>
                 <p>Las bufandas son útiles para mantenerte caliente, también tienen estilo. Solo necesito tirarme desde un avión con una bufanda para no coger un catarro. Mi perro es negro, mi rata es blanca. Mis padres quieren que tenga un hijo. El colegio es útil si te quieres morir.</p>"
                 taxonomies={lists}
+            />
+            <BlockApproach
+                title="Our Approach"
+                image={ approachImage }
+                alt="Our Team hard at work"
+                content={ ourApproach }
             />
             <BlockList 
                 title="Our Values"

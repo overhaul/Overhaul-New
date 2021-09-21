@@ -126,3 +126,14 @@ export const clients =[
         alt: 'Province of Alberta'
     },
 ]
+
+export const ourApproach =[
+    {
+        paragraph: 'Overhaul is a studio formed to do one thing: help companies transform the way they connect with people. In other words, we build brands that make your business better. Theres no tricks or gimmicks to what we do. Each project we take on is different, but our process remains the same. We simply work with good people, pay attention to details, and put in the time to make work that moves the needle. Sound like what you need? Start the conversation.',
+        title: 'The work varies. The process stays the same.'
+    },
+    {
+        paragraph: 'We balk at the idea of the expert or the guru. Creativity isnt complex. For us good work comes from sticking to a structure that allows for thinking differently and breaking through assumptions. That approach, paired with attention and effort means we can tackle almost any problem. The last ingredient is culture. Good work becomes great when people show up, check their egos at the door, and work together as a team. Its why weve invested in people who approach their work with an attitude of openness, flexibility, and enthusiasm. This goes for clients too - if were not a good culture fit, were not going to be a fit in general.',
+        title: 'Start with the right approach. Finish with the right attitude.'
+    }
+]
