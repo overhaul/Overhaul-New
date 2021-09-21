@@ -9,9 +9,11 @@ import BlockList from '../components/BlockList'
 import BlockClients from '../components/BlockClients'
 import BlockServices from '../components/BlockServices'
 import BlockAwards from '../components/BlockAwards'
+import BlockTeam from '../components/BlockTeam'
 import BlockApproach from '../components/BlockApproach'
 import { images, listItems, serviceAbilities, clients, ourApproach } from '../../mock-data/work-content'
 import { awards } from '../../mock-data/work-awards'
+import { team } from '../../mock-data/work-team'
 
 import approachImage from '/src/images/our-approach.jpg'
 
@@ -88,6 +90,12 @@ const AboutPage = () => {
             <BlockAwards
                 title="Awards"
                 awards={awards}
+            />
+            <BlockTeam 
+                title="Meet the Team"
+                subTitle="Hired guns don't have all the tools. Big shops move too slow. We meet you in the middle. "
+                paragraph="We’re Agile. We’re smaller, but experience tells us that’s a good thing. Our team has decades of experience across multiple discliplines."
+                team={team}
             />
         </Layout>
     )
