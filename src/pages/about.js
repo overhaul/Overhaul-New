@@ -8,8 +8,10 @@ import DualImages from '../components/DualImages'
 import BlockList from '../components/BlockList'
 import BlockClients from '../components/BlockClients'
 import BlockServices from '../components/BlockServices'
+import BlockAwards from '../components/BlockAwards'
 import BlockApproach from '../components/BlockApproach'
 import { images, listItems, serviceAbilities, clients, ourApproach } from '../../mock-data/work-content'
+import { awards } from '../../mock-data/work-awards'
 
 import approachImage from '/src/images/our-approach.jpg'
 
@@ -82,6 +84,10 @@ const AboutPage = () => {
                 subTitle="Every business decision is a brand opportunity."
                 paragraph="Branding doesn't stop with a visual identity or advertising campaign. Every aspect of your company is an opportunity to make your business better for your customers. With that in mind, we've built a team that lets us contribute wherever we can make the biggest impact. "
                 serviceItems={serviceAbilities}
+            />
+            <BlockAwards
+                title="Awards"
+                awards={awards}
             />
         </Layout>
     )
