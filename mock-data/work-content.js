@@ -6,6 +6,13 @@ import Alberta from '../src/images/clients/logo-alberta.png'
 import Edmonton from '../src/images/clients/logo-edmonton.png'
 import Katz from '../src/images/clients/logo-katz.png'
 
+export const aboutImage =[
+    {
+        src: '../src/images/OverhaulOffice.jpg',
+        alt: 'Views from the office'
+    }
+]
+
 export const images = [
     {
         src: "https://images.unsplash.com/photo-1631116618155-6074e787a30b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80",
