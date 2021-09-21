@@ -27,7 +27,7 @@ class BlockAwards extends React.Component {
             <div className="block-awards">
                 <div className="container row">
                     <div className="col-xs-12 block-awards_title">
-                        <Icon name="moon"/>
+                        <Icon name="water"/>
                         <h2>{ title }</h2>
                         <div onClick={this.toggleAccordion} className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}></div>
                     </div>
