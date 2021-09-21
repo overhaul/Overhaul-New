@@ -27,7 +27,7 @@ class BlockApproach extends React.Component {
             <div className="block-approach">
                 <div className="container row">
                     <div className="col-xs-12 col-md-3 block-approach_title">
-                        <Icon name="sun"/>
+                        <Icon name="sand"/>
                         <h2>{ title }</h2>
                         <div onClick={this.toggleAccordion} className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}></div>
                     </div>
@@ -38,7 +38,7 @@ class BlockApproach extends React.Component {
                         {content.map((contentItem, index) => (
                             <div className="block-approach_paragraph row" key={index}>
                                 <h2 className="col-md-3">{contentItem.title}</h2>
-                                <p className="col-md-9">{contentItem.paragraph}</p>
+                                { contentItem.paragraph ? <p className="col-md-9" dangerouslySetInnerHTML={{ __html:contentItem.paragraph}}></p> : ''}
                             </div>
                         ))}
                     </div>

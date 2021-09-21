@@ -27,7 +27,7 @@ class BlockTeam extends React.Component {
             <div className="block-team">
                 <div className="container row">
                     <div className="col-xs-12 col-md-6 block-team_title">
-                        <Icon name="sun"/>
+                        <Icon name="star"/>
                         <h2>{ title }</h2>
                         <div onClick={this.toggleAccordion} className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}></div>
                     </div>
