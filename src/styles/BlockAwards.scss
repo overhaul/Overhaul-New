@@ -1,0 +1,210 @@
+.block-awards {
+  position: relative;
+  background: $white;
+  color: $black;
+  padding: 1em 0;
+
+    @media(max-width: $tablet){
+      padding:0em;
+    }
+
+  &_title {
+    position: relative;
+    max-height: 76px;
+    display: flex;
+    align-items: center;
+
+    h2{
+    	margin-bottom: 0em;
+    }
+
+    .close{
+    	display: none;
+    }
+  }
+
+  &_table{
+
+    a{
+      text-decoration: none
+    }
+
+    &-head{
+      padding: 1em 0em;
+      border-bottom: 1px solid $black;
+
+      @media(max-width: $tablet){
+        display: none;
+      }
+    }
+
+    &-award{
+      padding: 1em 0em;
+      border-bottom: 1px solid $black;
+      position: relative;
+      text-decoration: none;
+      color: $black;
+
+      &:hover{
+        color: $black;
+       
+        p {
+          opacity: 0.6;
+        }
+      }
+
+      &-link{
+        background: $icon-arrow-blk;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 28px;
+        height: 18px;
+        position: absolute;
+        right:10px;
+        transition: 0.1s ease;
+
+         @media(max-width: $mobile){
+          bottom: 1em;
+         }
+      }
+
+      &-year{
+        @media(max-width: $mobile){
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  svg {
+    fill: $black;
+  }
+
+  h2{
+  	margin-bottom: 0.3em;
+  }
+
+  .container {
+    border-top: 1px solid $black;
+    padding: 1em 0em;
+  }
+
+  .scaling-svg {
+    position: relative;
+    height: 100%;
+    width: 75px;
+    padding-right: 1em;
+    left: 0;
+    top: 0;
+  }
+
+  @media(max-width: $tablet){
+
+  	&_title{
+  		max-height: 25px;
+  		margin-bottom: 0em;
+
+  		h2{
+  			margin-bottom: 0em;
+  		}
+  	}
+  	.accordion{
+  		height: 0;
+	    overflow: hidden;
+	    opacity: 0;
+	    visibility: hidden;
+	    transition: 0.1s ease;
+
+	    &.open{
+	    	height: auto;
+		    opacity: 1;
+		    transition: 0.1s ease;
+		    visibility: visible;
+		    margin-top: 1.5em;
+	    }
+	  }
+  	.scaling-svg{
+  		width: 25px;
+  	}
+	  .close{
+			display: flex;
+			content: '';
+			width:20px;
+			height: 20px;
+			background: $icon-plus-blk;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+	    top: 0px;
+	    right: 0px;
+	    transform: rotate(45deg);
+	    transition: 0.1s ease;
+	    cursor: pointer;
+
+	    &.open{
+	    	transform: rotate(0deg);
+	    	transition: 0.1s ease;
+	    }
+	  }
+	}
+}
+.block-awards_table-award{
+  &:hover{
+    .block-awards_table-award-link{
+      right:0px;
+    }
+  }
+}
+
+//Dark Mode
+
+.dark {
+  .block-awards {
+    background-color: $black;
+    color: $white;
+
+    &_table{
+
+      a{
+        text-decoration: none
+      }
+
+      &-head{
+        border-bottom: 1px solid $white;
+      }
+
+      &-award{
+        border-bottom: 1px solid $white;
+        color: $white;
+
+        &:hover{
+          color: $white;
+          p {
+            opacity: 0.6;
+          }
+        }
+
+        &-link{
+          background: $icon-arrow;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 28px;
+          height: 18px;
+          position: absolute;
+          right:10px;
+          transition: 0.1s ease;
+        }
+      }
+    }
+
+    svg{
+    	fill: $white;
+    }
+    .container {
+        border-top: 1px solid $white;
+    }
+    .close{
+    	background: $icon-plus;
+    }
+  }
+}
