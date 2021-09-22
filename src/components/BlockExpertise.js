@@ -35,7 +35,7 @@ class BlockExpertise extends React.Component {
                         {areas.map(({ title, paragraph, client, index}) => (
                             <div className="row block-expertise_content" key={index}>
                                 <h2 className="col-xs-12 col-md-4">{title}</h2>
-                                { paragraph ? <p className="col-md-8" dangerouslySetInnerHTML={{ __html:paragraph}}></p> : ''}
+                                { paragraph ? <p className="col-md-8 col-xs-12" dangerouslySetInnerHTML={{ __html:paragraph}}></p> : ''}
                                 <ul className="col-xs-12 col-md-8 col-md-offset-4">
                                     {client.map((client, index) => (
                                         <li key={index}>{client.title}
