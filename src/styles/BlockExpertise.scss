@@ -46,11 +46,16 @@
   }
 
   &_content{
-    border-bottom: 1px solid $white;
+    border-bottom: 1px solid $black;
     padding: 1.5em 0;
 
     &:first-child{
       padding-top: 0.75em;
+    }
+
+    &:last-child{
+      border-bottom: none;
+      padding-bottom: 0.5em;
     }
 
     ul{
@@ -76,7 +81,7 @@
           display: none;
         }
         &:hover{
-          color: $white;
+          color: $black;
           .block-expertise_content-image{
             opacity: 1;
           }
@@ -156,6 +161,18 @@
   .block-expertise {
     background-color: $black;
     color: $white;
+
+    &_content{
+      border-bottom: 1px solid $white;
+
+      ul{
+        li{
+          &:hover{
+            color:$white;
+          }
+        }
+      }
+    }
 
     svg{
     	fill: $white;
