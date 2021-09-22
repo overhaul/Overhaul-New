@@ -33,17 +33,17 @@ class BlockServices extends React.Component {
                     </div>
                     <div className={`accordion col-md-9 col-xs-12 ${this.state.accordionIsOpen ? 'open' : ''}`}>
                         <div className="block-services_subtitle row">
-                            <h2 className="col-md-3 col-xs-12">{ subTitle }</h2>
-                            <p className="col-md-9 col-xs-12">{ paragraph }</p>
+                            <h2 className="col-md-4 col-xs-12">{ subTitle }</h2>
+                            <p className="col-md-8 col-xs-12">{ paragraph }</p>
                         </div>
                         <div className="block-services_list row">
-                            <h2 className="col-md-3 col-xs-12">Our Core Abilities:</h2>
-                            <ul className="col-md-9 col-xs-12">
+                            <h2 className="col-md-4 col-xs-12">Our Core Abilities:</h2>
+                            <ul className="col-md-8 col-xs-12">
                                 {serviceItems.map((serviceItem, index) => (
                                     <li key={index}>{serviceItem.title}</li>
                                 ))}
                             </ul>
-                            <div className="block-services_list_cta col-md-9 col-xs-12 col-md-offset-3 col-xs-offset-0">
+                            <div className="block-services_list_cta col-md-8 col-xs-12 col-md-offset-4 col-xs-offset-0">
                                 <p>Have a specific need? <a href={'mailto:' + 'info@overhaulmedia.com'} target="_blank" rel="noreferrer">Ask us if we’re a good fit.</a></p>
                             </div>
                         </div>
