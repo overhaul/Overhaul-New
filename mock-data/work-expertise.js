@@ -103,7 +103,7 @@ export const areas =[
 				},
 			},
 			{
-			title: 'Pressd',
+			title: 'Press’d',
 			image: {
 				src: HAVEN,
 				alt: 'Haven Menswear Canada'
