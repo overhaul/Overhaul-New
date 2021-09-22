@@ -1,10 +1,7 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
-import WorkIntro from '../components/WorkIntro'
-import PageHero from '../components/PageHero'
+
 import PageTitle from '../components/PageTitle'
-import FullWidthImage from '../components/FUllWidthImage'
-import DualImages from '../components/DualImages'
 import BlockList from '../components/BlockList'
 import BlockClients from '../components/BlockClients'
 import BlockServices from '../components/BlockServices'
@@ -23,30 +20,6 @@ import aboutImage from '/src/images/OverhaulOffice.jpg'
 import approachImage from '/src/images/our-approach.jpg'
 
 const AboutPage = () => {
-
-    const lists = [{
-            title: 'Services',
-            items: [
-                'Strategy',
-                'Branding',
-                'Digital',
-            ],
-        },
-        {
-            title: 'Credits',
-            items: [
-                'Name 1',
-                'Name 2',
-                'Name 3',
-            ],
-        },
-        {
-            title: 'Industry',
-            items: [
-                'Retail',
-            ],
-        },
-    ]
 
     return (
         <Layout pageTitle="About Us">
