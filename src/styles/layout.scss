@@ -3,6 +3,11 @@
 @import './typography.scss';
 @import './grid.scss';
 
+
+* {
+  cursor: none;
+}
+
 section {
     margin-bottom: 1.5em;
 
