@@ -76,7 +76,7 @@
 
       li{
         color: $grey;
-        cursor: default;
+ 
         &:before{
           display: none;
         }
@@ -97,6 +97,7 @@
       width: 100%;
       max-width: 33%;
       object-fit: contain;
+      pointer-events: none;
 
       @media(max-width: $tablet){
         display: none;
