@@ -1,9 +1,12 @@
 import * as React from 'react'
+import { useContext } from "react";
 import Icon from '../components/Icons'
+import { MouseContext } from "../context/mouse-context";
 
 class BlockServices extends React.Component {
 
   constructor() {
+
         super()
         this.state = {
           accordionIsOpen: false
@@ -19,9 +22,11 @@ class BlockServices extends React.Component {
                   accordionIsOpen: !prevState.accordionIsOpen
                 }
             }
-         )
+        )
     }
+
     render() {
+
         const { title, subTitle, paragraph, serviceItems } = this.props
         return (
             <div className="block-services">
@@ -44,7 +49,15 @@ class BlockServices extends React.Component {
                                 ))}
                             </ul>
                             <div className="block-services_list_cta col-md-8 col-xs-12 col-md-offset-4 col-xs-offset-0">
-                                <p>Have a specific need? <a href={'mailto:' + 'info@overhaulmedia.com'} target="_blank" rel="noreferrer">Ask us if we’re a good fit.</a></p>
+                                <p>Have a specific need? 
+                                    <a href={'mailto:' + 'info@overhaulmedia.com'} 
+                                       target="_blank" 
+                                       rel="noreferrer"
+                                       onMouseEnter={() => cursorChangeHandler("hovered")}
+                                       onMouseLeave={() => cursorChangeHandler("")}>
+                                       Ask us if we’re a good fit.
+                                   </a>
+                                </p>
                             </div>
                         </div>
                     </div>
