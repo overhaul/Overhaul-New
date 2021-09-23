@@ -22,7 +22,7 @@ class BlockExpertise extends React.Component {
          )
     }
     render() {
-        const { title, paragraph, areas } = this.props
+        const { title, areas } = this.props
         return (
             <div className="block-expertise">
                 <div className="container row">

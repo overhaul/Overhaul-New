@@ -8,10 +8,6 @@ const Cursor = () => {
   return (
     <>
       <div
-        style={{ left: `${x}px`, top: `${y}px` }}
-        className={"cursor " + cursorType}
-      ></div>
-      <div
         className={"dot " + cursorType}
         style={{ left: `${x}px`, top: `${y}px` }}
       ></div>

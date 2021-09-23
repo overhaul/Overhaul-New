@@ -11,9 +11,8 @@ import NavDesk from '../components/NavDesk'
 import NavMob from '../components/NavMob'
 import Footer from '../components/Footer'
 
-const Layout = ({ children }) => {
-
-  const { cursorType, cursorChangeHandler } = useContext(MouseContext)
+function Layout({children}) {
+  const { cursorType, cursorChangeHandler } = useContext(MouseContext);
   return (
     <div>
       <MouseContextProvider>

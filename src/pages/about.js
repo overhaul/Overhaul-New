@@ -11,7 +11,7 @@ import BlockApproach from '../components/BlockApproach'
 import BlockImageText from '../components/BlockImageText'
 import BlockExpertise from '../components/BlockExpertise'
 
-import { images, listItems, serviceAbilities, clients, ourApproach } from '../../mock-data/work-content'
+import { listItems, serviceAbilities, clients, ourApproach } from '../../mock-data/work-content'
 import { awards } from '../../mock-data/work-awards'
 import { team } from '../../mock-data/work-team'
 import { areas } from '../../mock-data/work-expertise'

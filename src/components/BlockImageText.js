@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Icon from '../components/Icons'
 
 class BlockImageText extends React.Component {
 
