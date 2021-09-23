@@ -26,7 +26,8 @@ class BlockServices extends React.Component {
     }
 
     render() {
-
+        console.log(MouseContext)
+        // const { cursorType, cursorChangeHandler } = useContext(MouseContext);
         const { title, subTitle, paragraph, serviceItems } = this.props
         return (
             <div className="block-services">
@@ -53,9 +54,9 @@ class BlockServices extends React.Component {
                                     <a href={'mailto:' + 'info@overhaulmedia.com'} 
                                        target="_blank" 
                                        rel="noreferrer"
-                                       onMouseEnter={() => cursorChangeHandler("hovered")}
-                                       onMouseLeave={() => cursorChangeHandler("")}>
-                                       Ask us if we’re a good fit.
+                                       // onMouseEnter={() => cursorChangeHandler("hovered")}
+                                       // onMouseLeave={() => cursorChangeHandler("")}
+                                       >Ask us if we’re a good fit.
                                    </a>
                                 </p>
                             </div>
