@@ -1,0 +1,42 @@
+.work{
+
+	&_card{
+		margin-bottom: 2.5em;
+
+		a{
+			text-decoration: none;
+			color: inherit;
+
+			&:hover{
+				text-decoration: none;
+
+				.work_card-featured-image{
+					img{
+						transform: scale(1.05);
+						transition: ease 3s;
+					}
+				}
+				.work_card-subtitle{
+					color: $black;
+				}
+			}
+		}
+
+		&-subtitle{
+			color: $light-grey;
+		}
+
+		&-featured-image{
+			height: 512px;
+			overflow: hidden;
+			margin-bottom: 1em;
+
+			img{
+				width: 100%;
+    		height: 100%;
+    		object-fit: cover;
+    		transition: ease 3s;
+			}
+		}
+	}
+}
