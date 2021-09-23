@@ -1,10 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
-import WorkIntro from '../components/WorkIntro'
-import PageHero from '../components/PageHero'
 import PageTitle from '../components/PageTitle'
-import FullWidthImage from '../components/FUllWidthImage'
-import DualImages from '../components/DualImages'
 import BlockList from '../components/BlockList'
 import BlockClients from '../components/BlockClients'
 import BlockServices from '../components/BlockServices'
@@ -14,7 +10,7 @@ import BlockApproach from '../components/BlockApproach'
 import BlockImageText from '../components/BlockImageText'
 import BlockExpertise from '../components/BlockExpertise'
 
-import { images, listItems, serviceAbilities, clients, ourApproach } from '../../mock-data/work-content'
+import { listItems, serviceAbilities, clients, ourApproach } from '../../mock-data/work-content'
 import { awards } from '../../mock-data/work-awards'
 import { team } from '../../mock-data/work-team'
 import { areas } from '../../mock-data/work-expertise'
@@ -23,30 +19,6 @@ import aboutImage from '/src/images/OverhaulOffice.jpg'
 import approachImage from '/src/images/our-approach.jpg'
 
 const AboutPage = () => {
-
-    const lists = [{
-            title: 'Services',
-            items: [
-                'Strategy',
-                'Branding',
-                'Digital',
-            ],
-        },
-        {
-            title: 'Credits',
-            items: [
-                'Name 1',
-                'Name 2',
-                'Name 3',
-            ],
-        },
-        {
-            title: 'Industry',
-            items: [
-                'Retail',
-            ],
-        },
-    ]
 
     return (
         <Layout pageTitle="About Us">
