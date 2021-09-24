@@ -1,0 +1,56 @@
+.careers{
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $black;
+  padding: 2em 0;
+  margin-bottom:8em;
+
+  @media(max-width: $tablet){
+  	margin-bottom:4em;
+  }
+
+  &_card{
+    padding: 1em 0;
+  	border-bottom: 1px solid $black;
+  	position: relative;
+  	display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    align-items: center;
+    text-decoration: none;
+	  color:$black;
+
+    &:hover{
+    	color:black;
+
+    	.careers_card-link{
+    		margin-right: 0px;
+    		transition: 0.1s ease;
+    	}
+    }
+
+  	&:first-child{
+  		padding-top: 0em;
+  	}
+
+  	&:last-child{
+  		border-bottom: 0px;
+  		padding-bottom: 0em;
+  	}
+
+    &-link{
+      background: $icon-arrow-blk;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 28px;
+	    height: 18px;
+	    right: 10px;
+	    transition: 0.1s ease;
+	    display: flex;
+	    margin-right: 10px;
+
+      @media(max-width: $mobile){
+      	bottom: 1em;
+      }
+    }
+	}
+}
