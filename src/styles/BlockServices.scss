@@ -129,7 +129,8 @@
 	    right: 0px;
 	    transform: rotate(45deg);
 	    transition: 0.1s ease;
-	    cursor: pointer;
+	    appearance: none;
+      border: none;
 
 	    &.open{
 	    	transform: rotate(0deg);
@@ -154,6 +155,8 @@
     }
     .close{
     	background: $icon-plus;
+    	appearance: none;
+      border: none;
     }
 
     a{
