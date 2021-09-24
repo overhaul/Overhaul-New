@@ -29,7 +29,7 @@ class BlockList extends React.Component {
                     <div className="col-xs-12 col-md-6 block-list_title">
                         <Icon name="moon"/>
                         <h2>{ title }</h2>
-                        <div onClick={this.toggleAccordion} className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}></div>
+                        <button aria-label="open" onClick={this.toggleAccordion} className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}/>
                     </div>
                     <div className={`accordion col-md-6 col-xs-12 ${this.state.accordionIsOpen ? 'open' : ''}`}>
                         {listItems.map((listItem, index) => (

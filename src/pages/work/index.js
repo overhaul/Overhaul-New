@@ -11,8 +11,8 @@ const WorkPage = ({ data }) => {
         />
         <div className="work container row">
          {
-          data.allMdx.nodes.map((node) => (
-            <div className="col-xs-12 col-md-6">
+          data.allMdx.nodes.map((node, index) => (
+            <div className="col-xs-12 col-md-6" key={index}>
               <article className="work_card" key={node.id}>
                 <Link to={`/work/${node.slug}`}>
                   <div className="work_card-featured-image">
