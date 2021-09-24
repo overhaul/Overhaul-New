@@ -12,7 +12,14 @@ module.exports = {
       options: {
         name: `work`,
         path: `${__dirname}/work`,
-      }
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `careers`,
+        path: `${__dirname}/careers`,
+      },
     },
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp"
