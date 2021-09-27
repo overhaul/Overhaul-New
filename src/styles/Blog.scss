@@ -1,0 +1,23 @@
+.blog{
+	&-content{
+	  border-bottom: 1px solid;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+	}
+	&-title{
+	  border-bottom: 1px solid;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+	}
+}
+
+.dark{
+	.blog{
+		&-content{
+			color:$white;
+		}
+		&-title{
+			color:$white;
+		}
+	}
+}

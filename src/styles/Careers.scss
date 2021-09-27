@@ -22,7 +22,7 @@
 	  color:$black;
 
     &:hover{
-    	color:black;
+    	color:$black;
 
     	.careers_card-link{
     		margin-right: 0px;
@@ -65,4 +65,29 @@
 		border-bottom: 1px solid $black;
 		}
 	}
+}
+
+.dark{
+  .careers{
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    color:$white;
+
+    &_card{
+      color:$white;
+      border-bottom: 1px solid $white;
+       &-link{
+        background: $icon-arrow;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  .career{
+    .page-title{
+      .container{
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
 }
