@@ -32,11 +32,12 @@ const WorkPage = ({ data }) => {
 
 export const query = graphql `
   query {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+    allMdx(sort: {fields: frontmatter___date, order: DESC},filter: {fileAbsolutePath: {regex: "/work/"}}) {
       nodes {
         frontmatter {
           title
           subtitle
+          paragraph
           hero_image_alt
           hero_image {
             publicURL

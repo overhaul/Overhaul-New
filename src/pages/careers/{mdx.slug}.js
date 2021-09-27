@@ -13,7 +13,7 @@ const CareerPost = ({ data }) => {
           title={data.mdx.frontmatter.title}
         />
         <div className="container row">
-          <div className="col-xs-12 col-md-9 col-md-offset-3">
+          <div className="col-xs-12 col-md-9 col-md-offset-3 row">
             <MDXRenderer>
               {data.mdx.body}
             </MDXRenderer>
