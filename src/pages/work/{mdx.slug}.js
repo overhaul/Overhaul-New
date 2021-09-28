@@ -5,7 +5,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import PageHero from '../../components/PageHero'
 import WorkIntro from '../../components/WorkIntro'
 import Layout from '../../components/Layout'
-import FullWidthImage from '../../components/FullWidthImage'
 
 const WorkPost = ({ data }) => {
 

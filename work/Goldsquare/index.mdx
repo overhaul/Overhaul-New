@@ -27,16 +27,60 @@ lists: [{
         },
     ]
 date: "2021-07-23"
-hero_image: "./workshop-photo-1.jpg"
+hero_image: "./goldsquare-website-hero.jpg"
 hero_image_alt: "A Wedding flowers"
 hero_image_credit_text: "No one"
 hero_image_credit_link: "https://theinternet.com"
 ---
 
-Weiiiird - Isn't it **great**?
+import DualImages from '/src/components/DualImages'
+import FullWidthImage from '/src/components/FullWidthImage'
+import {
+    GSFullImage, 
+    GSFullImageOne, 
+    GSFullImageTwo, 
+    GSFullImageThree, 
+    GSFullImageFour,
+    GSFullImageFive,
+    GSFullImageSix,
+    GSDualImagesOne, 
+    GSDualImagesTwo, 
+    GSDualImagesThree, 
+    GSDualImagesFour
+    } 
+    from '/work-data/GoldSquareImages'
 
-Some of my **favorite** things are:
-
-* Petting cats
-* Singing
-* Eating potato-based foods
+<FullWidthImage
+    image={GSFullImage}
+    alt='GoldSquare Website and Branding'
+/>
+<DualImages
+    images={GSDualImagesOne}
+/>
+<FullWidthImage
+    image={GSFullImageOne}
+    alt='GoldSquare Website and Branding'
+/>
+<FullWidthImage
+    image={GSFullImageTwo}
+    alt='GoldSquare Website and Branding'
+/>
+<DualImages
+    images={GSDualImagesThree}
+/>
+<FullWidthImage
+    image={GSFullImageFive}
+    alt='GoldSquare Website and Branding'
+/>
+<FullWidthImage
+    image={GSFullImageThree}
+    alt='GoldSquare Website and Branding'
+/>
+<FullWidthImage
+    image={GSFullImageSix}
+    alt='GoldSquare Website and Branding'
+/>
+<FullWidthImage
+    image={GSFullImageFour}
+    alt='GoldSquare Website and Branding'
+/>

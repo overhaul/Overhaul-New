@@ -27,10 +27,49 @@ lists: [{
         },
     ]
 date: "2021-07-24"
-hero_image: "./01.jpeg"
-hero_image_alt: "More and More Wedding flowers"
-hero_image_credit_text: "Nadda"
-hero_image_credit_link: "https://theinternet.com"
+hero_image: "./hsbc-place-branding-hero.jpg"
+hero_image_alt: "HSBC Place Edmotnon"
 ---
 
-Here's another post! It's even better than the first one!
+import DualImages from '/src/components/DualImages'
+import FullWidthImage from '/src/components/FullWidthImage'
+import {
+    HsbcFwImageOne,
+    HsbcFwImageTwo,
+    HsbcFwImageThree,
+    HsbcFwImageFour,
+    HsbcFwImageFive,
+    HsbcDualImagesOne,
+    HsbcDualImagesTwo,
+    HsbcDualImagesThree   
+} from '/work-data/HsbcImages'
+
+<FullWidthImage
+    image={HsbcFwImageOne}
+    alt='HSBC Place Branding'
+/>
+<DualImages
+    images={HsbcDualImagesOne}
+/>
+<FullWidthImage
+    image={HsbcFwImageTwo}
+    alt='HSBC Place Branding'
+/>
+<FullWidthImage
+    image={HsbcFwImageThree}
+    alt='HSBC Place Branding'
+    />
+<DualImages
+    images={HsbcDualImagesTwo}
+/>
+<DualImages
+    images={HsbcDualImagesThree}
+/>
+<FullWidthImage
+    image={HsbcFwImageFour}
+    alt='HSBC Place Branding'
+/>
+<FullWidthImage
+    image={HsbcFwImageFive}
+    alt='HSBC Place Branding'
+/>

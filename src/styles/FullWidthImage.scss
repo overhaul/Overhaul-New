@@ -2,7 +2,8 @@
     display: flex;
     position: relative;
     z-index: 1;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
     background-color: $white;
 
     &_img {

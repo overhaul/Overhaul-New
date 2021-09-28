@@ -1,6 +1,6 @@
 ---
 title: "Uptop"
-subtitle: "Uptop!"
+subtitle: "Uptop! Branding"
 paragraph: '<p>Solamente necesito tomar cereales con leche. El queso está bueno, y también lo están las galletas. Me encanta mojar mis nachos en chocolate. Las bufandas son útiles para mantenerte caliente, también tienen estilo. Solo necesito tirarme desde un avión con una bufanda para no coger un catarro. Mi perro es negro, mi rata es blanca. Mis padres quieren que tenga un hijo. El colegio es útil si te quieres morir.</p>
 <p>Las bufandas son útiles para mantenerte caliente, también tienen estilo. Solo necesito tirarme desde un avión con una bufanda para no coger un catarro. Mi perro es negro, mi rata es blanca. Mis padres quieren que tenga un hijo. El colegio es útil si te quieres morir.</p>'
 lists: [{
@@ -27,11 +27,59 @@ lists: [{
         },
     ]
 date: "2021-07-25"
-hero_image: "./home-hero_1.jpeg"
-hero_image_alt: "More aaand more Wedding flowers"
-hero_image_credit_text: "nix"
-hero_image_credit_link: "https://theinternet.com"
+hero_image: "./uptop-hero.png"
+hero_image_alt: "Uptop Branding"
 
 ---
 
-Wow look at all this content. How do they do it?
+import FullWidthImage from '/src/components/FullWidthImage'
+import DualImages from '/src/components/DualImages'
+import {
+    UtFwOne,
+    UtFwTwo,
+    UtFwThree,
+    UtFwFour,
+    UtFwFive,
+    UtFwSix,
+    UtDiOne,
+    UtDiTwo,
+    UtDiThree,
+    UtDiFour
+} from '/work-data/UptopImages'
+
+<FullWidthImage
+    image={UtFwOne}
+    alt='UpTop Branding'
+/>
+<FullWidthImage
+    image={UtFwTwo}
+    alt='UpTop Branding'
+/>
+<DualImages
+    images={UtDiOne}
+/>
+<FullWidthImage
+    image={UtFwThree}
+    alt='UpTop Branding'
+/>
+<DualImages
+    images={UtDiTwo}
+/>
+<DualImages
+    images={UtDiThree}
+/>
+<FullWidthImage
+    image={UtFwFour}
+    alt='UpTop Branding'
+/>
+<DualImages
+    images={UtDiFour}
+/>
+<FullWidthImage
+    image={UtFwFive}
+    alt='UpTop Branding'
+/>
+<FullWidthImage
+    image={UtFwSix}
+    alt='UpTop Branding'
+/>
