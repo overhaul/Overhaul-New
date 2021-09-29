@@ -1,3 +1,9 @@
+$icon-plus: url('../images/plus.svg');
+$icon-plus-blk: url('../images/plus-blk.svg');
+$icon-arrow: url('../images/arrow.svg');
+$icon-arrow-blk: url('../images/arrow-blk.svg');
+
+$black: #000000;
 $white: #ffffff;
 $grey: #4E4E4E;
 $light-grey: #AFAFAF;
@@ -5,7 +11,7 @@ $red: #F40009;
 $black: #000;
 
 $tablet-large: 1440px;
-$tablet: 1024px;
+$tablet: 62em;
 $mobile: 660px;
 
 $ease: 0.2s ease;

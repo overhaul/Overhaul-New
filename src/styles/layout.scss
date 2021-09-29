@@ -1,7 +1,12 @@
-@import '../styles/variables.scss';
-@import '../styles/reset.scss';
-@import '../styles/typography.scss';
-@import '../styles/grid.scss';
+@import './variables.scss';
+@import './reset.scss';
+@import './typography.scss';
+@import './grid.scss';
+
+
+* {
+  cursor: none;
+}
 
 section {
     margin-bottom: 1.5em;
@@ -13,30 +18,22 @@ section {
 
 .container {
     margin: auto;
+    width: calc(100% - 30px);
     max-width: $max-width;
     font-family: sans-serif;
-    padding: 0 20px;
 
     @media(max-width: $tablet) {
         padding: 0px;
+        width: calc(100% - 20px);
     }
 
     .heading {
         
     }
-
 }
 
 main {
-    width: calc(100% - 30px);
-    margin: auto;
-    position: relative;
     z-index: 1;
-
-    @media(max-width: $tablet) {
-        width: calc(100% - 20px);
-    }
-
 }
 
 header {

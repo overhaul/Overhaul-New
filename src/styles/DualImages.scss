@@ -1,0 +1,36 @@
+.dual-images {
+    position: relative;
+    background-color: $white;
+
+    .container {
+
+        [class*="col-xs"] {
+
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom: 0.5em;
+            padding-top: 0.5em;
+
+            &:nth-of-type(odd) {
+                padding-right: 0.5rem;
+            }
+
+            &:nth-of-type(even) {
+                padding-left: 0.5rem;
+            }
+        }
+    }
+
+    &_img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.dark {
+
+    .dual-images {
+        background-color: $black;
+    }
+}
