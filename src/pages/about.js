@@ -70,8 +70,4 @@ const AboutPage = () => {
     )
 }
 
-window.addEventListener('load', (event) => {
-  document.body.classList.add('dark')
-});
-
 export default AboutPage
