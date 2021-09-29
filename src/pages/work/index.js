@@ -3,6 +3,7 @@ import { Component } from "react";
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import PageTitle from '../../components/PageTitle'
+import BlockCallToAction from '../../components/BlockCallToAction'
 
 class WorkPage extends Component {
 
@@ -75,32 +76,37 @@ class WorkPage extends Component {
               </div>
             ))
           }
-        </div>
-        <div className={`work container row list ${this.state.listIsOpen ? 'grid-view' : 'list-view'}`}>
-           {
-            data.allMdx.nodes.map((node, index) => (
-              <div className="work_card-list col-xs-12" key={index}>
-                <article key={node.id}>
-                  <Link to={`/work/${node.slug}`}>
-                    <p>{node.frontmatter.title}</p>
-                    <p className="work_card-list-subtitle">{node.frontmatter.subtitle}</p>
-                    <p className="work_card-list-date">{node.frontmatter.date}</p>
-                  </Link>
-                </article>
-                <div className="work_card-list-image">
-                  <img src={node.frontmatter.hero_image.publicURL} alt={node.frontmatter.hero_image_alt}/>
+          </div>
+          <div className={`work container row list ${this.state.listIsOpen ? 'grid-view' : 'list-view'}`}>
+             {
+              data.allMdx.nodes.map((node, index) => (
+                <div className="work_card-list col-xs-12" key={index}>
+                  <article key={node.id}>
+                    <Link to={`/work/${node.slug}`}>
+                      <p>{node.frontmatter.title}</p>
+                      <p className="work_card-list-subtitle">{node.frontmatter.subtitle}</p>
+                      <p className="work_card-list-date">{node.frontmatter.date}</p>
+                    </Link>
+                  </article>
+                  <div className="work_card-list-image">
+                    <img src={node.frontmatter.hero_image.publicURL} alt={node.frontmatter.hero_image_alt}/>
+                  </div>
                 </div>
-              </div>
-            ))
-          }
-        </div>
-      </Layout>
+              ))
+            }
+          </div>
+          <BlockCallToAction
+            title='Look like something you need?'
+            cta='Start the conversation.'
+            link='/contact'
+          />
+        </Layout>
     )
   }
 }
 
 export const query = graphql `
-  query {
+  query WorkPage{
     allMdx(sort: {fields: frontmatter___date, order: DESC},filter: {fileAbsolutePath: {regex: "/work/"}}) {
       nodes {
         frontmatter {
