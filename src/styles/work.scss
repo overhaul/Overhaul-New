@@ -146,3 +146,45 @@
 		}
 	}
 }
+
+.toggle-view{
+	display: flex;
+	flex-direction: row;
+
+			&:hover{
+			.toggle-view_buttons{
+				opacity: 1;
+				pointer-events: all;
+			}
+			.toggle-view_trigger{
+				color: $red;
+			}
+		}
+
+	&_buttons{
+		opacity: 0;
+		pointer-events: none;
+		display: flex;
+		flex-direction: row;
+
+		p{
+			padding: 0 1em;
+		}
+	}
+
+	&_trigger{
+	}
+
+	&_button{
+		color: $grey;
+		padding: 0 1em;
+		appearance: none;
+		border: 0px;
+		background: none;
+		display: flex;
+
+		&:hover{
+			color:$red;
+		}
+	}
+}
