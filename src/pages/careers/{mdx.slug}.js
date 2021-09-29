@@ -26,10 +26,11 @@ const CareerPost = ({ data }) => {
 
 export const query = graphql `
   query($slug: String) {
-    mdx(slug: {eq: $slug}) {
+    mdx(slug: {eq: $slug}, fileAbsolutePath: {regex: "/careers/"}) {
       body
       frontmatter {
         title
+        paragraph
         date(formatString: "MMMM DD, YYYY")
       }
     }

@@ -31,7 +31,7 @@ const WorkPost = ({ data }) => {
 
 export const query = graphql `
   query($slug: String) {
-    mdx(slug: {eq: $slug}) {
+    mdx(slug: {eq: $slug}, fileAbsolutePath: {regex: "/work/"}) {
       body
       frontmatter {
         title
