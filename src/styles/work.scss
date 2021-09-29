@@ -53,6 +53,8 @@
 				pointer-events: none;
 				width: 400px;
 				height: 300px;
+				// Until i can figure how to attach it to the cursor
+				display: none;
 
 				img{
 					width: 100%;
@@ -89,7 +91,58 @@
 		}
 	}
 
-	&.list{
-		padding: 4em 0;
+	&.grid-view{
+
+		&.grid{
+			transition: 0.1s ease;
+			padding-top: 1em;
+
+		}
+		&.list{
+			padding: 1em 0.5em 4em;;
+			opacity: 0; 
+			pointer-events: none;
+			height: 0em;
+			transition: 0.1s ease;
+
+			.work_card-list{
+				padding: 0;
+				opacity: 0; 
+				pointer-events: none;
+				height: 0em;
+				transition: 0.1s ease;
+			}
+		}
+	}
+
+	&.list-view{
+
+		&.grid{
+			padding: 0;
+			opacity: 0; 
+			pointer-events: none;
+			height: 0em;
+			transition: 0.1s ease;
+			
+			.grid_card{
+				height: 0;
+				transition: 0.1s ease;
+
+			}
+		}
+
+		&.list{
+			padding: 1em 0.5em 4em;;
+			opacity: 1; 
+			pointer-events: all;
+			height: auto;
+			transition: 0.1s ease;
+
+			.work_card-list{
+				opacity: 1; 
+				pointer-events: all;
+				height: auto;
+			}
+		}
 	}
 }
