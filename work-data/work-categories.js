@@ -1,6 +1,6 @@
 export const categories = [
 	{
-		title: 'Indentity'
+		title: 'Identity'
 	},
 	{
 		title: 'Digital'
