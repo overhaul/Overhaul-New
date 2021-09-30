@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import PageTitle from '../../components/PageTitle'
 import BlockCallToAction from '../../components/BlockCallToAction'
+import {categories} from '/work-data/work-categories'
 
 class WorkPage extends Component {
 
@@ -33,12 +34,20 @@ class WorkPage extends Component {
             title='Building brands that matter.'
           />
           <div className="container row">
-            <div className="col-xs-12 col-md-6">
-              <div className="toggle-view">
-                <p className="toggle-view_trigger">{this.state.listIsOpen ? 'Grid' : 'List'}</p>
-                <div className="toggle-view_buttons">
+            <div className="col-xs-12 work-filters">
+              <div className="work-filter">
+                <ul className="work-filter_items">
+                  <li className="work-filter_item first">All</li>
+                  {categories.map((category, index) => (
+                    <li className="work-filter_item" key={index}>{category.title}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="work-toggle">
+                <p className="work-toggle_trigger">{this.state.listIsOpen ? 'Grid' : 'List'}</p>
+                <div className="work-toggle_buttons">
                   {this.state.listIsOpen ? 
-                    <button className="toggle-view_button list"
+                    <button className="work-toggle_button list"
                         onClick={this.toggleView}
                         onKeyDown={this.toggleView}
                         >
@@ -48,7 +57,7 @@ class WorkPage extends Component {
                   }
                   {this.state.listIsOpen ? 
                     '' : 
-                    <button className="toggle-view_button grid"
+                    <button className="work-toggle_button grid"
                         onClick={this.toggleView}
                         onKeyDown={this.toggleView}
                         > 

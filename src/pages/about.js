@@ -22,7 +22,7 @@ import approachImage from '/src/images/our-approach.jpg'
 const AboutPage = () => {
 
     return (
-        <Layout pageTitle="About Us">
+        <Layout themeColor="dark" pageTitle="About Us">
             <PageTitle
                 title="A dozen years of digital, brand, and marketing projects. Edmonton born and built."
             />
