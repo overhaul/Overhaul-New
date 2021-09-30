@@ -156,6 +156,11 @@
 				opacity: 1;
 				pointer-events: all;
 			}
+			.work-toggle_button{
+				width: auto;
+				padding: 0 1em;
+				transition: 0.1s ease;
+			}
 		}
 
 	&_buttons{
@@ -181,11 +186,13 @@
 
 	&_button{
 		color: $grey;
-		padding: 0 1em;
+		padding: 0em;
 		appearance: none;
 		border: 0px;
 		background: none;
 		display: flex;
+		width: 0px;
+		transition: 0.1s ease;
 
 		&:hover{
 			color:$red;
