@@ -3,6 +3,7 @@ import { useContext } from "react"
 import { MouseContext } from "../context/mouse-context"
 import MouseContextProvider from "../context/mouse-context";
 import Cursor from '../components/Cursor'
+import aos from 'aos'
 
 import '../styles/layout.scss'
 import '../styles/styles.scss'
@@ -11,10 +12,13 @@ import NavDesk from '../components/NavDesk'
 import NavMob from '../components/NavMob'
 import Footer from '../components/Footer'
 
-function Layout({children}) {
+function Layout({children, themeColor}) {
+
+// aos.init()
+
   const { cursorType, cursorChangeHandler } = useContext(MouseContext);
   return (
-    <div>
+    <div className={themeColor}>
       <MouseContextProvider>
         <header>
           <NavDesk/>
@@ -33,6 +37,5 @@ function Layout({children}) {
     </div>
   )
 }
-
 
 export default Layout
