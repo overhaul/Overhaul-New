@@ -5,7 +5,7 @@ import PageTitle from '../../components/PageTitle'
 
 const CareersPage = ({ data }) => {
     return (
-        <Layout>
+        <Layout themeColor="dark">
         <PageTitle
           title='We’re on the lookout for talented individuals with a passion for creativity and technology to join our team.'
           />

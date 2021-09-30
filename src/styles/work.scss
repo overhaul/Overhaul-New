@@ -147,17 +147,19 @@
 	}
 }
 
-.toggle-view{
+.work-toggle{
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 
 			&:hover{
-			.toggle-view_buttons{
+			.work-toggle_buttons{
 				opacity: 1;
 				pointer-events: all;
 			}
-			.toggle-view_trigger{
-				color: $red;
+			.work-toggle_button{
+				width: auto;
+				padding: 0 1em;
+				transition: 0.1s ease;
 			}
 		}
 
@@ -169,22 +171,84 @@
 
 		p{
 			padding: 0 1em;
+
+			&:hover{
+				color: $red;
+			}
 		}
 	}
 
 	&_trigger{
+		&:hover{
+			color: $red;
+		}
 	}
 
 	&_button{
 		color: $grey;
-		padding: 0 1em;
+		padding: 0em;
 		appearance: none;
 		border: 0px;
 		background: none;
 		display: flex;
+		width: 0px;
+		transition: 0.1s ease;
 
 		&:hover{
 			color:$red;
+		}
+	}
+}
+
+.work-filter{
+	&s{
+		display: flex;
+		justify-content: space-between;
+	}
+	ul{
+		li{
+			&:before{
+				display: none;
+			}
+		}
+	}
+
+	&_items{
+		list-style:none;
+		margin: 0;
+    display: flex;
+    flex-direction: row;
+
+    &:hover{
+    	.work-filter_item{
+    		padding-left: 1.5em;
+				width: auto;
+				opacity: 1;
+				pointer-events: all;
+				transition: 0.1s ease;
+    	}
+    }
+	}
+
+	&_item{
+		padding-left: 0em;
+		width: 0;
+		opacity: 0;
+		pointer-events: none;
+		transition: 0.1s ease;
+
+		&:first-child{
+			padding-left: 0px!important;
+		}
+
+		&:hover{
+			color: $grey;
+		}
+
+		&.first{
+			width: auto;
+			opacity: 1;
+			pointer-events: all;
 		}
 	}
 }

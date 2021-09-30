@@ -7,7 +7,7 @@ import PageTitle from '../../components/PageTitle'
 const CareerPost = ({ data }) => {
 
   return (
-    <Layout>
+    <Layout themeColor="dark">
       <div className="career">
         <PageTitle
           title={data.mdx.frontmatter.title}
