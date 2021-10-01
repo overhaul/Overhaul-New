@@ -13,6 +13,7 @@ const IndexPage = () => {
     'You have this long to make an impression.',
     'Stand out,',
     'or sit on the bench.',
+    'get', 'to', 'zeee', 'choppa',
   ]
 
   return (
