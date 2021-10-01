@@ -1,16 +1,17 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
-import { StaticImage } from 'gatsby-plugin-image'
+import PageTitle from '../components/PageTitle'
+import Contact from '../components/Contact'
 
 const ContactPage = () => {
     return (
-        <Layout pageTitle="Contact Us">
-      <p>Hi there! I'm the proud creator of this site, which I built with Gatsby.</p>
-      <StaticImage
-        alt="Corporate flower needs"
-        src="../images/hero-corporate.jpg"
-      />
-    </Layout>
+        <Layout themeColor="dark" pageTitle="Contact Us">
+            <PageTitle
+                title='We do what you can’t.'
+                subTitle='You’ve got a great business. We’re here to help make it better. If you’d like to talk about working with us then we’d love to hear your story.'
+            />
+            <Contact/>
+        </Layout>
     )
 }
 

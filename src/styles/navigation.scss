@@ -1,5 +1,19 @@
 @import '../styles/variables.scss';
 
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: $max-width;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+
+    @media(min-width: $max-width){
+        max-width: 1960px;
+    }
+}
 
 //Desktop Navigation
 
@@ -176,9 +190,9 @@
 
     .hidden-nav {
         position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #000;
+        width: 100vw;
+        height: 100vh;
+        background: $black;
         top: 0;
         left: 0;
         transform: translateX(-100vw);

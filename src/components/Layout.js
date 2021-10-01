@@ -1,28 +1,39 @@
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import NavDesk from '../components/NavDesk'
-import NavMob from '../components/NavMob'
+import { useContext } from "react"
+import { MouseContext } from "../context/mouse-context"
+import MouseContextProvider from "../context/mouse-context";
+import Cursor from '../components/Cursor'
+import aos from 'aos'
+
+import '../styles/layout.scss'
 import '../styles/styles.scss'
 
-const Layout = ({ pageTitle, children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+import NavDesk from '../components/NavDesk'
+import NavMob from '../components/NavMob'
+import Footer from '../components/Footer'
 
+function Layout({children, themeColor}) {
+
+// aos.init()
+
+  const { cursorType, cursorChangeHandler } = useContext(MouseContext);
   return (
-    <div>
-      <title className="heading">{pageTitle} | {data.site.siteMetadata.title}</title>
-      <NavDesk/>
-      <NavMob/>
-      <main>
-        {children}
-      </main>
+    <div className={themeColor}>
+      <MouseContextProvider>
+        <header>
+          <NavDesk/>
+          <NavMob/>
+        </header>
+        <Cursor/>
+        <main>
+          {children}
+        </main>
+        <Footer
+          address="<p>7347 104 Street NW</p><p>Edmonton, AB T6E 4B9</p>"
+          phone="780 758 8642"
+          email="hello@overhaulmedia.com"
+          />
+      </MouseContextProvider>
     </div>
   )
 }

@@ -1,0 +1,45 @@
+.contact{
+	margin-bottom:8em;
+
+	@media(max-width: $tablet){
+		margin-bottom:4em;
+	}
+
+	&_content{
+		border-top: 1px solid $black;
+		padding: 2em 0;
+
+		&:last-child{
+			border-bottom: 1px solid $black;
+		}
+
+		@media(max-width: $tablet){
+			&-title{
+				padding-bottom:2em;
+			}
+		}
+	}
+}
+
+.dark{
+	.contact{
+		color:$white;
+
+		a{
+			color:$white;
+
+			&:hover{
+				color: $red;
+			}
+		}
+
+		&_content{
+			border-top: 1px solid $white;
+			padding: 2em 0;
+
+			&:last-child{
+			border-bottom: 1px solid $white;
+			}
+		}
+	}
+}

@@ -1,11 +1,29 @@
+@import '../styles/layout.scss';
+@import '../styles/Cursor.scss';
+@import '../styles/navigation.scss';
+@import '../styles/PageTitle.scss';
+@import '../styles/WorkIntro.scss';
 @import './variables.scss';
-
-@import './reset.scss';
-@import './grid.scss';
-@import './typography.scss';
-@import './layout.scss';
-@import './navigation.scss';
-
-
+@import '../styles/PageTitle.scss';
+@import '../styles/PageHero.scss';
 @import './FixedSlide.scss';
 @import './TypingSlide.scss';
+@import './PageTitle.scss';
+@import './FullWidthImage.scss';
+@import './DualImages.scss';
+@import './BlockClients.scss';
+@import './BlockList.scss';
+@import './BlockServices.scss';
+@import './BlockAwards.scss';
+@import './BlockApproach.scss';
+@import './BlockTeam.scss';
+@import './BlockImageText.scss';
+@import './BlockExpertise.scss';
+@import './Contact.scss';
+@import './Footer.scss';
+@import './work.scss';
+@import './Blog.scss';
+@import './BlockCallToAction.scss';
+@import './Careers.scss';
+
+
