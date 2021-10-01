@@ -151,15 +151,36 @@
 	display: flex;
 	flex-direction: row-reverse;
 
+		@media(max-width: $mobile){
+			flex-direction: column;
+		}
+
 			&:hover{
 			.work-toggle_buttons{
 				opacity: 1;
 				pointer-events: all;
+
+				@media(max-width: $mobile){
+					height: auto;
+					transition: 0.1s ease;
+
+					p{
+						padding: 0.5em 0;
+						transition: 0.1s ease;
+					}
+
+				}
 			}
 			.work-toggle_button{
 				width: auto;
 				padding: 0 1em;
 				transition: 0.1s ease;
+
+				@media(max-width: $mobile){
+					padding: 0em;
+					text-align: right;
+    			height: auto;
+				}
 			}
 		}
 
@@ -169,8 +190,17 @@
 		display: flex;
 		flex-direction: row;
 
+		@media(max-width: $mobile){
+			height: 0;
+			flex-direction: column;
+		}
+
 		p{
 			padding: 0 1em;
+
+			@media(max-width: $mobile){
+				padding: inherit;
+			}
 
 			&:hover{
 				color: $red;
@@ -179,13 +209,18 @@
 	}
 
 	&_trigger{
+
+		@media(max-width: $mobile){
+			text-align: right;
+		}
+
 		&:hover{
 			color: $red;
 		}
 	}
 
 	&_button{
-		color: $grey;
+		color: $light-grey;
 		padding: 0em;
 		appearance: none;
 		border: 0px;
@@ -193,6 +228,10 @@
 		display: flex;
 		width: 0px;
 		transition: 0.1s ease;
+
+			@media(max-width: $mobile){
+				height: 0;
+			}
 
 		&:hover{
 			color:$red;
@@ -219,6 +258,12 @@
     display: flex;
     flex-direction: row;
 
+    @media(max-width: $mobile){
+			flex-direction : column;
+			height: auto;
+			
+		}
+
     &:hover{
     	.work-filter_item{
     		padding-left: 1.5em;
@@ -226,6 +271,13 @@
 				opacity: 1;
 				pointer-events: all;
 				transition: 0.1s ease;
+
+				@media(max-width: $mobile){
+					padding-left: 0em;
+					height: auto;
+					opacity: 1;
+					padding-top: 0.5em;
+				}
     	}
     }
 	}
@@ -236,6 +288,19 @@
 		opacity: 0;
 		pointer-events: none;
 		transition: 0.1s ease;
+		
+		a{
+			color: $light-grey;
+
+			&:hover{
+				color: $red;
+			}
+		}
+
+		@media(max-width: $mobile){
+			flex-direction : column;
+			height: 0;
+		}
 
 		&--off{
 			display: none;
@@ -253,6 +318,9 @@
 			width: auto;
 			opacity: 1;
 			pointer-events: all;
+			a{
+				color: $black;
+			}
 		}
 	}
 }
