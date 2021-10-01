@@ -6,6 +6,10 @@
 
 * {
   cursor: none;
+
+    @media(max-width: $mobile){
+        cursor: inherit;
+      }
 }
 
 section {
