@@ -271,12 +271,12 @@
 				opacity: 1;
 				pointer-events: all;
 				transition: 0.1s ease;
-				padding-top: 0.5em;
 
 				@media(max-width: $mobile){
 					padding-left: 0em;
 					height: auto;
 					opacity: 1;
+					padding-top: 0.5em;
 				}
     	}
     }

@@ -5,7 +5,7 @@ import Layout from '../../components/Layout'
 import PageTitle from '../../components/PageTitle'
 
 const CareerPost = ({ data }) => {
-
+  if(!data.mdx?.frontmatter) return ''
   return (
     <Layout themeColor="dark">
       <div className="career">
