@@ -5,7 +5,7 @@ import Contact from '../components/Contact'
 
 const ContactPage = () => {
     return (
-        <Layout pageTitle="Contact Us">
+        <Layout themeColor="dark" pageTitle="Contact Us">
             <PageTitle
                 title='We do what you can’t.'
                 subTitle='You’ve got a great business. We’re here to help make it better. If you’d like to talk about working with us then we’d love to hear your story.'
