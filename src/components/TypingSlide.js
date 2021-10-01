@@ -35,10 +35,11 @@ class TypingSlide extends Component {
   }
 
   render () {
+    const height = this.props.height ?? 200
     const textStep = 1 / (this.props.text.length - 1)
     const { revealProgress } = this.state
     return (
-      <div className="fixed-slide typing-slide" ref={this.slideEl}>
+      <div style={{height: `${height}vh`}} className="fixed-slide typing-slide" ref={this.slideEl}>
         <div className="fixed-slide__clip">
           <div className="fixed-slide__inner">
             <div className="fixed-slide__content">
