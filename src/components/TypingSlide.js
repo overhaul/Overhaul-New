@@ -35,6 +35,8 @@ class TypingSlide extends Component {
   }
 
   render () {
+    const textStep = 1 / (this.props.text.length - 1)
+    const { revealProgress } = this.state
     return (
       <div className="fixed-slide typing-slide" ref={this.slideEl}>
         <div className="fixed-slide__clip">
@@ -42,7 +44,11 @@ class TypingSlide extends Component {
             <div className="fixed-slide__content">
               <div className="container">
                 <h1 className="fixed-slide__title">
-                  {this.state.revealProgress} {this.props.text}
+                  {this.props.text.map((text, i) => {
+                    const start = ((i - 1) * textStep)
+                    const position = (revealProgress - start) / textStep
+                    return (<span style={{ opacity: position }}> {text}</span>)
+                  })}
                 </h1>
               </div>
             </div>
