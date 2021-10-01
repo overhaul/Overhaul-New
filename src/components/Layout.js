@@ -14,11 +14,16 @@ import Footer from '../components/Footer'
 
 function Layout({children, themeColor}) {
 
-// aos.init()
+React.useEffect(() => {
+  aos.init({
+  });
+  aos.refresh();
+}, []);
 
   const { cursorType, cursorChangeHandler } = useContext(MouseContext);
   return (
     <div className={themeColor}>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
       <MouseContextProvider>
         <header>
           <NavDesk/>
