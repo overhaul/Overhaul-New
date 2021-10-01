@@ -7,7 +7,7 @@ import WorkIntro from '../../components/WorkIntro'
 import Layout from '../../components/Layout'
 
 const WorkPost = ({ data }) => {
-
+   if(!data.mdx?.frontmatter) return ''
   const { title, subtitle, paragraph, lists, hero_image } = data.mdx.frontmatter
 
     return (
