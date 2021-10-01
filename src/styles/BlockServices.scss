@@ -1,0 +1,170 @@
+.block-services {
+  position: relative;
+  background: $white;
+  color: $black;
+  padding: 1em 0;
+
+  	@media(max-width: $tablet){
+  		padding:0em;
+  	}
+
+  &_title {
+    position: relative;
+    max-height: 76px;
+    display: flex;
+    align-items: center;
+
+    h2{
+    	margin-bottom: 0em;
+    }
+
+    .close{
+    	display: none;
+    }
+  }
+
+  &_subtitle{
+  	border-bottom: 1px solid $black;
+    padding: 1em 0em;
+  }
+
+  &_list{
+  	padding: 1em 0em;
+  	ul{
+  		margin: 0em;
+  		columns: 3;
+		  -webkit-columns: 3;
+		  -moz-columns: 3;
+		  position: relative;
+
+		  @media(max-width: $tablet){
+			  columns: 2;
+			  -webkit-columns: 2;
+			  -moz-columns: 2;
+		  }
+		   @media(max-width: $mobile){
+			  columns: 1;
+			  -webkit-columns: 1;
+			  -moz-columns: 1;
+		  }
+
+			li{
+
+		 		&:before{
+		 			display: none;
+		 		}
+		 	}
+  	}
+
+  	&_cta{
+  		padding: 1em 0.5em;
+  	}
+  }
+
+  svg {
+    fill: $black;
+  }
+
+  h2{
+  	margin-bottom: 0.3em;
+  }
+
+  .container {
+    border-top: 1px solid $black;
+    padding: 1em 0em;
+  }
+
+  .scaling-svg {
+    position: relative;
+    height: 100%;
+    width: 75px;
+    padding-right: 1em;
+    left: 0;
+    top: 0;
+  }
+
+  @media(max-width: $tablet){
+
+  	&_title{
+  		max-height: 25px;
+  		margin-bottom: 0em;
+
+  		h2{
+  			margin-bottom: 0em;
+  		}
+  	}
+
+  	&_subtitle{
+  		padding-top: 0em;
+  	}
+
+  	.accordion{
+  		height: 0;
+	    overflow: hidden;
+	    opacity: 0;
+	    visibility: hidden;
+	    transition: 0.1s ease;
+
+	    &.open{
+	    	height: auto;
+		    opacity: 1;
+		    transition: 0.1s ease;
+		    visibility: visible;
+		    margin-top: 1.5em;
+	    }
+	  }
+  	.scaling-svg{
+  		width: 25px;
+  	}
+	  .close{
+			display: flex;
+			content: '';
+			width:20px;
+			height: 20px;
+			background: $icon-plus-blk;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+	    top: 0px;
+	    right: 0px;
+	    transform: rotate(45deg);
+	    transition: 0.1s ease;
+	    appearance: none;
+      border: none;
+
+	    &.open{
+	    	transform: rotate(0deg);
+	    	transition: 0.1s ease;
+	    }
+	  }
+	}
+}
+
+//Dark Mode
+
+.dark {
+  .block-services {
+    background-color: $black;
+    color: $white;
+
+    svg{
+    	fill: $white;
+    }
+    .container {
+        border-top: 1px solid $white;
+    }
+    .close{
+    	background: $icon-plus;
+    	appearance: none;
+      border: none;
+    }
+
+    a{
+    	color: $white;
+
+    	&:hover{
+    		color: $red;
+    	}
+    }
+  }
+}
