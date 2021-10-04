@@ -18,7 +18,7 @@ const IndexPage = () => {
 
   return (
     <Layout themeColor="dark" pageTitle="Home Page">
-      <TypingSlide height="300" text={titleSlideText} />
+      <TypingSlide height="200" text={titleSlideText} />
       <FixedSlides slides={slides} />
     </Layout>
   )

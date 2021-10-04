@@ -3,7 +3,6 @@ import { useContext } from "react"
 import { MouseContext } from "../context/mouse-context"
 import MouseContextProvider from "../context/mouse-context";
 import Cursor from '../components/Cursor'
-import aos from 'aos'
 
 import '../styles/layout.scss'
 import '../styles/styles.scss'
@@ -14,16 +13,9 @@ import Footer from '../components/Footer'
 
 function Layout({children, themeColor}) {
 
-React.useEffect(() => {
-  aos.init({
-  });
-  aos.refresh();
-}, []);
-
   const { cursorType, cursorChangeHandler } = useContext(MouseContext);
   return (
     <div className={themeColor}>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
       <MouseContextProvider>
         <header>
           <NavDesk/>
