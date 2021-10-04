@@ -6,7 +6,7 @@ class DualImages extends React.Component {
             <div className="dual-images">
 	            <div className="container row">
 		            {this.props.images.slice(0,2).map((image, index) => (
-			            <img data-aos="fade-zoom-in" src={image.src} alt={image.alt} key={index} className="dual-images_img col-md-6 col-xs-12"/>
+			            <img data-aos="fade-up" data-aos-delay="500" src={image.src} alt={image.alt} key={index} className="dual-images_img col-xs-6"/>
 		            ))}
                 </div>
             </div>
