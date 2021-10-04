@@ -99,7 +99,7 @@ class WorkPage extends Component {
             data.allMdx.nodes.filter(this.fitlerNode).map((node, index) => (
               <div className="col-xs-12 col-md-6 grid_card" key={index}>
                 <article className="work_card" key={node.id}>
-                  <Link to={`/work/${node.slug}`}>
+                  <Link to={`/work/${node.slug.toLowerCase()}`}>
                     <div className="work_card-featured-image">
                       <img src={node.frontmatter.hero_image.publicURL} alt={node.frontmatter.hero_image_alt}/>
                     </div>
@@ -116,7 +116,7 @@ class WorkPage extends Component {
               data.allMdx.nodes.filter(this.fitlerNode).map((node, index) => (
                 <div className="work_card-list col-xs-12" key={index}>
                   <article key={node.id}>
-                    <Link to={`/work/${node.slug}`}>
+                    <Link to={`/work/${node.slug.toLowerCase()}`}>
                       <p>{node.frontmatter.title}</p>
                       <p className="work_card-list-subtitle">{node.frontmatter.subtitle}</p>
                       <p className="work_card-list-date">{node.frontmatter.date}</p>

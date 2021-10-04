@@ -30,6 +30,10 @@
   will-change: width, height, transform, border;
   z-index: 999;
   pointer-events: none;
+
+  @media(max-width: $mobile){
+    display: none;
+  }
 }
 
 .dot {
@@ -44,6 +48,10 @@
   z-index: 999;
   pointer-events: none;
   mix-blend-mode: difference;
+  
+  @media(max-width: $mobile){
+    display: none;
+  }
 }
 
 .ring.hovered {
