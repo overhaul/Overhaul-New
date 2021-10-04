@@ -10,11 +10,13 @@ import BlockTeam from '../components/BlockTeam'
 import BlockApproach from '../components/BlockApproach'
 import BlockImageText from '../components/BlockImageText'
 import BlockExpertise from '../components/BlockExpertise'
+import BlockCarousel from '../components/BlockCarousel'
 
 import { listItems, serviceAbilities, clients, ourApproach } from '../../mock-data/work-content'
 import { awards } from '../../mock-data/work-awards'
 import { team } from '../../mock-data/work-team'
 import { areas } from '../../mock-data/work-expertise'
+import {aboutCarousel} from '../../work-data/aboutCarousel'
 
 import aboutImage from '/src/images/OverhaulOffice.jpg'
 import approachImage from '/src/images/our-approach.jpg'
@@ -65,6 +67,9 @@ const AboutPage = () => {
             <BlockAwards
                 title="Awards"
                 awards={awards}
+            />
+            <BlockCarousel
+                slides={aboutCarousel}
             />
         </Layout>
     )

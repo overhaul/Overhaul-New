@@ -5,7 +5,7 @@ class FixedSlides extends Component {
   render () {
     return (
       <div className="fixed-slide__slides">
-        {this.props.slides.map(slide => <FixedSlide  {...slide} />)}
+        {this.props.slides.map((slide, i) => <FixedSlide key={`slide_${i}`} {...slide} />)}
       </div>
     )
   }
