@@ -5,12 +5,24 @@
     padding-bottom: 0.5em;
     padding-top: 0.5em;
     background-color: $white;
+    &_window{
+        position: relative;
+        // 16x9 aspect ratio
+        &:before{
+            content: '';
+            padding-bottom: 56.25%;
+            display: block;
+        }
+    }
 
     &_img {
         object-fit: cover;
         width: 100%;
         height: 100%;
         padding: 0px;
+        position: absolute;
+        top: 0;
+        left:0;
     }
 }
 
