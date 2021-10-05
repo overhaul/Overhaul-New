@@ -24,7 +24,7 @@ class BlockClients extends React.Component {
     render() {
         const { title, clients } = this.props
         return (
-            <div className="block-clients">
+            <div className="block-clients gsap-fade-in">
                 <div className="container row">
                     <div className="col-xs-12 col-md-6 block-clients_title">
                         <Icon name="fire"/>
