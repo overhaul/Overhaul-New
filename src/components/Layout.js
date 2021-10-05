@@ -1,4 +1,6 @@
 import * as React from 'react'
+import { Helmet } from "react-helmet"
+
 import { useContext } from "react"
 import { MouseContext } from "../context/mouse-context"
 import MouseContextProvider from "../context/mouse-context";
@@ -23,7 +25,13 @@ React.useEffect(() => {
   const { cursorType, cursorChangeHandler } = useContext(MouseContext);
   return (
     <div className={themeColor}>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+      <Helmet>
+        <link
+          href="https://overhaul20.wpengine.com/wp-includes/css/dist/block-library/style.min.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+      </Helmet>
       <MouseContextProvider>
         <header>
           <NavDesk/>
