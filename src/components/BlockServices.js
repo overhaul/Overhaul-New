@@ -29,7 +29,7 @@ class BlockServices extends React.Component {
         // const { cursorType, cursorChangeHandler } = useContext(MouseContext);
         const { title, subTitle, paragraph, serviceItems } = this.props
         return (
-            <div className="block-services">
+            <div className="block-services gsap-fade-in">
                 <div className="container row">
                     <div className="col-xs-12 col-md-3 block-services_title">
                         <Icon name="sun"/>
