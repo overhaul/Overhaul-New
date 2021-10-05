@@ -5,7 +5,7 @@ class FullWidthImage extends React.Component {
         const {image, alt} = this.props
         return (
             <div className="full-width-image">
-                <div className="container">
+                <div className="container full-width-image_window gsap-fade-in">
                     <img
                         src={ image } 
                         alt={ alt } 

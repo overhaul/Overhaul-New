@@ -24,7 +24,7 @@ class BlockTeam extends React.Component {
     render() {
         const { title, subTitle, paragraph, team } = this.props
         return (
-            <div className="block-team">
+            <div className="block-team gsap-fade-in">
                 <div className="container row">
                     <div className="col-xs-12 col-md-6 block-team_title">
                         <Icon name="star"/>

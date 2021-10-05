@@ -24,7 +24,7 @@ class BlockList extends React.Component {
     render() {
         const { title, listItems } = this.props
         return (
-            <div className="block-list">
+            <div className="block-list gsap-fade-in">
                 <div className="container row">
                     <div className="col-xs-12 col-md-6 block-list_title">
                         <Icon name="moon"/>

@@ -27,9 +27,16 @@ header{
     align-items: center;
     margin: auto;
     padding: 0 35px;
+    transform: translateY(0px);
+    transition: 0.2s ease;
 
     @media(max-width: $tablet) {
         display: none;
+    }
+
+    &.desk-nav_hidden{
+        transform: translateY(-100px);
+        transition: 0.2s ease;
     }
 
     .logo {
