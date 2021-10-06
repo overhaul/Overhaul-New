@@ -108,7 +108,9 @@ class WorkPage extends Component {
                         />}
                       </div>
                       <p>{node.title}</p>
-                      <p className="work_card-subtitle">{node.excerpt}</p>
+                      <p className="work_card-subtitle">
+                        {node.excerpt.replace(/<[^><]+>/g, '')}
+                      </p>
                     </Link>
                   </article>
                 </div>
