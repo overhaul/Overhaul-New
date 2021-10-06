@@ -13,7 +13,7 @@ const WorkPost = ({ data }) => {
       <Layout pageTitle={title}>
         <PageHero
           title={title}
-          subTitle={excerpt}
+          subTitle={excerpt.replace(/<[^><]+>/g, '')}
           image={featuredImage?.node?.sourceUrl}
         />
         <GutenbergContent content={content} />
