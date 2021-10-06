@@ -3,6 +3,7 @@ import React from 'react'
 import DualImages from './DualImages'
 import FullWidthImage from './FullWidthImage'
 import WorkIntro from './WorkIntro'
+import PageTitle from './PageTitle'
 
 function Sections ({ sections }) {
   return !sections ? (<div />) : sections.map((section, i) => {
@@ -40,6 +41,14 @@ function Sections ({ sections }) {
             taxonomies={taxonomies}
           />
         ) 
+      case 'om_page_title' :
+        const { title, subtitle } = section
+        return(
+          <PageTitle
+             title={title}
+             subTitle={subtitle}
+          />
+        )
       default:
         return (<></>)
     }
