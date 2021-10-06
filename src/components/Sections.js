@@ -1,30 +1,47 @@
 import React from 'react'
 
-import DualImages from '/src/components/DualImages'
-import FullWidthImage from '/src/components/FullWidthImage'
+import DualImages from './DualImages'
+import FullWidthImage from './FullWidthImage'
+import WorkIntro from './WorkIntro'
 
 function Sections ({ sections }) {
   return !sections ? (<div />) : sections.map((section, i) => {
-    switch (section.fieldGroupName) {
+    switch (section.fieldGroupName || section.acf_fc_layout) {
+      case 'om_images':
       case 'Post_Description_Sections_Images':
         return section.images.length > 1
           ? (
             <DualImages
               key={i}
               images={section.images.map(
-                (node) => ({ src: node.image.sourceUrl , alt: node.image.altText })
+                (node) => {
+                  const image = node.image
+                  const src = image.sourceUrl ?? image.url
+                  const alt = image.altText ?? image.alt
+                  return { src, alt }
+                }
               )}
             />
           )
           : (
             <FullWidthImage
               key={i}
-              image={section.images[0].image.sourceUrl}
-              alt={section.images[0].image.altText}
+              image={section.images[0].image.sourceUrl ?? section.images[0].image.url}
+              alt={section.images[0].image.altText ?? section.images[0].image.alt}
             />
-          )        
+          )
+      case 'Post_Description_Sections_Content':
+      case 'om_content':
+        const {side_title, paragraph, taxonomies} = section.content_section
+        return (
+          <WorkIntro
+            title={side_title}
+            paragraph={paragraph}
+            taxonomies={taxonomies}
+          />
+        ) 
       default:
-        return(<div>NO IMAGE</div>)
+        return (<></>)
     }
   })
 }
