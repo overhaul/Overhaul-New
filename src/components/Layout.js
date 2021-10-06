@@ -53,6 +53,8 @@ function Layout({children, themeColor, pageTitle, seo}) {
           type="text/css"
         />
 
+        {seo.title ? <title>{seo.title}</title> : ''}
+
         {seo.canonical ? <link rel="canonical" href={seo.canonical} /> : ''}
         {seo.metaDesc ? <meta name="description" content={seo.metaDesc} /> : ''}
         {seo.metaKeywords ? <meta name="keywords" content={seo.metaKeywords} /> : ''}
