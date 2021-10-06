@@ -9,15 +9,11 @@ import GutenbergContent from '/src/components/GutenbergContent'
 
 const WorkPost = ({ data }) => {
     const { title, content, description, featuredImage } = data.wpPost
-    const subtitle = 'Subtitle'
-    const hero_image = {}
-    const paragraph = ''
-    const lists = []
     return (
       <Layout pageTitle={title}>
         <PageHero
           title={title}
-          subTitle={subtitle}
+          subTitle={excerpt}
           image={featuredImage?.node?.sourceUrl}
         />
         <GutenbergContent content={content} />
@@ -30,6 +26,7 @@ export const query = graphql `
     wpPost(slug: {eq: $slug}) {
       id
       title
+      excerpt
       featuredImage {
         node {
           altText
