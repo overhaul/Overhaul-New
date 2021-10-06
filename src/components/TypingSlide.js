@@ -1,4 +1,4 @@
-import React, {Component, useRef} from 'react'
+import React, {Component} from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -31,7 +31,7 @@ class TypingSlide extends Component {
   }
 
   componentWillUnmount () {
-    this.scrollWatcher.destroy()
+    this.scrollWatcher.kill()
   }
 
   render () {

@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { useContext } from "react";
 import Icon from '../components/Icons'
-import { MouseContext } from "../context/mouse-context";
+// import { useContext } from "react";
+// import { MouseContext } from "../context/mouse-context";
 
 class BlockServices extends React.Component {
 

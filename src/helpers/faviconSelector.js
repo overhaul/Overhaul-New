@@ -6,7 +6,6 @@ import iconRaised from  '../images/favicons/sign-of-the-horns.png'
 import iconVulcan from  '../images/favicons/vulcan-salute.png'
 
 //Dynamic Favicons
-
 export default function() {
   const icons = [ iconCall, iconPinched, iconHorns, iconGesture, iconRaised, iconVulcan ]
   const iconIndex = Math.floor(icons.length * Math.random())
