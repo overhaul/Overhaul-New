@@ -45,7 +45,7 @@ class WorkPage extends Component {
   render() {
     const { nodes: workNodes } = this.props.data.allWpPost;
     return (
-        <Layout>
+        <Layout seo={this.props.data.wpPage.seo}>
           <PageTitle
             title='Building brands that matter.'
           />
@@ -170,6 +170,33 @@ export const query = graphql `
             uri
           }
         }
+      }
+    }
+
+    wpPage(slug: {eq: "work"}) {
+      title
+      seo {
+        canonical
+        cornerstone
+        focuskw
+        fullHead
+        metaDesc
+        metaKeywords
+        metaRobotsNofollow
+        metaRobotsNoindex
+        opengraphAuthor
+        opengraphDescription
+        opengraphModifiedTime
+        opengraphPublishedTime
+        opengraphPublisher
+        opengraphSiteName
+        opengraphTitle
+        opengraphType
+        opengraphUrl
+        readingTime
+        title
+        twitterDescription
+        twitterTitle
       }
     }
   }

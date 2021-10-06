@@ -53,9 +53,7 @@ function Layout({children, themeColor, pageTitle, seo}) {
           rel="stylesheet"
           type="text/css"
         />
-<<<<<<< HEAD
         <link rel="icon" type="image/x-icon" href={favicon()}/>
-=======
 
         {seo.title ? <title>{seo.title}</title> : ''}
 
@@ -82,7 +80,6 @@ function Layout({children, themeColor, pageTitle, seo}) {
         {seo.twitterImage?.sourceUrl ? <meta name="twitter:card" content="summary_large_image" /> : ''}
 
         {seo.schema?.raw ? <script type='application/ld+json'>{seo.schema.raw}</script> : '' }
->>>>>>> 5b1e5ccc89ee548e4a431507f8fe061a04c7e528
       </Helmet>
       <MouseContextProvider>
         <header>
