@@ -31,21 +31,28 @@ class WorkIntro extends React.Component {
                     </div>
                     <div className="work-intro_paragraph col-xs-12 col-md-6 col-md-offset-2">
                         { paragraph ? <div dangerouslySetInnerHTML={{ __html:paragraph}}></div> : ''}
-                        <div className={`work-intro_read-more-content row ${this.state.toggleIsOpen ? 'open' : ''}`}>
-                            {taxonomies.map((list, i) => (
-                                <ul key={i} className="work-intro_read-more-list col-xs-6 col-md-5">
-                                <li><strong>{list.title}</strong></li>
-                                {list.items.map((item, j) => <li key={`${i}_${j}`}>{item}</li>)}
-                                </ul>
-                            ))}
-                        </div>
-                        <button onClick={this.toggleMore}
-                                onKeyDown={this.toggleMore}
-                                className="work-intro_read-more-button"
-                                >
-                             <p>{this.state.toggleIsOpen ? 'Read Less' : 'Read More'}</p>
-                        </button>
-                        
+                        {
+                          !taxonomies.length ? '' : (
+                            <div className={`work-intro_read-more-content row ${this.state.toggleIsOpen ? 'open' : ''}`}>
+                                {taxonomies.map((list, i) => (
+                                    <ul key={i} className="work-intro_read-more-list col-xs-6 col-md-5">
+                                    <li><strong>{list.title}</strong></li>
+                                    {list.items.map((item, j) => <li key={`${i}_${j}`}>{item.text ?? item}</li>)}
+                                    </ul>
+                                ))}
+                            </div>
+                          )
+                        }
+                        {
+                          !taxonomies.length ? '' : (
+                            <button onClick={this.toggleMore}
+                                    onKeyDown={this.toggleMore}
+                                    className="work-intro_read-more-button"
+                                    >
+                                <p>{this.state.toggleIsOpen ? 'Read Less' : 'Read More'}</p>
+                            </button>
+                          )
+                        }
                     </div>
                 </div>
             </div>
