@@ -8,17 +8,24 @@ import Layout from '../../components/Layout'
 import GutenbergContent from '/src/components/GutenbergContent'
 
 const WorkPost = ({ data }) => {
-    const { title, content, description, featuredImage, excerpt } = data.wpPost
-    return (
-      <Layout pageTitle={title}>
-        <PageHero
-          title={title}
-          subTitle={excerpt.replace(/<[^><]+>/g, '')}
-          image={featuredImage?.node?.sourceUrl}
-        />
-        <GutenbergContent content={content} />
-      </Layout>
-    )
+  const {
+    title,
+    content,
+    description,
+    featuredImage,
+    excerpt,
+    seo,
+  } = data.wpPost
+  return (
+    <Layout seo={seo}>
+      <PageHero
+        title={title}
+        subTitle={excerpt.replace(/<[^><]+>/g, '')}
+        image={featuredImage?.node?.sourceUrl}
+      />
+      <GutenbergContent content={content} />
+    </Layout>
+  )
 }
 
 export const query = graphql `
@@ -27,6 +34,35 @@ export const query = graphql `
       id
       title
       excerpt
+      content
+      seo {
+        canonical
+        metaDesc
+        metaKeywords
+        metaRobotsNofollow
+        metaRobotsNoindex
+        opengraphAuthor
+        opengraphDescription
+        opengraphModifiedTime
+        opengraphPublishedTime
+        opengraphPublisher
+        opengraphSiteName
+        opengraphTitle
+        opengraphType
+        opengraphUrl
+        title
+        twitterDescription
+        twitterTitle
+        schema {
+          raw
+        }
+        opengraphImage {
+          sourceUrl
+        }
+        twitterImage {
+          sourceUrl
+        }
+      }
       featuredImage {
         node {
           altText
@@ -39,7 +75,6 @@ export const query = graphql `
           sourceUrl
         }
       }
-      content
     }
   }
 `

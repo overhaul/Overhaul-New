@@ -14,11 +14,11 @@ function GutenbergContent ({ content }) {
 
           if (content.match(/GUTENBERGSECTIONS/) && sectionBlocks.length) {
             const sections = JSON.parse(sectionBlocks.shift().replace(/<!--SECTIONS|ENDSECTIONS-->/g, ''))
-            return (<Sections sections={sections.sections} />)
+            return (<Sections sections={sections.sections} key={index} />)
           }
           
           return (
-            <div dangerouslySetInnerHTML={{__html: content}}>
+            <div dangerouslySetInnerHTML={{__html: content}} key={index}>
             </div>
           )
         })}
