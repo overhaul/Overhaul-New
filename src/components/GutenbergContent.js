@@ -8,7 +8,7 @@ function GutenbergContent ({ content }) {
     .split('BLOCKSPLIT')
     .filter((v) => !v.match(/^[\s\n]*$/))
   return (
-    <div style={{zIndex: 100, backgroundColor: 'white', position: 'relative'}}>
+    <div style={{zIndex: 100, backgroundColor: 'white', position: 'relative', willChange: 'transform'}}>
       <div className="container">
         {gutenbergBlocks.map((content, index) => {
 
