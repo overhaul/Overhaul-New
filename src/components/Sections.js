@@ -6,14 +6,14 @@ import WorkIntro from './WorkIntro'
 import PageTitle from './PageTitle'
 
 function Sections ({ sections }) {
-  return !sections ? (<div />) : sections.map((section, i) => {
+  return !sections ? (<div />) : sections.map((section, index) => {
     switch (section.fieldGroupName || section.acf_fc_layout) {
       case 'om_images':
       case 'Post_Description_Sections_Images':
         return section.images.length > 1
           ? (
             <DualImages
-              key={i}
+              key={index}
               images={section.images.map(
                 (node) => {
                   const image = node.image
@@ -26,7 +26,7 @@ function Sections ({ sections }) {
           )
           : (
             <FullWidthImage
-              key={i}
+              key={index}
               image={section.images[0].image.sourceUrl ?? section.images[0].image.url}
               alt={section.images[0].image.altText ?? section.images[0].image.alt}
             />
@@ -36,6 +36,7 @@ function Sections ({ sections }) {
         const {side_title, paragraph, taxonomies} = section.content_section
         return (
           <WorkIntro
+            key={index}
             title={side_title}
             paragraph={paragraph}
             taxonomies={taxonomies}
