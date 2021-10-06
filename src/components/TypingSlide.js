@@ -48,7 +48,7 @@ class TypingSlide extends Component {
                   {this.props.text.map((text, i) => {
                     const start = ((i - 1) * textStep)
                     const position = (revealProgress - start) / textStep
-                    return (<span style={{ opacity: position }}> {text}</span>)
+                    return (<span key={i}style={{ opacity: position }}> {text}</span>)
                   })}
                 </h1>
               </div>

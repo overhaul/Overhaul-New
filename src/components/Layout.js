@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useContext} from 'react'
+import React, {useRef, useEffect, useContext, useState} from 'react'
 import { Helmet } from "react-helmet"
 
 import { MouseContext } from "../context/mouse-context"
@@ -13,6 +13,7 @@ import '../styles/styles.scss'
 import NavDesk from '../components/NavDesk'
 import NavMob from '../components/NavMob'
 import Footer from '../components/Footer'
+import favicon from '../helpers/faviconSelector'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,6 +42,7 @@ function Layout({children, themeColor}) {
   }, []);
 
   const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+
   return (
     <div className={themeColor} ref={el}>
       <Helmet>
@@ -49,6 +51,7 @@ function Layout({children, themeColor}) {
           rel="stylesheet"
           type="text/css"
         />
+        <link rel="icon" type="image/x-icon" href={favicon()}/>
       </Helmet>
       <MouseContextProvider>
         <header>
