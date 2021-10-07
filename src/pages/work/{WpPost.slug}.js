@@ -21,7 +21,9 @@ const WorkPost = ({ data }) => {
         subTitle={excerpt.replace(/<[^><]+>/g, '')}
         image={featuredImage?.node?.sourceUrl}
       />
-      <GutenbergContent content={content} />
+      <div style={{zIndex: 100, backgroundColor: 'white', position: 'relative', willChange: 'transform'}}>
+        <GutenbergContent content={content} />
+      </div>
     </Layout>
   )
 }
