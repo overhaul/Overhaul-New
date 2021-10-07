@@ -1,7 +1,5 @@
 import * as React from 'react'
 import Icon from '../components/Icons'
-// import { useContext } from "react";
-// import { MouseContext } from "../context/mouse-context";
 
 class BlockServices extends React.Component {
 
@@ -26,7 +24,6 @@ class BlockServices extends React.Component {
     }
 
     render() {
-        // const { cursorType, cursorChangeHandler } = useContext(MouseContext);
         const { title, subTitle, paragraph, serviceItems } = this.props
         return (
             <div className="block-services gsap-fade-in">
@@ -53,8 +50,6 @@ class BlockServices extends React.Component {
                                     <a href={'mailto:' + 'info@overhaulmedia.com'} 
                                        target="_blank" 
                                        rel="noreferrer"
-                                       // onMouseEnter={() => cursorChangeHandler("hovered")}
-                                       // onMouseLeave={() => cursorChangeHandler("")}
                                        >
                                        Ask us if we’re a good fit.
                                    </a>
