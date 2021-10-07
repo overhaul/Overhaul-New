@@ -2,6 +2,7 @@ import React from 'react'
 import Sections from './Sections'
 
 function GutenbergContent ({ content, containerClass }) {
+  if(!content) content = ''
   const sectionBlocks = content.match(/<!--SECTIONS(.+)ENDSECTIONS-->/g)
   const gutenbergBlocks =
     content.replace(/<!--SECTIONS(.+)ENDSECTIONS-->/g, 'BLOCKSPLITGUTENBERGSECTIONSBLOCKSPLIT')

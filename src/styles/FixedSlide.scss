@@ -9,21 +9,21 @@
 
   // Uncomment if you want the last slide to
   // scroll out of view and not be fixed
-  // &:last-child {
-  //   z-index: 0;
-  //   height: 200vh;
-  //   margin-top: -100vh;
+  &:last-child {
+    z-index: 0;
+    height: 200vh;
+    margin-top: -100vh;
 
-  //   .fixed-slide__inner {
-  //     position: absolute;
-  //   }
+    .fixed-slide__inner {
+      position: absolute;
+    }
 
-  //   .fixed-slide__clip {
-  //     position: sticky;
-  //     height: 100vh;
-  //     clip: none;
-  //   }
-  // }
+    .fixed-slide__clip {
+      position: sticky;
+      height: 100vh;
+      clip: none;
+    }
+  }
 
   &__inner {
     position: fixed;
@@ -36,6 +36,7 @@
 
   &__title {
     max-width: 756px;
+    padding-bottom: 0.25em;
 
     a {
       color: currentColor;
