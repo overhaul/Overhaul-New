@@ -1,3 +1,15 @@
 .block-cta{
 	padding: 2em 0 4em;
 }
+
+.dark{
+	.block-cta{
+		color:$white;
+	}
+	a{
+		color:$white;
+		&:hover{
+			color:$red;
+		}
+	}
+}

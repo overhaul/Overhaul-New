@@ -39,7 +39,7 @@ class WorkPage extends Component {
     if (this.state.currentCategory === -1) return true
     const currentCategoryObject = categories[this.state.currentCategory]
     const currentCategoryTitle = currentCategoryObject?.title
-    return (node.cats || []).find((cat) => cat.title === currentCategoryTitle)
+    return (node.categories.nodes || []).find((cat) => cat.name === currentCategoryTitle)
   }
 
   render() {
@@ -114,6 +114,7 @@ class WorkPage extends Component {
                     </Link>
                   </article>
                 </div>
+
               )
               })
             }
@@ -126,7 +127,7 @@ class WorkPage extends Component {
                   <article key={node.id}>
                     <Link to={`/work/${node.slug.toLowerCase()}`}>
                       <p>{node.title}</p>
-                      <p className="work_card-list-subtitle">{node.subtitle}</p>
+                      <p className="work_card-list-subtitle">{node.excerpt.replace(/<[^><]+>/g, '')}</p>
                       <p className="work_card-list-date">{node.date}</p>
                     </Link>
                   </article>
@@ -161,6 +162,12 @@ export const query = graphql `
         title
         excerpt
         content
+        categories {
+        nodes {
+          name
+        }
+      }
+        date(formatString: "YYYY")
         featuredImage {
           node {
             srcSet

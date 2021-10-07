@@ -37,10 +37,10 @@ function Layout({children, themeColor, pageTitle, seo}) {
         duration: 1
       });
     }
-    return () => {
-      ScrollTrigger.getAll().forEach(ST => ST.kill());
-        gsap.globalTimeline.clear();
-    }
+    // return () => {
+    //   ScrollTrigger.getAll().forEach(ST => ST.kill());
+    //     gsap.globalTimeline.clear();
+    // }
   }, []);
 
   // const { cursorType, cursorChangeHandler } = useContext(MouseContext);
