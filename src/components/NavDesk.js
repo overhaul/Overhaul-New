@@ -20,7 +20,7 @@ class NavDesk extends React.Component{
 
   // Remove the event listener when the component unmounts.
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    // window.removeEventListener("scroll", this.handleScroll);
   }
 
   // Hide or show the menu.
