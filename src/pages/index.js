@@ -2,6 +2,7 @@ import * as React from 'react'
 import Layout from '../components/Layout'
 import FixedSlides from '../components/FixedSlides'
 import TypingSlide from '../components/TypingSlide'
+import BlockCallToAction from '../components/BlockCallToAction'
 
 // Temporary content,
 // delete once pulling from site
@@ -18,8 +19,13 @@ const IndexPage = () => {
 
   return (
     <Layout themeColor="dark" pageTitle="Home Page">
-      <TypingSlide height="200" text={titleSlideText} />
+      <TypingSlide height="150" text={titleSlideText} />
       <FixedSlides slides={slides} />
+      <BlockCallToAction
+      title="Have a specific need? Don't see what you're after?"
+      link="/contact"
+      cta="Ask us if we're a good fit."
+      />
     </Layout>
   )
 }
