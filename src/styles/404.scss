@@ -1,0 +1,52 @@
+.error{
+	display: flex;
+	flex-direction: row;
+  justify-content: center;
+  align-items: center;
+	color: $white;
+	height: 80vh;
+
+	&_title{
+		text-align: center;
+		font-size: 4em;
+
+		@media(max-width: $mobile){
+			font-size: 2em;
+			text-align: left;
+		}
+
+		h1{
+			font-size: 4em;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+		}
+
+		h2{
+			font-size: 69px;
+			line-height: 110px;
+			margin-top: 2em;
+			margin-bottom: 15px;
+
+			@media(max-width: $mobile){
+				font-size: 38px;
+				line-height: 50px;
+			}
+		}
+
+		&-star{
+
+			.scaling-svg {
+		    position: relative;
+		    height: 295px;
+		    width: auto;
+		    padding: 10px;
+		    fill:$white;
+
+		    @media(max-width: $mobile){
+		    	height: 95px;
+		    }
+		  }
+		}
+	}	
+}
