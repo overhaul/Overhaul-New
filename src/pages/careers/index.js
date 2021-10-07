@@ -12,11 +12,11 @@ const CareersPage = ({ data }) => {
           <div className="careers container row">
             <h2 className="col-md-6 col-xs-12">Open Positions</h2>
             <div className="col-xs-12 col-md-6">
-             {
-              data.allMdx.nodes.map((node) => (
+              {
+                data.wpPage.wpChildren.nodes.map((node) => (
                   <Link to={`/careers/${node.slug}`} className="careers_card" key={node.id}>
-                      <h2>{node.frontmatter.title}</h2>
-                    <div className="careers_card-link"/>
+                    <h2>{node.title}</h2>
+                    <div className="careers_card-link" />
                   </Link>
                 ))
               }
@@ -28,17 +28,42 @@ const CareersPage = ({ data }) => {
 
 export const query = graphql `
   query {
-    allMdx(filter: {fileAbsolutePath: {regex: "/careers/"}}) {
-      nodes {
-        frontmatter {
-          title
-          date(formatString: "MMMM D, YYYY")
+    wpPage(slug: {eq: "careers"}) {
+      title
+      seo {
+        canonical
+        cornerstone
+        focuskw
+        fullHead
+        metaDesc
+        metaKeywords
+        metaRobotsNofollow
+        metaRobotsNoindex
+        opengraphAuthor
+        opengraphDescription
+        opengraphModifiedTime
+        opengraphPublishedTime
+        opengraphPublisher
+        opengraphSiteName
+        opengraphTitle
+        opengraphType
+        opengraphUrl
+        readingTime
+        title
+        twitterDescription
+        twitterTitle
+      }
+      wpChildren {
+        nodes {
+          ... on WpPage {
+            id
+            title
+            slug
+            uri
+          }
         }
-        id
-        slug
       }
     }
   }
-
 `
 export default CareersPage
