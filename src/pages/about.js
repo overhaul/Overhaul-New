@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 import PageTitle from '../components/PageTitle'
@@ -21,10 +22,10 @@ import {aboutCarousel} from '../../work-data/aboutCarousel'
 import aboutImage from '/src/images/OverhaulOffice.jpg'
 import approachImage from '/src/images/our-approach.jpg'
 
-const AboutPage = () => {
-
+const AboutPage = ({ data }) => {
+    const seo = data?.wpPage?.seo || {}
     return (
-        <Layout themeColor="dark" pageTitle="About Us">
+        <Layout themeColor="dark" seo={seo}>
             <PageTitle
                 title="A dozen years of digital, brand, and marketing projects. Edmonton born and built."
             />
@@ -74,5 +75,36 @@ const AboutPage = () => {
         </Layout>
     )
 }
+
+export const query = graphql `
+  query {
+    wpPage(slug: {eq: "about"}) {
+      title
+      seo {
+        canonical
+        cornerstone
+        focuskw
+        fullHead
+        metaDesc
+        metaKeywords
+        metaRobotsNofollow
+        metaRobotsNoindex
+        opengraphAuthor
+        opengraphDescription
+        opengraphModifiedTime
+        opengraphPublishedTime
+        opengraphPublisher
+        opengraphSiteName
+        opengraphTitle
+        opengraphType
+        opengraphUrl
+        readingTime
+        title
+        twitterDescription
+        twitterTitle
+      }
+    }
+  }
+`
 
 export default AboutPage
