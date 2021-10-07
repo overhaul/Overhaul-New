@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import PageTitle from '../../components/PageTitle'
 import BlockCallToAction from '../../components/BlockCallToAction'
-import {categories} from '/work-data/work-categories'
 
 class WorkPage extends Component {
 
@@ -12,7 +11,7 @@ class WorkPage extends Component {
     super()
     this.state = {
       listIsOpen: true,
-      currentCategory: -1
+      currentCategory: -1,
     }
     this.toggleView = this.toggleView.bind(this)
     this.updateCategory = this.updateCategory.bind(this)
@@ -37,9 +36,30 @@ class WorkPage extends Component {
 
   fitlerNode(node) {
     if (this.state.currentCategory === -1) return true
-    const currentCategoryObject = categories[this.state.currentCategory]
+    const currentCategoryObject = this.categoryList()[this.state.currentCategory]
     const currentCategoryTitle = currentCategoryObject?.title
     return (node.categories.nodes || []).find((cat) => cat.name === currentCategoryTitle)
+  }
+
+  categoryList() {
+    const { nodes: workNodes } = this.props.data.allWpPost;
+
+    const workPostCategories = workNodes.reduce((usedCategories, post) => {
+      for (let i = 0; i < post.categories.nodes.length; i++) {
+        if (!usedCategories[post.categories.nodes[i].slug]) {
+          usedCategories[post.categories.nodes[i].slug] = 
+            post.categories.nodes[i].name
+        }
+      }
+      return usedCategories
+    }, {})
+
+    return Object.keys(workPostCategories).map((cat) => {
+      return {
+        title: workPostCategories[cat],
+        slug: cat,
+      }
+    })
   }
 
   render() {
@@ -55,13 +75,13 @@ class WorkPage extends Component {
                 <ul className="work-filter_items">
                   <li className="work-filter_item first">
                     <a onClick={ () => this.updateCategory(-1)}>
-                      {categories[this.state.currentCategory]?.title ?? 'All'}
+                      {this.categoryList()[this.state.currentCategory]?.title ?? 'All'}
                     </a>
                   </li>
                   <li className={'work-filter_item ' + (this.state.currentCategory === -1 ? 'work-filter_item--off' : '')}>
                     <a onClick={ () => this.updateCategory(-1)}>All</a>
                   </li>
-                  {categories.map((category, index) => (
+                  {this.categoryList().map((category, index) => (
                     <li className={'work-filter_item ' + (this.state.currentCategory === index ? 'work-filter_item--off' : '')} key={index}>
                       <a onClick={ () => this.updateCategory(index)}>{category.title}</a>
                     </li>
@@ -165,6 +185,7 @@ export const query = graphql `
         categories {
         nodes {
           name
+          slug
         }
       }
         date(formatString: "YYYY")
