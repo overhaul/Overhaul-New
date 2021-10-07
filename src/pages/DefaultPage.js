@@ -1,26 +1,25 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import PageTitle from '../components/PageTitle'
-import Contact from '../components/Contact'
+import GutenbergContent from '../components/GutenbergContent'
 
-const ContactPage = ({data}) => {
+const DefaultPage = ({data}) => {
     const seo = data?.wpPage?.seo || {}
+    console.log(data)
     return (
         <Layout themeColor="dark" seo={seo}>
-            <PageTitle
-                title='We do what you can’t.'
-                subTitle='You’ve got a great business. We’re here to help make it better. If you’d like to talk about working with us then we’d love to hear your story.'
+          <GutenbergContent
+            content={data.wpPage.content}
             />
-            <Contact/>
         </Layout>
     )
 }
 
 export const query = graphql `
-  query {
-    wpPage(slug: {eq: "contact"}) {
+  query($slug: String) {
+    wpPage(slug: {eq: $slug}) {
       title
+      content
       seo {
         canonical
         cornerstone
@@ -48,4 +47,4 @@ export const query = graphql `
   }
 `
 
-export default ContactPage
+export default DefaultPage

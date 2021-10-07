@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import PageTitle from '../../components/PageTitle'
 import BlockCallToAction from '../../components/BlockCallToAction'
-import {categories} from '/work-data/work-categories'
 
 class WorkPage extends Component {
 
@@ -12,7 +11,7 @@ class WorkPage extends Component {
     super()
     this.state = {
       listIsOpen: true,
-      currentCategory: -1
+      currentCategory: -1,
     }
     this.toggleView = this.toggleView.bind(this)
     this.updateCategory = this.updateCategory.bind(this)
@@ -37,15 +36,36 @@ class WorkPage extends Component {
 
   fitlerNode(node) {
     if (this.state.currentCategory === -1) return true
-    const currentCategoryObject = categories[this.state.currentCategory]
+    const currentCategoryObject = this.categoryList()[this.state.currentCategory]
     const currentCategoryTitle = currentCategoryObject?.title
-    return node.frontmatter.cats.find((cat) => cat.title === currentCategoryTitle)
+    return (node.categories.nodes || []).find((cat) => cat.name === currentCategoryTitle)
+  }
+
+  categoryList() {
+    const { nodes: workNodes } = this.props.data.allWpPost;
+
+    const workPostCategories = workNodes.reduce((usedCategories, post) => {
+      for (let i = 0; i < post.categories.nodes.length; i++) {
+        if (!usedCategories[post.categories.nodes[i].slug]) {
+          usedCategories[post.categories.nodes[i].slug] = 
+            post.categories.nodes[i].name
+        }
+      }
+      return usedCategories
+    }, {})
+
+    return Object.keys(workPostCategories).map((cat) => {
+      return {
+        title: workPostCategories[cat],
+        slug: cat,
+      }
+    })
   }
 
   render() {
-    var { data } = this.props;
+    const { nodes: workNodes } = this.props.data.allWpPost;
     return (
-        <Layout>
+        <Layout seo={this.props.data.wpPage.seo}>
           <PageTitle
             title='Building brands that matter.'
           />
@@ -55,13 +75,13 @@ class WorkPage extends Component {
                 <ul className="work-filter_items">
                   <li className="work-filter_item first">
                     <a onClick={ () => this.updateCategory(-1)}>
-                      {categories[this.state.currentCategory]?.title ?? 'All'}
+                      {this.categoryList()[this.state.currentCategory]?.title ?? 'All'}
                     </a>
                   </li>
                   <li className={'work-filter_item ' + (this.state.currentCategory === -1 ? 'work-filter_item--off' : '')}>
                     <a onClick={ () => this.updateCategory(-1)}>All</a>
                   </li>
-                  {categories.map((category, index) => (
+                  {this.categoryList().map((category, index) => (
                     <li className={'work-filter_item ' + (this.state.currentCategory === index ? 'work-filter_item--off' : '')} key={index}>
                       <a onClick={ () => this.updateCategory(index)}>{category.title}</a>
                     </li>
@@ -95,40 +115,53 @@ class WorkPage extends Component {
           </div>
 
           <div className={`work container row grid ${this.state.listIsOpen ? 'grid-view' : 'list-view'}`}>
-           {
-            data.allMdx.nodes.filter(this.fitlerNode).map((node, index) => (
-              <div className="col-xs-12 col-md-6 grid_card" key={index}>
-                <article className="work_card" key={node.id}>
-                  <Link to={`/work/${node.slug.toLowerCase()}`}>
-                    <div className="work_card-featured-image">
-                      <img src={node.frontmatter.hero_image.publicURL} alt={node.frontmatter.hero_image_alt}/>
-                    </div>
-                    <p>{node.frontmatter.title}</p>
-                    <p className="work_card-subtitle">{node.frontmatter.subtitle}</p>
-                  </Link>
-                </article>
-              </div>
-            ))
-          }
+            {
+              workNodes.filter(this.fitlerNode).map((node, index) => {
+                return (
+                <div className="col-xs-12 col-md-6 grid_card" key={index}>
+                  <article className="work_card" key={node.id}>
+                    <Link to={`/work/${node.slug.toLowerCase()}`}>
+                      <div className="work_card-featured-image">
+                        {node.featuredImage && <img
+                          src={node.featuredImage.node.sourceUrl}
+                          alt={node.featuredImage.node.altText}
+                        />}
+                      </div>
+                      <p>{node.title}</p>
+                      <p className="work_card-subtitle">
+                        {node.excerpt.replace(/<[^><]+>/g, '')}
+                      </p>
+                    </Link>
+                  </article>
+                </div>
+
+              )
+              })
+            }
           </div>
+
           <div className={`work container row list ${this.state.listIsOpen ? 'grid-view' : 'list-view'}`}>
-             {
-              data.allMdx.nodes.filter(this.fitlerNode).map((node, index) => (
+            {
+              workNodes.filter(this.fitlerNode).map((node, index) => (
                 <div className="work_card-list col-xs-12" key={index}>
                   <article key={node.id}>
                     <Link to={`/work/${node.slug.toLowerCase()}`}>
-                      <p>{node.frontmatter.title}</p>
-                      <p className="work_card-list-subtitle">{node.frontmatter.subtitle}</p>
-                      <p className="work_card-list-date">{node.frontmatter.date}</p>
+                      <p>{node.title}</p>
+                      <p className="work_card-list-subtitle">{node.excerpt.replace(/<[^><]+>/g, '')}</p>
+                      <p className="work_card-list-date">{node.date}</p>
                     </Link>
                   </article>
                   <div className="work_card-list-image">
-                    <img src={node.frontmatter.hero_image.publicURL} alt={node.frontmatter.hero_image_alt}/>
+                    {node.featuredImage && <img
+                      src={node.featuredImage.node.sourceUrl}
+                      alt={node.featuredImage.node.altText}
+                    />}
                   </div>
                 </div>
               ))
             }
           </div>
+
           <BlockCallToAction
             title='Look like something you need?'
             cta='Start the conversation.'
@@ -140,26 +173,61 @@ class WorkPage extends Component {
 }
 
 export const query = graphql `
-  query WorkPage{
-    allMdx(sort: {fields: frontmatter___date, order: DESC},filter: {fileAbsolutePath: {regex: "/work/"}}) {
+  query WorkPage {
+    allWpPost {
       nodes {
-        frontmatter {
-          cats {
-            title
-          }
-          title
-          subtitle
-          paragraph
-          hero_image_alt
-          hero_image {
-            publicURL
-          }
-          date(formatString: "YYYY")
-        }
         id
+        uri
         slug
+        title
+        excerpt
+        content
+        categories {
+        nodes {
+          name
+          slug
+        }
+      }
+        date(formatString: "YYYY")
+        featuredImage {
+          node {
+            srcSet
+            slug
+            sourceUrl
+            title
+            uri
+          }
+        }
+      }
+    }
+
+    wpPage(slug: {eq: "work"}) {
+      title
+      seo {
+        canonical
+        cornerstone
+        focuskw
+        fullHead
+        metaDesc
+        metaKeywords
+        metaRobotsNofollow
+        metaRobotsNoindex
+        opengraphAuthor
+        opengraphDescription
+        opengraphModifiedTime
+        opengraphPublishedTime
+        opengraphPublisher
+        opengraphSiteName
+        opengraphTitle
+        opengraphType
+        opengraphUrl
+        readingTime
+        title
+        twitterDescription
+        twitterTitle
       }
     }
   }
 `
+
 export default WorkPage

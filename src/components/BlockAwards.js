@@ -24,7 +24,7 @@ class BlockAwards extends React.Component {
     render() {
         const { title, awards } = this.props
         return (
-            <div className="block-awards">
+            <div className="block-awards gsap-fade-in">
                 <div className="container row">
                     <div className="col-xs-12 block-awards_title">
                         <Icon name="water"/>

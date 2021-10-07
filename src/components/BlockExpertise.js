@@ -9,7 +9,7 @@ class BlockExpertise extends React.Component {
           accordionIsOpen: false
         }
         this.toggleAccordion = this.toggleAccordion.bind(this)
-        }
+    }
 
     toggleAccordion() {
 
@@ -24,7 +24,7 @@ class BlockExpertise extends React.Component {
     render() {
         const { title, areas } = this.props
         return (
-            <div className="block-expertise">
+            <div className="block-expertise gsap-fade-in">
                 <div className="container row">
                     <div className="col-xs-12 col-md-3 block-approach_title">
                         <Icon name="sand"/>
@@ -32,14 +32,14 @@ class BlockExpertise extends React.Component {
                         <button aria-label="open" onClick={this.toggleAccordion} className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}/>
                     </div>
                     <div className={`accordion col-md-9 col-xs-12 ${this.state.accordionIsOpen ? 'open' : ''}`}>
-                        {areas.map(({ title, paragraph, client, j}) => (
-                            <div className="row block-expertise_content" key={j}>
+                        {areas.map(({ title, paragraph, client }, i ) => (
+                            <div key={i} className="row block-expertise_content">
                                 <h2 className="col-xs-12 col-md-4">{title}</h2>
                                 { paragraph ? <p className="col-md-8 col-xs-12" dangerouslySetInnerHTML={{ __html:paragraph}}></p> : ''}
                                 <ul className="col-xs-12 col-md-8 col-md-offset-4" >
-                                    {client.map((client, index) => (
-                                        <li key={index}>{client.title}
-                                        <img className="block-expertise_content-image" 
+                                    {client.map((client, j) => (
+                                        <li key={`${i}${j}`}>{client.title}
+                                            <img className="block-expertise_content-image" 
                                              src={client.image.src} 
                                              alt={client.image.alt}
                                              />

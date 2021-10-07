@@ -24,8 +24,8 @@ class BlockApproach extends React.Component {
     render() {
         const { title, image, alt, content} = this.props
         return (
-            <div className="block-approach">
-                <div className="container row">
+            <div className="block-approach gsap-fade-in">
+                <div className="container row ">
                     <div className="col-xs-12 col-md-3 block-approach_title">
                         <Icon name="sand"/>
                         <h2>{ title }</h2>

@@ -11,7 +11,7 @@ class BlockCarousel extends React.Component {
     render() {
         const {slides}  = this.props
         return (
-            <div className="block-carousel">
+            <div className="block-carousel gsap-fade-in">
                 <div className="container row">
                     <Swiper
                         className="col-xs-12"

@@ -1,4 +1,4 @@
-import React, {Component, useRef} from 'react'
+import React, {Component} from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -31,7 +31,7 @@ class TypingSlide extends Component {
   }
 
   componentWillUnmount () {
-    this.scrollWatcher.destroy()
+    this.scrollWatcher.kill()
   }
 
   render () {
@@ -48,7 +48,7 @@ class TypingSlide extends Component {
                   {this.props.text.map((text, i) => {
                     const start = ((i - 1) * textStep)
                     const position = (revealProgress - start) / textStep
-                    return (<span style={{ opacity: position }}> {text}</span>)
+                    return (<span key={i}style={{ opacity: position }}> {text}</span>)
                   })}
                 </h1>
               </div>
