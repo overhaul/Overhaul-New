@@ -22,7 +22,11 @@ const IndexPage = ({data}) => {
 
   return (
     <Layout themeColor="dark" seo={seo}>
-      <TypingSlide height="150" text={titleSlideText} />
+      <TypingSlide
+        height="150"
+        text={titleSlideText}
+        nextSlide={slides[0]}
+      />
       <FixedSlides slides={slides} />
       <BlockCallToAction
       title="Have a specific need? Don't see what you're after?"
