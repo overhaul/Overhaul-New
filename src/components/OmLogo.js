@@ -1,12 +1,46 @@
-import * as React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import '../styles/navigation.scss'
 
+function handleMouseEnter ({logoInterval, logoIndex, setLogoInterval, setLogoIndex}) {
+	return () => {
+		clearInterval(logoInterval)
+		let currentLogoIndex = logoIndex + 1
+		setLogoIndex(currentLogoIndex)
+		setLogoInterval(
+			setInterval(
+				() => {
+					setLogoIndex(currentLogoIndex++)
+				},
+				250
+			)
+		)
+	}
+}
+
+function handleMouseLeave ({logoInterval, setLogoInterval}) {
+	return () => {
+		clearInterval(logoInterval)
+		setLogoInterval(null)
+	}
+}
+
 function OmLogo(){
+	const [logoIndex, setLogoIndex] = useState(0)
+	const [logoInterval, setLogoInterval] = useState(null)
+	const logos = ['Logo 1', 'Logo 2', 'Logo 3', 'Logo 4', 'Logo 5']
 
 	return(
-		<Link to="/" className="logo">
-			<svg id="logo" className="scaling-svg" viewBox="0 0 140 55">
+		<Link
+			to="/"
+			className="logo"
+			onMouseEnter={handleMouseEnter({logoInterval, logoIndex, setLogoInterval, setLogoIndex})}
+			onMouseLeave={handleMouseLeave({logoInterval, setLogoInterval})}
+		> 
+			{logos.map((logo, i) => {
+				return (<div key={i} style={{ display: logoIndex % logos.length === i ? 'block' : 'none' }}>{logo}</div>)
+			})}
+			{/*<svg id="logo" className="scaling-svg" viewBox="0 0 140 55">
 				<g>
 					<path d="M10.3,9.4H8c-2.7,0-4.8,1.4-6.1,3.4c-1.3,2-1.9,4.6-1.9,7.1c0,2.5,0.6,5.1,1.9,7.1c1.3,2,3.4,3.4,6.1,3.4h2.3
 						c2.7,0,4.8-1.4,6.1-3.4c1.3-2,1.9-4.6,1.9-7.1c0-2.6-0.6-5.1-1.9-7.1C15.1,10.7,13,9.4,10.3,9.4z M15.2,26.1
@@ -47,7 +81,7 @@ function OmLogo(){
 						c0.7-0.2,1.5-0.5,2.1-0.9c0.2-0.2,0.5-0.4,0.7-0.6c0.2,0.3,0.5,0.6,0.7,0.8c0.8,0.8,1.6,1.1,1.7,1.1c0.1,0,0.2,0.1,0.2,0.1
 						c0.3,0,0.6-0.2,0.7-0.5C127.1,29.4,126.9,29,126.5,28.8z"/>
 				</g>
-			</svg>
+			</svg>*/}
 		</Link>
 	)
 }

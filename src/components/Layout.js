@@ -88,7 +88,7 @@ function Layout({children, themeColor, pageTitle, seo}) {
           <NavMob/>
         </header>
         <Cursor/>
-        <CSSTransition in={isVisible} timeout={500} className="sample">
+        <CSSTransition in={isVisible} timeout={500} className="page">
           <main>
             {children}
           </main>
