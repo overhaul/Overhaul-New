@@ -11,7 +11,7 @@ class BlockImageText extends React.Component {
                         <img src={ image } alt={ imageAlt }/>
                     </div>
                     <div className="col-xs-12 col-md-6 block-image-text_text">
-                        { paragraph ? <p dangerouslySetInnerHTML={{ __html:paragraph}}></p> : ''}
+                        { paragraph ? <div dangerouslySetInnerHTML={{ __html:paragraph}}></div> : ''}
                     </div>
                 </div>
             </div>

@@ -144,3 +144,4 @@ export const ourApproach =[
         title: 'Start with the right approach. Finish with the right attitude.'
     }
 ]
+

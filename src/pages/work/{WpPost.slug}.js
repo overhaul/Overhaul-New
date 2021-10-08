@@ -5,6 +5,7 @@ import PageHero from '../../components/PageHero'
 import Layout from '../../components/Layout'
 
 import GutenbergContent from '/src/components/GutenbergContent'
+import BlockRelatedWork from '/src/components/BlockRelatedWork'
 
 const WorkPost = ({ data }) => {
   const {
@@ -13,7 +14,22 @@ const WorkPost = ({ data }) => {
     featuredImage,
     excerpt,
     seo,
+    id,
+    categories
   } = data.wpPost
+
+  // const maxRelated = 2
+
+  const relatedPosts = categories.nodes.reduce((related, category) => {
+    const posts = category.posts.nodes
+    for (let i = 0; i < posts.length; i++) {
+      if (related.used[posts[i].id]) continue
+      related.used[posts[i].id] = true
+      related.posts.push(posts[i])
+    }
+    return related
+  }, { used: { [id]: true }, posts: [] })
+
   return (
     <Layout seo={seo}>
       <PageHero
@@ -24,6 +40,7 @@ const WorkPost = ({ data }) => {
       <div style={{zIndex: 100, backgroundColor: 'white', position: 'relative', willChange: 'transform'}}>
         <GutenbergContent content={content} />
       </div>
+      <BlockRelatedWork cards={relatedPosts.posts} />
     </Layout>
   )
 }
@@ -33,6 +50,24 @@ export const query = graphql `
     wpPost(slug: {eq: $slug}) {
       id
       title
+      categories {
+        nodes {
+          posts {
+            nodes {
+              slug
+              title
+              featuredImage {
+                node {
+                  altText
+                  sourceUrl
+                }
+              }
+              excerpt
+              id
+            }
+          }
+        }
+      }
       excerpt
       content
       seo {
