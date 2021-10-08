@@ -3,6 +3,7 @@ import { Component } from "react";
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import PageTitle from '../../components/PageTitle'
+import WorkCard from '../../components/WorkCard'
 import BlockCallToAction from '../../components/BlockCallToAction'
 
 class WorkPage extends Component {
@@ -118,24 +119,14 @@ class WorkPage extends Component {
             {
               workNodes.filter(this.fitlerNode).map((node, index) => {
                 return (
-                <div className="col-xs-12 col-md-6 grid_card" key={index}>
-                  <article className="work_card" key={node.id}>
-                    <Link to={`/work/${node.slug.toLowerCase()}`}>
-                      <div className="work_card-featured-image">
-                        {node.featuredImage && <img
-                          src={node.featuredImage.node.sourceUrl}
-                          alt={node.featuredImage.node.altText}
-                        />}
-                      </div>
-                      <p>{node.title}</p>
-                      <p className="work_card-subtitle">
-                        {node.excerpt.replace(/<[^><]+>/g, '')}
-                      </p>
-                    </Link>
-                  </article>
-                </div>
-
-              )
+                  <WorkCard
+                    key={node.id}
+                    title={node.title}
+                    url={`/work/${node.slug.toLowerCase()}`}
+                    featuredImage={node.featuredImage}
+                    excerpt={node.excerpt}
+                  />
+                )
               })
             }
           </div>
