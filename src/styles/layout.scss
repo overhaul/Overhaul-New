@@ -25,6 +25,7 @@ section {
     width: calc(100% - 30px);
     max-width: $max-width;
     font-family: sans-serif;
+    overflow: hidden;
 
     @media(max-width: $tablet) {
         padding: 0px;
@@ -90,6 +91,8 @@ header {
         }
 
         .nav-link {
+            
+            margin-left: 0em;
 
             &_text {
                 color: $white;
@@ -113,13 +116,14 @@ header {
 }
 
 .page{
+    opacity: 0;
 
     &.enter{
         opacity: 0;
 
         &-active{
             opacity: 1;
-            transition: opacity 1s
+            transition: opacity 1s;
 
         }
         &-done{
@@ -132,7 +136,7 @@ header {
 
         &-active{
             opacity: 0;
-            transition: opacity 1s
+            transition: opacity 1s;
         }
 
         &-done{

@@ -12,7 +12,6 @@ const WorkPost = ({ data }) => {
     title,
     content,
     featuredImage,
-    excerpt,
     seo,
     id,
     categories
@@ -33,8 +32,7 @@ const WorkPost = ({ data }) => {
   return (
     <Layout seo={seo}>
       <PageHero
-        title={title}
-        subTitle={excerpt.replace(/<[^><]+>/g, '')}
+        subTitle={title}
         image={featuredImage?.node?.sourceUrl}
       />
       <div style={{zIndex: 100, backgroundColor: 'white', position: 'relative', willChange: 'transform'}}>
@@ -62,8 +60,10 @@ export const query = graphql `
                   sourceUrl
                 }
               }
-              excerpt
               id
+              workSubtitle {
+                subTitle
+              }
             }
           }
         }

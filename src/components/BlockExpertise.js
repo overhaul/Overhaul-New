@@ -33,7 +33,7 @@ class BlockExpertise extends React.Component {
                     </div>
                     <div className={`accordion col-md-9 col-xs-12 ${this.state.accordionIsOpen ? 'open' : ''}`}>
                         {areas.map(({ title, paragraph, client }, i ) => (
-                            <div key={i} className="row block-expertise_content">
+                            <div key={i} className="row block-expertise_content gsap-fade-in">
                                 <h2 className="col-xs-12 col-md-4">{title}</h2>
                                 { paragraph ? <p className="col-md-8 col-xs-12" dangerouslySetInnerHTML={{ __html:paragraph}}></p> : ''}
                                 <ul className="col-xs-12 col-md-8 col-md-offset-4" >

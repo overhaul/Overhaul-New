@@ -26,15 +26,17 @@ function Layout({children, themeColor, pageTitle, seo}) {
     const q = gsap.utils.toArray(".gsap-fade-in");
     for(let i = 0; i < q.length; i++) {
       gsap.fromTo(q[i], {
-        opacity: 0
+        opacity: 0,
+        y: 100,
       },{
         scrollTrigger: {
           trigger: q[i],
           start: 'top bottom',
           end: '+=500',
-          scrub: 0.5
+          scrub: 0.5,
         },
         opacity: 1,
+        y: 0,
         duration: 1
       });
     }
