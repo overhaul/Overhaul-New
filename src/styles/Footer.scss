@@ -32,6 +32,7 @@ footer {
         display: flex;
         font-size: 22px;
         line-height: 33px;
+        transition: $color;
 
         @media(max-width: $tablet-large) {
             font-size: 18px;
@@ -68,19 +69,20 @@ footer {
         }
     }
 
-    @media(max-width: 48em) {
+    @media(max-width: $mobile) {
 
-        .col-md-4,
-        .col-md-2 {
+        .col-lg-4,
+        .col-lg-2 {
             width: 100%;
             max-width: 100%;
             flex-basis: 100%;
             margin-bottom: 1em;
         }
 
-        .col-md-2 {
+        .col-lg-2 {
             margin-bottom: 1em;
         }
+
     }
 }
 
@@ -91,9 +93,11 @@ footer {
 
         a{
             color: $white;
+            transition: $color;
 
             &:hover{
                 color: $red;
+                transition: $color;
             }
         }
     }

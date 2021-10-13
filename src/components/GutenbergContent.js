@@ -9,7 +9,7 @@ function GutenbergContent ({ content, containerClass }) {
     .split('BLOCKSPLIT')
     .filter((v) => !v.match(/^[\s\n]*$/))
   return (
-    <div className={'gutenberg-content ' + (containerClass ?? 'container')}>
+    <div className={'gutenberg-content ' + (containerClass ?? '')}>
       {gutenbergBlocks.map((content, index) => {
 
         if (content.match(/GUTENBERGSECTIONS/) && sectionBlocks.length) {

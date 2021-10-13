@@ -28,8 +28,8 @@ section {
     overflow: hidden;
 
     @media(max-width: $tablet) {
-        padding: 0px;
-        width: calc(100% - 20px);
+        padding: 0px 25px;
+        width: 100%;
     }
 
     .heading {

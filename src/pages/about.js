@@ -69,9 +69,6 @@ const AboutPage = ({ data }) => {
                 title="Awards"
                 awards={awards}
             />
-            <BlockCarousel
-                slides={aboutCarousel}
-            />
         </Layout>
     )
 }

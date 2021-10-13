@@ -27,9 +27,11 @@
 
 		a{
 			color:$white;
+			transition: $color;
 
 			&:hover{
 				color: $red;
+				transition: $color;
 			}
 		}
 

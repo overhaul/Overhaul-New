@@ -5,7 +5,7 @@
   padding: 1em 0;
 
     @media(max-width: $tablet){
-      padding:0em;
+      padding: 0em 25px;
     }
 
   &_title {
@@ -16,6 +16,7 @@
 
     h2{
     	margin-bottom: 0em;
+
     }
 
     .close{
@@ -29,6 +30,10 @@
 
   h2{
   	margin-bottom: 0.3em;
+
+    &:first-child{
+      padding-top: 10px;
+    }
   }
 
   .container {
