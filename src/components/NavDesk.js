@@ -10,7 +10,7 @@ class NavDesk extends React.Component{
 
     this.state = {
       prevScrollpos: 0,
-      visible: true
+      visible: true,
     };
   }
   // Add an event listener when the component mounts.
@@ -25,15 +25,22 @@ class NavDesk extends React.Component{
 
   // Hide or show the menu.
   handleScroll = () => {
-    const { prevScrollpos } = this.state;
-
-    const currentScrollPos = window.pageYOffset;
-    const visible = prevScrollpos > currentScrollPos;
+    if (this.state.debounce) return
 
     this.setState({
-      prevScrollpos: currentScrollPos,
-      visible
-    });
+      debounce: setTimeout(() => {
+        const { prevScrollpos, debounce } = this.state;
+
+        const currentScrollPos = Math.max(0, window.pageYOffset);
+        const visible = prevScrollpos >= currentScrollPos;
+
+        this.setState({
+          prevScrollpos: currentScrollPos,
+          visible,
+          debounce: null,
+        });
+      }, 200)
+    })
   };
 
   render(){

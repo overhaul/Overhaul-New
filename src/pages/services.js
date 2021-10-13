@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PageTitle from '../components/PageTitle'
 
-const ContactPage = ({data}) => {
+const ServicesPage = ({data}) => {
     const seo = data?.wpPage?.seo || {}
     return (
         <Layout themeColor="dark" seo={seo}>
@@ -46,4 +46,4 @@ export const query = graphql `
   }
 `
 
-export default ContactPage
+export default ServicesPage

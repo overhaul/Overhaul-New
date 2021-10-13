@@ -42,15 +42,23 @@ class TypingSlide extends Component {
       <div style={{height: `${height}vh`}} className="fixed-slide typing-slide" ref={this.slideEl}>
         <div className="fixed-slide__clip">
           <div className="fixed-slide__inner">
-            <div className="fixed-slide__content">
-              <div className="container">
-                <h1 className="fixed-slide__title">
-                  {this.props.text.map((text, i) => {
-                    const start = ((i - 1) * textStep)
-                    const position = (revealProgress - start) / textStep
-                    return (<span key={i}style={{ opacity: position }}> {text}</span>)
-                  })}
-                </h1>
+            {this.props.nextSlide ? <img
+              className="fixed-slide__bg"
+              alt={this.props.nextSlide.image.alt}
+              src={this.props.nextSlide.image.src}
+            /> : ''}
+            
+            <div className="typing-slide__content-bg">
+              <div className="fixed-slide__content">
+                <div className="container">
+                  <h1 className="fixed-slide__title">
+                    {this.props.text.map((text, i) => {
+                      const start = ((i - 1) * textStep)
+                      const position = (revealProgress - start) / textStep
+                      return (<span key={i}style={{ opacity: position }}> {text}</span>)
+                    })}
+                  </h1>
+                </div>
               </div>
             </div>
           </div>

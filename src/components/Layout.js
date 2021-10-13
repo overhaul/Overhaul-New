@@ -1,10 +1,11 @@
-import React, {useRef, useEffect} from 'react'
+import React, {useRef, useEffect, useState} from 'react'
 import { Helmet } from "react-helmet"
 // import { MouseContext } from "../context/mouse-context"
-import MouseContextProvider from "../context/mouse-context";
+import MouseContextProvider from "../context/mouse-context"
 import Cursor from '../components/Cursor'
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { CSSTransition } from 'react-transition-group'
 
 import '../styles/layout.scss'
 import '../styles/styles.scss'
@@ -25,25 +26,27 @@ function Layout({children, themeColor, pageTitle, seo}) {
     const q = gsap.utils.toArray(".gsap-fade-in");
     for(let i = 0; i < q.length; i++) {
       gsap.fromTo(q[i], {
-        opacity: 0
+        opacity: 0,
+        y: 100,
       },{
         scrollTrigger: {
           trigger: q[i],
           start: 'top bottom',
           end: '+=500',
-          scrub: 0.5
+          scrub: 0.5,
         },
         opacity: 1,
+        y: 0,
         duration: 1
       });
     }
-    // return () => {
-    //   ScrollTrigger.getAll().forEach(ST => ST.kill());
-    //     gsap.globalTimeline.clear();
-    // }
+    setIsVisible(true)
+
   }, []);
 
-  // const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+  //Transition Stuff
+
+  const [isVisible, setIsVisible] = useState(false)
 
   return (
     <div className={themeColor} ref={el}>
@@ -83,13 +86,15 @@ function Layout({children, themeColor, pageTitle, seo}) {
       </Helmet>
       <MouseContextProvider>
         <header>
-          <NavDesk/>
+          <NavDesk />
           <NavMob/>
         </header>
         <Cursor/>
-        <main>
-          {children}
-        </main>
+        <CSSTransition in={isVisible} timeout={500} className="page">
+          <main>
+            {children}
+          </main>
+        </CSSTransition>
         <Footer
           address="<p>7347 104 Street NW</p><p>Edmonton, AB T6E 4B9</p>"
           phone="780 758 8642"
