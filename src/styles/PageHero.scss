@@ -18,5 +18,9 @@
         color: $white;
         left: 50%;
         transform: translateX(-50%);
+
+        @media(max-width: $tablet){
+            width: calc(100% - 50px);
+        }
     }
 }
