@@ -2,6 +2,22 @@
 	padding: 2em 0 8em;
 	margin-top: 8em;
 	
+	a{
+		text-decoration: none;
+		&:hover{
+
+			h1{
+				border-bottom: 3px solid $red;
+			}
+		}
+
+		h1{
+	    border-bottom: 3px solid $black;
+	    display: inline-block;
+	    line-height: 68px;
+	    margin-top: 10px;
+		}
+	}
 }
 
 .dark{
@@ -12,6 +28,17 @@
 		color:$white;
 		&:hover{
 			color:$red;
+
+			h1{
+				border-bottom: 3px solid $red;
+			}
+		}
+		
+		h1{
+	    border-bottom: 3px solid $white;
+	    display: inline-block;
+	    line-height: 68px;
+	    margin-top: 10px;
 		}
 	}
 }

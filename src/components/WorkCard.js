@@ -14,7 +14,7 @@ function WorkCard({title, url, featuredImage, excerpt}) {
 		      </div>
 		      <p>{title}</p>
 		      <p className="work_card-subtitle">
-		        {excerpt.replace(/<[^><]+>/g, '')}
+		        {excerpt}
 		      </p>
 		    </Link>
 		  </article>

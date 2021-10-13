@@ -124,7 +124,7 @@ class WorkPage extends Component {
                     title={node.title}
                     url={`/work/${node.slug.toLowerCase()}`}
                     featuredImage={node.featuredImage}
-                    excerpt={node.excerpt}
+                    excerpt={node.workSubtitle.subTitle}
                   />
                 )
               })
@@ -138,7 +138,7 @@ class WorkPage extends Component {
                   <article key={node.id}>
                     <Link to={`/work/${node.slug.toLowerCase()}`}>
                       <p>{node.title}</p>
-                      <p className="work_card-list-subtitle">{node.excerpt.replace(/<[^><]+>/g, '')}</p>
+                      <p className="work_card-list-subtitle">{node.workSubtitle.subTitle}</p>
                       <p className="work_card-list-date">{node.date}</p>
                     </Link>
                   </article>
@@ -188,6 +188,9 @@ export const query = graphql `
             title
             uri
           }
+        }
+        workSubtitle {
+          subTitle
         }
       }
     }

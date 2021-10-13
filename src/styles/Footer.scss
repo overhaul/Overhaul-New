@@ -1,3 +1,5 @@
+$footer-break: 1722px;
+
 footer {
     background-color: $white;
     position: relative;
@@ -11,6 +13,18 @@ footer {
         display: flex;
         flex-direction: column-reverse;
         margin-top: 1em;
+    }
+
+    @media(min-width: $footer-break){    
+        .col-lg-2 {
+            flex-basis: 16.66666667%;
+            max-width: 16.66666667%;
+        }
+
+        .col-lg-4 {
+            flex-basis: 33.33333333%;
+            max-width: 33.33333333%;
+        }
     }
 
     a {
@@ -39,10 +53,10 @@ footer {
         }
     }
 
-    @media(max-width: 1200px) {
+    @media(max-width: $footer-break) {
 
-        .col-md-4,
-        .col-md-2 {
+        .col-lg-4,
+        .col-lg-2 {
             width: 50%;
             max-width: 50%;
             flex-basis: 50%;

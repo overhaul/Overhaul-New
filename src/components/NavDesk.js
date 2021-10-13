@@ -11,7 +11,6 @@ class NavDesk extends React.Component{
     this.state = {
       prevScrollpos: 0,
       visible: true,
-      debounce: null,
     };
   }
   // Add an event listener when the component mounts.

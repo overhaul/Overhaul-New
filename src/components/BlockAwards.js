@@ -32,14 +32,14 @@ class BlockAwards extends React.Component {
                         <button aria-label="open" onClick={this.toggleAccordion} className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}/>
                     </div>
                     <div className={`accordion col-xs-12 ${this.state.accordionIsOpen ? 'open' : ''}`}>
-                        <div className="block-awards_table">
+                        <div className="block-awards_table gsap-fade-in">
                             <div className="block-awards_table-head row">
                                 <p className="block-awards_table-title col-xs-6">Award</p>
                                 <p className="block-awards_table-title col-xs-1">Year</p>
                                 <p className="block-awards_table-title col-xs-5">Project</p>
                             </div>
                             { awards.map((award, index) => (
-                                <a href={award.link} className="block-awards_table-award row" key={index}>
+                                <a href={award.link} className="block-awards_table-award row gsap-fade-in" key={index}>
                                     <p className="col-xs-9 col-md-6">{award.title}</p>
                                     <p className="col-xs-3 col-md-1 block-awards_table-award-year">{award.year}</p>
                                     <p className="col-xs-9 col-md-4">{award.project}</p>
