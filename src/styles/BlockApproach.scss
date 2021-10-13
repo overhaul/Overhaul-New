@@ -5,7 +5,7 @@
   padding: 1em 0;
 
     @media(max-width: $tablet){
-      padding:0em;
+      padding: 0em 25px;
     }
 
   &_title {
@@ -28,6 +28,7 @@
   }
 
   &_featured-image{
+    padding-top: 20px;
   	margin-bottom: 1em;
   	img{
   		width: 100%;

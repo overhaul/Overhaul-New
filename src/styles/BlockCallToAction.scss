@@ -4,41 +4,50 @@
 	
 	a{
 		text-decoration: none;
+		transition: $color;
+
 		&:hover{
 
 			h1{
-				border-bottom: 3px solid $red;
+				// border-bottom: 3px solid $red;
 			}
 		}
 
 		h1{
-	    border-bottom: 3px solid $black;
-	    display: inline-block;
-	    line-height: 68px;
-	    margin-top: 10px;
+	    // border-bottom: 3px solid $black;
+	    text-decoration: underline;
+	    // display: inline-block;
+	    // line-height: 68px;
+	    // margin-top: 10px;
 		}
 	}
 }
 
 .dark{
+
 	.block-cta{
 		color:$white;
 	}
 	a{
 		color:$white;
+		transition: $color;
+		
 		&:hover{
 			color:$red;
+			transition: $color;
 
 			h1{
-				border-bottom: 3px solid $red;
+				// border-bottom: 3px solid $red;
+
 			}
 		}
 		
 		h1{
-	    border-bottom: 3px solid $white;
-	    display: inline-block;
-	    line-height: 68px;
-	    margin-top: 10px;
+	    // border-bottom: 3px solid $white;
+	    text-decoration: underline;
+	    // display: inline-block;
+	    // line-height: 68px;
+	    // margin-top: 10px;
 		}
 	}
 }

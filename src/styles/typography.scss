@@ -73,9 +73,11 @@ ul, ol{
 
 a{
     color: $black;
+    transition: $color;s
 
     &:hover{
         color: $red;
+        transition: $color;
     }
 }
 

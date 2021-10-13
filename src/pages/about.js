@@ -17,7 +17,6 @@ import { listItems, serviceAbilities, clients, ourApproach } from '../../mock-da
 import { awards } from '../../mock-data/work-awards'
 import { team } from '../../mock-data/work-team'
 import { areas } from '../../mock-data/work-expertise'
-import {aboutCarousel} from '../../work-data/aboutCarousel'
 
 import aboutImage from '/src/images/OverhaulOffice.jpg'
 import approachImage from '/src/images/our-approach.jpg'
@@ -68,9 +67,6 @@ const AboutPage = ({ data }) => {
             <BlockAwards
                 title="Awards"
                 awards={awards}
-            />
-            <BlockCarousel
-                slides={aboutCarousel}
             />
         </Layout>
     )

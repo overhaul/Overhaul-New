@@ -3,6 +3,7 @@
 
 	@media(max-width: $tablet){
 		margin-bottom:4em;
+		padding: 0 25px;
 	}
 
 	&_content{
@@ -27,9 +28,11 @@
 
 		a{
 			color:$white;
+			transition: $color;
 
 			&:hover{
 				color: $red;
+				transition: $color;
 			}
 		}
 
