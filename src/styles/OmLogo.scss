@@ -1,13 +1,21 @@
 .logo{
 
 	.scaling-svg{
-		transition: fill 2s ease;
-		// svg{
-		// 	fill: inherit;
-		// }
+		path{
+			transition: fill 2s ease;
+			-webkit-transition: fill 2s ease;
+	 		-moz-transition: fill 2s ease;
+	 		-o-transition: fill 2s ease;
+		}
 		&:hover{
-			fill: $red;
-			transition: fill 0.2s ease;
+
+			path{
+				fill: $red;
+				transition: fill 0.2s ease;
+				-webkit-transition: fill 0.2s ease;
+		 		-moz-transition: fill 0.2s ease;
+		 		-o-transition: fill 0.2s ease;
+			}
 		}
 	}
 }
