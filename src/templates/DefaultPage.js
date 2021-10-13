@@ -5,12 +5,11 @@ import GutenbergContent from '../components/GutenbergContent'
 
 const DefaultPage = ({data}) => {
     const seo = data?.wpPage?.seo || {}
-    console.log(data)
     return (
         <Layout themeColor="dark" seo={seo}>
           <GutenbergContent
             content={data.wpPage.content}
-            />
+          />
         </Layout>
     )
 }
@@ -20,6 +19,7 @@ export const query = graphql `
     wpPage(slug: {eq: $slug}) {
       title
       content
+      slug
       seo {
         canonical
         cornerstone
