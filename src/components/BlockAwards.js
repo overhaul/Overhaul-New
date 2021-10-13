@@ -39,7 +39,7 @@ class BlockAwards extends React.Component {
                                 <p className="block-awards_table-title col-xs-5">Project</p>
                             </div>
                             { awards.map((award, index) => (
-                                <a href={award.link} className="block-awards_table-award row gsap-fade-in" key={index}>
+                                <a href={award.link} className="block-awards_table-award row" key={index}>
                                     <p className="col-xs-9 col-md-6">{award.title}</p>
                                     <p className="col-xs-3 col-md-1 block-awards_table-award-year">{award.year}</p>
                                     <p className="col-xs-9 col-md-4">{award.project}</p>
@@ -51,8 +51,8 @@ class BlockAwards extends React.Component {
                 </div>
             </div>
             
-          )
-      }
+        )
+    }
 }
 
 export default BlockAwards
