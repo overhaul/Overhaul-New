@@ -38,6 +38,12 @@
     flex-wrap: wrap;
     margin-right: -0.5rem;
     margin-left: -0.5rem;
+
+    @media(max-width: $tablet){
+        margin-right: 0rem;
+        margin-left: 0rem;
+ 
+    }
 }
 
 .row.reverse {
@@ -68,6 +74,11 @@
     flex: 0 0 auto;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+
+    @media(max-width: $tablet) {
+        padding-right:0;
+        padding-left: 0;
+    }
 
 }
 
@@ -302,7 +313,7 @@
     order: 1;
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: $tablet) {
 
     [class*="col-sm"] {
         box-sizing: border-box;

@@ -13,10 +13,18 @@
 
             &:nth-of-type(odd) {
                 padding-right: 0.5rem;
+
+                @media(max-width: $tablet){
+                    padding-right: 0px;
+                }
             }
 
             &:nth-of-type(even) {
                 padding-left: 0.5rem;
+
+                @media(max-width: $tablet){
+                    padding-left: 0px;
+                }
             }
         }
     }

@@ -11,10 +11,12 @@ $red: #F40009;
 $black: #000;
 
 $tablet-large: 1440px;
-$tablet: 62em;
+$tablet: 1024px;
 $mobile: 660px;
 
 $ease: 0.2s ease;
+$color: color 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+$opacity: opacity 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
 
 $max-width: 1920px;
 

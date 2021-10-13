@@ -8,6 +8,17 @@
 
   @media(max-width: $tablet){
   	margin-bottom:4em;
+    width: calc(100% - 50px);
+    border-bottom: 0px;
+    padding: 25px 0;
+  }
+
+  &-title{
+
+    @media(max-width: $tablet){
+      margin-bottom: 50px;
+    }
+
   }
 
   &_card{
@@ -73,11 +84,19 @@
     border-bottom: 1px solid $white;
     color:$white;
 
+    @media(max-width: $tablet){
+      margin-bottom: 4em;
+      width: calc(100% - 50px);
+      border-bottom: 0px;
+      padding: 25px 0;
+    }
+
     &_card{
       color:$white;
       border-bottom: 1px solid $white;
       padding-bottom: 1em;
-       &-link{
+
+      &-link{
         background: $icon-arrow;
         background-repeat: no-repeat;
         background-size: contain;
@@ -88,6 +107,11 @@
     .page-title{
       .container{
         border-bottom: 1px solid $white;
+
+        @media(max-width: $tablet){
+          width: calc(100% - 50px);
+          padding: 0px;
+        }
       }
     }
   }

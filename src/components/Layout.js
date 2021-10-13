@@ -22,6 +22,7 @@ function Layout({children, themeColor, pageTitle, seo}) {
   if (!seo) seo = {}
 
   const el = useRef();
+  
   useEffect(() => {
     const q = gsap.utils.toArray(".gsap-fade-in");
     for(let i = 0; i < q.length; i++) {

@@ -4,9 +4,13 @@
   color: $black;
   padding: 1em 0;
 
-    @media(max-width: $tablet){
-      padding:0em;
-    }
+  @media(max-width: $tablet){
+    padding: 0em 25px;
+  }
+
+  &_subtitle{
+    padding-top: 10px;
+  }
 
   &_title {
     position: absolute;
@@ -73,17 +77,20 @@
 
       &-one{
         opacity: 1;
+        transition: $opacity;
       }
 
       &-two{
         position: absolute;
         left: 0;
         opacity: 0;
+        transition: $opacity;
       }
 
       &:hover{
         .block-team_member-images-two{
           opacity: 1;
+          transition: $opacity;
         }
       }
     }

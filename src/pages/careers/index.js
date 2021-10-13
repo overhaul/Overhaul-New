@@ -10,8 +10,8 @@ const CareersPage = ({ data }) => {
           title='We’re on the lookout for talented individuals with a passion for creativity and technology to join our team.'
           />
           <div className="careers container row">
-            <h2 className="col-md-6 col-xs-12">Open Positions</h2>
-            <div className="col-xs-12 col-md-6">
+            <h2 className="col-md-6 col-xs-12 careers-title">Open Positions</h2>
+            <div className="col-xs-12 col-md-6 career-items">
               {
                 data.wpPage.wpChildren.nodes.map((node) => (
                   <Link to={`/careers/${node.slug}`} className="careers_card" key={node.id}>
