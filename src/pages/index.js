@@ -7,9 +7,20 @@ import BlockCallToAction from '../components/BlockCallToAction'
 
 // Temporary content,
 // delete once pulling from site
-import slides from '../../mock-data/fixed-slides'
+// import slides from '../../mock-data/fixed-slides'
 
 const IndexPage = ({data}) => {
+
+  const slides = (data?.wpPage?.homepagePosts.posts || []).map(({post}) => {
+    return {
+      title: post.workSubtitle.subTitle ,
+      link: post.uri,
+      image: {
+        src: post.featuredImage.node.sourceUrl,
+        alt: post.featuredImage.node.altText,
+      }
+    }
+  })
 
   const seo = data?.wpPage?.seo || {}
 
@@ -29,9 +40,9 @@ const IndexPage = ({data}) => {
       />
       <FixedSlides slides={slides} />
       <BlockCallToAction
-      title="Have a specific need? Don't see what you're after?"
-      link="/contact"
-      cta="Ask us if we're a good fit."
+        title="Have a specific need? Don't see what you're after?"
+        link="/contact"
+        cta="Ask us if we're a good fit."
       />
     </Layout>
   )
@@ -41,6 +52,25 @@ export const query = graphql `
   query {
     wpPage(slug: {eq: "home"}) {
       title
+      homepagePosts {
+        posts {
+          post {
+            ... on WpPost {
+              id
+              workSubtitle {
+                subTitle
+              }
+              uri
+              featuredImage {
+                node {
+                  sourceUrl
+                  altText
+                }
+              }
+            }
+          }
+        }
+      }
       seo {
         canonical
         cornerstone
