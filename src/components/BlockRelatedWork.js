@@ -6,20 +6,20 @@ class BlockRelatedWork extends React.Component {
         return (
             <div className="block-related">
                 <div className="container">
-                 <h1>Related Projects</h1>
-                     <div className="row">
-                        { this.props.cards.slice(0,2).map((post) => {
-                            return (
-                               <WorkCard
-                                    key={post.id}
-                                    url={`/work/${post.slug.toLowerCase()}`}
-                                    title={post.title}
-                                    excerpt={post.workSubtitle.subTitle}
-                                    featuredImage={post.featuredImage}
-                               />
-                            )
-                        })}
-                    </div>
+                    <h1>Related Projects</h1>
+                </div>
+                <div className="container row">
+                    { this.props.cards.slice(0,2).map((post) => {
+                        return (
+                           <WorkCard
+                                key={post.id}
+                                url={`/work/${post.slug.toLowerCase()}`}
+                                title={post.title}
+                                excerpt={post.workSubtitle.subTitle}
+                                featuredImage={post.featuredImage}
+                           />
+                        )
+                    })}
                 </div>
             </div>
         )

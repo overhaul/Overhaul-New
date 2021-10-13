@@ -91,9 +91,11 @@ header{
             font-weight: normal;
             font-size: 22px;
             line-height: 30px;
+            transition: $color;
 
             &:hover {
                 color: $red;
+                transition: $color;
             }
         }
     }
@@ -110,6 +112,7 @@ header{
         height: 50px;
         justify-content: space-between;
         align-items: center;
+        padding: 10px;
 
         .logo {
             display: flex;
@@ -146,7 +149,7 @@ header{
         width: 45px;
         height: 45px;
         right: 0em;
-        top: 17px;
+        top: 25px;
         cursor: pointer;
         z-index: 99;
 
@@ -250,7 +253,7 @@ header{
         display: flex;
         list-style: none;
         height: auto;
-        padding: 0 1em;
+        padding: 0 25px;
         flex-direction: column;
         color: $white;
         margin-top: 5em;
@@ -276,10 +279,16 @@ header{
 
             &:hover {
                 color: $red;
+
+
+                h1{
+                    border-bottom: none;
+                }
             }
 
             h1 {
                 margin-bottom: 15px;
+                border-bottom: none;
             }
         }
     }
@@ -289,7 +298,7 @@ header{
         bottom: 0em;
         display: flex;
         flex-direction: column;
-        padding: 0.5em;
+        padding: 10px 25px;
 
         a {
             font-style: normal;
