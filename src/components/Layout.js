@@ -25,8 +25,9 @@ function Layout({children, themeColor, pageTitle, seo}) {
   
   useEffect(() => {
     const q = gsap.utils.toArray(".gsap-fade-in");
+    const gsapAnimations = []
     for(let i = 0; i < q.length; i++) {
-      gsap.fromTo(q[i], {
+      const gsapAnimation = gsap.fromTo(q[i], {
         opacity: 0,
         y: 100,
       },{
@@ -40,9 +41,17 @@ function Layout({children, themeColor, pageTitle, seo}) {
         y: 0,
         duration: 1
       });
+
+      gsapAnimations.push(gsapAnimation)
     }
+
     setIsVisible(true)
 
+    return () => {
+      while (gsapAnimations.length) {
+        gsapAnimations.pop().kill()
+      }
+    }
   }, []);
 
   //Transition Stuff
