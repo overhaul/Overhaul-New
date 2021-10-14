@@ -24,7 +24,7 @@ exports.createPages = async function ({graphql, actions}) {
       .filter(({ node }) => {
         const isAStaticPage = staticPages.includes(node.uri)
         const isACareerPage = node.uri.match(/^\/careers\//)
-
+        const isHomepage = node.uri.match(/^\/$/)
         // Add other exclusion conditions here for pages
         // That have been created on WP
 
