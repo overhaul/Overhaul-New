@@ -9,7 +9,7 @@ function GutenbergContent ({ content, containerClass }) {
     .split('BLOCKSPLIT')
     .filter((v) => !v.match(/^[\s\n]*$/))
   return (
-    <div className={'gutenberg-content ' + (containerClass ?? '')}>
+    <div className={'gutenberg-content' + (containerClass ?? '')}>
       {gutenbergBlocks.map((content, index) => {
 
         // Vimeo embed override
