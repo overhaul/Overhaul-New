@@ -1,15 +1,19 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Img from "gatsby-image"
 
-function WorkCard({title, url, featuredImage, excerpt}) {
+function WorkCard({title, url, featuredImage, excerpt, gatsbyImageData}) {
 	return(
 		<div className="col-xs-12 col-md-6 grid_card">
 		  <article className="work_card">
 		    <Link to={url}>
 		      <div className="work_card-featured-image">
-		        {featuredImage && <img
-		          src={featuredImage.node.sourceUrl}
-		          alt={featuredImage.node.altText}
+		        {featuredImage && 
+		        	<Img
+		          // src={featuredImage.node.sourceUrl}
+		          // alt={featuredImage.node.altText}
+		          {...gatsbyImageData}
+
 		        />}
 		      </div>
 		      <p>{title}</p>

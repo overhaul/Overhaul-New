@@ -124,6 +124,7 @@ class WorkPage extends Component {
                     title={node.title}
                     url={`/work/${node.slug.toLowerCase()}`}
                     featuredImage={node.featuredImage}
+                    gatsbyImageData={node.featuredImage.node.localFile.childImageSharp}
                     excerpt={node.workSubtitle.subTitle}
                   />
                 )
@@ -187,6 +188,13 @@ export const query = graphql `
             sourceUrl
             title
             uri
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1200, quality: 80) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
         workSubtitle {
