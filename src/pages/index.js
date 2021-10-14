@@ -5,15 +5,11 @@ import FixedSlides from '../components/FixedSlides'
 import TypingSlide from '../components/TypingSlide'
 import BlockCallToAction from '../components/BlockCallToAction'
 
-// Temporary content,
-// delete once pulling from site
-// import slides from '../../mock-data/fixed-slides'
-
 const IndexPage = ({data}) => {
 
   const slides = (data?.wpPage?.homepagePosts.posts || []).map(({post}) => {
     return {
-      title: post.workSubtitle.subTitle ,
+      title: post.workSubtitle.subTitle,
       link: post.uri,
       image: {
         src: post.featuredImage.node.sourceUrl,

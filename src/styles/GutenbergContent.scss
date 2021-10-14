@@ -11,6 +11,7 @@
   max-width: $max-width;
   font-family: sans-serif;
   overflow: hidden;
+  padding: 0.5em 0;
 
   @media(max-width: $tablet) {
       padding: 0px 25px;
@@ -23,9 +24,7 @@
 
   &-block-embed{
 
-    margin: 0em;
-
-    &__wrapper{
+    &.is-type-video{
 
       &:before{
         position: absolute;
@@ -37,6 +36,11 @@
         pointer-events: all;
 
       }
+    }
+
+    margin: 0em;
+
+    &__wrapper{
 
       padding-bottom: 56.25%;
 
