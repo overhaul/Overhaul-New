@@ -34,6 +34,7 @@ const WorkPost = ({ data }) => {
       <PageHero
         subTitle={title}
         image={featuredImage?.node?.sourceUrl}
+        gatsbyImageData={featuredImage.node.localFile.childImageSharp}
       />
       <div style={{zIndex: 100, backgroundColor: 'white', position: 'relative', willChange: 'transform'}}>
         <GutenbergContent content={content} />
@@ -108,6 +109,13 @@ export const query = graphql `
           title
           caption
           sourceUrl
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 2000, quality: 80) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

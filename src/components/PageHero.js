@@ -1,13 +1,15 @@
 import * as React from 'react'
+import Img from "gatsby-image"
 
 class PageHero extends React.Component {
     render() {
-        const {title, image, subTitle} = this.props
+        const {title, image, subTitle, gatsbyImageData} = this.props
         return (
             <div className="page-hero">
-                <img
-                    src={ image } 
-                    alt={ title } 
+                <Img 
+                    {...gatsbyImageData}
+                    // src={ image } 
+                    // alt={ title } 
                     className="page-hero_img"
                 />
                 <div className="container page-hero_container">

@@ -1,16 +1,18 @@
 import React, {Component} from 'react'
+import Img from "gatsby-image"
 
 class FixedSlide extends Component {
   render () {
-    const {title, image, link} = this.props
+    const {title, image, link, gatsbyImageData } = this.props
     return (
       <div className="fixed-slide">
         <div className="fixed-slide__clip">
           <div className="fixed-slide__inner">
-            <img
+            <Img
               className="fixed-slide__bg"
-              alt={image.alt}
-              src={image.src}
+              // alt={image.alt}
+              // src={image.src}
+              {...gatsbyImageData}
             />
             <div className="fixed-slide__content">
               <div className="container">
