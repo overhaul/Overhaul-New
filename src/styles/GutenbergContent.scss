@@ -3,3 +3,50 @@
     color: $white;
   }
 }
+
+.wp{
+  
+  margin: auto;
+  width: calc(100% - 30px);
+  max-width: $max-width;
+  font-family: sans-serif;
+  overflow: hidden;
+
+  @media(max-width: $tablet) {
+      padding: 0px 25px;
+      width: auto;
+  }
+
+  &-block-columns{
+    margin-bottom: 0;
+  }
+
+  &-block-embed{
+
+    margin: 0em;
+
+    &__wrapper{
+
+      &:before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: all;
+
+      }
+
+      padding-bottom: 56.25%;
+
+      iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%
+      }
+    }
+  }
+}
