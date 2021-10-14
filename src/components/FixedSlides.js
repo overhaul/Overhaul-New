@@ -11,4 +11,5 @@ class FixedSlides extends Component {
   }
 }
 
+
 export default FixedSlides
