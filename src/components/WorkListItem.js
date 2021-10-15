@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import useMousePosition from "../hooks/useMousePosition"
+import Img from "gatsby-image"
 
 function WorkListItem (props) {
   const { x, y } = useMousePosition()
-
+console.log(props.featuredImage)
   return (
     <div className="work_card-list col-xs-12">
       <article key={props.id}>
@@ -20,10 +21,10 @@ function WorkListItem (props) {
           transform: `translate(${x}px, ${y}px)`
         }}
       >
-        {props.featuredImage && <img
-          src={props.featuredImage.node.sourceUrl}
-          alt={props.featuredImage.node.altText}
-        />}
+        {props.featuredImage && 
+          <Img
+            fluid={{ ...props.featuredImage.node.localFile.childImageSharp.fluid, sizes: '200w' }}
+          />}
       </div>
     </div>
   )
