@@ -46,7 +46,7 @@ class NavDesk extends React.Component{
   render(){
     return(
       <nav id="desk_nav" className={`desk-nav ${this.state.visible ? '' : 'desk-nav_hidden'}`}>
-      <OmLogo/>
+        <OmLogo />
         <ul className="nav-links">
           <li className="nav-link_item">
             <Link to="/work" className="nav-link_text">
