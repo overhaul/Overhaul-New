@@ -30,6 +30,7 @@ module.exports = {
         useACF: true,
       },
     },
+    "gatsby-plugin-image",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",

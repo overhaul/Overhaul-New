@@ -10,8 +10,6 @@ class FixedSlide extends Component {
           <div className="fixed-slide__inner">
             <Img
               className="fixed-slide__bg"
-              // alt={image.alt}
-              // src={image.src}
               {...gatsbyImageData}
             />
             <div className="fixed-slide__content">

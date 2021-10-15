@@ -9,11 +9,7 @@ function WorkCard({title, url, featuredImage, excerpt, gatsbyImageData}) {
 		    <Link to={url}>
 		      <div className="work_card-featured-image">
 		        {featuredImage && 
-		        	<Img
-		          // src={featuredImage.node.sourceUrl}
-		          // alt={featuredImage.node.altText}
-		          {...gatsbyImageData}
-
+		        	<Img {...gatsbyImageData}
 		        />}
 		      </div>
 		      <p>{title}</p>

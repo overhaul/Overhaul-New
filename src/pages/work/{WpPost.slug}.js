@@ -59,6 +59,13 @@ export const query = graphql `
                 node {
                   altText
                   sourceUrl
+                  localFile {
+                    childImageSharp {
+                      fluid(maxWidth: 2000, quality: 80) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
                 }
               }
               id

@@ -190,7 +190,7 @@ export const query = graphql `
             uri
             localFile {
               childImageSharp {
-                fluid(maxWidth: 1200, quality: 80) {
+                fluid(maxWidth: 900, quality: 80) {
                   ...GatsbyImageSharpFluid
                 }
               }
