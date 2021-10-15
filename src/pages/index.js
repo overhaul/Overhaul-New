@@ -11,6 +11,7 @@ const IndexPage = ({data}) => {
     return {
       title: post.workSubtitle.subTitle,
       link: post.uri,
+      gatsbyImageData: post.featuredImage.node.localFile.childImageSharp,
       image: {
         src: post.featuredImage.node.sourceUrl,
         alt: post.featuredImage.node.altText,
@@ -60,6 +61,13 @@ export const query = graphql `
                 node {
                   sourceUrl
                   altText
+                  localFile {
+                    childImageSharp {
+                      fluid(maxWidth: 2000, quality: 80) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
                 }
               }
             }
