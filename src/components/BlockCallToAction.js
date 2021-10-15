@@ -9,7 +9,7 @@ class BlockCallToAction extends React.Component {
             <div className="container row gsap-fade-in">
                 <div className="block-cta col-md-6 col-xs-12">
                     <h1>{ title }</h1>
-                    <a href={link}><h1>{cta}</h1></a>
+                    <a className="cursor-text--Reach_Out" href={link}><h1>{cta}</h1></a>
                 </div>
             </div>
           )

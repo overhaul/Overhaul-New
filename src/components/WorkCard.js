@@ -8,7 +8,7 @@ function WorkCard({title, url, featuredImage, excerpt, gatsbyImageData}) {
 		  <article className="work_card">
 		    <Link to={url}>
 		      <div className="work_card-featured-image">
-		        {featuredImage && 
+		        {gatsbyImageData && 
 		        	<Img {...gatsbyImageData}
 		        />}
 		      </div>
