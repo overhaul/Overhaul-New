@@ -1,8 +1,5 @@
 import React, {useRef, useEffect, useState} from 'react'
 import { Helmet } from "react-helmet"
-// import { MouseContext } from "../context/mouse-context"
-import MouseContextProvider from "../context/mouse-context"
-import Cursor from '../components/Cursor'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { CSSTransition } from 'react-transition-group'
@@ -10,9 +7,10 @@ import { CSSTransition } from 'react-transition-group'
 import '../styles/layout.scss'
 import '../styles/styles.scss'
 
-import NavDesk from '../components/NavDesk'
-import NavMob from '../components/NavMob'
-import Footer from '../components/Footer'
+import CursorWrapper from './CursorWrapper'
+import NavDesk from './NavDesk'
+import NavMob from './NavMob'
+import Footer from './Footer'
 import favicon from '../helpers/faviconSelector'
 
 gsap.registerPlugin(ScrollTrigger);
@@ -94,12 +92,11 @@ function Layout({children, themeColor, pageTitle, seo}) {
 
         {seo.schema?.raw ? <script type='application/ld+json'>{seo.schema.raw}</script> : '' }
       </Helmet>
-      <MouseContextProvider>
+      <CursorWrapper>
         <header>
           <NavDesk />
           <NavMob/>
         </header>
-        <Cursor/>
         <CSSTransition in={isVisible} timeout={500} className="page">
           <main>
             {children}
@@ -110,7 +107,7 @@ function Layout({children, themeColor, pageTitle, seo}) {
           phone="780 758 8642"
           email="hello@overhaulmedia.com"
         />
-      </MouseContextProvider>
+      </CursorWrapper>
     </div>
   )
 }
