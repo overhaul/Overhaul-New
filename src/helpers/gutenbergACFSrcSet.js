@@ -1,4 +1,5 @@
 export default function ({ sizes }) {
+  if (!sizes) return ''
 	const sizeKeys = Object.keys(sizes)
   let srcSet = ''
 
