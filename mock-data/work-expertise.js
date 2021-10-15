@@ -1,4 +1,39 @@
-import HAVEN from '../src/images/clients/haven-feature.jpg'
+import HAVEN from '../src/images/expertise/expertise-haven.jpg'
+import Helm from '../src/images/expertise/expertise-helm.jpg'
+import Goldsquare from '../src/images/expertise/expertise-goldsquare.jpg'
+import Fancii from '../src/images/expertise/expertise-fancii.jpg'
+import Healthy from '../src/images/expertise/expertise-healthybedroom.jpg'
+import Orijen from '../src/images/expertise/expertise-orijen.jpg'
+import Soho from '../src/images/expertise/expertise-soho.jpg'
+import Publish from '../src/images/expertise/expertise-publishbrand.jpg'
+import OneOthree from '../src/images/expertise/expertise-103st.jpg'
+import Uptop from '../src/images/expertise/expertise-uptop.jpg'
+import Afpa from '../src/images/expertise/expertise-afpa.jpg'
+import Baiju from '../src/images/expertise/expertise-baiju.jpg'
+import Beljan from '../src/images/expertise/expertise-beljan.jpg'
+import Ici from '../src/images/expertise/expertise-canadaici.jpg'
+import CureMD from '../src/images/expertise/expertise-curemd.jpg'
+import Dosc from '../src/images/expertise/expertise-dosc.jpg'
+import Epic from '../src/images/expertise/expertise-epic.jpg'
+import Farrow from '../src/images/expertise/expertise-farrow.jpg'
+import Handfull from '../src/images/expertise/expertise-handfuloffilms.jpg'
+import Hello from '../src/images/expertise/expertise-hellodental.jpg'
+import HighDough from '../src/images/expertise/expertise-highdough.jpg'
+import Hsbc from '../src/images/expertise/expertise-hsbc.jpg'
+import Human from '../src/images/expertise/expertise-humanodyssey.jpg'
+import Hyphen from '../src/images/expertise/expertise-hyphen.jpg'
+import Iac from '../src/images/expertise/expertise-iac.jpg'
+import ABvr from '../src/images/expertise/expertise-loveabvr.jpg'
+import Malt from '../src/images/expertise/expertise-maltandmortar.jpg'
+import Mettra from '../src/images/expertise/expertise-mettra.jpg'
+import North53 from '../src/images/expertise/expertise-north53.jpg'
+import Naked from '../src/images/expertise/expertise-nakedandfamous.jpg'
+import NorthDistrict from '../src/images/expertise/expertise-northdistrict.jpg'
+import Pressd from '../src/images/expertise/expertise-pressd.jpg'
+import Pure from '../src/images/expertise/expertise-purealigners.jpg'
+import Smp from '../src/images/expertise/expertise-smp.jpg'
+import ThreeBoars from '../src/images/expertise/expertise-threeboars.jpg'
+import Wishbone from '../src/images/expertise/expertise-wishbone.jpg'
 
 export const areas =[
 	{
@@ -15,57 +50,57 @@ export const areas =[
 			{
 			title: 'Helm',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Helm,
+				alt: 'Helm Menswear Canada'
 				},
 			},
 			{
 			title: 'Goldsquare',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Goldsquare,
+				alt: 'An Eye for the finer things'
 				},
 			},
 			{
 			title: 'Fancii',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Fancii,
+				alt: 'Fancii beauty products'
 				},
 			},
 			{
 			title: 'Healthy Bedroom',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Healthy,
+				alt: 'Healthy Bedroom Mattresses'
 				},
 			},
 			{
 			title: 'Orijen',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Orijen,
+				alt: 'Orijen'
 				},
 			},
 			{
 			title: 'SOHO Hair',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Soho,
+				alt: 'Vidal Sasoon'
 				},
 			},
 			{
 			title: 'Publish Brand',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Publish,
+				alt: 'Publish Brand Canada'
 				},
 			},
 			{
 			title: 'Naked and Famous',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Naked,
+				alt: 'Naked and Famous Demin'
 				},
 			}
 		]
@@ -77,64 +112,64 @@ export const areas =[
 			{
 			title: 'Uptop',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Uptop,
+				alt: 'Uptop'
 				},
 			},
 			{
 			title: 'Farrow',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Farrow,
+				alt: 'Farrow Sandwiches Edmonton'
 				},
 			},
 			{
 			title: 'Three Boars',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: ThreeBoars,
+				alt: 'Three Boars Eatery'
 				},
 			},
 			{
 			title: 'HighDough',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: HighDough,
+				alt: 'HighDough Pizza Edmonton'
 				},
 			},
 			{
 			title: 'Press’d',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Pressd,
+				alt: 'Pressd Sandwiches'
 				},
 			},
 			{
 			title: 'North 53',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: North53,
+				alt: 'North 53 cocktails'
 				},
 			},
 			{
 			title: 'Wishbone',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Wishbone,
+				alt: 'Wishbone Eatery'
 				},
 			},
 			{
 			title: 'Baiju',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Baiju,
+				alt: 'Baiju food'
 				},
 			},
 			{
 			title: 'Malt and Mortar',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Malt,
+				alt: 'Malt and Mortar Pub Edmonton'
 				},
 			}
 		]
@@ -146,64 +181,64 @@ export const areas =[
 			{
 			title: 'Canada ICI',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Ici,
+				alt: 'Ici Canada'
 				},
 			},
 			{
 			title: 'Epic Investment Services',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Epic,
+				alt: 'Epic Investment Services'
 				},
 			},
 			{
 			title: 'HSBC Place',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Hsbc,
+				alt: 'HSBC Place Edmonton Canada'
 				},
 			},
 			{
 			title: 'Currents of Windermere',
 			image: {
 				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				alt: 'Currents of Windermere'
 				},
 			},
 			{
 			title: 'Beljan',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Beljan,
+				alt: 'Beljan property management'
 				},
 			},
 			{
 			title: 'Hyphen Group',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Hyphen,
+				alt: 'Hyphen Group'
 				},
 			},
 			{
 			title: '103 Street Center',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: OneOthree,
+				alt: '103st Center Edmonton'
 				},
 			},
 			{
 			title: 'North District',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: NorthDistrict,
+				alt: 'North District Edmonton'
 				},
 			},
 			{
 			title: 'DOSC',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Dosc,
+				alt: 'DOSC Edmonton'
 				},
 			}
 		]
@@ -216,28 +251,28 @@ export const areas =[
 			title: 'Theater Network',
 			image: {
 				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				alt: 'Theater Network'
 				},
 			},
 			{
 			title: 'Georgie Magazine',
 			image: {
 				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				alt: 'Georgie Magazine'
 				},
 			},
 			{
 			title: 'Human Odyssey',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Human,
+				alt: 'Human Odyssey'
 				},
 			},
 			{
 			title: 'Handful of Films',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Handfull,
+				alt: 'Handful of Films'
 				},
 			}
 		]
@@ -249,43 +284,43 @@ export const areas =[
 			{
 			title: 'Love AB Forests VR Tour',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: ABvr,
+				alt: 'Love AB Forests VR Tour'
 				},
 			},
 			{
 			title: 'YEG City Budget',
 			image: {
 				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				alt: 'YEG City Budget'
 				},
 			},
 			{
 			title: 'Report to the City',
 			image: {
 				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				alt: 'Report to the City'
 				},
 			},
 			{
 			title: 'Invest Alberta Corporation',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Iac,
+				alt: 'Invest Alberta Corporation'
 				},
 			},
 			{
 			title: 'Alberta Forest Products Association',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Afpa,
+				alt: 'Alberta Forest Products Associatio'
 				},
 			},
 			{
 			title: 'City of Leduc',
 			image: {
 				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				alt: 'City of Leduc'
 				},
 			}
 		]
@@ -297,36 +332,36 @@ export const areas =[
 			{
 			title: 'Cure MD',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: CureMD,
+				alt: 'Cure MD'
 				},
 			},
 			{
 			title: 'SMP',
 			image: {
 				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				alt: 'SMP'
 				},
 			},
 			{
 			title: 'Mettra Pharmacy',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Mettra,
+				alt: 'Mettra Pharmacy'
 				},
 			},
 			{
 			title: 'Pure Aligners',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Pure,
+				alt: 'Pure Aligners'
 				},
 			},
 			{
 			title: 'Hello Dental',
 			image: {
-				src: HAVEN,
-				alt: 'Haven Menswear Canada'
+				src: Hello,
+				alt: 'Hello Dental Edmonton'
 				},
 			}
 		]
