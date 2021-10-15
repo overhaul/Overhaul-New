@@ -25,11 +25,12 @@ module.exports = {
       options: {
         url: process.env.WPGRAPHQL_URL || 'https://overhaul20.wpengine.com/graphql',    
         html: {
-          useGatsbyImage: false,
+          useGatsbyImage: true,
         },
         useACF: true,
       },
     },
+    "gatsby-plugin-image",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",

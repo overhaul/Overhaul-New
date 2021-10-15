@@ -10,10 +10,12 @@ function Sections ({ sections }) {
     switch (section.fieldGroupName || section.acf_fc_layout) {
       case 'om_images':
       case 'Post_Description_Sections_Images':
+      console.log(section.images)
         return section.images.length > 1
           ? (
             <DualImages
               key={index}
+              // gatsbyImageData={}
               images={section.images.map(
                 (node) => {
                   const image = node.image
