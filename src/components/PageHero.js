@@ -8,8 +8,6 @@ class PageHero extends React.Component {
             <div className="page-hero">
                 <Img 
                     {...gatsbyImageData}
-                    // src={ image } 
-                    // alt={ title } 
                     className="page-hero_img"
                 />
                 <div className="container page-hero_container">

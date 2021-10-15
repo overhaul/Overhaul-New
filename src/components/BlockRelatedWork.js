@@ -17,6 +17,7 @@ class BlockRelatedWork extends React.Component {
                                 title={post.title}
                                 excerpt={post.workSubtitle.subTitle}
                                 featuredImage={post.featuredImage}
+                                gatsbyImageData={post.featuredImage.node.localFile.childImageSharp}
                            />
                         )
                     })}
