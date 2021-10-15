@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import PageTitle from '../../components/PageTitle'
 import WorkCard from '../../components/WorkCard'
+import WorkListItem from '../../components/WorkListItem'
 import BlockCallToAction from '../../components/BlockCallToAction'
 
 class WorkPage extends Component {
@@ -124,7 +125,7 @@ class WorkPage extends Component {
                     title={node.title}
                     url={`/work/${node.slug.toLowerCase()}`}
                     featuredImage={node.featuredImage}
-                    gatsbyImageData={node.featuredImage.node.localFile.childImageSharp}
+                    gatsbyImageData={node.featuredImage?.node.localFile.childImageSharp}
                     excerpt={node.workSubtitle.subTitle}
                   />
                 )
@@ -135,21 +136,7 @@ class WorkPage extends Component {
           <div className={`work container row list ${this.state.listIsOpen ? 'grid-view' : 'list-view'}`}>
             {
               workNodes.filter(this.fitlerNode).map((node, index) => (
-                <div className="work_card-list col-xs-12" key={index}>
-                  <article key={node.id}>
-                    <Link to={`/work/${node.slug.toLowerCase()}`}>
-                      <p>{node.title}</p>
-                      <p className="work_card-list-subtitle">{node.workSubtitle.subTitle}</p>
-                      <p className="work_card-list-date">{node.date}</p>
-                    </Link>
-                  </article>
-                  <div className="work_card-list-image">
-                    {node.featuredImage && <img
-                      src={node.featuredImage.node.sourceUrl}
-                      alt={node.featuredImage.node.altText}
-                    />}
-                  </div>
-                </div>
+                <WorkListItem {...node} key={index} />
               ))
             }
           </div>
