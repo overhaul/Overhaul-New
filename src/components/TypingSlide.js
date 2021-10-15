@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Img from "gatsby-image"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,12 +43,11 @@ class TypingSlide extends Component {
       <div style={{height: `${height}vh`}} className="fixed-slide typing-slide" ref={this.slideEl}>
         <div className="fixed-slide__clip">
           <div className="fixed-slide__inner">
-            {this.props.nextSlide ? <img
+            {this.props.nextSlide ? 
+              <Img
               className="fixed-slide__bg"
-              alt={this.props.nextSlide.image.alt}
-              src={this.props.nextSlide.image.src}
-            /> : ''}
-            
+              {...this.props.nextSlide.gatsbyImageData}
+              /> : ''}
             <div className="typing-slide__content-bg">
               <div className="fixed-slide__content">
                 <div className="container">
