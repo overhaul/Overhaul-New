@@ -5,23 +5,24 @@ import FullWidthImage from './FullWidthImage'
 import WorkIntro from './WorkIntro'
 import PageTitle from './PageTitle'
 
+import gutenbergACFSrcSet from '../helpers/gutenbergACFSrcSet'
+
 function Sections ({ sections }) {
   return !sections ? (<div />) : sections.map((section, index) => {
     switch (section.fieldGroupName || section.acf_fc_layout) {
       case 'om_images':
       case 'Post_Description_Sections_Images':
-      console.log(section.images)
         return section.images.length > 1
           ? (
             <DualImages
               key={index}
-              // gatsbyImageData={}
               images={section.images.map(
                 (node) => {
                   const image = node.image
                   const src = image.sourceUrl ?? image.url
                   const alt = image.altText ?? image.alt
-                  return { src, alt }
+                  const srcSet = gutenbergACFSrcSet(image)
+                  return { src, alt, srcSet}
                 }
               )}
             />
@@ -29,8 +30,16 @@ function Sections ({ sections }) {
           : (
             <FullWidthImage
               key={index}
-              image={section.images[0].image.sourceUrl ?? section.images[0].image.url}
-              alt={section.images[0].image.altText ?? section.images[0].image.alt}
+              image={section.images.reduce(
+                (imageObj, node) => {
+                  const image = node.image
+                  const src = image.sourceUrl ?? image.url
+                  const alt = image.altText ?? image.alt
+                  const srcSet = gutenbergACFSrcSet(image)
+                  return { src, alt, srcSet }
+                },
+                {}
+              )}
             />
           )
       case 'Post_Description_Sections_Content':
