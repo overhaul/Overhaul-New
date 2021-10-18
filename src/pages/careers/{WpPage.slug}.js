@@ -60,14 +60,6 @@ export const query = graphql `
         }
       }
     }
-    mdx(slug: {eq: $slug}, fileAbsolutePath: {regex: "/careers/"}) {
-      body
-      frontmatter {
-        title
-        paragraph
-        date(formatString: "MMMM DD, YYYY")
-      }
-    }
   }
 `
 
