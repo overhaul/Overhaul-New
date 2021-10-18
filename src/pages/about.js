@@ -16,7 +16,7 @@ import BlockCarousel from '../components/BlockCarousel'
 import { listItems, serviceAbilities, clients, ourApproach } from '../../mock-data/work-content'
 import { awards } from '../../mock-data/work-awards'
 import { team } from '../../mock-data/work-team'
-import { areas } from '../../mock-data/work-expertise'
+import { areas } from '../work-expertise'
 
 import aboutImage from '/src/images/OverhaulOffice.jpg'
 import approachImage from '/src/images/our-approach.jpg'

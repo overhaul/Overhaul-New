@@ -5,7 +5,6 @@ import Img from "gatsby-image"
 
 function WorkListItem (props) {
   const { x, y } = useMousePosition()
-console.log(props.featuredImage)
   return (
     <div className="work_card-list col-xs-12">
       <article key={props.id}>
@@ -23,7 +22,7 @@ console.log(props.featuredImage)
       >
         {props.featuredImage && 
           <Img
-            fluid={{ ...props.featuredImage.node.localFile.childImageSharp.fluid, sizes: '200w' }}
+            fixed={ props.featuredImage.node.localFile.childImageSharp.fixed }
           />}
       </div>
     </div>

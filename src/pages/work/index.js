@@ -162,11 +162,11 @@ export const query = graphql `
         excerpt
         content
         categories {
-        nodes {
-          name
-          slug
+          nodes {
+            name
+            slug
+          }
         }
-      }
         date(formatString: "YYYY")
         featuredImage {
           node {
@@ -179,6 +179,9 @@ export const query = graphql `
               childImageSharp {
                 fluid(maxWidth: 900, quality: 80) {
                   ...GatsbyImageSharpFluid
+                }
+                fixed(width: 200) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
