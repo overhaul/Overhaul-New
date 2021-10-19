@@ -11,6 +11,11 @@ module.exports = {
         url: process.env.WPGRAPHQL_URL || 'https://overhaul20.wpengine.com/graphql',
         html: {
           useGatsbyImage: true,
+          // generateWebpImages: false,
+        },
+        schema: {
+          circularQueryLimit: 1,
+          previewRequestConcurrency: 50,
         },
         debug: {
           preview: true,
