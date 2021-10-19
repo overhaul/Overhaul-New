@@ -8,11 +8,11 @@ $scaleSize: 5;
   height: 16px;
   z-index: 999;
   pointer-events: none;
-  mix-blend-mode: darken;
+  // mix-blend-mode: darken;
   transition: background-color 2s;
 
   .dark & {
-    mix-blend-mode: screen;
+    // mix-blend-mode: screen;
   }
 
   @media(max-width: $mobile){
