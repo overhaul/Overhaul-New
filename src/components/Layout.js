@@ -24,6 +24,11 @@ function Layout({children, themeColor, pageTitle, seo}) {
   useEffect(() => {
     const q = gsap.utils.toArray(".gsap-fade-in");
     const gsapAnimations = []
+
+    if (!window.ScrollTriggerInstance) {
+      window.ScrollTriggerInstance = ScrollTrigger
+    }
+
     for(let i = 0; i < q.length; i++) {
       const gsapAnimation = gsap.fromTo(q[i], {
         opacity: 0,
@@ -54,33 +59,34 @@ function Layout({children, themeColor, pageTitle, seo}) {
 
   useEffect(() => {
     const q = gsap.utils.toArray(".gsap-spin-in");
-    const gsapAnimations = []
+    const gsapRotations = []
     for(let i = 0; i < q.length; i++) {
-      const gsapAnimation = gsap.fromTo(q[i], {
-        rotate: '-180',
+      const gsapRotate = gsap.fromTo(q[i], {
+        rotate: '0',
         opacity: 1,
       },{
         scrollTrigger: {
           trigger: q[i],
           start: 'top bottom',
-          scrub: true,
+          scrub: 1,
         },
-        rotate: '180',
+        rotate: '640',
         opacity: 1
         // duration: 1
       });
 
-      gsapAnimations.push(gsapAnimation)
+      gsapRotations.push(gsapRotate)
     }
 
     setIsVisible(true)
 
     return () => {
-      while (gsapAnimations.length) {
-        gsapAnimations.pop().kill()
+      while (gsapRotations.length) {
+        gsapRotations.pop().kill()
       }
     }
   }, []);
+
   //Transition Stuff
 
   const [isVisible, setIsVisible] = useState(false)

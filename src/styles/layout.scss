@@ -144,17 +144,17 @@ header {
     }
 }
 
-.scaling-svg{
+// .scaling-svg{
 
-    &.gsap-spin-in{
-        opacity: 0;
-        transition: 2s ease;
-        transform: rotate(0deg);
+//     &.gsap-spin-in{
+//         opacity: 0;
+//         transition: 0.2s ease;
+//         transform: rotate(0deg);
 
-        &.visible{
-            transform: rotate(360deg);
-            transition: 2s ease;
-            opacity: 1;
-        }
-    }
-}
+//         &.visible{
+//             transform: rotate(360deg);
+//             transition: 0.2s ease;
+//             opacity: 1;
+//         }
+//     }
+// }
