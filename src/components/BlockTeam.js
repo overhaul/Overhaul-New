@@ -39,10 +39,17 @@ class BlockTeam extends React.Component {
                         <div className="row">
                             {team.map((member, index) => (
                                 <div className="block-team_member col-md-3" key={index}>
-                                    <div className="block-team_member-images" style={{ backgroundImage: "url(" + member.backgroundImage.src + ")"}}>
+                                    <div className="block-team_member-images">
+                                        { member.backgroundImage ? member.backgroundImage : ''}
                                         <div className="block-team_member-images-hover">
-                                            <img src={member.imageAfter.src} alt={member.imageAfter.alt} className="block-team_member-images-one"/>
-                                            <img src={member.imageBefore.src} alt={member.imageBefore.alt} className="block-team_member-images-two"/>
+                                            { member.imageAfter ? member.imageAfter : <img className="block-team_member-images-one" 
+                                             src={member.imageAfter.src} 
+                                             alt={member.imageAfter.alt}
+                                             />}
+                                             { member.imageBefore ? member.imageBefore : <img className="block-team_member-images-two" 
+                                             src={member.imageBefore.src} 
+                                             alt={member.imageBefore.alt}
+                                             />}
                                         </div>
                                     </div>
                                     <div className="block-team_member-profile">

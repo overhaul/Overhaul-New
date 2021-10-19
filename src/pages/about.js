@@ -11,15 +11,10 @@ import BlockTeam from '../components/BlockTeam'
 import BlockApproach from '../components/BlockApproach'
 import BlockImageText from '../components/BlockImageText'
 import BlockExpertise from '../components/BlockExpertise'
-import BlockCarousel from '../components/BlockCarousel'
 
-import { listItems, serviceAbilities, clients, ourApproach } from '../../mock-data/work-content'
-import { awards } from '../../mock-data/work-awards'
-import { team } from '../../mock-data/work-team'
-import { areas } from '../work-expertise'
+import { awards, team, areas, listItems, serviceAbilities, clients, ourApproach, approachImage } from '../about-content'
 
 import aboutImage from '/src/images/OverhaulOffice.jpg'
-import approachImage from '/src/images/our-approach.jpg'
 
 const AboutPage = ({ data }) => {
     const seo = data?.wpPage?.seo || {}
@@ -36,7 +31,7 @@ const AboutPage = ({ data }) => {
             />
             <BlockClients 
                 title="Selected Clients"
-                clients={ clients }
+                clients={clients}
             />
             <BlockList 
                 title="Our Values"
@@ -60,9 +55,9 @@ const AboutPage = ({ data }) => {
             />
             <BlockApproach
                 title="Our Approach"
-                image={ approachImage }
+                image={approachImage}
                 alt="Our Team hard at work"
-                content={ ourApproach }
+                content={ourApproach}
             />
             <BlockAwards
                 title="Awards"

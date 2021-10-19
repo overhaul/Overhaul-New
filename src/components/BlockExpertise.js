@@ -39,7 +39,6 @@ class BlockExpertise extends React.Component {
                                 <ul className="col-xs-12 col-md-8 col-md-offset-4" >
                                     {client.map((client, j) => (
                                         <li key={`${i}${j}`}>{client.title}
-                                        {console.log(client)}
                                         { client.staticAsset ? client.staticAsset : <img className="block-expertise_content-image" 
                                              src={client.image.src} 
                                              alt={client.image.alt}

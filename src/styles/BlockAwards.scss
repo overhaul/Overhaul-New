@@ -60,8 +60,13 @@
         width: 28px;
         height: 18px;
         position: absolute;
-        right:10px;
+        right: 10px;
+        top: 24px;
         transition: 0.1s ease;
+
+        @media(max-width: $tablet-large){
+          top: 18px;
+         }
 
          @media(max-width: $mobile){
           bottom: 1em;
