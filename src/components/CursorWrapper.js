@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useMousePosition from "../hooks/useMousePosition";
 import useCursorType from "../hooks/useCursorType";
 
