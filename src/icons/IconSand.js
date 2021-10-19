@@ -5,7 +5,7 @@ class IconSand extends Component {
     render() {
 
         return (
-			<svg className="scaling-svg" viewBox="0 0 80 80">
+			<svg className="scaling-svg gsap-spin-in" viewBox="0 0 76 76">
 				<g>
 					<rect x="31.3" y="8.5" transform="matrix(0.9659 -0.2589 0.2589 0.9659 -3.2182 8.9274)" className="st0" width="2" height="16.3"/>
 					<rect x="21.4" y="14.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -9.2763 22.395)" className="st0" width="2" height="16.3"/>

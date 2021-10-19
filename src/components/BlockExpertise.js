@@ -24,7 +24,7 @@ class BlockExpertise extends React.Component {
     render() {
         const { title, areas } = this.props
         return (
-            <div className="block-expertise gsap-fade-in">
+            <div className="block-expertise gsap-fade-in" id="Services">
                 <div className="container row">
                     <div className="col-xs-12 col-md-3 block-approach_title">
                         <Icon name="sand"/>
@@ -39,7 +39,6 @@ class BlockExpertise extends React.Component {
                                 <ul className="col-xs-12 col-md-8 col-md-offset-4" >
                                     {client.map((client, j) => (
                                         <li key={`${i}${j}`}>{client.title}
-                                        {console.log(client)}
                                         { client.staticAsset ? client.staticAsset : <img className="block-expertise_content-image" 
                                              src={client.image.src} 
                                              alt={client.image.alt}

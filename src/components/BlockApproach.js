@@ -22,7 +22,7 @@ class BlockApproach extends React.Component {
          )
     }
     render() {
-        const { title, image, alt, content} = this.props
+        const { title, image, content} = this.props
         return (
             <div className="block-approach gsap-fade-in">
                 <div className="container row ">
@@ -33,7 +33,7 @@ class BlockApproach extends React.Component {
                     </div>
                     <div className={`block-approach_content accordion col-md-9 col-xs-12 ${this.state.accordionIsOpen ? 'open' : ''}`}>
                         <div className="block-approach_featured-image">
-                            <img className="block-approach_image" src={image} alt={alt}/>
+                           { image.imageSrc ? image.imageSrc : ''}
                         </div>
                         {content.map((contentItem, index) => (
                             <div className="block-approach_paragraph row" key={index}>

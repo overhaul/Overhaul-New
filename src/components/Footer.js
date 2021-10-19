@@ -20,11 +20,11 @@ class Footer extends React.Component {
                         </div>
                         <div className="col-xs-12 col-md-6 col-lg-2">
                             <Link to="/careers">Careers</Link>
-                            <Link to="/services">Services</Link>
+                            <Link to="/about#Services">Services</Link>
                         </div>
                          <div className="col-xs-12 col-md-6 col-lg-2">
                             <a href="https://www.instagram.com/overhaulmedia/?hl=en" target="_blank" rel="noreferrer">Instagram</a>
-                            <a href="https://ca.linkedin.com/company/overhaul-media" target="_blank" rel="noreferrer">Linkedin</a>
+                            <a href="https://ca.linkedin.com/company/overhaul-media" target="_blank" rel="noreferrer">LinkedIn</a>
                         </div>
                     </div>
                 </div>
