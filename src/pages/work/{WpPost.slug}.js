@@ -20,17 +20,6 @@ const WorkPost = ({ data }) => {
   // const maxRelated = 2
 
   const relatedPosts = workSubtitle?.relatedWork || []
-  // (workSubtitle?.relatedWork || []).reduce((related, category) => {
-  //   const posts = category.posts.nodes
-  //   for (let i = 0; i < posts.length; i++) {
-  //     if (related.used[posts[i].id]) continue
-  //     related.used[posts[i].id] = true
-  //     related.posts.push(posts[i])
-  //   }
-  //   return related
-  // }, { used: { [id]: true }, posts: [] })
-
-  console.log(relatedPosts)
 
   return (
     <Layout seo={seo}>
@@ -42,7 +31,7 @@ const WorkPost = ({ data }) => {
       <div style={{zIndex: 100, backgroundColor: 'white', position: 'relative', willChange: 'transform'}}>
         <GutenbergContent content={content} />
       </div>
-      <BlockRelatedWork cards={relatedPosts} />
+      {relatedPosts.length ? <BlockRelatedWork cards={relatedPosts} /> : ''}
     </Layout>
   )
 }
