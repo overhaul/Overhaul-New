@@ -14,15 +14,15 @@ module.exports = {
           // generateWebpImages: false,
         },
         schema: {
-          circularQueryLimit: 1,
-          previewRequestConcurrency: 50,
+          circularQueryLimit: 2,
+          // previewRequestConcurrency: 50,
         },
         debug: {
           preview: true,
         },
         develop: {
           hardCacheMediaFiles: true,
-          nodeUpdateInterval: 300,
+          // nodeUpdateInterval: 300,
         },
         production: {
           hardCacheMediaFiles: true,
