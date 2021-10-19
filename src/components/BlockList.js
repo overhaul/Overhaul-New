@@ -22,12 +22,12 @@ class BlockList extends React.Component {
          )
     }
     render() {
-        const { title, listItems } = this.props
+        const { title, listItems, icon } = this.props
         return (
             <div className="block-list gsap-fade-in">
                 <div className="container row">
                     <div className="col-xs-12 col-md-6 block-list_title">
-                        <Icon name="moon"/>
+                        <Icon name={!icon ? 'moon' : icon}/>
                         <h2>{ title }</h2>
                         <button aria-label="open" onClick={this.toggleAccordion} className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}/>
                     </div>
