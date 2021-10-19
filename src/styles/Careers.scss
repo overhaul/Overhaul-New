@@ -101,6 +101,11 @@
         background-repeat: no-repeat;
         background-size: contain;
       }
+
+      &:last-child{
+        border-bottom: 0px;
+        padding-bottom: 0em;
+      }
     }
   }
   .career{
