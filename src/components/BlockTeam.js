@@ -38,7 +38,7 @@ class BlockTeam extends React.Component {
                         </div>
                         <div className="row">
                             {team.map((member, index) => (
-                                <div className="block-team_member col-md-3" key={index}>
+                                <div className="block-team_member col-md-3 gsap-fade-in" key={index}>
                                     <div className="block-team_member-images">
                                         { member.backgroundImage ? member.backgroundImage : ''}
                                         <div className="block-team_member-images-hover">
