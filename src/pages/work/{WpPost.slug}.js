@@ -13,12 +13,18 @@ const WorkPost = ({ data }) => {
     content,
     featuredImage,
     seo,
+    excerpt,
+    id,
     workSubtitle,
   } = data.wpPost
 
   // const maxRelated = 2
 
   const relatedPosts = workSubtitle?.relatedWork || []
+
+  if (!seo.metaDesc) seo.metaDesc = excerpt
+  if (!seo.opengraphDescription) seo.opengraphDescription = excerpt
+  if (!seo.twitterDescription) seo.twitterDescription = excerpt
 
   return (
     <Layout seo={seo}>
@@ -41,6 +47,7 @@ export const query = graphql `
       id
       title
       content
+      excerpt
       seo {
         canonical
         metaDesc

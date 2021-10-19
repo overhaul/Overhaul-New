@@ -67,6 +67,10 @@
 	    visibility: hidden;
 	    transition: 0.1s ease;
 
+      h2{
+        padding-left: 0px!important;
+      }
+
 	    &.open{
 	    	height: auto;
 		    opacity: 1;
