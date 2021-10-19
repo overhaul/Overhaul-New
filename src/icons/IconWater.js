@@ -5,7 +5,7 @@ class IconWater extends Component {
     render() {
 
         return (
-			<svg className="scaling-svg" viewBox="0 0 80 80">
+			<svg className="scaling-svg gsap-spin-in" viewBox="0 0 76 76">
 				<g>
 					<rect x="29.5" y="1" transform="matrix(0.9659 -0.2589 0.2589 0.9659 -1.5109 8.2191)" className="st0" width="2" height="17.7"/>
 					<rect x="16.4" y="8.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -7.2034 17.3912)" className="st0" width="2" height="17.7"/>

@@ -21,6 +21,9 @@ class WorkPage extends Component {
   }
 
   toggleView() {
+    if (window.ScrollTriggerInstance) {
+      window.ScrollTriggerInstance.refresh(true)
+    }
     this.setState( 
       function(prevState){
         return{
@@ -153,7 +156,7 @@ class WorkPage extends Component {
 
 export const query = graphql `
   query WorkPage {
-    allWpPost {
+    allWpPost(limit: 18){
       nodes {
         id
         uri

@@ -24,6 +24,11 @@ function Layout({children, themeColor, pageTitle, seo}) {
   useEffect(() => {
     const q = gsap.utils.toArray(".gsap-fade-in");
     const gsapAnimations = []
+
+    if (!window.ScrollTriggerInstance) {
+      window.ScrollTriggerInstance = ScrollTrigger
+    }
+
     for(let i = 0; i < q.length; i++) {
       const gsapAnimation = gsap.fromTo(q[i], {
         opacity: 0,
@@ -48,6 +53,36 @@ function Layout({children, themeColor, pageTitle, seo}) {
     return () => {
       while (gsapAnimations.length) {
         gsapAnimations.pop().kill()
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const q = gsap.utils.toArray(".gsap-spin-in");
+    const gsapRotations = []
+    for(let i = 0; i < q.length; i++) {
+      const gsapRotate = gsap.fromTo(q[i], {
+        rotate: '0',
+        opacity: 1,
+      },{
+        scrollTrigger: {
+          trigger: q[i],
+          start: 'top bottom',
+          scrub: 1,
+        },
+        rotate: '640',
+        opacity: 1
+        // duration: 1
+      });
+
+      gsapRotations.push(gsapRotate)
+    }
+
+    setIsVisible(true)
+
+    return () => {
+      while (gsapRotations.length) {
+        gsapRotations.pop().kill()
       }
     }
   }, []);
