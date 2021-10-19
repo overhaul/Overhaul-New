@@ -104,7 +104,7 @@ function Layout({children, themeColor, pageTitle, seo}) {
         {seo.title ? <title>{seo.title}</title> : ''}
 
         {seo.canonical ? <link rel="canonical" href={seo.canonical} /> : ''}
-        {seo.metaDesc ? <meta name="description" content={seo.metaDesc} /> : ''}
+        {seo.metaDesc ? <meta name="description" content={seo.metaDesc.replace(/<[^>]+>|\n|\r|\\n|\\r/g, '')} /> : ''}
         {seo.metaKeywords ? <meta name="keywords" content={seo.metaKeywords} /> : ''}
         {seo.metaRobotsNofollow ? <meta name="robots" content={seo.metaRobotsNofollow} /> : ''}
         {seo.metaRobotsNoindex ? <meta name="robots" content={seo.metaRobotsNoindex} /> : ''}
@@ -113,7 +113,7 @@ function Layout({children, themeColor, pageTitle, seo}) {
         {seo.opengraphType ? <meta name="og:type" content={seo.opengraphType} /> : ''}
         {seo.opengraphTitle ? <meta name="og:title" content={seo.opengraphTitle} /> : ''}
         {seo.opengraphAuthor ? <meta name="og:author" content={seo.opengraphAuthor} /> : ''}
-        {seo.opengraphDescription ? <meta name="og:description" content={seo.opengraphDescription} /> : ''}
+        {seo.opengraphDescription ? <meta name="og:description" content={seo.opengraphDescription.replace(/<[^>]+>|\n|\r|\\n|\\r/g, '')} /> : ''}
         {seo.opengraphUrl ? <meta name="og:url" content={seo.opengraphUrl} /> : ''}
         {seo.opengraphSiteName ? <meta name="og:site_name" content={seo.opengraphSiteName} /> : ''}
         {seo.opengraphImage?.sourceUrl ? <meta property="og:image" content={seo.opengraphImage.sourceUrl} /> : ''}
@@ -121,7 +121,7 @@ function Layout({children, themeColor, pageTitle, seo}) {
         <meta name="twitter:site" content="@overhaulmedia" />
         <meta name="twitter:creator" content="@overhaulmedia" />
         {seo.twitterTitle ? <meta name="twitter:title" content={seo.twitterTitle} /> : ''}
-        {seo.twitterDescription ? <meta name="twitter:description" content={seo.twitterDescription} /> : ''}
+        {seo.twitterDescription ? <meta name="twitter:description" content={seo.twitterDescription.replace(/<[^>]+>|\n|\r|\\n|\\r/g, '')} /> : ''}
         {seo.twitterImage?.sourceUrl ? <meta name="twitter:image" content={seo.twitterImage.sourceUrl} /> : ''}
         {seo.twitterImage?.sourceUrl ? <meta name="twitter:card" content="summary_large_image" /> : ''}
 
