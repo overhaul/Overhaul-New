@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 
 class PageHero extends React.Component {
     render() {
-        const {title, image, subTitle, gatsbyImageData} = this.props
+        const {title, subTitle, gatsbyImageData} = this.props
         return (
             <div className="page-hero">
                 {gatsbyImageData ? <Img 
