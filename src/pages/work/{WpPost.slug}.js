@@ -14,12 +14,12 @@ const WorkPost = ({ data }) => {
     featuredImage,
     seo,
     id,
-    categories
+    // categories
   } = data.wpPost
 
   // const maxRelated = 2
 
-  const relatedPosts = categories.nodes.reduce((related, category) => {
+  const relatedPosts = [].reduce((related, category) => {
     const posts = category.posts.nodes
     for (let i = 0; i < posts.length; i++) {
       if (related.used[posts[i].id]) continue
@@ -49,34 +49,6 @@ export const query = graphql `
     wpPost(slug: {eq: $slug}) {
       id
       title
-      categories {
-        nodes {
-          posts {
-            nodes {
-              slug
-              title
-              featuredImage {
-                node {
-                  altText
-                  sourceUrl
-                  localFile {
-                    childImageSharp {
-                      fluid(maxWidth: 2000, quality: 80) {
-                        ...GatsbyImageSharpFluid
-                      }
-                    }
-                  }
-                }
-              }
-              id
-              workSubtitle {
-                subTitle
-              }
-            }
-          }
-        }
-      }
-      excerpt
       content
       seo {
         canonical
@@ -108,14 +80,6 @@ export const query = graphql `
       }
       featuredImage {
         node {
-          altText
-          uri
-          slug
-          sizes
-          srcSet
-          title
-          caption
-          sourceUrl
           localFile {
             childImageSharp {
               fluid(maxWidth: 2000, quality: 80) {
