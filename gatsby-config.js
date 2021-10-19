@@ -15,6 +15,13 @@ module.exports = {
         debug: {
           preview: true,
         },
+        develop: {
+          hardCacheMediaFiles: true,
+          nodeUpdateInterval: 300,
+        },
+        production: {
+          hardCacheMediaFiles: true,
+        },
         // useACF: true,
       },
     },
