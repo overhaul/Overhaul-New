@@ -24,7 +24,7 @@ class BlockExpertise extends React.Component {
     render() {
         const { title, areas } = this.props
         return (
-            <div className="block-expertise gsap-fade-in">
+            <div className="block-expertise gsap-fade-in" id="Services">
                 <div className="container row">
                     <div className="col-xs-12 col-md-3 block-approach_title">
                         <Icon name="sand"/>

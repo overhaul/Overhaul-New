@@ -14,7 +14,7 @@ class IconFire extends Component {
 							<rect x="50.6" y="45.6" transform="matrix(0.707 -0.7073 0.7073 0.707 -21.689 51.7214)" className="st0" width="2" height="12.8"/>
 							<rect x="18.5" y="27.1" transform="matrix(0.2588 -0.9659 0.9659 0.2588 -17.931 43.6271)" className="st0" width="2" height="12.8"/>
 							
-								<rect x="55.5" y="37" transform="matrix(0.2585 -0.966 0.966 0.2585 -3.523182e-02 86.8154)" className="st0" width="2" height="12.8"/>
+							<rect x="55.5" y="37" transform="matrix(0.2585 -0.966 0.966 0.2585 -3.523182e-02 86.8154)" className="st0" width="2" height="12.8"/>
 							<rect x="13" y="42.4" transform="matrix(0.966 -0.2586 0.2586 0.966 -10.5698 6.5109)" className="st0" width="12.8" height="2"/>
 							<rect x="50.1" y="32.5" transform="matrix(0.9659 -0.2588 0.2588 0.9659 -6.7435 15.7744)" className="st0" width="12.9" height="2"/>
 							<rect x="18" y="51" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -29.6379 32.5152)" className="st0" width="12.8" height="2"/>
