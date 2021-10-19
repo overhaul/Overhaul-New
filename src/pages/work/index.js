@@ -167,14 +167,8 @@ export const query = graphql `
             slug
           }
         }
-        date(formatString: "YYYY")
         featuredImage {
           node {
-            srcSet
-            slug
-            sourceUrl
-            title
-            uri
             localFile {
               childImageSharp {
                 fluid(maxWidth: 900, quality: 80) {
