@@ -14,20 +14,23 @@ const WorkPost = ({ data }) => {
     featuredImage,
     seo,
     id,
-    // categories
+    workSubtitle,
   } = data.wpPost
 
   // const maxRelated = 2
 
-  const relatedPosts = [].reduce((related, category) => {
-    const posts = category.posts.nodes
-    for (let i = 0; i < posts.length; i++) {
-      if (related.used[posts[i].id]) continue
-      related.used[posts[i].id] = true
-      related.posts.push(posts[i])
-    }
-    return related
-  }, { used: { [id]: true }, posts: [] })
+  const relatedPosts = workSubtitle?.relatedWork || []
+  // (workSubtitle?.relatedWork || []).reduce((related, category) => {
+  //   const posts = category.posts.nodes
+  //   for (let i = 0; i < posts.length; i++) {
+  //     if (related.used[posts[i].id]) continue
+  //     related.used[posts[i].id] = true
+  //     related.posts.push(posts[i])
+  //   }
+  //   return related
+  // }, { used: { [id]: true }, posts: [] })
+
+  console.log(relatedPosts)
 
   return (
     <Layout seo={seo}>
@@ -39,7 +42,7 @@ const WorkPost = ({ data }) => {
       <div style={{zIndex: 100, backgroundColor: 'white', position: 'relative', willChange: 'transform'}}>
         <GutenbergContent content={content} />
       </div>
-      <BlockRelatedWork cards={relatedPosts.posts} />
+      <BlockRelatedWork cards={relatedPosts} />
     </Layout>
   )
 }
@@ -88,6 +91,30 @@ export const query = graphql `
             }
           }
         }
+      }
+      workSubtitle {
+        relatedWork {
+          ... on WpPost {
+            id
+            title
+            slug
+            workSubtitle {
+              subTitle
+            }
+            featuredImage {
+              node {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1000, quality: 80) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        subTitle
       }
     }
   }
