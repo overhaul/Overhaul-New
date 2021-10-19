@@ -10,6 +10,10 @@
 
   &_subtitle{
     padding-top: 10px;
+
+    h2{
+      padding-left: 0px!important;
+    }
   }
 
   &_title {
@@ -83,6 +87,10 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
+
+        .gatsby-image-wrapper{
+          position: absolute;
+        }
       }
 
       img{
