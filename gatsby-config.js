@@ -15,7 +15,7 @@ module.exports = {
         debug: {
           preview: true,
         },
-        useACF: true,
+        // useACF: true,
       },
     },
     "gatsby-plugin-image",
