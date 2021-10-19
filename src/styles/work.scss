@@ -144,6 +144,10 @@
 			height: auto;
 			transition: 0.1s ease;
 
+			@media(max-width: $mobile){
+				width: calc(100% - 30px);
+			}
+
 			.work_card-list{
 				opacity: 1; 
 				pointer-events: all;

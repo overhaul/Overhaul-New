@@ -6,4 +6,11 @@
   h1{
     margin-bottom: 15px;
   }
+
+  .container{
+    @media(max-width: $mobile){
+      max-width: calc(100% - 50px);
+      padding: 0px;
+    }
+  }
 }

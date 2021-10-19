@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Component } from "react";
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import PageTitle from '../../components/PageTitle'
 import WorkCard from '../../components/WorkCard'
