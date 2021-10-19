@@ -29,6 +29,7 @@
 
   h2{
   	margin-bottom: 0.3em;
+    padding-left: 25px;
   }
 
   .container {
@@ -40,7 +41,6 @@
     position: relative;
     height: 100%;
     width: 75px;
-    padding-right: 1em;
     left: 0;
     top: 0;
   }
@@ -60,6 +60,10 @@
       @media(max-width: $tablet){
         padding-bottom: 0.5em;
       }
+    }
+
+    h2{
+      padding-left: 0px;
     }
 
     ul{

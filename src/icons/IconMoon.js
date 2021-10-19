@@ -5,7 +5,7 @@ class IconMoon extends Component {
     render() {
 
         return (
-            <svg className="scaling-svg" viewBox="0 0 80 80">
+            <svg className="scaling-svg gsap-spin-in" viewBox="0 0 76 76">
 						<g>
 							<g>
 								<path className="st0" d="M39,78C17.5,78,0,60.5,0,39S17.5,0,39,0s39,17.5,39,39S60.5,78,39,78z M39,2C18.6,2,2,18.6,2,39

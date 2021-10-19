@@ -52,6 +52,35 @@ function Layout({children, themeColor, pageTitle, seo}) {
     }
   }, []);
 
+  useEffect(() => {
+    const q = gsap.utils.toArray(".gsap-spin-in");
+    const gsapAnimations = []
+    for(let i = 0; i < q.length; i++) {
+      const gsapAnimation = gsap.fromTo(q[i], {
+        rotate: '-180',
+        opacity: 1,
+      },{
+        scrollTrigger: {
+          trigger: q[i],
+          start: 'top bottom',
+          scrub: true,
+        },
+        rotate: '180',
+        opacity: 1
+        // duration: 1
+      });
+
+      gsapAnimations.push(gsapAnimation)
+    }
+
+    setIsVisible(true)
+
+    return () => {
+      while (gsapAnimations.length) {
+        gsapAnimations.pop().kill()
+      }
+    }
+  }, []);
   //Transition Stuff
 
   const [isVisible, setIsVisible] = useState(false)

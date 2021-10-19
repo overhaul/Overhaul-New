@@ -5,7 +5,7 @@ class IconStar extends Component {
     render() {
 
         return (
-			<svg className="scaling-svg" viewBox="0 0 80 80">
+			<svg className="scaling-svg gsap-spin-in" viewBox="0 0 76 76">
 				<g>
 					<rect x="37" className="st0" width="2" height="12.7"/>
 					<rect x="34.5" y="12.8" transform="matrix(0.9914 -0.1305 0.1305 0.9914 -2.197 4.7992)" className="st0" width="2" height="12.7"/>

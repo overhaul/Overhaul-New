@@ -5,7 +5,7 @@ class IconFire extends Component {
     render() {
 
         return (
-					<svg className="scaling-svg" viewBox="0 0 80 80">
+					<svg className="scaling-svg gsap-spin-in" viewBox="0 0 76 76">
 						<g>
 							<rect x="37" className="st0" width="2" height="12.8"/>
 							<rect x="32" y="13.5" transform="matrix(0.9659 -0.2589 0.2589 0.9659 -4.0329 9.2316)" className="st0" width="2" height="12.8"/>
