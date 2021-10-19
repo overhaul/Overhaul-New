@@ -27,7 +27,7 @@ exports.createPages = async function ({graphql, actions}) {
         // Add other exclusion conditions here for pages
         // That have been created on WP
 
-        return !isAStaticPage && !isACareerPage && !isHomepage
+        return !isAStaticPage && !isACareerPage && !isHomepage 
       })
       .map(({ node }) => node)
 
