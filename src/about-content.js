@@ -51,7 +51,7 @@ export const team =[
 export const areas =[
     {
         title: 'Lifestyle, fashion, and beauty.',
-        paragraph: '<p>Las bufandas son útiles para mantenerte caliente, también tienen estilo. Solo necesito tirarme desde un avión con una bufanda para no coger un catarro. Mi perro es negro, mi rata es blanca</p>',
+        paragraph: '<p>We’ve got extensive experience with DTC and traditional retail for lifestyle, fashion and beauty products. Even some that made the switch along the way.</p>',
         client: [
             {
                 title: 'Haven',
