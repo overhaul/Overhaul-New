@@ -15,7 +15,7 @@
     margin-top: -100vh;
 
     .fixed-slide__inner {
-      position: absolute;
+      position: absolute !important;
     }
 
     .fixed-slide__clip {
@@ -28,7 +28,7 @@
 
   &__inner {
     transform: translateZ(0);
-    position: fixed;
+    position: fixed !important;
     overflow: hidden;
     top: 0;
     left: 0;
