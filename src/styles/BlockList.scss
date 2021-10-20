@@ -50,6 +50,12 @@
     top: 0;
   }
 
+  .accordion{
+    h2{
+      padding-left: 0px!important;
+    }
+  }
+
   @media(max-width: $tablet){
 
   	&_title{

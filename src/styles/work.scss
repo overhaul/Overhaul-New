@@ -282,7 +282,7 @@
 				width: auto;
 				opacity: 1;
 				pointer-events: all;
-				transition: 0.1s ease;
+				transition: 0.3s ease;
 
 				@media(max-width: $mobile){
 					padding-left: 0em;
@@ -304,7 +304,7 @@
 		width: 0;
 		opacity: 0;
 		pointer-events: none;
-		transition: 0.1s ease;
+		transition: 0.3s ease;
 		
 		a{
 			color: $light-grey;
