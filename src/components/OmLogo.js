@@ -5,7 +5,7 @@ import '../styles/navigation.scss'
 function OmLogo(){
 	return(
 		<Link to="/" className="logo cursor-type--alt"> 
-			<svg id="logo" className="scaling-svg" viewBox="0 0 140 55">
+			<svg itemProp="logo" id="logo" className="scaling-svg" viewBox="0 0 140 55">
 				<g>
 					<path d="M10.3,9.4H8c-2.7,0-4.8,1.4-6.1,3.4c-1.3,2-1.9,4.6-1.9,7.1c0,2.5,0.6,5.1,1.9,7.1c1.3,2,3.4,3.4,6.1,3.4h2.3
 						c2.7,0,4.8-1.4,6.1-3.4c1.3-2,1.9-4.6,1.9-7.1c0-2.6-0.6-5.1-1.9-7.1C15.1,10.7,13,9.4,10.3,9.4z M15.2,26.1

@@ -12,9 +12,7 @@ import BlockApproach from '../components/BlockApproach'
 import BlockImageText from '../components/BlockImageText'
 import BlockExpertise from '../components/BlockExpertise'
 
-import { awards, team, areas, listItems, serviceAbilities, clients, ourApproach, approachImage } from '../about-content'
-
-import aboutImage from '/src/images/OverhaulOffice.jpg'
+import { awards, team, areas, listItems, serviceAbilities, clients, ourApproach, approachImage , aboutImage} from '../about-content'
 
 const AboutPage = ({ data }) => {
     const seo = data?.wpPage?.seo || {}

@@ -9,42 +9,46 @@ import Alberta from '../src/images/clients/logo-alberta.png'
 import Edmonton from '../src/images/clients/logo-edmonton.png'
 import Katz from '../src/images/clients/logo-katz.png'
 
+export const aboutImage = {
+    image : (<StaticImage src='../src/images/OverhaulOffice.jpg' alt='The OverhaulMedia Boardroom' placehodeler='blurred'/>)
+}
+
 export const approachImage = {
-    imageSrc: (<StaticImage className="block-approach_image" src='../src/images/our-approach.jpg' alt='The OverhaulMedia Approach' placehodeler='blurred' layout='fixed' width={1600}/>)
+    imageSrc: (<StaticImage className="block-approach_image" src='../src/images/our-approach.jpg' alt='The OverhaulMedia Approach' placehodeler='blurred'/>)
 }
 
 export const team =[
     {
         name: 'Matt Janzen',
         backgroundImage: (<StaticImage className="background-image" src='../src/images/team/matt-bkg.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={900}/>),
-        imageBefore: (<StaticImage src='../src/images/team/matt-before.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={500}  height={830} className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/matt-after.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={500}  height={830} className="block-team_member-images-one"/>),
+        imageBefore: (<StaticImage src='../src/images/team/matt-before.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/matt-after.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
         title: 'Director',
         profile: 'With over 15 years experience managing design and development projects, Mathew’s familiarity with all elements of digital and visual comms production allow him to create solutions beyond the standard formulas.'
     },
     {
         name: 'Michael Wichuk',
         backgroundImage: (<StaticImage className="background-image" src='../src/images/team/mike-bkg.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={888}/>),
-        imageBefore: (<StaticImage src='../src/images/team/mike-before.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={500}  height={830} className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/mike-after.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={500}  height={830}className="block-team_member-images-one"/>),
+        imageBefore: (<StaticImage src='../src/images/team/mike-before.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/mike-after.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830}className="block-team_member-images-one"/>),
         title: 'Senior Designer',
         profile: 'Michael is a talented designer with decades of agency and freelance experience. Michael also practices traditional print methods with his Heidelberg letterpress.'
     },
     {
         name: 'Roman Hermens',
         backgroundImage:(<StaticImage className="background-image" src='../src/images/team/roman-bkg.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={900}/>),
-        imageBefore: (<StaticImage src='../src/images/team/roman-before.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed'width={500}  height={830} className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/roman-after.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={500}  height={830} className="block-team_member-images-one"/>),
+        imageBefore: (<StaticImage src='../src/images/team/roman-before.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed'width={554}  height={830} className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/roman-after.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
         title: 'Developer',
         profile: 'Roman is a talented, versatile developer. He is also a seasoned designer of brand marks, websites and more.'
     },
     {
         name: 'Peter Elima',
         backgroundImage: (<StaticImage className="background-image" src='../src/images/team/peter-bkg.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={900}/>),
-        imageBefore: (<StaticImage src='../src/images/team/peter-before.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={500}  height={830}className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/peter-after.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={500}  height={830} className="block-team_member-images-one"/>),
+        imageBefore: (<StaticImage src='../src/images/team/peter-before.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830}className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/peter-after.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
         title: 'Designer',
-        profile: 'Las bufandas son útiles para mantenerte caliente, también tienen estilo. Solo necesito tirarme desde un avión con una bufanda para no coger un catarro. '
+        profile: 'Peter strives to spark conversations and create experiences through his work. With focus primarily on editorial design, brand identities, interactive design and loves to kern type.'
     }
 ]
 
@@ -317,37 +321,37 @@ export const awards =[
         link:"/work/the-great-human-odyssey"
     },
     {
-        title: 'ACE Award - Not for Profit Interactive',
-        year: "2012",
-        project:"Share Hope",
-        link:"/work/share-hope"
-    },
-    {
         title: 'FWA - Site of the Day',
         year: "2015",
         project:"The Great Human Odyssey",
         link:"/wokr/the-great-human-odyssey"
     },
-]
-
-export const aboutImage =[
     {
-        src: '../src/images/OverhaulOffice.jpg',
-        alt: 'Views from the office'
-    }
-]
-
-export const ICIimages = [
-    {
-        src: "https://images.unsplash.com/photo-1631116618155-6074e787a30b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80",
-        alt: "This is the alt text"
+        title: 'ACE Award - Not for Profit Interactive',
+        year: "2012",
+        project:"Share Hope",
+        link:"/work/share-hope"
     },
-    {
-        src: "https://images.unsplash.com/photo-1631116618155-6074e787a30b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80",
-        alt: "This is the second alt text"
-    }
-
 ]
+
+// export const aboutImage =[
+//     {
+//         src: '../src/images/OverhaulOffice.jpg',
+//         alt: 'Views from the office'
+//     }
+// ]
+
+// export const ICIimages = [
+//     {
+//         src: "https://images.unsplash.com/photo-1631116618155-6074e787a30b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80",
+//         alt: "This is the alt text"
+//     },
+//     {
+//         src: "https://images.unsplash.com/photo-1631116618155-6074e787a30b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80",
+//         alt: "This is the second alt text"
+//     }
+
+// ]
 
 export const listItems =[
     {
