@@ -177,7 +177,7 @@ export const query = graphql `
                 fluid(maxWidth: 900, quality: 80) {
                   ...GatsbyImageSharpFluid
                 }
-                fixed(width: 200) {
+                fixed(width: 300) {
                   ...GatsbyImageSharpFixed
                 }
               }
