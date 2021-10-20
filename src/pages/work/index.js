@@ -176,9 +176,13 @@ export const query = graphql `
               childImageSharp {
                 fluid(maxWidth: 900, quality: 80) {
                   ...GatsbyImageSharpFluid
+                  srcSetWebp
+                  srcWebp
                 }
                 fixed(width: 300) {
                   ...GatsbyImageSharpFixed
+                  srcSetWebp
+                  srcWebp
                 }
               }
             }
