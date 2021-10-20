@@ -6,5 +6,25 @@
 	{
 		 "fromPath": "/hosting/",
 		 "toPath": "/about"
+	},
+	{
+		 "fromPath": "/services/*",
+		 "toPath": "/about#Services"
+	},
+	{
+		 "fromPath": "/font-licensing",
+		 "toPath": "/about"
+	},
+	{
+		 "fromPath": "/graphic-design",
+		 "toPath": "/about"
+	},
+	{
+		 "fromPath": "/wordpress-maintenance",
+		 "toPath": "/about"
+	},
+	{
+		 "fromPath": "/services/shopify",
+		 "toPath": "/about#Services"
 	}
 ]

@@ -19,10 +19,10 @@ export const approachImage = {
 
 export const team =[
     {
-        name: 'Matt Janzen',
-        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/matt-bkg.jpg' alt='A rock with some barnacles' placehodeler='blurred' layout='fullWidth' />),
-        imageBefore: (<StaticImage src='../src/images/team/matt-before.jpg' alt='Matt Janzen before mugshot' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/matt-after.jpg' alt='Matt Janzen, after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
+        name: 'Matthew Janzen',
+        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/matt-bkg.jpg' alt='A rock with some barnacles' placehodeler='blurred' layout='fixed' width={900}/>),
+        imageBefore: (<StaticImage src='../src/images/team/matt-before.jpg' alt='Matt Janzen before mugshot' placehodeler='blurred' layout='fixed' className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/matt-after.jpg' alt='Matt Janzen, after a haircut' placehodeler='blurred' layout='fixed' className="block-team_member-images-one"/>),
         title: 'Director',
         profile: 'With over 15 years experience managing design and development projects, Mathew’s familiarity with all elements of digital and visual comms production allow him to create solutions beyond the standard formulas.'
     },
