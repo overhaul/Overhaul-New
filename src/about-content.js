@@ -20,33 +20,33 @@ export const approachImage = {
 export const team =[
     {
         name: 'Matt Janzen',
-        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/matt-bkg.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={900}/>),
-        imageBefore: (<StaticImage src='../src/images/team/matt-before.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/matt-after.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
+        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/matt-bkg.jpg' alt='A rock with some barnacles' placehodeler='blurred' layout='fixed' width={900}/>),
+        imageBefore: (<StaticImage src='../src/images/team/matt-before.jpg' alt='Matt Janzen before mugshot' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/matt-after.jpg' alt='Matt Janzen, after a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
         title: 'Director',
         profile: 'With over 15 years experience managing design and development projects, Mathew’s familiarity with all elements of digital and visual comms production allow him to create solutions beyond the standard formulas.'
     },
     {
         name: 'Michael Wichuk',
-        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/mike-bkg.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={888}/>),
-        imageBefore: (<StaticImage src='../src/images/team/mike-before.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/mike-after.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830}className="block-team_member-images-one"/>),
+        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/mike-bkg.jpg' alt='A nice lake in the mountains' placehodeler='blurred' layout='fixed' width={888}/>),
+        imageBefore: (<StaticImage src='../src/images/team/mike-before.jpg' alt='Mike before a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/mike-after.jpg' alt='Mike after a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830}className="block-team_member-images-one"/>),
         title: 'Senior Designer',
         profile: 'Michael is a talented designer with decades of agency and freelance experience. Michael also practices traditional print methods with his Heidelberg letterpress.'
     },
     {
         name: 'Roman Hermens',
-        backgroundImage:(<StaticImage className="background-image" src='../src/images/team/roman-bkg.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={900}/>),
-        imageBefore: (<StaticImage src='../src/images/team/roman-before.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed'width={554}  height={830} className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/roman-after.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
+        backgroundImage:(<StaticImage className="background-image" src='../src/images/team/roman-bkg.jpg' alt='The ocean near tofino' placehodeler='blurred' layout='fixed' width={900}/>),
+        imageBefore: (<StaticImage src='../src/images/team/roman-before.jpg' alt='Roman before a haircut' placehodeler='blurred' layout='fixed'width={554}  height={830} className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/roman-after.jpg' alt='Roman after a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
         title: 'Developer',
         profile: 'Roman is a talented, versatile developer. He is also a seasoned designer of brand marks, websites and more.'
     },
     {
         name: 'Peter Elima',
-        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/peter-bkg.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={900}/>),
-        imageBefore: (<StaticImage src='../src/images/team/peter-before.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830}className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/peter-after.jpg' alt='A Mountain-Scape' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
+        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/peter-bkg.jpg' alt='A parking lot at Elk Island Park' placehodeler='blurred' layout='fixed' width={900}/>),
+        imageBefore: (<StaticImage src='../src/images/team/peter-before.jpg' alt='Peter before a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830}className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/peter-after.jpg' alt='Peter after a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
         title: 'Designer',
         profile: 'Peter strives to spark conversations and create experiences through his work. With focus primarily on editorial design, brand identities, interactive design and loves to kern type.'
     }
@@ -67,31 +67,31 @@ export const areas =[
             },
             {
                 title: 'Goldsquare',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-goldsquare.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-goldsquare.jpg' alt='goldsquare vision' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Fancii',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-fancii.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-fancii.jpg' alt='fancii website' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Healthy Bedroom',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-healthybedroom.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-healthybedroom.jpg' alt='healthy bedrooom website' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Orijen',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-orijen.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-orijen.jpg' alt='Orijen image' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'SOHO Hair',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-soho.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-soho.jpg' alt='soho hair salon' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Publish Brand',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-publishbrand.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-publishbrand.jpg' alt='Publish brand website' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Naked and Famous',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-nakedandfamous.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-nakedandfamous.jpg' alt='naked and famous demin' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             }
         ]
     },
@@ -101,39 +101,39 @@ export const areas =[
         client: [
             {
                 title: 'Uptop',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-uptop.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-uptop.jpg' alt='Uptop branding' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Farrow',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-farrow.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-farrow.jpg' alt='farrow sandwiches' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Three Boars',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-threeboars.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-threeboars.jpg' alt='three boars eatery' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'HighDough',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-highdough.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-highdough.jpg' alt='Highdough pizza' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Press’d',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-pressd.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-pressd.jpg' alt='pressd sandwiches' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'North 53',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-north53.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-north53.jpg' alt='north 53 cocktail place' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Wishbone',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-wishbone.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-wishbone.jpg' alt='wishbone restaurent' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Baiju',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-baiju.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-baiju.jpg' alt='Baiju restaurent' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Malt and Mortar',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-maltandmortar.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-maltandmortar.jpg' alt='malt and mortar pub' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             }
         ]
     },
@@ -143,39 +143,39 @@ export const areas =[
         client: [
             {
                 title: 'Canada ICI',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-canadaici.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-canadaici.jpg' alt='canada ici' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Epic Investment Services',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-epic.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-epic.jpg' alt='epic investments corporation' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'HSBC Place',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-hsbc.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-hsbc.jpg' alt='hsbc place edmonton' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Currents of Windermere',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-currentsofwindermere.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-currentsofwindermere.jpg' alt='currents of wondermere' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Beljan',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-beljan.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-beljan.jpg' alt='beljan developments company' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Hyphen Group',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-hyphen.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-hyphen.jpg' alt='hyphen development group' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: '103 Street Center',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-103st.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-103st.jpg' alt='103 street center' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'North District',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-northdistrict.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-northdistrict.jpg' alt='north district edmonton' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'DOSC',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-dosc.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-dosc.jpg' alt='dosc pub and club' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             }
         ]
     },
@@ -185,19 +185,19 @@ export const areas =[
         client: [
             {
                 title: 'Theater Network',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-theaternetwork.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-theaternetwork.jpg' alt='theater network edmonton' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Georgie Magazine',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-georgiemagazine.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-georgiemagazine.jpg' alt='georgie magazine' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Human Odyssey',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-humanodyssey.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-humanodyssey.jpg' alt='the human odyssey' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Handful of Films',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-handfuloffilms.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-handfuloffilms.jpg' alt='handful of films' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             }
         ]
     },
@@ -207,27 +207,27 @@ export const areas =[
         client: [
             {
                 title: 'Love AB Forests VR Tour',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-loveabvr.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-loveabvr.jpg' alt='love alberta forests virtual reality tour' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'YEG City Budget',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-yegcitybudget.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-yegcitybudget.jpg' alt='the edmonton city budget' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Report to the City',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-reportotthecity.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-reportotthecity.jpg' alt='a report for hte city of edmonton' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Invest Alberta Corporation',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-iac.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-iac.jpg' alt='invest alberta corporation' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Alberta Forest Products Association',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-afpa.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-afpa.jpg' alt='albert forestry products association' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'City of Leduc',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-cityofleduc.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-cityofleduc.jpg' alt='the city of leduc' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             }
         ]
     },
@@ -237,23 +237,23 @@ export const areas =[
         client: [
             {
                 title: 'Cure MD',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-curemd.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-curemd.jpg' alt='cure md' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'SMP',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-smp.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-smp.jpg' alt='swainson mikki plesket law offices' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Mettra Pharmacy',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-mettra.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-mettra.jpg' alt='mettra pharmacy edmonton' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Pure Aligners',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-purealigners.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-purealigners.jpg' alt='pure aligners' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Hello Dental',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-hellodental.jpg' alt='' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-hellodental.jpg' alt='hello dental office' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             }
         ]
     },
