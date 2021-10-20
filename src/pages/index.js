@@ -63,6 +63,7 @@ export const query = graphql `
                   altText
                   localFile {
                     childImageSharp {
+                      gatsbyImageData,
                       fluid(maxWidth: 2000, quality: 80) {
                         ...GatsbyImageSharpFluid
                       }
