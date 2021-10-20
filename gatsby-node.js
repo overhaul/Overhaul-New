@@ -1,11 +1,13 @@
 const path = require('path')
-const fs = require('fs');
+const fs = require('fs')
+const redirects = require("./redirects.json")
 
 const staticPages = fs.readdirSync('./src/pages').map((file) => {
   return file.replace(/^(.+?)(?:\.js)?$/, '/$1/')
 })
 
 exports.createPages = async function ({graphql, actions}) {
+  const { createRedirect } = actions
   const { data } = await graphql(`
     query {
       allWpPage {
@@ -38,4 +40,12 @@ exports.createPages = async function ({graphql, actions}) {
       context: { slug: pages[i].slug },
     })
   }
+  console.log(redirects)
+  redirects.forEach(redirect => 
+    createRedirect({
+      fromPath: redirect.fromPath,
+      toPath: redirect.toPath,
+      isPermanent: false,
+    })
+  )
 }

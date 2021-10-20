@@ -334,25 +334,6 @@ export const awards =[
     },
 ]
 
-// export const aboutImage =[
-//     {
-//         src: '../src/images/OverhaulOffice.jpg',
-//         alt: 'Views from the office'
-//     }
-// ]
-
-// export const ICIimages = [
-//     {
-//         src: "https://images.unsplash.com/photo-1631116618155-6074e787a30b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80",
-//         alt: "This is the alt text"
-//     },
-//     {
-//         src: "https://images.unsplash.com/photo-1631116618155-6074e787a30b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80",
-//         alt: "This is the second alt text"
-//     }
-
-// ]
-
 export const listItems =[
     {
         title: 'Good design.',
