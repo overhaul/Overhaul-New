@@ -20,33 +20,33 @@ export const approachImage = {
 export const team =[
     {
         name: 'Matt Janzen',
-        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/matt-bkg.jpg' alt='A rock with some barnacles' placehodeler='blurred' layout='fixed' width={900}/>),
-        imageBefore: (<StaticImage src='../src/images/team/matt-before.jpg' alt='Matt Janzen before mugshot' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/matt-after.jpg' alt='Matt Janzen, after a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
+        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/matt-bkg.jpg' alt='A rock with some barnacles' placehodeler='blurred' layout='fullWidth' />),
+        imageBefore: (<StaticImage src='../src/images/team/matt-before.jpg' alt='Matt Janzen before mugshot' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/matt-after.jpg' alt='Matt Janzen, after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Director',
         profile: 'With over 15 years experience managing design and development projects, Mathew’s familiarity with all elements of digital and visual comms production allow him to create solutions beyond the standard formulas.'
     },
     {
         name: 'Michael Wichuk',
-        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/mike-bkg.jpg' alt='A nice lake in the mountains' placehodeler='blurred' layout='fixed' width={888}/>),
-        imageBefore: (<StaticImage src='../src/images/team/mike-before.jpg' alt='Mike before a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/mike-after.jpg' alt='Mike after a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830}className="block-team_member-images-one"/>),
+        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/mike-bkg.jpg' alt='A nice lake in the mountains' placehodeler='blurred' layout='fullWidth' />),
+        imageBefore: (<StaticImage src='../src/images/team/mike-before.jpg' alt='Mike before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/mike-after.jpg' alt='Mike after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Senior Designer',
         profile: 'Michael is a talented designer with decades of agency and freelance experience. Michael also practices traditional print methods with his Heidelberg letterpress.'
     },
     {
         name: 'Roman Hermens',
-        backgroundImage:(<StaticImage className="background-image" src='../src/images/team/roman-bkg.jpg' alt='The ocean near tofino' placehodeler='blurred' layout='fixed' width={900}/>),
-        imageBefore: (<StaticImage src='../src/images/team/roman-before.jpg' alt='Roman before a haircut' placehodeler='blurred' layout='fixed'width={554}  height={830} className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/roman-after.jpg' alt='Roman after a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
+        backgroundImage:(<StaticImage className="background-image" src='../src/images/team/roman-bkg.jpg' alt='The ocean near tofino' placehodeler='blurred' layout='fullWidth' />),
+        imageBefore: (<StaticImage src='../src/images/team/roman-before.jpg' alt='Roman before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/roman-after.jpg' alt='Roman after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Developer',
         profile: 'Roman is a talented, versatile developer. He is also a seasoned designer of brand marks, websites and more.'
     },
     {
         name: 'Peter Elima',
-        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/peter-bkg.jpg' alt='A parking lot at Elk Island Park' placehodeler='blurred' layout='fixed' width={900}/>),
-        imageBefore: (<StaticImage src='../src/images/team/peter-before.jpg' alt='Peter before a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830}className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/peter-after.jpg' alt='Peter after a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
+        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/peter-bkg.jpg' alt='A parking lot at Elk Island Park' placehodeler='blurred' layout='fullWidth' />),
+        imageBefore: (<StaticImage src='../src/images/team/peter-before.jpg' alt='Peter before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/peter-after.jpg' alt='Peter after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Designer',
         profile: 'Peter strives to spark conversations and create experiences through his work. With focus primarily on editorial design, brand identities, interactive design and loves to kern type.'
     }
