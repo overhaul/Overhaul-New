@@ -126,6 +126,7 @@ function Layout({children, themeColor, pageTitle, seo}) {
         {seo.twitterImage?.sourceUrl ? <meta name="twitter:card" content="summary_large_image" /> : ''}
 
         {seo.schema?.raw ? <script type='application/ld+json'>{seo.schema.raw}</script> : '' }
+
       </Helmet>
       <CursorWrapper>
         <header>

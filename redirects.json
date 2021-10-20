@@ -1,0 +1,10 @@
+[
+	{
+		 "fromPath": "/agreement/",
+		 "toPath": "/about"
+	},
+	{
+		 "fromPath": "/hosting/",
+		 "toPath": "/about"
+	}
+]
