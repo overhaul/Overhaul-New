@@ -1,26 +1,25 @@
 import React, {Component} from 'react'
 import Img from "gatsby-image"
 
-import { convertToBgImage } from 'gbimage-bridge'
-import BackgroundImage from 'gatsby-background-image'
-
 class FixedSlide extends Component {
   render () {
     const {title, link, gatsbyImageData } = this.props
-    const bgImage = convertToBgImage(gatsbyImageData)
     return (
       <div className="fixed-slide">
         <div className="fixed-slide__clip">
-          <BackgroundImage
-            Tag="div"
+          <div
             className="fixed-slide__inner"
-            fluid={gatsbyImageData.fluid}
+            style={{
+              backgroundImage: `url(${gatsbyImageData.fluid.src})`,
+              backgroundAttachment: 'fixed',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center center',
+            }}
           >
             {/* <Img
               className="fixed-slide__bg"
               {...gatsbyImageData}
             /> */}
-
             <div className="fixed-slide__content">
               <div className="container">
                 <h1 className="fixed-slide__title">
@@ -31,7 +30,7 @@ class FixedSlide extends Component {
                 </a>
               </div>
             </div>
-          </BackgroundImage>
+          </div>
         </div>
       </div>
     )
