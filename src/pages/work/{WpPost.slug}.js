@@ -14,7 +14,6 @@ const WorkPost = ({ data }) => {
     featuredImage,
     seo,
     excerpt,
-    id,
     workSubtitle,
   } = data.wpPost
 
