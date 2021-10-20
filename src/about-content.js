@@ -19,16 +19,16 @@ export const approachImage = {
 
 export const team =[
     {
-        name: 'Matt Janzen',
+        name: 'Matthew Janzen',
         backgroundImage: (<StaticImage className="background-image" src='../src/images/team/matt-bkg.jpg' alt='A rock with some barnacles' placehodeler='blurred' layout='fixed' width={900}/>),
-        imageBefore: (<StaticImage src='../src/images/team/matt-before.jpg' alt='Matt Janzen before mugshot' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='../src/images/team/matt-after.jpg' alt='Matt Janzen, after a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-one"/>),
+        imageBefore: (<StaticImage src='../src/images/team/matt-before.jpg' alt='Matt Janzen before mugshot' placehodeler='blurred' layout='fixed' className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/matt-after.jpg' alt='Matt Janzen, after a haircut' placehodeler='blurred' layout='fixed' className="block-team_member-images-one"/>),
         title: 'Director',
         profile: 'With over 15 years experience managing design and development projects, Mathew’s familiarity with all elements of digital and visual comms production allow him to create solutions beyond the standard formulas.'
     },
     {
         name: 'Michael Wichuk',
-        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/mike-bkg.jpg' alt='A nice lake in the mountains' placehodeler='blurred' layout='fixed' width={888}/>),
+        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/mike-bkg.jpg' alt='A nice lake in the mountains' placehodeler='blurred' layout='fixed' width={450}/>),
         imageBefore: (<StaticImage src='../src/images/team/mike-before.jpg' alt='Mike before a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830} className="block-team_member-images-two"/>),
         imageAfter: (<StaticImage src='../src/images/team/mike-after.jpg' alt='Mike after a haircut' placehodeler='blurred' layout='fixed' width={554}  height={830}className="block-team_member-images-one"/>),
         title: 'Senior Designer',

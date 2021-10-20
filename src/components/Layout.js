@@ -147,5 +147,6 @@ function Layout({children, themeColor, pageTitle, seo}) {
     </div>
   )
 }
+console.log("%c site by Overhaul ©","color: red; font-family: Helvetica; font-size: 20px; padding: 10px 20px; width:100%; background-color: #000;")
 
 export default Layout

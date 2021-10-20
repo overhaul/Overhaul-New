@@ -104,8 +104,10 @@
         opacity: 1;
         transition: $opacity;
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        left:0;
+        max-width: 100%;
+        // left: 50%;
+        // transform: translateX(-50%);
 
           img{
             width: 100%;
@@ -124,8 +126,10 @@
         position: absolute;
         opacity: 0;
         transition: $opacity;
-        left: 50%;
-        transform: translateX(-50%);
+        left:0;
+        max-width: 100%;
+        // left: 50%;
+        // transform: translateX(-50%);
 
         img{
           width: 100%;
