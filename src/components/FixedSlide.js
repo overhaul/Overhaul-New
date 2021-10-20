@@ -11,9 +11,6 @@ class FixedSlide extends Component {
             className="fixed-slide__inner"
             style={{
               backgroundImage: `url(${gatsbyImageData.fluid.src}), url(${gatsbyImageData.fluid.base64})`,
-              backgroundAttachment: 'fixed',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center center',
             }}
           >
             {/* <Img
