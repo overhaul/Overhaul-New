@@ -324,7 +324,7 @@ export const awards =[
         title: 'FWA - Site of the Day',
         year: "2015",
         project:"The Great Human Odyssey",
-        link:"/wokr/the-great-human-odyssey"
+        link:"/work/the-great-human-odyssey"
     },
     {
         title: 'ACE Award - Not for Profit Interactive',
