@@ -144,17 +144,14 @@ header {
     }
 }
 
-// .scaling-svg{
+//wp styles
+.wp-block-column{
 
-//     &.gsap-spin-in{
-//         opacity: 0;
-//         transition: 0.2s ease;
-//         transform: rotate(0deg);
-
-//         &.visible{
-//             transform: rotate(360deg);
-//             transition: 0.2s ease;
-//             opacity: 1;
-//         }
-//     }
-// }
+    h1, h2, h3, h4, h5, h6, ul, p {
+        margin-bottom: 15px;
+    }
+}
+.wp-block-separator{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
