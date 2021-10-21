@@ -25,7 +25,19 @@
 	},
 	{
 		 "fromPath": "/services/shopify",
-		 "toPath": "/about#Services"
+		 "toPath": "/ecommerce/"
+	},
+	{
+		 "fromPath": "/services/branding-edmonton/",
+		 "toPath": "/branding-edmonton/"
+	},
+	{
+		 "fromPath": "/services/bar-restaurant-branding/",
+		 "toPath": "/bar-restaurant-branding/"
+	},
+	{
+		 "fromPath": "/services/naming-nomenclature/",
+		 "toPath": "/naming-nomenclature/"
 	},
 	{
 		 "fromPath": "/jobs",
@@ -36,7 +48,23 @@
 		 "toPath": "/careers"
 	},
 	{
+		 "fromPath": "/careers/designer/",
+		 "toPath": "/careers"
+	},
+	{
 		 "fromPath": "/beljan/",
 		 "toPath": "/work/beljan-developments"
+	},
+	{
+		 "fromPath": "/work/bilt",
+		 "toPath": "/work/"
+	},
+	{
+		 "fromPath": "/planner",
+		 "toPath": "/about/"
+	},
+	{
+		 "fromPath": "/services/seo-search-optimization/",
+		 "toPath": "/about#Services/"
 	}
 ]
