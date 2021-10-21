@@ -1,5 +1,12 @@
 .work{
 
+  &_content {
+    z-index: 100;
+    background-color: white;
+    position: relative;
+    transform: translateZ(0);
+  }
+
 	&_card{
 		margin-bottom: 2.5em;
 
