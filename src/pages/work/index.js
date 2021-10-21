@@ -24,6 +24,7 @@ class WorkPage extends Component {
     if (window.ScrollTriggerInstance) {
       window.ScrollTriggerInstance.refresh(true)
     }
+
     this.setState( 
       function(prevState){
         return{
