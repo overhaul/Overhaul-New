@@ -34,7 +34,50 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        output: '/',
+        query: `
+          {
+            allWpContentNode(filter: {nodeType: {in: ["Post", "Page"]}}) {
+              nodes {
+                ... on WpPost {
+                  uri
+                  modifiedGmt
+                }
+                ... on WpPage {
+                  uri
+                  modifiedGmt
+                }
+              }
+            }
+          }
+        `,
+        resolveSiteUrl: () => process.env.URL || `https://overhaulmedia.com`,
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+          allWpContentNode: { nodes: allWpNodes },
+        }) => {
+          const wpNodeMap = allWpNodes.reduce((acc, node) => {
+            const { uri } = node
+            acc[uri] = node
+
+            return acc
+          }, {})
+
+          return allPages.map(page => {
+            return { ...page, ...wpNodeMap[page.path] }
+          })
+        },
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
