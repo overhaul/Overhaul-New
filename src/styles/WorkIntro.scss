@@ -5,6 +5,12 @@
   position: relative;
   background: $white;
 
+  &_title{
+  	@media(max-width: $mobile){
+  		margin-bottom: 25px;
+  	}
+
+  }
 	&_read-more{
 
 		&-button{
