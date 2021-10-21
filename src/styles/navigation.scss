@@ -262,6 +262,14 @@ header{
         a {
             text-decoration: none;
             font-weight: 400;
+
+            &[aria-current='page']{
+                color:$red;
+            }
+
+            &:hover{
+                text-decoration: none;
+            }
         }
     }
 
@@ -280,9 +288,9 @@ header{
             &:hover {
                 color: $red;
 
-
                 h1{
                     border-bottom: none;
+                    text-decoration: none;
                 }
             }
 

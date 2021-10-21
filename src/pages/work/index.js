@@ -23,6 +23,13 @@ class WorkPage extends Component {
   toggleView() {
     if (window.ScrollTriggerInstance) {
       window.ScrollTriggerInstance.refresh(true)
+
+       return () => {
+        while (window.ScrollTriggerInstance.length) {
+          window.ScrollTriggerInstance.kill()
+          console.log('killed')
+        }
+      }
     }
     this.setState( 
       function(prevState){

@@ -26,10 +26,12 @@ class BlockExpertise extends React.Component {
         return (
             <div className="block-expertise gsap-fade-in" id="Services">
                 <div className="container row">
-                    <div className="col-xs-12 col-md-3 block-approach_title">
+                    <div className="col-xs-12 col-md-3 block-expertise_title">
                         <Icon name="sand"/>
                         <h2>{ title }</h2>
-                        <button aria-label="open" onClick={this.toggleAccordion} className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}/>
+                        <button aria-label="open" onClick={this.toggleAccordion} className='arrow-button'>
+                            <span className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}></span>
+                        </button>
                     </div>
                     <div className={`accordion col-md-9 col-xs-12 ${this.state.accordionIsOpen ? 'open' : ''}`}>
                         {areas.map(({ title, paragraph, client }, i ) => (

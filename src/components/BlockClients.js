@@ -29,7 +29,9 @@ class BlockClients extends React.Component {
                     <div className="col-xs-12 col-md-6 block-clients_title">
                         <Icon name="fire"/>
                         <h2>{ title }</h2>
-                        <button aria-label="open" onClick={this.toggleAccordion} className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}/>
+                        <button aria-label="open" onClick={this.toggleAccordion} className='arrow-button'>
+                            <span className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}></span>
+                        </button>
                     </div>
                     <div className={`block-clients_grid accordion col-md-6 col-xs-12 ${this.state.accordionIsOpen ? 'open' : ''}`}>
                         {clients.map((client, index) => (

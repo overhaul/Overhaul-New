@@ -29,7 +29,9 @@ class BlockAwards extends React.Component {
                     <div className="col-xs-12 block-awards_title">
                         <Icon name="water"/>
                         <h2>{ title }</h2>
-                        <button aria-label="open" onClick={this.toggleAccordion} className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}/>
+                        <button aria-label="open" onClick={this.toggleAccordion} className='arrow-button'>
+                            <span className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}></span>
+                        </button>
                     </div>
                     <div className={`accordion col-xs-12 ${this.state.accordionIsOpen ? 'open' : ''}`}>
                         <div className="block-awards_table gsap-fade-in">

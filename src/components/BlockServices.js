@@ -31,7 +31,9 @@ class BlockServices extends React.Component {
                     <div className="col-xs-12 col-md-3 block-services_title">
                         <Icon name="sun"/>
                         <h2>{ title }</h2>
-                        <button aria-label="open" onClick={this.toggleAccordion} className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}/>
+                        <button aria-label="open" onClick={this.toggleAccordion} className='arrow-button'>
+                            <span className={`close ${this.state.accordionIsOpen ? 'open' : ''}`}></span>
+                        </button>
                     </div>
                     <div className={`accordion col-md-9 col-xs-12 ${this.state.accordionIsOpen ? 'open' : ''}`}>
                         <div className="block-services_subtitle row">

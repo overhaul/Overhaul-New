@@ -21,6 +21,23 @@
     .close{
     	display: none;
     }
+
+    .arrow-button{
+      display: none;
+
+      @media(max-width: $tablet){
+        display: block;
+        width: 100%;
+        background: transparent;
+        border: none;
+        text-align: left;
+        color: #fff;
+        padding: 0px;
+        position: absolute;
+        top: 0;
+        height: 45px;
+      }
+    }
   }
 
   &_subtitle{

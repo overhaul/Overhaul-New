@@ -19,10 +19,9 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
 
   if (!seo) seo = {}
 
-  const el = useRef();
-  
   useEffect(() => {
     const q = gsap.utils.toArray(".gsap-fade-in");
+    const qSpin = gsap.utils.toArray(".gsap-spin-in");
     const gsapAnimations = []
 
     if (!window.ScrollTriggerInstance) {
@@ -48,25 +47,13 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
       gsapAnimations.push(gsapAnimation)
     }
 
-    setIsVisible(true)
-
-    return () => {
-      while (gsapAnimations.length) {
-        gsapAnimations.pop().kill()
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    const q = gsap.utils.toArray(".gsap-spin-in");
-    const gsapRotations = []
-    for(let i = 0; i < q.length; i++) {
-      const gsapRotate = gsap.fromTo(q[i], {
+    for(let i = 0; i < qSpin.length; i++) {
+      const gsapRotateSpin = gsap.fromTo(qSpin[i], {
         rotate: '0',
         opacity: 1,
       },{
         scrollTrigger: {
-          trigger: q[i],
+          trigger: qSpin[i],
           start: 'top bottom',
           scrub: 1,
         },
@@ -75,14 +62,15 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
         // duration: 1
       });
 
-      gsapRotations.push(gsapRotate)
+      gsapAnimations.push(gsapRotateSpin)
     }
 
     setIsVisible(true)
 
     return () => {
-      while (gsapRotations.length) {
-        gsapRotations.pop().kill()
+      window.ScrollTriggerInstance.clearScrollMemory()
+      while (gsapAnimations.length) {
+        gsapAnimations.pop().kill()
       }
     }
   }, []);
@@ -119,7 +107,7 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
   }, [])
 
   return (
-    <div className={`layout ${themeColor}`} ref={el}>
+    <div className={`layout ${themeColor}`}>
       <Helmet>
         <link
           href="https://overhaul20.wpengine.com/wp-includes/css/dist/block-library/style.min.css"
