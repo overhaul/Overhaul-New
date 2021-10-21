@@ -1,6 +1,12 @@
 .gutenberg-content {
+
   .dark & {
     color: $white;
+  }
+  .wp{
+    h1, h2, h3, h4, h5, h6, ul, p {
+        margin-bottom: 15px;
+    }
   }
 }
 
