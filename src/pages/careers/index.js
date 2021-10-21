@@ -5,7 +5,7 @@ import PageTitle from '../../components/PageTitle'
 
 const CareersPage = ({ data }) => {
     return (
-        <Layout themeColor="dark">
+        <Layout themeColor="dark" seo={data.wpPage.seo}>
         <PageTitle
           title='We’re on the lookout for talented individuals with a passion for creativity and technology to join our team.'
           />
