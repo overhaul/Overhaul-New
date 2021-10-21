@@ -38,43 +38,43 @@ module.exports = {
       resolve: "gatsby-plugin-sitemap",
       options: {
         output: '/',
-        query: `
-          {
-            allWpContentNode(filter: {nodeType: {in: ["Post", "Page"]}}) {
-              nodes {
-                ... on WpPost {
-                  uri
-                  modifiedGmt
-                }
-                ... on WpPage {
-                  uri
-                  modifiedGmt
-                }
-              }
-            }
-          }
-        `,
+        // query: `
+        //   {
+        //     allWpContentNode(filter: {nodeType: {in: ["Post", "Page"]}}) {
+        //       nodes {
+        //         ... on WpPost {
+        //           uri
+        //           modifiedGmt
+        //         }
+        //         ... on WpPage {
+        //           uri
+        //           modifiedGmt
+        //         }
+        //       }
+        //     }
+        //   }
+        // `,
         resolveSiteUrl: () => process.env.URL || `https://overhaulmedia.com`,
-        resolvePages: ({
-          allWpContentNode: { nodes: allWpNodes },
-        }) => {
-          const wpNodeMap = allWpNodes.reduce((acc, node) => {
-            const { uri } = node
-            acc[uri] = node
+        // resolvePages: ({
+        //   allWpContentNode: { nodes: allWpNodes },
+        // }) => {
+        //   const wpNodeMap = allWpNodes.reduce((acc, node) => {
+        //     const { uri } = node
+        //     acc[uri] = node
 
-            return acc
-          }, {})
+        //     return acc
+        //   }, {})
 
-          return allPages.map(page => {
-            return { ...page, ...wpNodeMap[page.path] }
-          })
-        },
-        serialize: ({ path, modifiedGmt }) => {
-          return {
-            url: path,
-            lastmod: modifiedGmt,
-          }
-        },
+        //   return allPages.map(page => {
+        //     return { ...page, ...wpNodeMap[page.path] }
+        //   })
+        // },
+        // serialize: ({ path, modifiedGmt }) => {
+        //   return {
+        //     url: path,
+        //     lastmod: modifiedGmt,
+        //   }
+        // },
       },
     },
     {
