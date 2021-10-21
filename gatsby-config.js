@@ -41,22 +41,22 @@ module.exports = {
         resolveSiteUrl: () => process.env.URL || `https://overhaulmedia.com`,
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-robots-txt',
-    //   options: {
-    //     host: 'https://overhaulnewmain.gatsbyjs.io/',
-    //     sitemap: 'https://overhaulnewmain.gatsbyjs.io/sitemap.xml',
-    //     resolveEnv: () => process.env.GATSBY_ENV,
-    //     env: {
-    //       development: {
-    //         policy: [{ userAgent: '*', disallow: ['/'] }]
-    //       },
-    //       production: {
-    //         policy: [{ userAgent: '*', disallow: ['/'] }]
-    //       }
-    //     }
-    //   }
-    // },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://overhaulnewmain.gatsbyjs.io/',
+        sitemap: 'https://overhaulnewmain.gatsbyjs.io/sitemap-index.xml',
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            policy: [{ userAgent: '*', allow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: ['/'] }]
+          }
+        }
+      }
+    },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
