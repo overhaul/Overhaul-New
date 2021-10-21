@@ -26,5 +26,17 @@
 	{
 		 "fromPath": "/services/shopify",
 		 "toPath": "/about#Services"
+	},
+	{
+		 "fromPath": "/jobs",
+		 "toPath": "/careers"
+	},
+	{
+		 "fromPath": "/jobs/web-developer/",
+		 "toPath": "/careers"
+	},
+	{
+		 "fromPath": "/beljan/",
+		 "toPath": "/work/beljan-developments"
 	}
 ]
