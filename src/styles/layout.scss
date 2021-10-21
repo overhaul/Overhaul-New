@@ -80,8 +80,11 @@ header {
 
 //Dark Body class
 
-.dark {
-    background: #000;
+.dark { 
+   
+    &.layout {
+      background: #000;
+    }
 
     .desk-nav {
 

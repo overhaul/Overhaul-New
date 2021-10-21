@@ -26,13 +26,13 @@ const WorkPost = ({ data }) => {
   if (!seo.twitterDescription) seo.twitterDescription = excerpt
 
   return (
-    <Layout seo={seo}>
+    <Layout seo={seo} startNavWhite={true}>
       <PageHero
         subTitle={title}
         image={featuredImage?.node?.sourceUrl}
         gatsbyImageData={featuredImage?.node.localFile.childImageSharp}
       />
-      <div style={{zIndex: 100, backgroundColor: 'white', position: 'relative', willChange: 'transform'}}>
+      <div className="work_content">
         <GutenbergContent content={content} />
       </div>
       {relatedPosts.length ? <BlockRelatedWork cards={relatedPosts} /> : ''}

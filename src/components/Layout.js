@@ -15,7 +15,7 @@ import favicon from '../helpers/faviconSelector'
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Layout({children, themeColor, pageTitle, seo}) {
+function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
 
   if (!seo) seo = {}
 
@@ -88,11 +88,38 @@ function Layout({children, themeColor, pageTitle, seo}) {
   }, []);
 
   //Transition Stuff
-
   const [isVisible, setIsVisible] = useState(false)
+  const [isBelowFold, setIsBelowFold] = useState(false)
+
+  useEffect(() => {
+    let windowHeight = window.innerHeight
+    let wasBelow = false
+    function handleResize() {
+      windowHeight = window.innerHeight
+    }
+
+    function handleScroll (e) {
+      const checkBelowFold = windowHeight < window.scrollY
+      if (checkBelowFold && !wasBelow) {
+        setIsBelowFold(true)
+        wasBelow = true
+      } else if (!checkBelowFold && wasBelow) {
+        setIsBelowFold(false)
+        wasBelow = false
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    }
+  }, [])
 
   return (
-    <div className={themeColor} ref={el}>
+    <div className={`layout ${themeColor}`} ref={el}>
       <Helmet>
         <link
           href="https://overhaul20.wpengine.com/wp-includes/css/dist/block-library/style.min.css"
@@ -129,9 +156,9 @@ function Layout({children, themeColor, pageTitle, seo}) {
 
       </Helmet>
       <CursorWrapper>
-        <header>
+        <header className={!isBelowFold && startNavWhite ? 'dark' : ''}>
           <NavDesk />
-          <NavMob/>
+          <NavMob />
         </header>
         <CSSTransition in={isVisible} timeout={500} className="page">
           <main>
