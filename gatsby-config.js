@@ -56,7 +56,6 @@ module.exports = {
         `,
         resolveSiteUrl: () => process.env.URL || `https://overhaulmedia.com`,
         resolvePages: ({
-          allSitePage: { nodes: allPages },
           allWpContentNode: { nodes: allWpNodes },
         }) => {
           const wpNodeMap = allWpNodes.reduce((acc, node) => {
