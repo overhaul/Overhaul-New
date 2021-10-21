@@ -4,6 +4,7 @@ import DualImages from './DualImages'
 import FullWidthImage from './FullWidthImage'
 import WorkIntro from './WorkIntro'
 import PageTitle from './PageTitle'
+import PageHero from './PageHero'
 
 import gutenbergACFSrcSet from '../helpers/gutenbergACFSrcSet'
 
@@ -57,8 +58,25 @@ function Sections ({ sections }) {
         const { title, subtitle } = section
         return(
           <PageTitle
-             title={title}
-             subTitle={subtitle}
+            title={title}
+            subTitle={subtitle}
+          />
+        )
+      case 'om_page_hero' :
+        const { hero_title, sub_title, image } = section
+        return(
+          <PageHero
+            gatsbyImageData={[image].reduce(
+                (imageObj, image) => {
+                  const src = image.sourceUrl ?? image.url
+                  const alt = image.altText ?? image.alt
+                  const srcSet = gutenbergACFSrcSet(image)
+                  return { src, alt, srcSet }
+                },
+                {}
+              )}
+            title={hero_title}
+            subTitle={sub_title}
           />
         )
       default:
