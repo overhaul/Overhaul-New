@@ -17,10 +17,6 @@
     .fixed-slide__inner {
       position: absolute;
       background-attachment: scroll;
-
-      @media(max-width: $mobile) {
-        position: absolute;
-      }
     }
 
     .fixed-slide__clip {
@@ -39,12 +35,12 @@
     width: 100%;
     height: 100%;
 
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center center;
 
-    @media(max-width: $mobile) {
-      background-attachment: fixed;
+    @media(max-width: $tablet) {
+      background-attachment: scroll;
     }
   }
 
