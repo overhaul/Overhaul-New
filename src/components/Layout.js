@@ -38,7 +38,7 @@ function Layout({children, themeColor, pageTitle, seo}) {
           trigger: q[i],
           start: 'top bottom',
           end: '+=500',
-          scrub: 0.5,
+          scrub: false,
         },
         opacity: 1,
         y: 0,

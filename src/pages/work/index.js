@@ -164,6 +164,7 @@ export const query = graphql `
         title
         excerpt
         content
+        date(formatString: "yyyy")
         categories {
           nodes {
             name
