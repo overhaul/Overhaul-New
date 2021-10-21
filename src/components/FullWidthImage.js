@@ -3,6 +3,7 @@ import * as React from 'react'
 class FullWidthImage extends React.Component {
     render() {
         const {image} = this.props
+        console.log(image)
         return (
             <div className="full-width-image">
                 <div className="container full-width-image_window gsap-fade-in">

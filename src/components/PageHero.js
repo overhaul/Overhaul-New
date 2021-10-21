@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 class PageHero extends React.Component {
     render() {
         const {title, subTitle, gatsbyImageData} = this.props
+        console.log(gatsbyImageData)
         return (
             <div className="page-hero">
                 {gatsbyImageData && (gatsbyImageData.fluid || gatsbyImageData.fixed) ? <Img
