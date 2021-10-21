@@ -38,7 +38,7 @@ module.exports = {
       resolve: "gatsby-plugin-sitemap",
       options: {
         output: '/',
-        resolveSiteUrl: () => process.env.URL || `https://overhaulmedia.com`,
+        resolveSiteUrl: () => process.env.URL || `https://overhaulnewmain.gatsbyjs.io`,
       },
     },
     {

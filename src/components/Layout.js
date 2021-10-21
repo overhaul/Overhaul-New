@@ -21,8 +21,6 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
 
   useEffect(() => {
 
-    console.log(seo)
-
     const q = gsap.utils.toArray(".gsap-fade-in");
     const qSpin = gsap.utils.toArray(".gsap-spin-in");
     const gsapAnimations = []
@@ -124,8 +122,8 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
         {seo.canonical ? <link rel="canonical" href={seo.canonical} /> : ''}
         {seo.metaDesc ? <meta name="description" content={seo.metaDesc.replace(/<[^>]+>|\n|\r|\\n|\\r/g, '')} /> : ''}
         {seo.metaKeywords ? <meta name="keywords" content={seo.metaKeywords} /> : ''}
-        {/* {seo.metaRobotsNofollow ? <meta name="robots" content={seo.metaRobotsNofollow} /> : ''} */}
-        {/* {seo.metaRobotsNoindex ? <meta name="robots" content={seo.metaRobotsNoindex} /> : ''} */}
+        {seo.metaRobotsNofollow ? <meta name="robots" content={seo.metaRobotsNofollow} /> : ''}
+        {seo.metaRobotsNoindex ? <meta name="robots" content={seo.metaRobotsNoindex} /> : ''}
 
         <meta property="og:locale" content="en_US" />
         {seo.opengraphType ? <meta name="og:type" content={seo.opengraphType} /> : ''}
