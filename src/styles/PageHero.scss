@@ -5,9 +5,16 @@
     position: relative;
 
     .gatsby-image-wrapper{
+        clip: rect(0, auto, auto, 0);
+        position: absolute;
+        width: 100%;
+        height: 100%;
 
         img {
             position: fixed!important;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
