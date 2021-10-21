@@ -52,6 +52,9 @@ export const query = graphql `
         title
         twitterDescription
         twitterTitle
+        schema {
+          raw
+        }
       }
       wpChildren {
         nodes {

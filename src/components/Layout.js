@@ -20,6 +20,9 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
   if (!seo) seo = {}
 
   useEffect(() => {
+
+    console.log(seo)
+
     const q = gsap.utils.toArray(".gsap-fade-in");
     const qSpin = gsap.utils.toArray(".gsap-spin-in");
     const gsapAnimations = []
