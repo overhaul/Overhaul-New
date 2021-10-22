@@ -37,7 +37,7 @@ class WorkIntro extends React.Component {
                                 {taxonomies.map((list, i) => (
                                     <ul key={i} className="work-intro_read-more-list col-xs-6 col-md-5">
                                     <li><strong>{list.title}</strong></li>
-                                    {list.items.map((item, j) => <li key={`${i}_${j}`}>{item.text ?? item}</li>)}
+                                    {(list.items || []).map((item, j) => <li key={`${i}_${j}`}>{item.text ?? item}</li>)}
                                     </ul>
                                 ))}
                             </div>
