@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useState} from 'react'
+import React, { useEffect, useState} from 'react'
 import { Helmet } from "react-helmet"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -142,7 +142,7 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
         {seo.twitterImage?.sourceUrl ? <meta name="twitter:card" content="summary_large_image" /> : ''}
 
         {seo.schema?.raw ? <script type='application/ld+json'>{seo.schema.raw}</script> : '' }
-
+     
       </Helmet>
       <CursorWrapper>
         <header className={!isBelowFold && startNavWhite ? 'dark' : ''}>
