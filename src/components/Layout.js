@@ -15,7 +15,7 @@ import favicon from '../helpers/faviconSelector'
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
+function Layout({children, themeColor, pageTitle, seo, slug, startNavWhite = false}) {
 
   if (!seo) seo = {}
 
@@ -119,7 +119,7 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
 
         {seo.title ? <title>{seo.title}</title> : ''}
 
-        {seo.canonical ? <link rel="canonical" href={seo.canonical} /> : ''}
+        {seo.canonical ? <link rel="canonical" href={seo.canonical} /> : <link rel="canonical" href={seo.opengraphUrl}/> }
         {seo.metaDesc ? <meta name="description" content={seo.metaDesc.replace(/<[^>]+>|\n|\r|\\n|\\r/g, '')} /> : ''}
         {seo.metaKeywords ? <meta name="keywords" content={seo.metaKeywords} /> : ''}
         {seo.metaRobotsNofollow ? <meta name="robots" content={seo.metaRobotsNofollow} /> : ''}

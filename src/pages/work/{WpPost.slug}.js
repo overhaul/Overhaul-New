@@ -18,7 +18,6 @@ const WorkPost = ({ data }) => {
   } = data.wpPost
 
   // const maxRelated = 2
-
   const relatedPosts = workSubtitle?.relatedWork || []
 
   if (!seo.metaDesc) seo.metaDesc = excerpt
@@ -50,6 +49,7 @@ export const query = graphql `
       title
       content
       excerpt
+      slug
       seo {
         canonical
         metaDesc
