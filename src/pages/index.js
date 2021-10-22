@@ -94,6 +94,9 @@ export const query = graphql `
         opengraphTitle
         opengraphType
         opengraphUrl
+        opengraphImage {
+          sourceUrl
+        }
         readingTime
         title
         twitterDescription

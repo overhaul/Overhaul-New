@@ -59,7 +59,7 @@ export const areas =[
         client: [
             {
                 title: 'Haven',
-                staticAsset: (<StaticImage src='../src/images/expertise/expertise-haven.jpg' alt='Haven Menswear Canada' width={300} placeholder='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset: (<StaticImage src='../src/images/expertise/expertise-haven.jpg' alt='Haven Menswear Canada' height={150} placeholder='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Helm',
