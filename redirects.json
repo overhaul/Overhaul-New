@@ -28,12 +28,20 @@
 		 "toPath": "/ecommerce/"
 	},
 	{
+		"fromPath": "/services/shopify/",
+		"toPath": "/ecommerce/"
+   	},
+	{
 		 "fromPath": "/services/branding-edmonton/",
 		 "toPath": "/branding-edmonton/"
 	},
 	{
+		"fromPath": "/services/branding-edmonton",
+		"toPath": "/branding-edmonton/"
+   	},
+	{
 		 "fromPath": "/services/bar-restaurant-branding/",
-		 "toPath": "/bar-restaurant-branding/"
+		 "toPath": "/bar-restaurant-branding-edmonton/"
 	},
 	{
 		 "fromPath": "/services/naming-nomenclature/",
