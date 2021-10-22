@@ -49,7 +49,6 @@ export const query = graphql `
       title
       content
       excerpt
-      slug
       seo {
         canonical
         metaDesc
