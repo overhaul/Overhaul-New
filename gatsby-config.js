@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.overhaulmedia.com",
-    title: "The New Overhaul New",
+    title: "Overhaul Media Edmonton Digital Design Agency",
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -33,6 +33,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-sitemap",
