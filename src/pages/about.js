@@ -25,7 +25,7 @@ const AboutPage = ({ data }) => {
                 image={aboutImage}
                 imageAlt='The Overhaul Office'
                 paragraph="<p>We are a design agency in Edmonton that helps business redefine the way they connect with their customers. Our services range from creative direction, design & development, to marketing and communications. The aim is simple: deliver original ideas, push the boundaries of technology, and contribute work that matters.</p><p>From the original concept to the finished product, we work with clients large and small to reinforce their core brand value and define their distinct voice in the market. Our aim is to help businesses see design as a competitive advantage; helping brands move beyond conventional marketing activities to deliver messages and ideas that elevate the customer experience.</p>
-<p>Founded in 2006, Overhaul has built a client list that includes Beljan Development, Naked & Famous Denim, HAVEN, CBC, City of Edmonton, Government of Alberta, and Epic Investment Services and more.</p>"
+<p>Founded in 2006, Overhaul has built a client list that includes Beljan Development, Naked & Famous Denim, HAVEN, CBC, City of Edmonton, Government of Alberta, Epic Investment Services and more.</p>"
             />
             <BlockClients 
                 title="Selected Clients"

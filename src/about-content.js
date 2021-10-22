@@ -19,7 +19,7 @@ export const approachImage = {
 
 export const team =[
     {
-        name: 'Matthew Janzen',
+        name: 'Mathew Janzen',
         backgroundImage: (<StaticImage className="background-image" src='../src/images/team/matt-bkg.jpg' alt='A rock with some barnacles' placehodeler='blurred' layout='fixed' width={900}/>),
         imageBefore: (<StaticImage src='../src/images/team/matt-before.jpg' alt='Matt Janzen before mugshot' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
         imageAfter: (<StaticImage src='../src/images/team/matt-after.jpg' alt='Matt Janzen, after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
@@ -306,13 +306,13 @@ export const awards =[
         title: 'Awwards, Honorable Mention',
         year: "2020",
         project:"GoldSquare",
-        link:"work/goldsquare"
+        link:"/work/goldsquare"
     },
     {
         title: 'Applied Arts, Digital – Single Award',
         year: "2016",
         project:"YEG City Budget",
-        link:"work/yeg-city-budget"
+        link:"/work/yeg-city-budget"
     },
     {
         title: 'Alberta Film & Television Award - Best Cross Platform Production',
