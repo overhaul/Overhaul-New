@@ -106,7 +106,6 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
       window.removeEventListener("resize", handleResize);
     }
   }, [])
-{console.log(seo)}
   return (
     <div className={`layout ${themeColor}`}>
       <Helmet>
