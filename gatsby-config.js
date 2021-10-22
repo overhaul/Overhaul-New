@@ -38,14 +38,14 @@ module.exports = {
       resolve: "gatsby-plugin-sitemap",
       options: {
         output: '/',
-        resolveSiteUrl: () => process.env.URL || `https://overhaulnewmain.gatsbyjs.io`,
+        resolveSiteUrl: () => process.env.URL || `https://overhaulmedia.com`,
       },
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://overhaulnewmain.gatsbyjs.io/',
-        sitemap: 'https://overhaulnewmain.gatsbyjs.io/sitemap-index.xml',
+        host: 'https://overhaulmedia.com/',
+        sitemap: 'https://overhaulmedia.com/sitemap-index.xml',
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
           development: {
