@@ -44,6 +44,10 @@
 		 "toPath": "/bar-restaurant-branding-edmonton/"
 	},
 	{
+		"fromPath": "/bar-restaurant-branding/",
+		"toPath": "/bar-restaurant-branding-edmonton/"
+   	},
+	{
 		 "fromPath": "/services/naming-nomenclature/",
 		 "toPath": "/naming-nomenclature/"
 	},
