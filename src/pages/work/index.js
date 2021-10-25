@@ -157,7 +157,7 @@ class WorkPage extends Component {
 
 export const query = graphql `
   query WorkPage {
-    allWpPost(limit: 18){
+    allWpPost(sort: {fields: date, order: DESC}, limit: 18){
       nodes {
         id
         uri
