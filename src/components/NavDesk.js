@@ -49,17 +49,17 @@ class NavDesk extends React.Component{
         <OmLogo />
         <ul className="nav-links">
           <li className="nav-link_item">
-            <Link to="/work" className="nav-link_text">
+            <Link to="/work" className="nav-link_text" rel="alternate" hrefLang="en">
             Work
             </Link>
           </li>
           <li className="nav-link_item">
-            <Link to="/about" className="nav-link_text">
+            <Link to="/about" className="nav-link_text" rel="alternate" hrefLang="en">
             About
             </Link>
           </li>
           <li className="nav-link_item">
-            <Link to="/contact" className="nav-link_text">
+            <Link to="/contact" className="nav-link_text" rel="alternate" hrefLang="en">
             Contact
             </Link>
           </li>

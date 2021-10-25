@@ -44,29 +44,29 @@ class NavMob extends Component {
       <div className="hidden-nav">
         <ul className="nav-links">
            <li className="nav-link_item">
-            <Link to="/work" className="nav-link_text">
+            <Link to="/work" className="nav-link_text" rel="alternate" hrefLang="en">
               <h1>Work</h1>
             </Link>
           </li>
           <li className="nav-link_item">
-            <Link to="/about" className="nav-link_text">
+            <Link to="/about" className="nav-link_text" rel="alternate" hrefLang="en">
               <h1>About</h1>
             </Link>
           </li>
           <li className="nav-link_item">
-            <Link to="/contact" className="nav-link_text">
+            <Link to="/contact" className="nav-link_text" rel="alternate" hrefLang="en">
               <h1>Contact</h1>
             </Link>
           </li>
         </ul>
         <div className="more-links">
-          <Link to="/careers" className="nav-link_text">
+          <Link to="/careers" className="nav-link_text" rel="alternate" hrefLang="en">
               Careers
           </Link>
-          <a href="tel:7807588642" rel="noreferrer" target="_blank" className="nav-link_text">
+          <a href="tel:7807588642" rel="noreferrer" target="_blank" className="nav-link_text" hrefLang="en">
               780 758 8642
           </a>
-          <a href="mailto:hello@overhaulmedia.com" target="_blank" rel="noreferrer" className="nav-link_text">
+          <a href="mailto:hello@overhaulmedia.com" target="_blank" rel="noreferrer" className="nav-link_text" hrefLang="en">
               hello@overhaulmedia.com
           </a>
         </div>

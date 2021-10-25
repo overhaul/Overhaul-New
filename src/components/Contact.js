@@ -13,7 +13,7 @@ class Contact extends React.Component {
 	  	 			<h2>780 758 8642</h2>
 	  	 			<h2>7347 104 Street NW</h2>
 	  	 			<h2>Edmonton, AB T6E 4B9</h2>
-	  	 			<a href="mailto:hello@overhaulmedia.com" target="_blank" rel="noreferrer"><h2>hello@overhaulmedia.com</h2></a>
+	  	 			<a href="mailto:hello@overhaulmedia.com" target="_blank" rel="noreferrer" hrefLang="en"><h2>hello@overhaulmedia.com</h2></a>
 	  	 		</div>
 	  	 	</div>
 	  	 	<div className="contact_content row container">
@@ -21,14 +21,14 @@ class Contact extends React.Component {
 	  	 		<div className="contact_content-info col-md-6 col-xs-12">
 	  	 			<h2>Mathew Janzen</h2>
 	  	 			<h2>780 758 8642</h2>
-	  	 			<h2><a href="mailto:business@overhaulmedia.com" target="_blank" rel="noreferrer">business@overhaulmedia.com</a></h2>
+	  	 			<h2><a href="mailto:business@overhaulmedia.com" target="_blank" rel="noreferrer" hrefLang="en">business@overhaulmedia.com</a></h2>
 	  	 		</div>
 	  	 	</div>
 	  	 	<div className="contact_content row container">
 	  	 		<h2 className="contact_content-title col-md-6 col-xs-12">Job Opportunities & Internships</h2>
 	  	 		<div className="contact_content-info col-md-6 col-xs-12">
-	  	 			<h2><Link to="/careers">Click here</Link> to see what’s available.</h2>
-	  	 			<h2><a href="mailto:work@overhaulmedia.com" rel="noreferrer" target="_blank">work@overhaulmedia.com</a></h2>
+	  	 			<h2><Link to="/careers" hrefLang="en" rel="alternate">Click here</Link> to see what’s available.</h2>
+	  	 			<h2><a href="mailto:work@overhaulmedia.com" rel="noreferrer" target="_blank" hrefLang="en">work@overhaulmedia.com</a></h2>
 	  	 		</div>
 	  	 	</div>
   	 	</div>

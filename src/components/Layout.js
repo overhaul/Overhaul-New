@@ -109,6 +109,7 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
   return (
     <div className={`layout ${themeColor}`}>
       <Helmet>
+      <html lang='en'/>
         <link
           href="https://overhaul20.wpengine.com/wp-includes/css/dist/block-library/style.min.css"
           rel="stylesheet"

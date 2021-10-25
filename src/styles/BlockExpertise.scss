@@ -126,6 +126,10 @@
       object-fit: contain;
       pointer-events: none;
 
+      &:before{
+        
+      }
+
       @media(max-width: $tablet){
         display: none;
       }
