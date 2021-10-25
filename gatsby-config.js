@@ -33,13 +33,20 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
         output: '/',
         resolveSiteUrl: () => process.env.URL || `https://overhaulmedia.com`,
+      },
+    },
+    {
+      resolve : "gatsby-plugin-gatsby-cloud",
+      options: {
+        allPageHeaders: [
+            "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
+        ],
       },
     },
     {
