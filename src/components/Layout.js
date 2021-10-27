@@ -136,12 +136,6 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
         {seo.twitterImage?.sourceUrl ? <meta name="twitter:card" content="summary_large_image" /> : ''}
 
         {seo.schema?.raw ? <script type='application/ld+json'>{seo.schema.raw}</script> : '' }
-
-        <link
-          href="https://overhaul20.wpengine.com/wp-includes/css/dist/block-library/style.min.css"
-          rel="stylesheet"
-          type="text/css"
-        />
      
       </Helmet>
       <CursorWrapper>
