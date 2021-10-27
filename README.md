@@ -27,7 +27,7 @@
 
 ## 🚀 Overhaul Stuff
 
-The site is pulling data from a Wordpress install at overhaul20.wpengine.com. Edits made there are detected by Gatsby and deployed.
+The site is pulling data from a Wordpress install at cms.overhaulmedia.com. Edits made there are detected by Gatsby and deployed.
 There are a few 'hardcoded' pages that can't be overwritten from Wordpress: 
  - Work
  - About
