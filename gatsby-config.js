@@ -45,6 +45,11 @@ module.exports = {
     {
       resolve : "gatsby-plugin-gatsby-cloud",
       options: {
+        headers: {
+          "*.js": [
+            "cache-control: public, max-age=10, immutable",
+          ],
+        },
         allPageHeaders: [
             "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
         ],
