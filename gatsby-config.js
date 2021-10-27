@@ -8,7 +8,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: process.env.WPGRAPHQL_URL || 'https://overhaul20.wpengine.com/graphql',
+        url: process.env.WPGRAPHQL_URL || 'https://cms.overhaulmedia.com/graphql',
         html: {
           useGatsbyImage: true,
           // generateWebpImages: false,
