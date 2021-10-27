@@ -47,7 +47,7 @@ module.exports = {
       options: {
         headers: {
           "*.js": [
-            "cache-control: public, max-age=10, immutable",
+            "cache-control: public, max-age=31536000, immutable",
           ],
         },
         allPageHeaders: [
