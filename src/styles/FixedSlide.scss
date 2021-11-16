@@ -47,6 +47,22 @@
   &__title {
     max-width: 756px;
     padding-bottom: 0.25em;
+    font-size: 72px;
+    line-height: 84px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: -2px;
+
+    @media(max-width: $tablet-large){
+      font-size: 64px;
+      line-height: 74px;
+    }
+
+    @media(max-width: $tablet) {
+      font-size: 52px;
+      line-height: 62px;
+    }
 
     a {
       color: currentColor;

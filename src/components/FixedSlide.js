@@ -19,9 +19,9 @@ class FixedSlide extends Component {
             /> */}
             <div className="fixed-slide__content">
               <div className="container">
-                <h1 className="fixed-slide__title">
+                <h2 className="fixed-slide__title">
                   {title}
-                </h1>
+                </h2>
                 <a className="fixed-slide__link" href={link}>
                   View Project
                 </a>
