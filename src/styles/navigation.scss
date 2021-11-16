@@ -290,13 +290,31 @@ header{
             &:hover {
                 color: $red;
 
-                h1{
+                h2{
                     border-bottom: none;
                     text-decoration: none;
+
+                    // @media(max-width: $tablet-large){
+                    // font-size: 64px;
+                    // line-height: 74px;
+                    // }
+
+                    // @media(max-width: $tablet) {
+                    // font-size: 52px;
+                    // line-height: 62px;
+                    // }
                 }
             }
 
-            h1 {
+            h2 {
+                font-size: 52px;
+                line-height: 62px;
+                font-family: Helvetica;
+                font-style: normal;
+                font-weight: 300;
+                letter-spacing: -2px;
+                border-bottom: none;
+                text-decoration: none;
                 margin-bottom: 15px;
                 border-bottom: none;
                 text-decoration: none;
