@@ -12,11 +12,11 @@ class Footer extends React.Component {
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-6  row">
                         <div className="col-xs-12 col-md-6 col-lg-4">
-                            <div dangerouslySetInnerHTML={{ __html:address}}/>
+                            <div itemProp="address" dangerouslySetInnerHTML={{ __html:address}}/>
                         </div>
                         <div className="col-xs-12 col-md-6 col-lg-4">
-                            <p><a href={'tel:' + phone} rel="noreferrer" target="_blank" hrefLang="en">{phone}</a></p>
-                            <p><a href={'mailto:' + email} rel="noreferrer" target="_blank" hrefLang="en">{ email }</a></p>
+                            <p><a itemProp="telephone" href={'tel:' + phone} rel="noreferrer" target="_blank" hrefLang="en">{phone}</a></p>
+                            <p><a itemProp="email" href={'mailto:' + email} rel="noreferrer" target="_blank" hrefLang="en">{ email }</a></p>
                         </div>
                         <div className="col-xs-12 col-md-6 col-lg-2">
                             <Link to="/careers" rel="alternate" hrefLang="en">Careers</Link>
