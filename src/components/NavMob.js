@@ -45,17 +45,17 @@ class NavMob extends Component {
         <ul className="nav-links">
            <li className="nav-link_item">
             <Link to="/work" className="nav-link_text" rel="alternate" hrefLang="en">
-              <h1>Work</h1>
+              <h2>Work</h2>
             </Link>
           </li>
           <li className="nav-link_item">
             <Link to="/about" className="nav-link_text" rel="alternate" hrefLang="en">
-              <h1>About</h1>
+              <h2>About</h2>
             </Link>
           </li>
           <li className="nav-link_item">
             <Link to="/contact" className="nav-link_text" rel="alternate" hrefLang="en">
-              <h1>Contact</h1>
+              <h2>Contact</h2>
             </Link>
           </li>
         </ul>
