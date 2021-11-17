@@ -78,5 +78,13 @@
 	{
 		 "fromPath": "/services/seo-search-optimization/",
 		 "toPath": "/about#Services/"
-	}
+	},
+	{
+		"fromPath": "/ecommerce/shopify-partner-logo/",
+		"toPath": "/"
+ 	},
+ 	{
+		"fromPath": "/web-design",
+		"toPath": "/web-design-development-edmonton"
+ 	}
 ]
