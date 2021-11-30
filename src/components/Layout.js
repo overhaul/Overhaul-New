@@ -80,6 +80,36 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
   const [isVisible, setIsVisible] = useState(false)
   const [isBelowFold, setIsBelowFold] = useState(false)
 
+  // Seo Contact Address
+  const contactAddress = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Overhaul Media",
+    "logo": "https://cms.overhaulmedia.com/wp-content/uploads/2021/10/OverhaulMediaPhotos20190587-edited-scaled.jpg",
+    "image": "https://overhaulmedia.com/static/a3e675482218cc51a435ab6447bedc90/8fc3b/OverhaulOffice.jpg",
+    "description": "We are a design agency in Edmonton that helps businesses redefine the way they connect with their customers. Our services range from creative direction, design & development, to marketing and communications. The aim is simple: deliver original ideas, push the boundaries of technology, and contribute work that matters.",
+    "url": "https://overhaulmedia.com/",
+    "priceRange": "$", 
+    "telephone": "+1 780 758 8642",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7347 104 Street NW",
+      "addressLocality": "Edmonton",
+      "addressRegion": "AB",
+      "postalCode": "T6E 4B9",
+      "addressCountry": "CA"
+    } ,
+    "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "53.5106139",
+    "longitude": "-113.497065"
+    },
+      "sameAs": [
+        "https://www.instagram.com/overhaulmedia/",
+        "https://ca.linkedin.com/company/overhaul-media"
+      ] 
+    }
+
   useEffect(() => {
     let windowHeight = window.innerHeight
     let wasBelow = false
@@ -111,6 +141,9 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
       <Helmet>
       <html lang='en'/>
         <link rel="icon" type="image/x-icon" href={favicon()}/>
+        <script type="application/ld+json">
+          {JSON.stringify(contactAddress)}
+        </script>
 
         {seo.title ? <title>{seo.title}</title> : ''}
 
