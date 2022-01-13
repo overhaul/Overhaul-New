@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function useMousePosition() {
-  const [mousePosition, setMousePosition] = useState({ x: null, y: null });
+  const [mousePosition, setMousePosition] = useState({ x: -200, y: -200 });
 
   useEffect(() => {
     if (window.mousePosition) setMousePosition(window.mousePosition);
