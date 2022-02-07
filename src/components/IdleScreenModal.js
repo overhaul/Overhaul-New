@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const IdleScreenModal= ({showModal, handleClose, remainingTime}) => {
+export const IdleScreenModal = ({showModal, handleClose, remainingTime}) => {
 
-    return(
-    <div class="screen-saver" show={showModal} onHide={handleClose}></div>
-    )
+	return(
+		<div className="screen-saver" show={showModal} onHide={handleClose}></div>
+	)
 }
