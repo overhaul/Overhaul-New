@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 
-const logoW = 451;
-const logoH = 108;
+const scaleFactor = 0.85; // use to resize
+const logoW = Math.round(451 * scaleFactor)
+const logoH = Math.round(108 * scaleFactor)
 
 class DvdLogo extends Component {
 
@@ -56,7 +57,7 @@ class DvdLogo extends Component {
     const {r, g, b, xPos, yPos} = this.state;
     return (
       <g>
-        <g fill={`rgb(${r}, ${g}, ${b})`} transform={`translate(${xPos}, ${yPos})`}>
+        <g fill={`rgb(${r}, ${g}, ${b})`} transform={`translate(${xPos}, ${yPos}) scale(${scaleFactor})`}>
           <path d="M146.25,43l.05.13h0A.24.24,0,0,0,146.25,43Z"/>
           <path d="M146.25,43l.05.13h0A.24.24,0,0,0,146.25,43Z"/>
           <path
