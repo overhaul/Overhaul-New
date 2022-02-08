@@ -49,7 +49,16 @@ export const team =[
         imageAfter: (<StaticImage src='../src/images/team/peter-after.jpg' alt='Peter after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Designer',
         profile: 'Peter strives to spark conversations and create experiences through his work. With focus primarily on editorial design, brand identities, interactive design and loves to kern type.'
-    }
+    },
+    {
+        name: 'Jeff Gordon',
+        backgroundImage: (<StaticImage className="background-image" src='https://placekitten.com/1920/1200?image=1' alt='A parking lot at Elk Island Park' placehodeler='blurred' layout='fullWidth' />),
+        imageBefore: (<StaticImage src='https://placekitten.com/554/830?image=2' alt='Jeff before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='https://placekitten.com/554/830?image=3' alt='Jeff after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
+        title: 'Developer',
+        profile: 'Eat a rug and furry furry hairs everywhere oh no human coming lie on counter don\'t get off counter steal raw zucchini off kitchen counter.'
+    },
+
 ]
 
 export const areas =[
