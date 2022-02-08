@@ -16,7 +16,8 @@ class DvdLogo extends Component {
       ySpeed: 1,
       r: DvdLogo.getRandomNumber(100, 256),
       g: DvdLogo.getRandomNumber(100, 256),
-      b: DvdLogo.getRandomNumber(100, 256)
+      b: DvdLogo.getRandomNumber(100, 256),
+      interval: null
     }
   }
 
@@ -25,7 +26,11 @@ class DvdLogo extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => this.animateLogo(), 3);
+    this.setState({interval: setInterval(() => this.animateLogo(), 3)})
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.interval);
   }
 
   animateLogo() {
