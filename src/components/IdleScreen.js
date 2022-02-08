@@ -1,75 +1,63 @@
 import React from 'react'
 import IdleTimer from 'react-idle-timer';
-import { IdleScreenModal } from './IdleScreenModal'
+import DvdLogo from "./DvdLogo";
 
 class IdleScreen extends React.Component {
-  
-  constructor(props){
+
+  constructor(props) {
     super(props)
 
     this.state = {
-      timeout:1000 * 5 * 1,
-      showModal: false,
-      isTimedOut: false
+      showLogo: false,
+      idleTimeout: 2 / 60, // minutes
+      height: 0,
+      width: 0
     }
 
-    this.idleTimer = null
-    this.onAction = this._onAction.bind(this)
-    this.onActive = this._onActive.bind(this)
-    this.onIdle = this._onIdle.bind(this)
-    this.handleClose = this.handleClose.bind(this)
-
+    this.handleOnActive = this.handleOnActive.bind(this)
+    this.handleOnIdle = this.handleOnIdle.bind(this)
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this)
   }
 
-  _onAction(e) {
-    console.log('user did something', e)
-    this.setState({isTimedOut: false})
+  handleOnActive(event) {
+    this.setState({showLogo: false})
   }
 
-  _onActive(e) {
-    console.log('user is active', e)
-    this.setState({isTimedOut: false})
+  handleOnIdle(event) {
+    this.setState({showLogo: true})
   }
 
-  _onIdle(e) {
-    console.log('user is idle', e)
-    const isTimedOut = this.state.isTimedOut
-    if (isTimedOut) {
-       //do nothing
-    } else {
-      this.setState({showModal: true})
-      this.idleTimer.reset();
-      this.setState({isTimedOut: true})
-    }
-    
+  componentDidMount() {
+    this.updateWindowDimensions()
+    window.addEventListener('resize', this.updateWindowDimensions);
   }
 
-  handleClose() {
-    this.setState({showModal: false})
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
   }
 
-  render(){
+  updateWindowDimensions() {
+    this.setState({width: window.innerWidth, height: window.innerHeight})
+  }
 
-    return(
-      <>
+  render() {
+    return (
+      <div>
         <IdleTimer
-          ref={ref => { this.idleTimer = ref }}
-          element={document}
-          onActive={this.onActive}
-          onIdle={this.onIdle}
-          onAction={this.onAction}
+          timeout={1000 * 60 * this.state.idleTimeout}
+          onActive={this.handleOnActive}
+          onIdle={this.handleOnIdle}
           debounce={250}
-          timeout={this.state.timeout} />
-
-          <div className="">              
-              <IdleScreenModal 
-                  showModal={this.state.showModal} 
-                  handleClose={this.handleClose}
-              />
-          </div>
-      </>
+        />
+        {this.state.showLogo &&
+          <svg width={this.state.width} height={this.state.height} style={{backgroundColor: 'black', zIndex: 1000, position: 'relative'}}>
+            <DvdLogo width={this.state.width} height={this.state.height}/>
+          </svg>
+        }
+      </div>
     )
- }
+  }
+
 }
 
 export default IdleScreen
