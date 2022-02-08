@@ -9,9 +9,9 @@ class IdleScreen extends React.Component {
 
     this.state = {
       showLogo: false,
-      idleTimeout: 2 / 60, // minutes
-      height: 0,
-      width: 0
+      idleTimeout: 5, // minutes
+      screenH: 0,
+      screenW: 0
     }
 
     this.handleOnActive = this.handleOnActive.bind(this)
@@ -37,7 +37,7 @@ class IdleScreen extends React.Component {
   }
 
   updateWindowDimensions() {
-    this.setState({width: window.innerWidth, height: window.innerHeight})
+    this.setState({screenW: window.innerWidth, screenH: window.innerHeight})
   }
 
   render() {
@@ -50,8 +50,8 @@ class IdleScreen extends React.Component {
           debounce={250}
         />
         {this.state.showLogo &&
-          <svg width={this.state.width} height={this.state.height} style={{backgroundColor: 'black', zIndex: 1000, position: 'relative'}}>
-            <DvdLogo width={this.state.width} height={this.state.height}/>
+          <svg width={this.state.screenW} height={this.state.screenH} style={{backgroundColor: 'black', zIndex: 1000, position: 'relative'}}>
+            <DvdLogo width={this.state.screenW} height={this.state.screenH}/>
           </svg>
         }
       </div>
