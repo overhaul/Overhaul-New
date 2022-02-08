@@ -50,7 +50,7 @@ class IdleScreen extends React.Component {
           debounce={250}
         />
         {this.state.showLogo &&
-          <svg width={this.state.screenW} height={this.state.screenH} style={{backgroundColor: 'black', zIndex: 1000, position: 'relative'}}>
+          <svg width={this.state.screenW} height={this.state.screenH} className="idle-screen">
             <DvdLogo width={this.state.screenW} height={this.state.screenH}/>
           </svg>
         }
