@@ -24,19 +24,18 @@ class IdleScreen extends React.Component {
   }
 
   handleOnIdle(event) {
-    window.gtag('event', 'screensaver-activated', {
-      'event_category': 'DVD Screensaver',
-      'non_interaction': true
-    });
+    window.ga('send', 'event', 'DVD Screensaver', 'activated')
     this.setState({showLogo: true})
   }
 
   componentDidMount() {
+    window.ga('create', 'UA-2018782-1', 'auto')
     this.updateWindowDimensions()
     window.addEventListener('resize', this.updateWindowDimensions);
   }
 
   componentWillUnmount() {
+    window.ga('remove');
     window.removeEventListener('resize', this.updateWindowDimensions);
   }
 
