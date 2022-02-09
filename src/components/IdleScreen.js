@@ -1,7 +1,6 @@
 import React from 'react'
 import IdleTimer from 'react-idle-timer';
 import DvdLogo from "./DvdLogo";
-import {trackCustomEvent} from "gatsby-plugin-google-analytics";
 
 class IdleScreen extends React.Component {
 
@@ -25,10 +24,10 @@ class IdleScreen extends React.Component {
   }
 
   handleOnIdle(event) {
-    trackCustomEvent({
-      category: 'DVD Screensaver',
-      action: 'activated'
-    })
+    window.gtag('event', 'screensaver-activated', {
+      'event_category': 'DVD Screensaver',
+      'non_interaction': true
+    });
     this.setState({showLogo: true})
   }
 
