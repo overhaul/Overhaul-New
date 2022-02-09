@@ -9,7 +9,7 @@ class IdleScreen extends React.Component {
 
     this.state = {
       showLogo: false,
-      idleTimeout: 5, // minutes
+      idleTimeout: 60, // seconds
       screenH: 0,
       screenW: 0
     }
@@ -47,7 +47,7 @@ class IdleScreen extends React.Component {
     return (
       <div>
         <IdleTimer
-          timeout={1000 * 60 * this.state.idleTimeout}
+          timeout={1000 * this.state.idleTimeout}
           onActive={this.handleOnActive}
           onIdle={this.handleOnIdle}
           debounce={250}
