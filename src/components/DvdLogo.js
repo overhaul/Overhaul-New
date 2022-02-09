@@ -26,7 +26,7 @@ class DvdLogo extends Component {
   }
 
   componentDidMount() {
-    this.setState({interval: setInterval(() => this.animateLogo(), 3)})
+    this.setState({interval: setInterval(() => this.animateLogo(), 5)})
   }
 
   componentWillUnmount() {
