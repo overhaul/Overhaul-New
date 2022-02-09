@@ -4,6 +4,18 @@ module.exports = {
     title: "Overhaul Media Edmonton Digital Design Agency",
   },
   plugins: [
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: [
+    //       "UA-2018782-1",
+    //     ],
+    //     pluginConfig: {
+    //       head: true,
+    //       respectDNT: false,
+    //     },
+    //   },
+    // },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-wordpress`,
@@ -77,6 +89,6 @@ module.exports = {
         id: "GTM-PDCQ6C",
         includeInDevelopment: false,
       },
-    },
+    }
   ],
 };

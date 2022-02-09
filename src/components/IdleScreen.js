@@ -24,6 +24,10 @@ class IdleScreen extends React.Component {
   }
 
   handleOnIdle(event) {
+    window.gtag('event', 'screensaver-activated', {
+      'event_category': 'DVD Screensaver',
+      'non_interaction': true
+    });
     this.setState({showLogo: true})
   }
 
