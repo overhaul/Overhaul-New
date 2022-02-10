@@ -4,6 +4,12 @@ module.exports = {
     title: "Overhaul Media Edmonton Digital Design Agency",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-2018782-1",
+      },
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-wordpress`,
