@@ -49,7 +49,16 @@ export const team =[
         imageAfter: (<StaticImage src='../src/images/team/peter-after.jpg' alt='Peter after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Designer',
         profile: 'Peter strives to spark conversations and create experiences through his work. With focus primarily on editorial design, brand identities, interactive design and loves to kern type.'
-    }
+    },
+    {
+        name: 'Jeff Gordon',
+        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/jeff-bkg.jpg' alt='The Edmonton river valley' placehodeler='blurred' layout='fullWidth' />),
+        imageBefore: (<StaticImage src='../src/images/team/jeff-before.jpg' alt='Jeff before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/jeff-after.jpg' alt='Jeff after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
+        title: 'Developer',
+        profile: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem in nulla dapibus fringilla non sed mi. Aliquam bibendum fermentum ligula, ac scelerisque est aliquet quis.'
+    },
+
 ]
 
 export const areas =[
