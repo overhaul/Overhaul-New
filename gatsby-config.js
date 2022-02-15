@@ -68,11 +68,11 @@ module.exports = {
         sitemap: 'https://overhaulmedia.com/sitemap-index.xml',
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
-          development: {
-            policy: [{ userAgent: '*', allow: ['/'] }]
+          staging: {
+            policy: [{userAgent: '*', disallow: ['/']}]
           },
-          production: { 
-            policy: [{ userAgent: '*', allow: '/' }]
+          production: {
+            policy: [{userAgent: '*', allow: '/'}]
           }
         }
       }
