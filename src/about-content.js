@@ -52,11 +52,11 @@ export const team =[
     },
     {
         name: 'Jeff Gordon',
-        backgroundImage: (<StaticImage className="background-image" src='https://placekitten.com/1920/1200?image=1' alt='A parking lot at Elk Island Park' placehodeler='blurred' layout='fullWidth' />),
-        imageBefore: (<StaticImage src='https://placekitten.com/554/830?image=2' alt='Jeff before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
-        imageAfter: (<StaticImage src='https://placekitten.com/554/830?image=3' alt='Jeff after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
+        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/jeff-bkg.jpg' alt='The Edmonton river valley' placehodeler='blurred' layout='fullWidth' />),
+        imageBefore: (<StaticImage src='../src/images/team/jeff-before.jpg' alt='Jeff before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/jeff-after.jpg' alt='Jeff after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Developer',
-        profile: 'Eat a rug and furry furry hairs everywhere oh no human coming lie on counter don\'t get off counter steal raw zucchini off kitchen counter.'
+        profile: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem in nulla dapibus fringilla non sed mi. Aliquam bibendum fermentum ligula, ac scelerisque est aliquet quis.'
     },
 
 ]
