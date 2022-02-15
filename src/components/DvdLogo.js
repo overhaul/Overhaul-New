@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-const scaleFactor = 0.85; // use to resize
+const scaleFactor = 0.65; // use to resize
 const logoW = Math.round(451 * scaleFactor)
 const logoH = Math.round(108 * scaleFactor)
 
@@ -14,9 +14,9 @@ class DvdLogo extends Component {
       yPos: DvdLogo.getRandomNumber(0, this.props.height - logoH),
       xSpeed: 1,
       ySpeed: 1,
-      r: DvdLogo.getRandomNumber(100, 256),
-      g: DvdLogo.getRandomNumber(100, 256),
-      b: DvdLogo.getRandomNumber(100, 256),
+      r: DvdLogo.getRandomNumber(75, 256),
+      g: DvdLogo.getRandomNumber(75, 256),
+      b: DvdLogo.getRandomNumber(75, 256),
       interval: null
     }
   }
@@ -26,7 +26,7 @@ class DvdLogo extends Component {
   }
 
   componentDidMount() {
-    this.setState({interval: setInterval(() => this.animateLogo(), 5)})
+    this.setState({interval: setInterval(() => this.animateLogo(), 10)})
   }
 
   componentWillUnmount() {
