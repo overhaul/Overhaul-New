@@ -56,7 +56,7 @@ export const team =[
         imageBefore: (<StaticImage src='../src/images/team/jeff-before.jpg' alt='Jeff before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
         imageAfter: (<StaticImage src='../src/images/team/jeff-after.jpg' alt='Jeff after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Developer',
-        profile: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem in nulla dapibus fringilla non sed mi. Aliquam bibendum fermentum ligula, ac scelerisque est aliquet quis.'
+        profile: 'Jeff is a seasoned web and application developer with over 15 years experience.'
     },
 
 ]
