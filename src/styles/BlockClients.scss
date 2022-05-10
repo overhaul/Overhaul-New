@@ -41,14 +41,20 @@
   }
 
   &_image{
-  	max-width:33%;
+  	max-width: 33%;
+    margin-right: 5%;
+    width: 27%;
   	filter: invert(1);
-  	width: 33%;
     height: auto;
     padding: 2em 0;
 
     @media(max-width: $tablet){
-    	text-align: center;
+      text-align: center;
+    }
+
+    @media(max-width: $mobile){
+      margin: 0 1% 0 1%;
+      width: 31%;
     }
   }
 
