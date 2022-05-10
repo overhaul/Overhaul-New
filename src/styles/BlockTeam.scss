@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .block-team {
   position: relative;
   background: $white;
@@ -116,7 +118,7 @@
         position: relative;
         z-index: 1000;
         // background: red;
-        padding-bottom: 600 / 444 * 100%;
+        padding-bottom: math.div(600,444) * 100%;
       }
 
       .background-image{
