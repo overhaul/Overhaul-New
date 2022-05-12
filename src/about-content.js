@@ -59,6 +59,14 @@ export const team =[
         title: 'Developer',
         profile: 'Jeff is a seasoned web and application developer with over 15 years experience.'
     },
+    // {
+    //     name: 'Erik Halabi',
+    //     backgroundImage: (<StaticImage className="background-image" src='../src/images/team/erik-bkg.jpg' alt='Random music studio' placehodeler='blurred' layout='fullWidth' />),
+    //     imageBefore: '',
+    //     imageAfter: '',
+    //     title: 'Developer',
+    //     profile: 'Erik is a Jr. Developer with a passion for problem solving and creative thinking.'
+    // },
 
 ]
 
@@ -270,6 +278,12 @@ export const areas =[
 ]
 
 export const awards =[
+    {
+        title: 'CA Award - Winner, Award of Excellence',
+        year: "2022",
+        project:"Love AB Forests",
+        link:"/work/love-alberta-forests"
+    },
     {
         title: 'ACE Award - Winner, Best in Show',
         year: "2021",
