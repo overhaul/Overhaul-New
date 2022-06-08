@@ -1,23 +1,22 @@
 import React, {Component} from 'react'
 import StepOne from './StepOne'
 import StepTwo from './StepTwo'
+import StepThree from './StepThree'
 
 class StepForm extends Component {
   state = {
     step: 1,
     name: ''
   }
-  // go back to previous step
+  
   prevStep = () => {
     const { step } = this.state;
     this.setState({ step: step - 1 });
   }
-  // proceed to the next step
   nextStep = () => {
     const { step } = this.state;
     this.setState({ step: step + 1 });
   }
-  // handle field change
   handleChange = input => e => {
     this.setState({ [input]: e.target.value });
   }
@@ -32,19 +31,29 @@ class StepForm extends Component {
           <StepOne 
             nextStep={ this.nextStep }
             handleChange={ this.handleChange }
-            values={ values }
+            values={ values.name }
           />
         )
       case 2: 
         return (
           <StepTwo 
+            slide='A'
             prevStep={ this.prevStep }
             nextStep={ this.nextStep }
             handleChange={ this.handleChange }
-            values={ values }
           />
         )
-      case 3: 
+        case 3: 
+        return (
+          <StepThree 
+            values={ values }
+            slide='B'
+            prevStep={ this.prevStep }
+            nextStep={ this.nextStep }
+            handleChange={ this.handleChange }
+          />
+        )
+      case 4: 
         return (
           <div>WOO!</div>
         )

@@ -29,16 +29,14 @@ const Form = () => {
 
 	return (
 		<div>
-				<div className="container">
-				<form ref={formRef} onSubmit={handleSubmit} name="google-sheet">
-					<FormName/> 
-					<Radios step={slide}/>
-					<div className="input-style">
-						<input type="submit" value={loading ? "Loading..." : "SEND MESSAGE"} />
-					</div> 
-				</form>
-				</div>
+			<form ref={formRef} onSubmit={handleSubmit} name="google-sheet">
+				{/* <FormName/> 
+				<Radios step={slide}/> */}
+				{/* <div className="input-style">
+					<input type="submit" value={loading ? "Loading..." : "SEND MESSAGE"} />
+				</div> */}
 				<StepForm></StepForm>
+			</form>
 		</div>
 
 	)

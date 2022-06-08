@@ -1,7 +1,7 @@
 import React from 'react'
 import Radios from './Radios'
 
-const StepTwo = ({ prevStep, nextStep, handleChange, values }) => {
+const StepTwo = ({ prevStep, nextStep, handleChange, slide }) => {
   
   const Continue = e => {
     e.preventDefault();
@@ -16,22 +16,16 @@ const StepTwo = ({ prevStep, nextStep, handleChange, values }) => {
   return (
     <div>
       <h3>the inputs</h3>
-      <Radios step={values}/>
+      <Radios step={slide}/>
       <button 
         onClick={ Previous }
         type="submit"
-        fullWidth
-        variant="contained"
-        color="primary"
       >
         Previous
       </button>
       <button 
         onClick={ Continue }
         type="submit"
-        fullWidth
-        variant="contained"
-        color="primary"
       >
         Next
       </button>
