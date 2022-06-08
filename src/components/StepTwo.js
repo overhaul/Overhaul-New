@@ -1,8 +1,8 @@
 import React from 'react'
-import Radios from './Radios'
+// import Radios from './Radios'
 
-const StepTwo = ({ prevStep, nextStep, handleChange, slide }) => {
-  
+const StepTwo = ({ prevStep, nextStep, handleChange, slide, radios }) => {
+
   const Continue = e => {
     e.preventDefault();
     nextStep();
@@ -16,16 +16,17 @@ const StepTwo = ({ prevStep, nextStep, handleChange, slide }) => {
   return (
     <div>
       <h3>the inputs</h3>
-      <Radios step={slide}/>
+      { radios }
+      {/* <Radios step={slide}/> */}
       <button 
         onClick={ Previous }
-        type="submit"
+        type="none"
       >
         Previous
       </button>
       <button 
         onClick={ Continue }
-        type="submit"
+        type="none"
       >
         Next
       </button>

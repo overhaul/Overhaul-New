@@ -2,11 +2,13 @@ import React, {Component} from 'react'
 import StepOne from './StepOne'
 import StepTwo from './StepTwo'
 import StepThree from './StepThree'
+import Radios from './Radios'
 
 class StepForm extends Component {
   state = {
     step: 1,
-    name: ''
+    name: '',
+    slide: '',
   }
   
   prevStep = () => {
@@ -37,11 +39,13 @@ class StepForm extends Component {
       case 2: 
         return (
           <StepTwo 
-            slide='A'
+            values={ values.steptwo }
             prevStep={ this.prevStep }
             nextStep={ this.nextStep }
             handleChange={ this.handleChange }
-          />
+            radios= {(<Radios step='A'/>)}
+          >
+          </StepTwo>
         )
         case 3: 
         return (
@@ -51,7 +55,9 @@ class StepForm extends Component {
             prevStep={ this.prevStep }
             nextStep={ this.nextStep }
             handleChange={ this.handleChange }
-          />
+            radios= {(<Radios step='B'/>)}
+          >
+          </StepThree>
         )
       case 4: 
         return (
