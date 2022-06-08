@@ -2,18 +2,19 @@ import * as React from 'react'
 
 class Radios extends React.Component {
   render() {
+    const { step } = this.props
     return (
       <div>
-        <input type="radio" id="1" name="A" value="1"/>
-        <label for="1">1</label>
-        <input type="radio" id="2" name="A" value="2"/>
-        <label for="2">2</label>
-        <input type="radio" id="3" name="A" value="3"/>
-        <label for="3">3</label>
-        <input type="radio" id="4" name="A" value="4"/>
-        <label for="4">4</label>
-        <input type="radio" id="5" name="A" value="5"/>
-        <label for="C">5</label>
+        <input type="radio" id="1" name={ step } value="1"/>
+        <label htmlFor="1">1</label>
+        <input type="radio" id="2" name={ step } value="2"/>
+        <label htmlFor="2">2</label>
+        <input type="radio" id="3" name={ step } value="3"/>
+        <label htmlFor="3">3</label>
+        <input type="radio" id="4" name={ step } value="4"/>
+        <label htmlFor="4">4</label>
+        <input type="radio" id="5" name={ step } value="5"/>
+        <label htmlFor="C">5</label>
       </div>
     )
   }
