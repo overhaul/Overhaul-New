@@ -8,6 +8,7 @@ import Syncrude from '../src/images/clients/logo-syncrude.png'
 import Alberta from '../src/images/clients/logo-alberta.png'
 import Edmonton from '../src/images/clients/logo-edmonton.png'
 import Katz from '../src/images/clients/logo-katz.png'
+import Tonal from '../src/images/clients/tonal-logo-white.png'
 
 export const aboutImage = {
     image : (<StaticImage src='../src/images/OverhaulOffice.jpg' alt='The OverhaulMedia Boardroom' placehodeler='blurred'/>)
@@ -49,7 +50,24 @@ export const team =[
         imageAfter: (<StaticImage src='../src/images/team/peter-after.jpg' alt='Peter after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Designer',
         profile: 'Peter strives to spark conversations and create experiences through his work. With focus primarily on editorial design, brand identities, interactive design and loves to kern type.'
-    }
+    },
+    {
+        name: 'Jeff Gordon',
+        backgroundImage: (<StaticImage className="background-image" src='../src/images/team/jeff-bkg.jpg' alt='The Edmonton river valley' placehodeler='blurred' layout='fullWidth' />),
+        imageBefore: (<StaticImage src='../src/images/team/jeff-before.jpg' alt='Jeff before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
+        imageAfter: (<StaticImage src='../src/images/team/jeff-after.jpg' alt='Jeff after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
+        title: 'Developer',
+        profile: 'Jeff is a seasoned web and application developer with over 15 years experience.'
+    },
+    // {
+    //     name: 'Erik Halabi',
+    //     backgroundImage: (<StaticImage className="background-image" src='../src/images/team/erik-bkg.jpg' alt='Random music studio' placehodeler='blurred' layout='fullWidth' />),
+    //     imageBefore: '',
+    //     imageAfter: '',
+    //     title: 'Developer',
+    //     profile: 'Erik is a Jr. Developer with a passion for problem solving and creative thinking.'
+    // },
+
 ]
 
 export const areas =[
@@ -261,6 +279,12 @@ export const areas =[
 
 export const awards =[
     {
+        title: 'CA Award - Winner, Award of Excellence',
+        year: "2022",
+        project:"Love AB Forests",
+        link:"/work/love-alberta-forests"
+    },
+    {
         title: 'ACE Award - Winner, Best in Show',
         year: "2021",
         project:"Love AB Forests",
@@ -440,6 +464,10 @@ export const clients =[
     {
         src: Alberta,
         alt: 'Province of Alberta'
+    },
+    {
+        src: Tonal,
+        alt: 'Tonal'
     },
 ]
 

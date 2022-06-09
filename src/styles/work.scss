@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .work{
 
   &_content {
@@ -45,7 +47,7 @@
 		    display: block;
 		    width: 1px;
 		    margin-right: -1px;
-				padding-bottom: 9 / 16 * 100%;
+				padding-bottom: math.div(9,16) * 100%;
 			}
 
 			.gatsby-image-wrapper{

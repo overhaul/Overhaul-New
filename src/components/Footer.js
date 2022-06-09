@@ -11,7 +11,7 @@ class Footer extends React.Component {
 							<p>© 2021 Overhaul Media</p>
 						</div>
 						<div className="col-xs-12 col-sm-12 col-md-8 row nav-container">
-							<div class="col-md-6 nav">
+							<div className="col-md-6 nav">
 								<div className="mob-1">
 										<div itemProp="address" dangerouslySetInnerHTML={{ __html:address}}/>
 								</div>
@@ -20,7 +20,7 @@ class Footer extends React.Component {
 										<p><a itemProp="email" href={'mailto:' + email} rel="noreferrer" target="_blank" hrefLang="en">{ email }</a></p>
 								</div>
 							</div>
-							<div class="col-md-6 nav">
+							<div className="col-md-6 nav">
 								<div className="mob-2">
 										<Link to="/ecommerce" rel="alternate" hrefLang="en">eCommerce</Link>
 										<Link to="/bar-restaurant-branding-edmonton" rel="alternate" hrefLang="en">Bar & Restaurant Branding</Link>

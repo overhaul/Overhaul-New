@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .block-team {
   position: relative;
   background: $white;
@@ -74,10 +76,25 @@
     top: 0;
   }
 
+  &_member-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem 1rem;
+    margin: 4rem 0 0 0;
+
+    &>div:last-child {
+      grid-column-start: 2;
+    }
+
+    @media(max-width: $tablet) {
+      grid-template-columns: 100%;
+      &>div:last-child {
+        grid-column-start: 1;
+      }
+    }
+  }
+
   &_member{
-    display: flex;
-    flex-direction: column;
-    margin-top: 4em;
 
     @media(max-width: $tablet){
       width: 100%;
@@ -101,7 +118,7 @@
         position: relative;
         z-index: 1000;
         // background: red;
-        padding-bottom: 600 / 444 * 100%;
+        padding-bottom: math.div(600,444) * 100%;
       }
 
       .background-image{

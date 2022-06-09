@@ -12,6 +12,7 @@ import NavDesk from './NavDesk'
 import NavMob from './NavMob'
 import Footer from './Footer'
 import favicon from '../helpers/faviconSelector'
+import IdleScreen from './IdleScreen'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -172,6 +173,7 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
 
       </Helmet>
       <CursorWrapper>
+        <IdleScreen/>
         <header className={!isBelowFold && startNavWhite ? 'dark' : ''}>
           <NavDesk />
           <NavMob />

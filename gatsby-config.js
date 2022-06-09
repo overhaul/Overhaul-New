@@ -4,6 +4,12 @@ module.exports = {
     title: "Overhaul Media Edmonton Digital Design Agency",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-2018782-1",
+      },
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-wordpress`,
@@ -62,11 +68,11 @@ module.exports = {
         sitemap: 'https://overhaulmedia.com/sitemap-index.xml',
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
-          development: {
-            policy: [{ userAgent: '*', allow: ['/'] }]
+          staging: {
+            policy: [{userAgent: '*', disallow: ['/']}]
           },
-          production: { 
-            policy: [{ userAgent: '*', allow: '/' }]
+          production: {
+            policy: [{userAgent: '*', allow: '/'}]
           }
         }
       }
@@ -77,6 +83,6 @@ module.exports = {
         id: "GTM-PDCQ6C",
         includeInDevelopment: false,
       },
-    },
+    }
   ],
 };
