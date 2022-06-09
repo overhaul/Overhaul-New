@@ -1,12 +1,6 @@
 import React, {useState, useRef} from 'react'
-// import Radios from './Radios'
 
 const StepThree = ({ prevStep, nextStep, handleChange, slide, values, radios }) => {
-
-  const Continue = e => {
-    e.preventDefault();
-    nextStep();
-  }
 
   const Previous = e => {
     e.preventDefault();
