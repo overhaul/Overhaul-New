@@ -3,6 +3,11 @@ import React, {useState, useRef} from 'react'
 
 const StepThree = ({ prevStep, nextStep, handleChange, slide, values, radios }) => {
 
+  const Continue = e => {
+    e.preventDefault();
+    nextStep();
+  }
+
   const Previous = e => {
     e.preventDefault();
     prevStep();
@@ -12,26 +17,28 @@ const StepThree = ({ prevStep, nextStep, handleChange, slide, values, radios }) 
 
   return (
     <div>
-      <h3>the end</h3>
-      <p>{ values.name }</p>
+      <h1>Slide: Z</h1>
+      {/* <p>{ values.name }</p> */}
       { radios }
-      <input 
-            type="hidden"
-            placeholder="Name"
-            label="Name"
-            htmlFor="name"
-            name="Name"
-            value={ values.name }
-            autoComplete="name"
-            />
-      {/* <Radios step={slide}/> */}
-      <button 
-        onClick={ Previous }
-        none="submit"
-      >
-        Previous
-      </button>
-      <input type="submit" value={loading ? "Loading..." : "SEND MESSAGE"} />
+      <div className="buttons">
+        <input 
+          type="hidden"
+          placeholder="Name"
+          label="Name"
+          htmlFor="name"
+          name="Name"
+          value={ values.name }
+          autoComplete="name"
+          />
+        {/* <Radios step={slide}/> */}
+        <button 
+          onClick={ Previous }
+          none="submit"
+        >
+          Previous
+        </button>
+        <input className="done" type="submit" value={loading ? "Loading..." : "DONE"} />
+      </div>
     </div>
   )
 }

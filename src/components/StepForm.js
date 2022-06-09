@@ -9,6 +9,7 @@ class StepForm extends Component {
     step: 1,
     name: '',
     slide: '',
+    cheked: 'false'
   }
   
   prevStep = () => {

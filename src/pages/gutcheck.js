@@ -2,7 +2,7 @@ import React, {useState, useRef} from 'react'
 import Radios from '../components/Radios'
 import FormName from '../components/FormName'
 import StepForm from '../components/StepForm'
-
+import Layout from '../components/Layout'
 
 const Form = () => {
 		const formRef = useRef(null)
@@ -22,6 +22,7 @@ const Form = () => {
 
 		}).then(res => {
 						console.log("SUCCESSFULLY SUBMITTED")
+						document.getElementsByClassName('gutcheck').innerHtml = "DONE"
 						setLoading(false)
 				})
 				.catch(err => console.log(err))
@@ -29,7 +30,8 @@ const Form = () => {
 
 	return (
 		<div>
-			<form ref={formRef} onSubmit={handleSubmit} name="google-sheet">
+			<Layout themeColor="dark">
+			<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet">
 				{/* <FormName/> 
 				<Radios step={slide}/> */}
 				{/* <div className="input-style">
@@ -37,6 +39,7 @@ const Form = () => {
 				</div> */}
 				<StepForm></StepForm>
 			</form>
+			</Layout>
 		</div>
 
 	)
