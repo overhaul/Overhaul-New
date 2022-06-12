@@ -1,5 +1,5 @@
 import React from 'react'
-// import Radios from './Radios'
+import Radios from './Radios'
 
 const StepTwo = ({ prevStep, nextStep, handleChange, slide, radios }) => {
 
@@ -16,8 +16,7 @@ const StepTwo = ({ prevStep, nextStep, handleChange, slide, radios }) => {
   return (
     <div>
       <h1>Slide: A</h1>
-      { radios }
-      {/* <Radios step={slide}/> */}
+      <Radios step={ slide }/>
       <div className="buttons">
         <button 
           onClick={ Previous }

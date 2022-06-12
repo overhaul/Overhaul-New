@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react'
-import Radios from '../components/Radios'
-import FormName from '../components/FormName'
+// import Radios from '../components/Radios'
+// import FormName from '../components/FormName'
 import StepForm from '../components/StepForm'
 import Layout from '../components/Layout'
 
@@ -32,12 +32,8 @@ const Form = () => {
 		<div>
 			<Layout themeColor="dark">
 			<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet">
-				{/* <FormName/> 
-				<Radios step={slide}/> */}
-				{/* <div className="input-style">
-					<input type="submit" value={loading ? "Loading..." : "SEND MESSAGE"} />
-				</div> */}
-				<StepForm></StepForm>
+				<StepForm>
+				</StepForm>
 			</form>
 			</Layout>
 		</div>

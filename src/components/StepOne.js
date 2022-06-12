@@ -18,8 +18,8 @@ const StepOne = ({ nextStep, handleChange, values }) => {
             htmlFor="name"
             name="Name"
             value={values.name}
-            onChange={handleChange('name')}
-            defaultValue={values.name}
+            onChange={ handleChange('name') }
+            defaultValue={ values.name }
             autoComplete="name"
           />
         </div>

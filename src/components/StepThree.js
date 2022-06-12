@@ -1,4 +1,6 @@
 import React, {useState, useRef} from 'react'
+import Radios from './Radios'
+
 
 const StepThree = ({ prevStep, nextStep, handleChange, slide, values, radios }) => {
 
@@ -12,8 +14,8 @@ const StepThree = ({ prevStep, nextStep, handleChange, slide, values, radios }) 
   return (
     <div>
       <h1>Slide: Z</h1>
-      {/* <p>{ values.name }</p> */}
-      { radios }
+      <p>{ values.name }</p>
+      <Radios step={slide}/>
       <div className="buttons">
         <input 
           type="hidden"
@@ -24,7 +26,6 @@ const StepThree = ({ prevStep, nextStep, handleChange, slide, values, radios }) 
           value={ values.name }
           autoComplete="name"
           />
-        {/* <Radios step={slide}/> */}
         <button 
           onClick={ Previous }
           none="submit"
