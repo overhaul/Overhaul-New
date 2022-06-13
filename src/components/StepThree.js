@@ -15,6 +15,7 @@ const StepThree = ({ prevStep, nextStep, handleChange, slide, values, radios }) 
     <div>
       <h1>Slide: Z</h1>
       <p>{ values.name }</p>
+      {values.steptwo}
       <Radios step={slide}/>
       <div className="buttons">
         <input 

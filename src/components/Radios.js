@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-const Radios = ({ nextStep, handleChange, values ,step }) => {
+const Radios = ({ step }) => {
   
   const SetSelection = e => {
     console.log(step + e.target.value);
@@ -8,7 +8,7 @@ const Radios = ({ nextStep, handleChange, values ,step }) => {
   }
 
   return (
-    <div className="gutcheck-radios" onChange={SetSelection.bind(this)}>
+    <div className="gutcheck-radios" onChange={ SetSelection.bind(this) }>
       <label htmlFor={ step + '1'}>
         <input type="radio" 
               id={ step  + '1'} 

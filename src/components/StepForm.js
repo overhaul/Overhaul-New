@@ -24,13 +24,18 @@ class StepForm extends Component {
   nextStep = () => {
     const { name } = this.state;
     const { step } = this.state;
+
     if (step === 1) {
       console.log("page 1")
       if ( name.length <= 1) {
         return alert('Please enter your name');
       } else {
-        
-        console.log('mmm');
+       // nothing
+      }
+    } else if (step > 1) {
+      console.log(step.values)
+      if (step.value === '') {
+        return alert('Please make a selection');
       }
     }
     this.setState({ step: step + 1 });

@@ -13,11 +13,11 @@ const StepOne = ({ nextStep, handleChange, values }) => {
       <div className="gutcheck-container">
         <div className="gutcheck-item">
           <input type="text" 
-            placeholder="Your Name"
+            placeholder={( values.name === '' ? values.name : "Your Name" )}
             label="Name"
             htmlFor="name"
             name="Name"
-            value={values.name}
+            value={ values.name }
             onChange={ handleChange('name') }
             defaultValue={ values.name }
             autoComplete="name"
