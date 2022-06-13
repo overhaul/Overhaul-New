@@ -1,8 +1,9 @@
 import React, {useState, useRef} from 'react'
+import { formSelections } from './Radios'
 import Radios from './Radios'
 
 
-const StepThree = ({ prevStep, nextStep, handleChange, slide, values, radios }) => {
+const StepThree = ({ prevStep, slide, values, }) => {
 
   const Previous = e => {
     e.preventDefault();
@@ -18,15 +19,6 @@ const StepThree = ({ prevStep, nextStep, handleChange, slide, values, radios }) 
       {values.steptwo}
       <Radios step={slide}/>
       <div className="buttons">
-        <input 
-          type="hidden"
-          placeholder="Name"
-          label="Name"
-          htmlFor="name"
-          name="Name"
-          value={ values.name }
-          autoComplete="name"
-          />
         <button 
           onClick={ Previous }
           none="submit"
@@ -35,6 +27,23 @@ const StepThree = ({ prevStep, nextStep, handleChange, slide, values, radios }) 
         </button>
         <input className="done" type="submit" value={loading ? "Loading..." : "DONE"} />
       </div>
+      <input 
+          type="hidden"
+          htmlFor="name"
+          name="Name"
+          value={ values.name }
+          />
+      {formSelections.map(function(item, i){
+        return <input 
+                key={i}
+                type="hidden"
+                htmlFor="name"
+                name={item.step}
+                value={item.choice}
+                />;
+          }
+        )
+      }
     </div>
   )
 }

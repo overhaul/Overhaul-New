@@ -1,14 +1,18 @@
 import * as React from 'react'
 
 const Radios = ({ step }) => {
+
+  const selection = (step, choice) => { return { step: step, choice: choice } }
   
-  const SetSelection = e => {
-    console.log(step + e.target.value);
-    const results = step + e.target.value
+  const setSelection = e => {
+    const results = selection(step, e.target.value)
+    console.log(results)
+    formSelections.push(results)
+    console.log(formSelections)
   }
 
   return (
-    <div className="gutcheck-radios" onChange={ SetSelection.bind(this) }>
+    <div className="gutcheck-radios" onChange={ setSelection.bind(this) }>
       <label htmlFor={ step + '1'}>
         <input type="radio" 
               id={ step  + '1'} 
@@ -46,7 +50,8 @@ const Radios = ({ step }) => {
       </label>
     </div>
   )
-
 }
 
 export default Radios
+
+export const formSelections = []

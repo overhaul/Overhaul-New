@@ -1,7 +1,7 @@
 import React from 'react'
 import Radios from './Radios'
 
-const StepTwo = ({ prevStep, nextStep, handleChange, slide, radios }) => {
+const StepTwo = ({ prevStep, nextStep, slide }) => {
 
   const Continue = e => {
     e.preventDefault();
