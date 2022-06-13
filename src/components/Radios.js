@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 const Radios = ({ step }) => {
 
@@ -6,7 +6,6 @@ const Radios = ({ step }) => {
   
   const setSelection = e => {
     const results = selection(step, e.target.value)
-    console.log(results)
     formSelections.push(results)
     console.log(formSelections)
   }
@@ -28,7 +27,7 @@ const Radios = ({ step }) => {
         <p>2</p>
       </label>
       <label htmlFor={ step + '3'}>
-        <input type="radio" 
+        <input type="radio"  
               id={ step + '3' } 
               name={ step } 
               value="3"/>

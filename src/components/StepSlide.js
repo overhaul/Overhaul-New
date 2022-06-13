@@ -1,7 +1,7 @@
 import React from 'react'
 import Radios from './Radios'
 
-const StepTwo = ({ prevStep, nextStep, slide }) => {
+const StepSlide = ({ prevStep, nextStep, slide }) => {
 
   const Continue = e => {
     e.preventDefault();
@@ -15,7 +15,7 @@ const StepTwo = ({ prevStep, nextStep, slide }) => {
 
   return (
     <div>
-      <h1>Slide: A</h1>
+      <h1>Slide: { slide }</h1>
       <Radios step={ slide }/>
       <div className="buttons">
         <button 
@@ -35,4 +35,4 @@ const StepTwo = ({ prevStep, nextStep, slide }) => {
   )
 }
 
-export default StepTwo
+export default StepSlide

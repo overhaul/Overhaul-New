@@ -15,8 +15,6 @@ const StepThree = ({ prevStep, slide, values, }) => {
   return (
     <div>
       <h1>Slide: Z</h1>
-      <p>{ values.name }</p>
-      {values.steptwo}
       <Radios step={slide}/>
       <div className="buttons">
         <button 
