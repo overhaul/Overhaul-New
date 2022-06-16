@@ -26,7 +26,6 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
       formSelections.push(results)
     }
     formSelections.sort((a, b) => (a.slide > b.slide) ? 1 : -1)
-    console.log(formSelections)
   }
 
   const Continue = e => {

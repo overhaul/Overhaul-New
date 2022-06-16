@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import StepOne from './StepOne'
 import StepSlide from './StepSlide'
-import StepFinal from './StepFinal'
 
 class StepForm extends Component {
   
@@ -15,6 +14,7 @@ class StepForm extends Component {
       cheked: 'false',
     }
   }
+
   
   prevStep = () => {
     const { step } = this.state;

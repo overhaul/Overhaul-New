@@ -7,9 +7,6 @@ const Form = () => {
 		const formRef = useRef(null)
 		const scriptUrl = "https://script.google.com/a/macros/overhaulmedia.com/s/AKfycbwE4Ed4-OEhVdeY_Kvfp2O-6GMlGc9-0Jwf9tXGJB8oDUFtxC1aRoGxgUj_HsVbX_lc/exec"
 		const [loading, setLoading] = useState(false)
-		const slide = [
-			"A"
-		]
 
 		const handleSubmit = (e) =>{
 				e.preventDefault()
@@ -20,7 +17,7 @@ const Form = () => {
 				body: new FormData(formRef.current),
 
 		}).then(res => {
-						console.log("SUCCESSFULLY SUBMITTED")
+						alert('Successfully submitted!')
 						document.getElementsByClassName('gutcheck').innerHtml = "DONE"
 						setLoading(false)
 				})
@@ -35,9 +32,8 @@ const Form = () => {
 						<OmLogo />
 					</div> */}
 					<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet">
-						<StepForm>
-						</StepForm>
-					</form>
+						<StepForm />
+					</form>					
 				</div>
       		</CursorWrapper>
 		</div>
