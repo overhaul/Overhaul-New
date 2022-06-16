@@ -1,8 +1,7 @@
 import React, {useState, useRef} from 'react'
-// import Radios from '../components/Radios'
-// import FormName from '../components/FormName'
+import OmLogo from '../components/OmLogo'
 import StepForm from '../components/StepForm'
-import Layout from '../components/Layout'
+import CursorWrapper from '../components/CursorWrapper'
 
 const Form = () => {
 		const formRef = useRef(null)
@@ -30,12 +29,17 @@ const Form = () => {
 
 	return (
 		<div>
-			<Layout themeColor="dark">
-			<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet">
-				<StepForm>
-				</StepForm>
-			</form>
-			</Layout>
+			<CursorWrapper>
+				<div className="layout dark" style={{height: '100vh'}}>
+					{/* <div className="OM-logo">
+						<OmLogo />
+					</div> */}
+					<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet">
+						<StepForm>
+						</StepForm>
+					</form>
+				</div>
+      		</CursorWrapper>
 		</div>
 
 	)
