@@ -26,7 +26,6 @@ class StepForm extends Component {
     const { step } = this.state;
 
     if (step === 1) {
-      console.log("page 1")
       if ( name.length <= 1) {
         return alert('Please enter your name');
       } else {

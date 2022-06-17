@@ -3,6 +3,7 @@ import Radio from './Radios'
 
 const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
 
+  // 5 radios
   let radiosClone = [0, 0, 0, 0, 0]
   const selection = (slide, choice) => { return { slide: slide, choice: choice } }
 
@@ -28,7 +29,10 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
     formSelections.sort((a, b) => (a.slide > b.slide) ? 1 : -1)
   }
 
+  console.log(formSelections[slideNumber]);
+
   const Continue = e => {
+
     e.preventDefault();
     if (slideNumber < 17) {
       setFinalStep(false)
@@ -45,7 +49,7 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
     if (formSelections[slideNumber]) {
       nextStep();
     } else {
-      alert("Please select an answer before continuing!")
+      alert("Please select a number before continuing")
     }
   }
 
@@ -79,7 +83,7 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
       console.log('answered')
     } else {
       e.preventDefault();
-      alert("Please select an answer before continuing!")
+      alert("Please select a number before continuing")
     }
   }
 
@@ -111,9 +115,10 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
             onClick={ Previous }
             type="none"
           >
-            Previous
+            Prev
           </button>
           <button 
+            className= { formSelections[slideNumber] == undefined ? 'disabled' : '' }
             onClick={ Continue }
             type="none"
           >
@@ -126,9 +131,9 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
               onClick={ Previous }
               none="submit"
             >
-              Previous
+              Prev
             </button>
-            <input className="done" type="submit" onClick={checkFinal} value={loading ? "Loading..." : "DONE"} />
+            <input className="done" type="submit" onClick={checkFinal} value={loading ? "Loading..." : "Done"} />
           </div>
           <input 
             type="hidden"
