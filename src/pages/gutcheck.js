@@ -31,11 +31,11 @@ const Form = () => {
 					{/* <div className="OM-logo">
 						<OmLogo />
 					</div> */}
-					<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet">
+					<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet" >
 						<StepForm />
 					</form>					
 				</div>
-      		</CursorWrapper>
+      </CursorWrapper>
 		</div>
 
 	)

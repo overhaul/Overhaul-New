@@ -1,4 +1,5 @@
 @import './variables.scss';
+$small: 34px;
 
 .gutcheck {
   height: 100%;
@@ -60,8 +61,8 @@
         font-family: 'Helvetica';
         font-style: normal;
         font-weight: 300;
-        font-size: 48px;
-        line-height: 56px;
+        font-size: $small;
+        line-height: $small;
       }
     }
 
@@ -91,8 +92,8 @@
       background-color: $black;
       color: $white;
       font-weight: 300;
-      font-size: 48px;
-      line-height: 56px;
+      font-size: $small;
+      line-height: $small;
       text-align: center;
 
       &::placeholder {
@@ -116,58 +117,61 @@
       border-radius: 50px;
       border: 2px solid #219653;
       width: calc(50% - 10px);
+      max-width: calc(50% - 10px);
       appearance: none;
       font-weight: 300;
-      font-size: 48px;
-      line-height: 56px;
-
-      @media (max-width: 450px) {
-        width: 100%;
-      }
+      font-size: $small;
+      line-height: $small;
     }
   }
 
   .buttons {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: block;
     font-weight: 300;
-    font-size: 48px;
+    font-size: $small;
     line-height: 56px;
-
-    @media (max-width: 450px){
-      display: block;
-    }
 
     button {
       flex-grow: 1;
       margin-top: 12px;
       padding: 12px;
       font-weight: 300;
-      font-size: 48px;
-      line-height: 56px;
+      font-size: $small;
+      line-height: $small;
       border-radius: 50px;
       background-color: $white;
       color: $black;
-      border: 2px solid $white;
+      border: 1px solid $white;
       width: calc(50% - 12px);
       margin-right: 20px;
+      max-width: calc(50% - 12px);
 
-      @media (max-width: 450px) {
+      &.prev {
+        background-color: $black;
+        color: $white;
+        border: 1px solid $white;
+      }
+
+      &.first {
         width: 100%;
+        max-width: 100%;
+      }
+
+      &:nth-child(2){
+        float: right;
       }
 
       &:last-child {
         margin-right: 0px;
       }
-      
-      &.first {
-        width: 100%;
-      }
 
       &.disabled {
         opacity: 0.5;
+      }
+
+      &.hide {
+        display: none;
       }
     }
   }

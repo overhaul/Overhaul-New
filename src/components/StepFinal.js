@@ -3,14 +3,14 @@ import { formSelections } from './Radios'
 import Radios from './Radios'
 
 
-const StepThree = ({ prevStep, slide, values, }) => {
+const StepThree = ({ prevStep, slide, values }) => {
 
   const Previous = e => {
     e.preventDefault();
     prevStep();
   }
 
-  const [loading, setLoading] = useState(false)
+  const [loading] = useState(false)
 
   return (
     <div>
@@ -23,7 +23,11 @@ const StepThree = ({ prevStep, slide, values, }) => {
         >
           Previous
         </button>
-        <input className="done" type="submit" value={loading ? "Loading..." : "DONE"} />
+        <input 
+          className={ formSelections[slideNumber] === undefined ? 'disabled' : 'done' } 
+          type="submit"
+          value={loading ? "Loading..." : "DONE"} 
+          />
       </div>
       <input 
           type="hidden"

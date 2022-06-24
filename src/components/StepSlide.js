@@ -9,7 +9,7 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
 
   const [radios, setRadios] = useState([0, 0, 0, 0, 0]);
   const [finalStep, setFinalStep] = useState(false);
-  const [loading, setLoading] = useState(false)
+  const [loading] = useState(false)
   
   const setSelection = e => {
     const results = selection(slide, e.target.value)
@@ -112,13 +112,14 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
       { (!finalStep) ?
         <div className="buttons">
           <button 
+            className={slideNumber === 0 ? 'hide' : 'prev' }
             onClick={ Previous }
             type="none"
           >
             Prev
           </button>
           <button 
-            className= { formSelections[slideNumber] == undefined ? 'disabled' : '' }
+            className= { formSelections[slideNumber] === undefined ? 'disabled' : '' }
             onClick={ Continue }
             type="none"
           >
@@ -128,6 +129,7 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
         <div>
           <div className="buttons">
             <button 
+              className="prev"
               onClick={ Previous }
               none="submit"
             >
