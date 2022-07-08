@@ -45,7 +45,7 @@ $small: 34px;
 
       &:hover {
         background-color: $red;
-        border: 2px solid $red;
+        border: 1px solid $red;
         transition: 0.2s ease;
 
         @media(max-width:$mobile){
@@ -197,4 +197,38 @@ $small: 34px;
       fill: white;
     }
   }
+}
+
+.hide {
+  display: none !important;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+.end-message {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
