@@ -28,9 +28,6 @@ const Form = () => {
 			</Helmet>
 			<CursorWrapper>
 				<div className="layout dark" style={{height: '100vh'}}>
-					{/* <div className="OM-logo">
-						<OmLogo />
-					</div> */}
 					{ (!finished) ?
 						<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet" >
 							<StepForm />
