@@ -33,12 +33,6 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
   const Continue = e => {
 
     e.preventDefault();
-    if (slideNumber < 1) {
-      setFinalStep(false)
-    } else {
-      setFinalStep(true)
-    }
-
     if (formSelections[slideNumber + 1]) {
       radiosClone[formSelections[slideNumber + 1].choice - 1] = 1
       setRadios(radiosClone)
@@ -48,14 +42,20 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
     if (formSelections[slideNumber]) {
       nextStep();
     } else {
-      alert("Please select a number before continuing")
+      return
+    }
+
+    if (slideNumber < 17) {
+      setFinalStep(false)
+    } else {
+      setFinalStep(true)
     }
   }
 
   const Previous = e => {
     e.preventDefault();
 
-    if (slideNumber > 0 && (slideNumber < 3)) {
+    if (slideNumber > 0 && (slideNumber < 19)) {
       setFinalStep(false)
       if (formSelections[slideNumber-1]) {
         radiosClone[formSelections[slideNumber - 1].choice - 1] = 1
@@ -65,16 +65,8 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
       setFinalStep(true)
     }
 
-    if (slideNumber === 0) {
-      if (window.confirm("Would you like to restart?")) {
-        prevStep();
-      } else {
-        setFinalStep(false)
-      }
-    } else {
-      setRadios(radiosClone)
-      prevStep();
-    }
+    setRadios(radiosClone)
+    prevStep();
   }
 
   const checkFinal = e => {
@@ -82,7 +74,6 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
       setLoading(true)
     } else {
       e.preventDefault();
-      alert("Please select a number before continuing")
     }
   }
 
@@ -119,7 +110,7 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
               Prev
             </button>
             <button 
-              className= { formSelections[slideNumber] === undefined ? 'disabled' : '' }
+              className={ formSelections[slideNumber] === undefined ? 'disabled' : '' }
               onClick={ Continue }
               type="none"
             >
@@ -135,7 +126,7 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
               >
                 Prev
               </button>
-              <input className="done" type="submit" onClick={checkFinal} value={loading ? "Loading..." : "Done"} />
+              <input className={`done ${formSelections[slideNumber] === undefined ? 'disabled' : ''}`} type="submit" onClick={checkFinal} value="Done" />
             </div>
             <input 
               type="hidden"
@@ -157,7 +148,7 @@ const StepSlide = ({ prevStep, nextStep, slide, slideNumber, values }) => {
           </div>
         }
       </div>
-      <div className={`spinner ${loading ? '' : 'hide' }`}>
+      <div className={`spinner ${ loading ? '' : 'hide' }`}>
         <IconAir />
       </div>
     </div>

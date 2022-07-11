@@ -33,7 +33,7 @@ const Form = () => {
 							<StepForm />
 						</form> :
 						<div className="end-message">
-							<h2>Thats It</h2>
+							<h2>Form Submitted,</h2>
 							<h2>Good Job!</h2>
 						</div>
 					}
