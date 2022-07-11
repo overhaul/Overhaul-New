@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-// import OmLogo from '../components/OmLogo'
+import { Helmet } from "react-helmet"
 import StepForm from '../components/StepForm'
 import CursorWrapper from '../components/CursorWrapper'
 
@@ -23,6 +23,9 @@ const Form = () => {
 
 	return (
 		<div>
+			<Helmet>
+				<meta name="robots" content="noindex, nofollow" />
+			</Helmet>
 			<CursorWrapper>
 				<div className="layout dark" style={{height: '100vh'}}>
 					{/* <div className="OM-logo">
