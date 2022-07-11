@@ -45,7 +45,7 @@ $small: 34px;
 
       &:hover {
         background-color: $red;
-        border: 2px solid $red;
+        border: 1px solid $red;
         transition: 0.2s ease;
 
         @media(max-width:$mobile){
@@ -113,15 +113,20 @@ $small: 34px;
       color: $black;
       margin-top: 12px;
       padding: 12px;
+      margin-left: 4px;
       font-size: 24px;
       border-radius: 50px;
-      border: 2px solid #219653;
-      width: calc(50% - 10px);
-      max-width: calc(50% - 10px);
+      border: 1px solid #219653;
+      width: calc(50% - 12px);
+      max-width: calc(50% - 12px);
       appearance: none;
       font-weight: 300;
       font-size: $small;
       line-height: $small;
+    }
+
+    &.disabled {
+      opacity: 0.5;
     }
   }
 
@@ -197,4 +202,41 @@ $small: 34px;
       fill: white;
     }
   }
+}
+
+.hide {
+  display: none !important;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+.end-message {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: start;
+  align-items: start;
+  align-content: left;
+  padding: 20px;
+}
+
+.white {
+  color: white;
 }

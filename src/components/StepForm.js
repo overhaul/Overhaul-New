@@ -14,7 +14,6 @@ class StepForm extends Component {
       cheked: 'false',
     }
   }
-
   
   prevStep = () => {
     const { step } = this.state;
@@ -28,8 +27,6 @@ class StepForm extends Component {
     if (step === 1) {
       if ( name.length <= 1) {
         return alert('Please enter your name');
-      } else {
-       // nothing
       }
     }
     this.setState({ step: step + 1 });
