@@ -2,9 +2,9 @@
 $small: 34px;
 
 .gutcheck {
-  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: 100%; /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
-  min-height: 100vh;            /* fall-back */
+  min-height: 100%;/* fall-back */
   min-height: -moz-available;
   min-height: -webkit-fill-available;
   min-height: fill-available;
