@@ -9,7 +9,7 @@ const StepOne = ({ nextStep, handleChange, values }) => {
 
   return (
     <div>
-      <h1>GutCheck</h1>
+      <h1>Gut Check</h1>
       <div className="gutcheck-container">
         <div className="gutcheck-item">
           <input type="text" 
