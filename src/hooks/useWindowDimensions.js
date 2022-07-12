@@ -9,6 +9,12 @@ function getWindowDimensions() {
       width,
       height
     };
+  } else {
+    const { innerWidth: width, innerHeight: height } = null;
+    return {
+      width,
+      height
+    };
   }
 }
 
