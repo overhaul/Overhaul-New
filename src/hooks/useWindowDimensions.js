@@ -8,6 +8,8 @@ function getWindowDimensions() {
   };
 }
 
+const isBrowser = typeof window !== "undefined"
+
 export default function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
@@ -15,9 +17,10 @@ export default function useWindowDimensions() {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
     }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    if (isBrowser) {
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   return windowDimensions;
