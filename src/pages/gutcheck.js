@@ -27,7 +27,7 @@ const Form = () => {
 				<meta name="robots" content="noindex, nofollow" />
 			</Helmet>
 			<CursorWrapper>
-				<div className="layout dark" style={{height: '100vh'}}>
+				<div className="layout dark">
 					{ (!finished) ?
 						<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet" >
 							<StepForm />
