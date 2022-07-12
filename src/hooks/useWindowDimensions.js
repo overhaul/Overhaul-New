@@ -1,21 +1,13 @@
 import { useState, useEffect } from 'react';
 
-const isBrowser = typeof window !== "undefined"
+const isBrowser = () => typeof window !== "undefined"
 
 function getWindowDimensions() {
-  if (isBrowser) {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-      width,
-      height
-    };
-  } else {
-    const { '100%': width, '100%': height } = window;
-    return {
-      width,
-      height
-    };
-  }
+  const { innerWidth: width, innerHeight: height } = isBrowser() && window;
+  return {
+    width,
+    height
+  };
 }
 
 export default function useWindowDimensions() {
