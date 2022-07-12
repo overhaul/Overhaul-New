@@ -10,7 +10,7 @@ function getWindowDimensions() {
       height
     };
   } else {
-    const { innerWidth: width, innerHeight: height } = null;
+    const { '100%': width, '100%': height } = window;
     return {
       width,
       height
