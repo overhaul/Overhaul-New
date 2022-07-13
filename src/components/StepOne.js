@@ -30,7 +30,7 @@ const StepOne = ({ nextStep, handleChange, values }) => {
             variant="contained"
             color="primary"
             className="first"
-          >
+            >
             Let's Go
           </button>
         </div>

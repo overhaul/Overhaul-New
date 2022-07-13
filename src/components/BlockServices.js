@@ -49,7 +49,7 @@ class BlockServices extends React.Component {
                             </ul>
                             <div className="block-services_list_cta col-md-8 col-xs-12 col-md-offset-4 col-xs-offset-0">
                                 <p>Have a specific need? 
-                                    <a href={'mailto:' + 'info@overhaulmedia.com'} 
+                                    <a href={'mailto:info@overhaulmedia.com'} 
                                        target="_blank" 
                                        rel="noreferrer"
                                        >

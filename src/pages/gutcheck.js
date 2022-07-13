@@ -25,7 +25,7 @@ const Form = () => {
 		console.log(height)
 
 	return (
-		<div>
+		<div style={{overflowY: 'hidden'}}>
 			<Helmet>
 				<meta name="robots" content="noindex, nofollow" />
 			</Helmet>
@@ -41,7 +41,7 @@ const Form = () => {
 						</div>
 					}
 				</div>
-    		</CursorWrapper>
+    	</CursorWrapper>
 		</div>
 
 	)
