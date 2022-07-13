@@ -12,7 +12,7 @@ function CursorWrapper ({ children }) {
     const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
 
 
-  if( isTablet || isMobile ) return  (<></>)
+  if( isTablet || isMobile ) return (<>{children}</>)
   
   return (
     <>
