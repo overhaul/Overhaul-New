@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import Img from "gatsby-image"
 
 class FixedSlide extends Component {
   render () {
@@ -12,11 +11,7 @@ class FixedSlide extends Component {
             style={{
               backgroundImage: `url(${gatsbyImageData.fluid.src}), url(${gatsbyImageData.fluid.base64})`,
             }}
-          >
-            {/* <Img
-              className="fixed-slide__bg"
-              {...gatsbyImageData}
-            /> */}
+            >
             <div className="fixed-slide__content">
               <div className="container">
                 <h2 className="fixed-slide__title">
