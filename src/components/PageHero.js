@@ -11,7 +11,6 @@ const PageHero = ({ title, subTitle, gatsbyImageData }) => {
             {gatsbyImageData && (gatsbyImageData.fluid || gatsbyImageData.fixed) ? <Img
                 {...gatsbyImageData}
                 className="page-hero_img"
-                alt=""
                 />
             : <div className="gatsby-image-wrapper"><img {...gatsbyImageData} /></div> }
             <div className="container page-hero_container">

@@ -6,6 +6,14 @@ function CursorWrapper ({ children }) {
   const { slug: cursorSlug, text: cursorText } = useCursorType()
   const { x, y } = useMousePosition()
 
+
+    const userAgent = typeof window !== 'undefined' && navigator.userAgent.toLowerCase();
+    const isMobile = /iPhone|Android/i.test(typeof window !== 'undefined' && navigator.userAgent);
+    const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(userAgent);
+
+
+  if( isTablet || isMobile ) return (<>{children}</>)
+  
   return (
     <>
       <span
