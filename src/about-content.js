@@ -24,8 +24,7 @@ export const team =[
         backgroundImage: (<StaticImage className="background-image" src='../src/images/team/matt-bkg.jpg' alt='A rock with some barnacles' placehodeler='blurred' layout='fixed' width={900}/>),
         imageBefore: (<StaticImage src='../src/images/team/matt-before.jpg' alt='Matt Janzen before mugshot' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
         imageAfter: (<StaticImage src='../src/images/team/matt-after.jpg' alt='Matt Janzen, after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
-        title: 'Director',
-        profile: 'With over 15 years experience managing design and development projects, Mathew’s familiarity with all elements of digital and visual comms production allow him to create solutions beyond the standard formulas.'
+        title: 'Principal',
     },
     {
         name: 'Roman Hermens',
@@ -33,7 +32,6 @@ export const team =[
         imageBefore: (<StaticImage src='../src/images/team/roman-before.jpg' alt='Roman before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
         imageAfter: (<StaticImage src='../src/images/team/roman-after.jpg' alt='Roman after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Developer',
-        profile: 'Roman is a talented, versatile developer. He is also a seasoned designer of brand marks, websites and more.'
     },
     {
         name: 'Peter Elima',
@@ -41,7 +39,6 @@ export const team =[
         imageBefore: (<StaticImage src='../src/images/team/peter-before.jpg' alt='Peter before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
         imageAfter: (<StaticImage src='../src/images/team/peter-after.jpg' alt='Peter after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Designer',
-        profile: 'Peter strives to spark conversations and create experiences through his work. With focus primarily on editorial design, brand identities, interactive design and loves to kern type.'
     },
     {
         name: 'Jeff Gordon',
@@ -49,15 +46,13 @@ export const team =[
         imageBefore: (<StaticImage src='../src/images/team/jeff-before.jpg' alt='Jeff before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
         imageAfter: (<StaticImage src='../src/images/team/jeff-after.jpg' alt='Jeff after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Developer',
-        profile: 'Jeff is a seasoned web and application developer with over 15 years experience.'
     },
     {
         name: 'Erik Halabi',
         backgroundImage: (<StaticImage className="background-image" src='../src/images/team/erik-bkg.jpg' alt='Music studio' placehodeler='blurred' layout='fullWidth' />),
         imageBefore: (<StaticImage src='../src/images/team/erik-after.jpg' alt='Erik before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
         imageAfter: (<StaticImage src='../src/images/team/erik-before.jpg' alt='Erik after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
-        title: 'Developer',
-        profile: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in sem pellentesque magna suscipit vehicula. Pellentesque euismod ut erat nec placerat.'
+        title: 'Frontend Developer',
     },
     {
         name: 'Matt Gaudet',
@@ -65,7 +60,6 @@ export const team =[
         imageBefore: (<StaticImage src='../src/images/team/mattg-after.jpg' alt='Matt before a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-two"/>),
         imageAfter: (<StaticImage src='../src/images/team/mattg-before.jpg' alt='Matt after a haircut' placehodeler='blurred' layout='fullWidth' objectFit='contain' className="block-team_member-images-one"/>),
         title: 'Project Manager',
-        profile: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in sem pellentesque magna suscipit vehicula. Pellentesque euismod ut erat nec placera.'
     },
 ]
 
