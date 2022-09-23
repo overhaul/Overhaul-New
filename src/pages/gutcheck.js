@@ -2,11 +2,13 @@ import React, { useState, useRef } from 'react'
 import { Helmet } from "react-helmet"
 import StepForm from '../components/StepForm'
 import CursorWrapper from '../components/CursorWrapper'
+import useWindowDimensions from '../hooks/useWindowDimensions'
 
 const Form = () => {
 		const formRef = useRef(null)
 		const scriptUrl = "https://script.google.com/a/macros/overhaulmedia.com/s/AKfycbwE4Ed4-OEhVdeY_Kvfp2O-6GMlGc9-0Jwf9tXGJB8oDUFtxC1aRoGxgUj_HsVbX_lc/exec"
 		const [finished, setFinished] = useState(false)
+		const { height } = useWindowDimensions();
 
 		const handleSubmit = (e) =>{
 				e.preventDefault()
@@ -27,7 +29,7 @@ const Form = () => {
 				<meta name="robots" content="noindex, nofollow" />
 			</Helmet>
 			<CursorWrapper>
-				<div className="layout dark">
+				<div className="layout dark" style={{ height : height }}>
 					{ (!finished) ?
 						<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet" >
 							<StepForm />
