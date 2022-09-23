@@ -22,7 +22,6 @@ const Form = () => {
 				})
 				.catch(err => console.log(err))
 		}
-		console.log(height)
 
 	return (
 		<div style={{overflowY: 'hidden'}}>
@@ -30,7 +29,7 @@ const Form = () => {
 				<meta name="robots" content="noindex, nofollow" />
 			</Helmet>
 			<CursorWrapper>
-				<div className="layout dark" style={{ 'height': height }}>
+				<div className="layout dark" style={{ height : height }}>
 					{ (!finished) ?
 						<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet" >
 							<StepForm />
