@@ -27,10 +27,10 @@ const Form = () => {
 		<div>
 			<Helmet>
 				<meta name="robots" content="noindex, nofollow" />
-				<body style="overflow: hidden"/>
+				<body style={{ overflow: 'hidden' }}/>
 			</Helmet>
 			<CursorWrapper>
-				<div className="layout dark" style={{ height : `${height}px`, overflow: 'hidden' }}>
+				<div className="layout dark" style={{ height: height, overflow: 'hidden' }}>
 					{ (!finished) ?
 						<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet" >
 							<StepForm />
