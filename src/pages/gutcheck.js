@@ -27,7 +27,7 @@ const Form = () => {
 		<div>
 			<Helmet>
 				<meta name="robots" content="noindex, nofollow" />
-				<body style={{ overflow: 'hidden' }}/>
+				<body className="no-scroll"/>
 			</Helmet>
 			<CursorWrapper>
 				<div className="layout dark" style={{ height: height, overflow: 'hidden' }}>

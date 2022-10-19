@@ -147,6 +147,10 @@ header {
     }
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 //wp styles
 .wp-block-column{
 
@@ -158,3 +162,4 @@ header {
     margin-top: 25px;
     margin-bottom: 25px;
 }
+
