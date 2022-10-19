@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import { Helmet } from "react-helmet"
 import StepForm from '../components/StepForm'
 import CursorWrapper from '../components/CursorWrapper'
@@ -23,13 +23,18 @@ const Form = () => {
 				.catch(err => console.log(err))
 		}
 
+		useEffect(() => {
+			document.querySelector(':root').style.setProperty('--window-height', `${height}px`)
+		}, [])
+
 	return (
-		<div style={{overflowY: 'hidden'}}>
+		<div>
 			<Helmet>
 				<meta name="robots" content="noindex, nofollow" />
+				<body className="no-scroll"/>
 			</Helmet>
 			<CursorWrapper>
-				<div className="layout dark" style={{ height : height }}>
+				<div className="layout dark no-scroll">
 					{ (!finished) ?
 						<form className="gutcheck" ref={formRef} onSubmit={handleSubmit} name="google-sheet" >
 							<StepForm />
@@ -40,7 +45,7 @@ const Form = () => {
 						</div>
 					}
 				</div>
-    	</CursorWrapper>
+    		</CursorWrapper>
 		</div>
 
 	)
