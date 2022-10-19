@@ -149,6 +149,7 @@ header {
 
 .no-scroll {
     overflow: hidden;
+    height: var(--window-height, 100vh);
 }
 
 //wp styles
