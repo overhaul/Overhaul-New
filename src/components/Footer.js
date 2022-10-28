@@ -4,11 +4,12 @@ import { Link } from 'gatsby'
 class Footer extends React.Component {
 	render() {
 		const { phone, email, address } = this.props
+		const year = new Date().getFullYear()
 		return (
 			<footer className="footer">
 					<div className="container row">
 						<div className="col-xs-12 col-sm-12 col-md-4  copyright">
-							<p>© 2021 Overhaul Media</p>
+							<p>© {year} Overhaul Media</p>
 						</div>
 						<div className="col-xs-12 col-sm-12 col-md-8 row nav-container">
 							<div className="col-md-6 nav">
