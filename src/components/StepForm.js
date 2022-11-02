@@ -2,6 +2,9 @@ import React, {Component} from 'react'
 import StepOne from './StepOne'
 import StepSlide from './StepSlide'
 
+import '../styles/layout.scss'
+import '../styles/styles.scss'
+
 class StepForm extends Component {
   
   constructor(props) {
