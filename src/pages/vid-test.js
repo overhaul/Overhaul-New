@@ -6,7 +6,7 @@ const VidTest = ({data}) => {
 
     return (
         <Layout themeColor="dark">
-            <Vimeo autoplay="true" video="204792892"/>
+            <Vimeo autoplay="true" video="773896366"/>
         </Layout>
     )
 }
