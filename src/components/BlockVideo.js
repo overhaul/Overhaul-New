@@ -18,7 +18,7 @@ class Vimeo extends React.Component {
         allowed.push('fullscreen');
       }
       return (
-        <div className="video-container">
+        <div className="video-container wp">
           <div class="player">
             <iframe
               className="play-vimeo"
