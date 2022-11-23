@@ -27,6 +27,7 @@ class Vimeo extends React.Component {
               allowFullScreen
               frameborder={this.props.border || 0}
               />
+              { this.props.autoplay ? (<div class="video-overlay"></div>) : '' }
             </div>
         </div>
       );
