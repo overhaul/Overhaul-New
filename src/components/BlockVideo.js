@@ -14,13 +14,11 @@ class Vimeo extends React.Component {
       if (+this.props.autoplay) {
         allowed.push('autoplay');
       }
-      if (+this.props.fullscreen) {
-        allowed.push('fullscreen');
-      }
       return (
         <div className="video-container">
           <div class="player">
             <iframe
+              title='vimeo video'
               className="play-vimeo"
               type="text/html"
               src={`https://player.vimeo.com/video/${this.props.video}?${Object.keys(cfg).map(prop => `${prop}=${cfg[prop]}`).join('&')}`} width="100%" height="100%" allow={allowed.join('; ')}
