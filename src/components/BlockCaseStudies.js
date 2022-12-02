@@ -13,7 +13,7 @@ class BlockCaseStudies extends React.Component {
                     { caseStudies.map((caseStudy, index) => (
                         <div className="col-xs-12 col-md-6 grid_card" key={index}>
                             <article className="work_card">
-                              <Link to={caseStudy.url}>
+                              <Link to={caseStudy.link}>
                                 <div className="work_card-featured-image">
                                     { caseStudy.image ? caseStudy.image : 
                                     <img 
