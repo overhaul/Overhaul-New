@@ -25,6 +25,32 @@ export const ecommSlides = [
     }
 ]
 
+export const caseStudies = [
+    {
+        title: 'Nalata Nalata Shopify + WordPress Hybrid',
+        link: '/work/nalata-nalata',
+        image: (<StaticImage src='../src/images/ecomm/NalataEcomm.png' alt='Nalata nalata case study' layout='fullWidth' placehodeler='blurred'/>),
+        
+    },
+    {
+        title: 'HAVEN – Shopify Plus + WordPress',
+        link: '/work/haven',
+        image: (<StaticImage src='../src/images/ecomm/HavenEcomm.png' alt='Haven Menswear Case study' layout='fullWidth' placehodeler='blurred'/>),
+    }
+]
+
+export const partners = [
+    {
+        image: (<StaticImage src='../src/images/clients/logo-haven.png' alt='Haven Menswear' layout='fullWidth' placehodeler='blurred'/>),
+    },
+    {
+        image: (<StaticImage src='../src/images/clients/logo-nalata-nalata.png' alt='Nalata nalata' layout='fullWidth' placehodeler='blurred'/>),
+    },
+    {
+        image: (<StaticImage src='../src/images/clients/tonal-logo-white.png' alt='Haven Menswear Case study' layout='fullWidth' placehodeler='blurred'/>),
+    }
+]
+
 export const whatwedo = [
     {
         icon: 'star',

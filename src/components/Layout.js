@@ -66,7 +66,7 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
 
       gsapAnimations.push(gsapRotateSpin)
     }
-
+    
     setIsVisible(true)
 
     return () => {

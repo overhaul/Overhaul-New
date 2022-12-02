@@ -3,28 +3,11 @@ import Accordion from '../components/Accordion';
 
 class BlockWhatWeDo extends React.Component {
 
-//   constructor() {
-//         super()
-//         this.state = {
-//           accordionIsOpen: false
-//         }
-//         this.toggleAccordion = this.toggleAccordion.bind(this)
-//     }
-
-    // toggleAccordion() {
-
-    //     this.setState( 
-    //         function(prevState){
-    //             return{
-    //               accordionIsOpen: !prevState.accordionIsOpen
-    //             }
-    //         }
-    //      )
-    // }
     render() {
         const { title, smallTitle, whatwedo } = this.props
         return (
             <div className="block-what-we-do gsap-fade-in">
+                <div className="line"></div>
                 <div className='col-xs-12 col-md-4'><h5 className="container">{smallTitle}</h5></div>
                 <div className='col-xs-12 col-md-8'>
                     <div className='container title'>{title}</div>
