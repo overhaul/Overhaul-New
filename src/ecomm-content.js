@@ -55,27 +55,27 @@ export const whatwedo = [
     {
         icon: 'star',
         title: 'Development',
-        paragraph: '<p>Our full-stack development team delivers maintainable products with a premium on code quality and user experience. On the back end, we build and integrate the technologies best suited to your project, so your way of doing business is well-supported.</p>'
+        paragraph: 'Our full-stack development team delivers maintainable products with a premium on code quality and user experience. On the back end, we build and integrate the technologies best suited to your project, so your way of doing business is well-supported.'
     },
     {
         icon: 'fire',
         title: 'User Experience Design',
-        paragraph: '<p>At the heart of every project is design. We create a visual language that reflects who you are as a company and apply it to the pieces that make up your user’s journey. Good design shows an understanding of the user and their goals, front to back.</p>'
+        paragraph: 'At the heart of every project is design. We create a visual language that reflects who you are as a company and apply it to the pieces that make up your user’s journey. Good design shows an understanding of the user and their goals, front to back.'
     },
     {
         icon: 'sand',
         title: 'Branding',
-        paragraph: '<p>Your brand is at the forefront of every user experience—digital or otherwise. We offer solutions to help your brand embody its promise across every touchpoint, finding ways to ensure you make a meaningful connection with your audience.</p>'
+        paragraph: 'Your brand is at the forefront of every user experience—digital or otherwise. We offer solutions to help your brand embody its promise across every touchpoint, finding ways to ensure you make a meaningful connection with your audience.'
     },
     {
         icon: 'water',
         title: 'Strategy',
-        paragraph: '<p>Every project needs a solid plan. We aim to understand the current landscape of your business, where you’re headed, and anything that might be getting in your way. From there we can work together to plan a perfect solution.</p>'
+        paragraph: 'Every project needs a solid plan. We aim to understand the current landscape of your business, where you’re headed, and anything that might be getting in your way. From there we can work together to plan a perfect solution.'
     },
     {
         icon: 'wind',
         title: 'Ongoing Optimization & Maintenance',
-        paragraph: '<p>Our work together will set you up for launch. However your store isn’t a static tool. As you grow over time, we’ll support you with regular reporting, maintenance updates, and data-informed improvements. We care about the long-term success of our work and want to make sure it’s successful.</p>'
+        paragraph: 'Our work together will set you up for launch. However your store isn’t a static tool. As you grow over time, we’ll support you with regular reporting, maintenance updates, and data-informed improvements. We care about the long-term success of our work and want to make sure it’s successful.'
     },
 
 ]
