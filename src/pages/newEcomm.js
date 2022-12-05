@@ -1,10 +1,8 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
-// import FixedSlides from '../components/FixedSlides'
 import TypingSlide from '../components/TypingSlide'
-import { ecommSlides, whatwedo } from '../ecomm-content'
+import { whatwedo } from '../ecomm-content'
 import Vimeo from '../components/BlockVideo'
-// import BlockCallToAction from '../components/BlockCallToAction'
 import BlockWhatWeDo from '../components/BlockWhatWeDo'
 import Marquee from '../components/BlockMarquee'
 import BlockCaseStudies from '../components/BlockCaseStudies'
@@ -28,7 +26,7 @@ const EcommPage = () => {
             />
             <Vimeo 
                 autoplay 
-                video="773896366" 
+                video="778176258" 
                 fit="full"
                 overlayContent="It’s an expression of your brand, your business, your products and your relationship with customers."
             />
