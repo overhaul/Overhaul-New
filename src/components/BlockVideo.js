@@ -34,6 +34,8 @@ class Vimeo extends React.Component {
               type="text/html"
               src={`https://player.vimeo.com/video/${this.props.video}?${Object.keys(cfg).map(prop => `${prop}=${cfg[prop]}`).join('&')}`} width="100%" height="100%" allow={allowed.join('; ')}
               allowFullScreen
+              muted
+              autoPlay
               frameborder={this.props.border || 0}
               />
               { this.props.autoplay ? (<div class="video-overlay">

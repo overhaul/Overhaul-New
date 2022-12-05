@@ -28,7 +28,6 @@ const EcommPage = () => {
                 autoplay 
                 video="778176258" 
                 fit="full"
-                overlayContent="It’s an expression of your brand, your business, your products and your relationship with customers."
             />
             {/* <FixedSlides slides={ecommSlides} /> */}
             <BlockWhatWeDo
