@@ -8,6 +8,7 @@ class Vimeo extends React.Component {
         muted: 1,
         playsinline: 0,
         controls: 0,
+        autopause: 0,
         background: 1
       };
       const allowed = [];
@@ -33,8 +34,8 @@ class Vimeo extends React.Component {
               className={"play-vimeo " + fit }
               type="text/html"
               src={`https://player.vimeo.com/video/${this.props.video}?${Object.keys(cfg).map(prop => `${prop}=${cfg[prop]}`).join('&')}`} width="100%" height="100%" allow={allowed.join('; ')}
-              allowFullScreen
-              muted
+              allowAutoPlay
+              muted={'muted'}
               autoPlay
               frameborder={this.props.border || 0}
               />
