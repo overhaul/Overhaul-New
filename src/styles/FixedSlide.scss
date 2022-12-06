@@ -65,6 +65,11 @@
       width: calc(100% - 40px);
     }
 
+    @media(max-width: $mobile) {
+      font-size: 37px;
+      line-height: 42px;
+    }
+
     a {
       color: currentColor;
     }

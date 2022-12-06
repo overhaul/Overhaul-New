@@ -12,15 +12,15 @@ import BlockPartners from '../components/BlockPartners'
 const EcommPage = () => {
 
     const titleSlideText = [
-        'Your online store is more than just a single sales channel,',
-        'Its this,',
-        'and this too.',
+        'Your online store is more than just a sales channel,',
+        'It’s an expression of your brand,',
+        'your products and your relationship with customers.'
     ]
 
     return(
         <Layout themeColor="dark" >
             <TypingSlide
-                height="150"
+                height="190"
                 text={titleSlideText}
                 nextSlide={''}
             />
@@ -31,14 +31,14 @@ const EcommPage = () => {
             />
             {/* <FixedSlides slides={ecommSlides} /> */}
             <BlockWhatWeDo
-                smallTitle="What we Do"
-                title="We work with new and existing brands to create good ideas. We’re experts at helping companies grow and will work with you to produce exceptional results. We’re smaller than some – so we can tailor you and your team’s involvement in the process."
+                smallTitle="What We Do"
+                title="Category defining brands with exceptional customer loyalty share one common strategy – a commitment to delivering superior products and services extending across digital channels, providing an unparalleled customer experience that spans every single interaction."
                 whatwedo={whatwedo} 
             />
             <Marquee 
                 text='Want to Start a Project?'
-                linkText="Get_started"
-                link="/contact"
+                linkText="Get_Started"
+                link="mailto:info@overhaulmedia.com"
             />
             <Vimeo 
                 autoplay
@@ -52,7 +52,7 @@ const EcommPage = () => {
             <BlockCaseStudies/>
             <Marquee 
                 text='Curious about our process or capabilities?'
-                linkText="Reach_out"
+                linkText="Reach_Out"
                 link="mailto:info@overhaulmedia.com"
             />
         </Layout>

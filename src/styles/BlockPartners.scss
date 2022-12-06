@@ -67,11 +67,19 @@
 
         .logo {
             width: 20%;
+            max-width: 150px;
             padding: 12px 38px;
 
             @media(max-width: $tablet){
-                width: 40%;
-                padding: 12px;
+                width: 35%;
+                padding: 24px;
+
+            }
+
+            &:nth-child(odd){
+                @media(max-width: $mobile){
+                    padding-left: 0px;
+                }
             }
 
             &:first-child {
