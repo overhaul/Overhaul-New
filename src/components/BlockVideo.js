@@ -7,6 +7,7 @@ class Vimeo extends React.Component {
         byline: 0,
         muted: 1,
         playsinline: 1,
+        loop: 1,
         controls: 0,
         autopause: 0,
         background: 1
