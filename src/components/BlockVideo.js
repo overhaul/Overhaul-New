@@ -24,9 +24,15 @@ class Vimeo extends React.Component {
       }
 
       return (
-        <div className="video-container">
+        <div className={this.props.mobileImage ? 'video-container mobile' : 'video-container'}>
          {this.props.title
             ? <h5 className="title container">{this.props.title}</h5>
+            : ''
+          }
+          {this.props.mobileImage
+            ? <div className="mobile-image">
+                <img src={this.props.mobileImage} alt={this.props.mobileImage.alt}/>
+              </div>
             : ''
           }
           <div class="player">

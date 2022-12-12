@@ -7,6 +7,7 @@ import BlockWhatWeDo from '../components/BlockWhatWeDo'
 import Marquee from '../components/BlockMarquee'
 import BlockCaseStudies from '../components/BlockCaseStudies'
 import BlockPartners from '../components/BlockPartners'
+import mobileProcess from '../images/mobile-process.png'
 
 
 const EcommPage = () => {
@@ -26,7 +27,7 @@ const EcommPage = () => {
             />
             <Vimeo 
                 autoplay 
-                video="778176258" 
+                video="780415326" 
                 fit="full"
             />
             {/* <FixedSlides slides={ecommSlides} /> */}
@@ -44,6 +45,7 @@ const EcommPage = () => {
                 autoplay
                 video="657647433" 
                 title="Our Process at a Glance"
+                mobileImage={mobileProcess}
             />
             <BlockPartners 
                 title="We have a 10+ year track record of creating and optimizing eCommerce sites across multiple industries." 
