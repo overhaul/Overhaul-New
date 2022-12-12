@@ -18,7 +18,6 @@ const IndexPage = ({data}) => {
       }
     }
   })
-  console.log(slides)
 
   const seo = data?.wpPage?.seo || {}
 

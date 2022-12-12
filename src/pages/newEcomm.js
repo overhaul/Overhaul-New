@@ -12,6 +12,28 @@ import mobileProcess from '../images/mobile-process.png'
 
 const EcommPage = () => {
 
+    const staticSeo = 
+        {
+        'canonical': "https://overhaulmedia.com/ecommerce",
+        "cornerstone": false,
+        "focuskw": "Edmonton Digital Agency",
+        "metaDesc": "Overhaul Media is an award-winning digital agency and design agency in Edmonton, Alberta. We offer branding, web design, graphic design, digital products, web developer and design studio solutions including Shopify, E-commerce, Restaurant Branding for a diverse set of clients across the globe. Call today.",
+        "metaKeywords": "",
+        "metaRobotsNofollow": "follow",
+        "metaRobotsNoindex": "index",
+        "opengraphAuthor": "",
+        "opengraphDescription": "Overhaul Media is an award-winning digital agency and design agency in Edmonton, Alberta. We offer branding, web design, graphic design, digital products, web developer and design studio solutions including Shopify, E-commerce, Restaurant Branding for a diverse set of clients across the globe. Call today.",
+        "opengraphImage": {sourceUrl: 'https://cms.overhaulmedia.com/wp-content/uploads/2…/10/OverhaulMediaPhotos20190587-edited-scaled.jpg'},
+        "opengraphModifiedTime": "2022-03-22T23:06:57+00:00",
+        "opengraphPublishedTime": "",
+        "opengraphPublisher": "https://www.facebook.com/overhaulmedia",
+        "opengraphSiteName": "Overhaul Media",
+        "opengraphTitle":"Overhaul | Branding, digital design and development. Edmonton, Alberta",
+        "opengraphType": "article",
+        "opengraphUrl": "https://overhaulmedia.com",
+        "readingTime": 0,
+        }
+    
     const titleSlideText = [
         'Your online store is more than just a sales channel,',
         'It’s an expression of your brand,',
@@ -19,7 +41,7 @@ const EcommPage = () => {
     ]
 
     return(
-        <Layout themeColor="dark" >
+        <Layout themeColor="dark" seo={staticSeo}>
             <TypingSlide
                 height="190"
                 text={titleSlideText}
