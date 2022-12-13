@@ -45,7 +45,6 @@ class BlockTeam extends React.Component {
                     <div className="block-team_member-images">
                       { member.backgroundImage ? member.backgroundImage : ''}
                       <div className="block-team_member-images-hover">
-                        {console.log(member.imageAfter)}
                         { member.imageAfter ? member.imageAfter : <img className="block-team_member-images-one"
                                                                        src={member.imageAfter.src}
                                                                        alt={member.imageAfter.alt}

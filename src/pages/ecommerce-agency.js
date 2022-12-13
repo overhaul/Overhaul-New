@@ -16,7 +16,7 @@ const EcommPage = () => {
         {
         'canonical': "https://overhaulmedia.com/ecommerce",
         "cornerstone": false,
-        "focuskw": "Edmonton Digital Agency",
+        "focuskw": "Edmonton Digital Agency, Ecommerce Experts",
         "metaDesc": "Overhaul Media is an award-winning digital agency and design agency in Edmonton, Alberta. We offer branding, web design, graphic design, digital products, web developer and design studio solutions including Shopify, E-commerce, Restaurant Branding for a diverse set of clients across the globe. Call today.",
         "metaKeywords": "",
         "metaRobotsNofollow": "follow",
@@ -52,7 +52,6 @@ const EcommPage = () => {
                 video="780415326" 
                 fit="full"
             />
-            {/* <FixedSlides slides={ecommSlides} /> */}
             <BlockWhatWeDo
                 smallTitle="What We Do"
                 title="Category defining brands with exceptional customer loyalty share one common strategy – a commitment to delivering superior products and services extending across digital channels, providing an unparalleled customer experience that spans every single interaction."

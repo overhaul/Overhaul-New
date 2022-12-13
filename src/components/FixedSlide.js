@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 class FixedSlide extends Component {
   render () {
     const {title, link, gatsbyImageData } = this.props
-    console.log(gatsbyImageData)
+
     return (
       <div className="fixed-slide">
         <div className="fixed-slide__clip">
