@@ -5,7 +5,7 @@ import { caseStudies } from '../ecomm-content'
 class BlockCaseStudies extends React.Component {
     render() {
         return (
-            <div className="block-case-studies">
+            <div className="block-case-studies gsap-fade-in">
                 <div className="container">
                     <h5>Case Studies</h5>
                 </div>
