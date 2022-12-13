@@ -62,6 +62,12 @@
     @media(max-width: $tablet) {
       font-size: 52px;
       line-height: 62px;
+      width: calc(100% - 40px);
+    }
+
+    @media(max-width: $mobile) {
+      font-size: 37px;
+      line-height: 46px;
     }
 
     a {

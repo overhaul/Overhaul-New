@@ -19,7 +19,7 @@ class BlockTeam extends React.Component {
           accordionIsOpen: !prevState.accordionIsOpen
         }
       }
-    )
+    ) 
   }
   render() {
     const { title, subTitle, paragraph, team } = this.props
