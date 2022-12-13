@@ -1,0 +1,30 @@
+.block-case-studies {
+
+    .container {
+        border-top: 1px solid $white;
+        padding: 32px 0;
+        width:calc(100% - 40px);
+
+        h5 {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 42px;
+            letter-spacing: -0.02em;
+            color :$white;
+
+            @media(max-width: $tablet){
+                font-size: 20px;
+                line-height: 32px;
+            }
+        }
+    }
+    .row {
+        margin: auto;
+        width: calc(100% - 30px);
+        max-width: 1920px;
+        font-family: sans-serif;
+        overflow: hidden;
+    }
+
+}

@@ -234,6 +234,7 @@ $small: 34px;
 
 .end-message {
   height: 100%;
+  min-height: 99vh;
   display: flex;
   flex-direction: column;
   color: white;

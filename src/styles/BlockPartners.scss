@@ -1,0 +1,115 @@
+.block-partners {
+    position: relative;
+    background: $white;
+    color: $black;
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: row;
+
+    @media(max-width: $tablet){
+        flex-direction: column;
+    }
+
+    .line {
+        position: relative;
+        display: contents;
+        
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            content: "";
+            display: block;
+            height: 1px;
+            background-color: #ffffff;
+            width: calc(100% - 50px);
+        }
+    }
+
+    .title {
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.02em;
+
+        @media(max-width: $tablet){
+            font-size: 32px;
+            line-height: 38px;
+            padding: 25px 0;
+            width: calc(100% - 50px);
+        }
+    }
+
+    h5 {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -0.02em;
+
+        @media(max-width: $tablet){
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }
+  
+    h2 {
+      margin-bottom: 0.3em;
+      padding-left: 65px;
+    }
+  
+    .container {
+      padding: 1rem 0rem;
+
+        @media(max-width: $tablet){
+            padding: 25px;
+        }
+
+        .logo {
+            width: 20%;
+            max-width: 150px;
+            padding: 12px 38px;
+
+            @media(max-width: $tablet){
+                width: 35%;
+                padding: 24px;
+
+            }
+
+            &:nth-child(odd){
+                @media(max-width: $mobile){
+                    padding-left: 0px;
+                }
+            }
+
+            &:first-child {
+                padding-left: 0px;
+            }
+        }
+    }
+  
+    &_content{
+      border-bottom: 1px solid $black;
+      padding: 1.5em 0;
+  
+        &:first-child{
+                    border-top: 1px solid $black;
+        }
+    }
+		
+}
+  
+  //Dark Mode
+  
+.dark {
+
+    .block-partners {
+      background-color: $black;
+      color: $white;
+  
+        &_content {
+				border-top: 1px solid $white;
+		}
+
+    }
+}
