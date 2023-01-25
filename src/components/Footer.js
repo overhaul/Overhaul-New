@@ -23,7 +23,7 @@ class Footer extends React.Component {
 							</div>
 							<div className="col-md-6 nav">
 								<div className="mob-2">
-										<Link to="/ecommerce" rel="alternate" hrefLang="en">eCommerce</Link>
+										<Link to="/ecommerce-agency" rel="alternate" hrefLang="en">eCommerce</Link>
 										<Link to="/bar-restaurant-branding-edmonton" rel="alternate" hrefLang="en">Bar & Restaurant Branding</Link>
 								</div>
 								<div className="mob-2">
