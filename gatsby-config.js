@@ -59,6 +59,10 @@ module.exports = {
         allPageHeaders: [
             "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
         ],
+        mergeSecurityHeaders: true,
+        mergeLinkHeaders: true,
+        mergeCachingHeaders: true,
+        generateMatchPathRewrites: true,
       },
     },
     {
