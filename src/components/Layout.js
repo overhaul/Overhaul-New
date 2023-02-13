@@ -32,7 +32,7 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
 
     for(let i = 0; i < q.length; i++) {
       const gsapAnimation = gsap.fromTo(q[i], {
-        opacity: 0,
+        // opacity: 1,
         y: 100,
       },{
         scrollTrigger: {
@@ -41,7 +41,7 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
           end: '+=500',
           scrub: false,
         },
-        opacity: 1,
+        // opacity: 1,
         y: 0,
         duration: 1
       });
