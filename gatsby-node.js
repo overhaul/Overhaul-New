@@ -13,8 +13,8 @@ exports.createPages = async function ({graphql, actions}) {
       allWpPage {
         edges {
           node {
-            uri
             slug
+            link
           }
         }
       }
@@ -23,9 +23,9 @@ exports.createPages = async function ({graphql, actions}) {
 
   const pages = (data.allWpPage.edges || [])
       .filter(({ node }) => {
-        const isAStaticPage = staticPages.includes(node.uri)
-        const isACareerPage = node.uri.match(/^\/careers\//)
-        const isHomepage = node.uri.match(/^\/$/)
+        const isAStaticPage = staticPages.includes(node.link)
+        const isACareerPage = node.link.match(/^\/careers\//)
+        const isHomepage = node.link.match(/^\/$/)
         // Add other exclusion conditions here for pages
         // That have been created on WP
 
@@ -35,13 +35,13 @@ exports.createPages = async function ({graphql, actions}) {
 
   for (let i = 0; i < pages.length; i++) {
     actions.createPage({
-      path: pages[i].uri,
+      path: pages[i].link,
       component: require.resolve(`./src/templates/DefaultPage.js`),
       context: { slug: pages[i].slug },
     })
   }
-  console.log(redirects)
-  redirects.forEach(redirect => 
+
+  redirects.forEach(redirect =>
     createRedirect({
       fromPath: redirect.fromPath,
       toPath: redirect.toPath,
