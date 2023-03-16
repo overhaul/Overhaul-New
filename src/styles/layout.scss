@@ -29,6 +29,7 @@ section {
     @media(max-width: $tablet) {
         padding: 0px 25px;
         width: 100%;
+        box-sizing: border-box;
     }
 
     .heading {
@@ -84,7 +85,6 @@ header {
    
     &.layout {
       background: #000;
-      overflow: hidden;
     }
 
     .desk-nav {

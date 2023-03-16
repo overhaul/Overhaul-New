@@ -1,5 +1,9 @@
 [
 	{
+		 "fromPath": "/ecommerce",
+		 "toPath": "/ecommerce-agency/"
+	},
+	{
 		 "fromPath": "/agreement/",
 		 "toPath": "/about"
 	},
@@ -25,11 +29,11 @@
 	},
 	{
 		 "fromPath": "/services/shopify",
-		 "toPath": "/ecommerce/"
+		 "toPath": "/ecommerce-agency/"
 	},
 	{
 		"fromPath": "/services/shopify/",
-		"toPath": "/ecommerce/"
+		"toPath": "/ecommerce-agency/"
    	},
 	{
 		 "fromPath": "/services/branding-edmonton/",
