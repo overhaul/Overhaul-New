@@ -64,10 +64,6 @@
 		 "toPath": "/careers"
 	},
 	{
-		 "fromPath": "/careers/designer/",
-		 "toPath": "/careers"
-	},
-	{
 		 "fromPath": "/beljan/",
 		 "toPath": "/work/beljan-developments"
 	},
