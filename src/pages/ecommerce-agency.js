@@ -14,11 +14,12 @@ const EcommPage = () => {
 
     const staticSeo = 
         {
-        'canonical': "https://overhaulmedia.com/ecommerce",
+        'canonical': "https://overhaulmedia.com/ecommerce-agency",
         "cornerstone": false,
         "focuskw": "Edmonton Digital Agency, Ecommerce Experts",
+        "title" : "Edmonton Digital Agency, Ecommerce Experts",
         "metaDesc": "Overhaul Media is an award-winning digital agency and design agency in Edmonton, Alberta. We offer branding, web design, graphic design, digital products, web developer and design studio solutions including Shopify, E-commerce, Restaurant Branding for a diverse set of clients across the globe. Call today.",
-        "metaKeywords": "",
+        "metaKeywords": "Overhaul, Shopify, Edmonton",
         "metaRobotsNofollow": "follow",
         "metaRobotsNoindex": "index",
         "opengraphAuthor": "",
