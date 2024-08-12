@@ -12,6 +12,7 @@ const Form = () => {
 
 		const handleSubmit = (e) =>{
 				e.preventDefault()
+				console.log(formRef.current)
 				fetch(scriptUrl, {
 					method: 'POST', 
 					body: new FormData(formRef.current),
@@ -25,7 +26,7 @@ const Form = () => {
 
 		useEffect(() => {
 			document.querySelector(':root').style.setProperty('--window-height', `${height}px`)
-		}, [])
+		}, [height])
 
 	return (
 		<div>
