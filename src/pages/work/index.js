@@ -20,18 +20,14 @@ class WorkPage extends Component {
     this.fitlerNode = this.fitlerNode.bind(this)
   }
 
-  toggleView() {
+  toggleView(view) {
     if (window.ScrollTriggerInstance) {
       window.ScrollTriggerInstance.refresh(true)
     }
 
-    this.setState( 
-      function(prevState){
-        return{
-          listIsOpen: !prevState.listIsOpen
-        }
-      }
-    )
+    this.setState({
+      listIsOpen: view === 'list'
+    })
   }
 
   updateCategory(index){
@@ -97,14 +93,14 @@ class WorkPage extends Component {
             <div className="work-toggle">
               <div className="work-toggle_buttons">
                   <button className={`work-toggle_button list ${this.state.listIsOpen ? '' : 'active'}`}
-                      onClick={this.toggleView}
-                      onKeyDown={this.toggleView}
+                      onClick={() => this.toggleView('grid')}
+                      onKeyDown={() => this.toggleView('grid')}
                       >
                       <p>List</p>
                   </button>
                   <button className={`work-toggle_button grid ${this.state.listIsOpen ? 'active' : ''}`}
-                      onClick={this.toggleView}
-                      onKeyDown={this.toggleView}
+                      onClick={() => this.toggleView('list')}
+                      onKeyDown={() => this.toggleView('list')}
                       > 
                       <p>Grid</p>
                   </button>
