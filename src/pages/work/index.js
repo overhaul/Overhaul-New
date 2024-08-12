@@ -95,26 +95,19 @@ class WorkPage extends Component {
               </ul>
             </div>
             <div className="work-toggle">
-              <p className="work-toggle_trigger">{this.state.listIsOpen ? 'Grid' : 'List'}</p>
               <div className="work-toggle_buttons">
-                {this.state.listIsOpen ? 
-                  <button className="work-toggle_button list"
+                  <button className={`work-toggle_button list ${this.state.listIsOpen ? '' : 'active'}`}
                       onClick={this.toggleView}
                       onKeyDown={this.toggleView}
                       >
                       <p>List</p>
-                  </button> : 
-                  ''
-                }
-                {this.state.listIsOpen ? 
-                  '' : 
-                  <button className="work-toggle_button grid"
+                  </button>
+                  <button className={`work-toggle_button grid ${this.state.listIsOpen ? 'active' : ''}`}
                       onClick={this.toggleView}
                       onKeyDown={this.toggleView}
                       > 
                       <p>Grid</p>
                   </button>
-                }
               </div>
             </div>
           </div>
