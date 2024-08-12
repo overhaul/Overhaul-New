@@ -4,13 +4,17 @@ class FixedSlide extends Component {
   render () {
     const {title, link, gatsbyImageData } = this.props
 
+    const backgroundImage = gatsbyImageData?.fluid
+      ? `url(${gatsbyImageData.fluid.src}), url(${gatsbyImageData.fluid.base64})`
+      : '';
+
     return (
       <div className="fixed-slide">
         <div className="fixed-slide__clip">
           <div
             className="fixed-slide__inner"
             style={{
-              backgroundImage: `url(${gatsbyImageData.fluid?.src}), url(${gatsbyImageData.fluid?.base64})`,
+              backgroundImage: backgroundImage,
             }}
             >
             <div className="fixed-slide__content">

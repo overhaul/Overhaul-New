@@ -9,12 +9,12 @@ const IndexPage = ({data}) => {
 
   const slides = (data?.wpPage?.homepagePosts.posts || []).map(({post}) => {
     return {
-      title: post.workSubtitle.subTitle,
+      title: post.workSubtitle ? post.workSubtitle.subTitle : 'Default Value',
       link: post.uri,
-      gatsbyImageData: post.featuredImage.node.localFile.childImageSharp,
+      gatsbyImageData: post && post.featuredImage && post.featuredImage.node && post.featuredImage.node.localFile && post.featuredImage.node.localFile.childImageSharp ? post.featuredImage.node.localFile.childImageSharp : null,
       image: {
-        src: post.featuredImage.node.sourceUrl,
-        alt: post.featuredImage.node.altText,
+        src: post && post.featuredImage && post.featuredImage.node ? post.featuredImage.node.sourceUrl : null,
+        alt: post && post.featuredImage && post.featuredImage.node ? post.featuredImage.node.altText : null,
       }
     }
   })

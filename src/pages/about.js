@@ -38,7 +38,7 @@ const AboutPage = ({ data }) => {
             <BlockTeam 
                 title="Meet the Team"
                 subTitle="Hired guns don't have all the tools. Big shops move too slow. We meet you in the middle. "
-                paragraph="We’re Agile. We’re smaller, but experience tells us that’s a good thing. Our team has decades of experience across multiple discliplines."
+                paragraph="We’re Agile. We’re smaller, but experience tells us that’s a good thing. Our team has decades of experience across multiple disciplines."
                 team={team}
             />
             <BlockExpertise
