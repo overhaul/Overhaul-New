@@ -77,6 +77,7 @@ class WorkPage extends Component {
               <ul className="work-filter_items">
                 <li className="work-filter_item first">
                   <a onClick={ () => this.updateCategory(-1)}>
+                    Work &mdash; &nbsp; 
                     {this.categoryList()[this.state.currentCategory]?.title ?? 'All'}
                   </a>
                 </li>
@@ -146,7 +147,7 @@ class WorkPage extends Component {
 
 export const query = graphql `
   query WorkPage {
-    allWpPost(sort: {fields: date, order: DESC}, limit: 18){
+    allWpPost(sort: {fields: date, order: DESC}, limit: 32){
       nodes {
         id
         uri
