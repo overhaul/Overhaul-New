@@ -97,11 +97,11 @@
         }
 
 				img{
-          pointer-events: none;
+          			pointer-events: none;
 					width: 100%;
-	    		height: 100%;
-	    		object-fit: cover;
-	    		// transition: ease 1s;
+	    			height: 100%;
+	    			object-fit: cover;
+	    			// transition: ease 1s;
 				}
 			}
 
@@ -211,47 +211,43 @@
 	}
 }
 
-.work-toggle{
+.work-toggle {
 	display: flex;
 	flex-direction: row-reverse;
 
+	@media(max-width: $mobile){
+		flex-direction: column;
+	}
+
+	.work-toggle_buttons{
+		opacity: 1;
+		pointer-events: all;
+
 		@media(max-width: $mobile){
-			flex-direction: column;
+			height: auto;
+			transition: 0.1s ease;
+
+			p {
+				transition: 0.1s ease;
+			}
+
 		}
+	}
 
-		// &:hover{
-		// 	.work-toggle_buttons{
-		// 		opacity: 1;
-		// 		pointer-events: all;
+	.work-toggle_button{
+		width: auto;
+		padding: 0 1em;
+		transition: 0.1s ease;
 
-		// 		@media(max-width: $mobile){
-		// 			height: auto;
-		// 			transition: 0.1s ease;
-
-		// 			p{
-		// 				padding: 0.5em 0;
-		// 				transition: 0.1s ease;
-		// 			}
-
-		// 		}
-		// 	}
-		// 	.work-toggle_button{
-		// 		width: auto;
-		// 		padding: 0 1em;
-		// 		transition: 0.1s ease;
-
-		// 		@media(max-width: $mobile){
-		// 			padding: 0em;
-		// 			text-align: right;
-    	// 		height: auto;
-    	// 		cursor: pointer;
-		// 		}
-		// 	}
-		// }
+		@media(max-width: $mobile){
+			padding: 0em;
+			text-align: right;
+			height: auto;
+			cursor: pointer;
+		}
+	}
 
 	&_buttons{
-		// opacity: 0;
-		// pointer-events: none;
 		display: flex;
 		flex-direction: row;
 
@@ -265,10 +261,10 @@
 
 		@media(max-width: $mobile){
 			height: 0;
-			flex-direction: column;
+			flex-direction: row;
 		}
 
-		p{
+		p {
 			// padding: 0 1em;
 
 			// @media(max-width: $mobile){
@@ -299,12 +295,11 @@
 		border: 0px;
 		background: none;
 		display: flex;
-		// width: 0px;
 		transition: 0.1s ease;
 
-			@media(max-width: $mobile){
-				height: 0;
-			}
+		@media(max-width: $mobile){
+			height: 0;
+		}
 
 		&:hover{
 			color:$red;
@@ -313,10 +308,12 @@
 }
 
 .work-filter{
+
 	&s{
 		display: flex;
 		justify-content: space-between;
 	}
+
 	ul{
 		li{
 			&:before{
@@ -328,18 +325,18 @@
 	&_items{
 		list-style:none;
 		margin: 0;
-    display: flex;
-    flex-direction: row;
+    	display: flex;
+    	flex-direction: row;
 
-    @media(max-width: $mobile){
-			flex-direction : column;
+		@media(max-width: $mobile){
+			flex-direction: column;
 			height: auto;
-			
 		}
 
-    &:hover{
-    	.work-filter_item{
-    		padding-left: 1.5em;
+		&:hover{
+			
+			.work-filter_item{
+				padding-left: 1.5em;
 				width: auto;
 				opacity: 1;
 				pointer-events: all;
@@ -356,8 +353,8 @@
 				&.first{
 					padding-top: 0;
 				}
-    	}
-    }
+			}
+		}
 	}
 
 	&_item{
@@ -396,7 +393,8 @@
 			width: auto;
 			opacity: 1;
 			pointer-events: all;
-			a{
+
+			a {
 				color: $black;
 			}
 		}
