@@ -9,6 +9,7 @@ import Alberta from '../src/images/clients/logo-alberta.png'
 import Edmonton from '../src/images/clients/logo-edmonton.png'
 import Katz from '../src/images/clients/logo-katz.png'
 import Tonal from '../src/images/clients/tonal-logo-white.png'
+import Macleans from '../src/images/clients/logo-macleans.png'
 
 export const aboutImage = {
     image : (<StaticImage src='../src/images/OverhaulOffice.jpg' alt='The OverhaulMedia Boardroom' placehodeler='blurred'/>)
@@ -462,6 +463,10 @@ export const clients =[
         src: Tonal,
         alt: 'Tonal'
     },
+    {
+        src: Macleans,
+        alt: 'Macleans Magazine'
+    }
 ]
 
 export const ourApproach =[
