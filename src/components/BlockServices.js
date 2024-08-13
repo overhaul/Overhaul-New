@@ -48,12 +48,13 @@ class BlockServices extends React.Component {
                                 ))}
                             </ul>
                             <div className="block-services_list_cta col-md-8 col-xs-12 col-md-offset-4 col-xs-offset-0">
-                                <p>Have a specific need? 
+                                <p>Have a specific need? &nbsp;
                                     <a href={'mailto:info@overhaulmedia.com'} 
                                        target="_blank" 
                                        rel="noreferrer"
-                                       >
-                                       Ask us if we’re a good fit.
+                                       
+                                    >
+                                    Ask us if we’re a good fit.
                                    </a>
                                 </p>
                             </div>
