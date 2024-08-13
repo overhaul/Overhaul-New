@@ -7,12 +7,12 @@ import BlockList from '../components/BlockList'
 import BlockClients from '../components/BlockClients'
 import BlockServices from '../components/BlockServices'
 import BlockAwards from '../components/BlockAwards'
-import BlockTeam from '../components/BlockTeam'
+// import BlockTeam from '../components/BlockTeam'
 import BlockApproach from '../components/BlockApproach'
 import BlockImageText from '../components/BlockImageText'
 import BlockExpertise from '../components/BlockExpertise'
 
-import { awards, team, areas, listItems, serviceAbilities, clients, ourApproach, approachImage , aboutImage} from '../about-content'
+import { awards, areas, listItems, serviceAbilities, clients, ourApproach, approachImage , aboutImage} from '../about-content'
 
 const AboutPage = ({ data }) => {
     const seo = data?.wpPage?.seo || {}
@@ -35,12 +35,12 @@ const AboutPage = ({ data }) => {
                 title="Our Values"
                 listItems={listItems}
             />
-            <BlockTeam 
+            {/* <BlockTeam 
                 title="Meet the Team"
                 subTitle="Hired guns don't have all the tools. Big shops move too slow. We meet you in the middle. "
                 paragraph="We’re Agile. We’re smaller, but experience tells us that’s a good thing. Our team has decades of experience across multiple disciplines."
                 team={team}
-            />
+            /> */}
             <BlockExpertise
                 title="Areas of Expertise"
                 areas={areas}
