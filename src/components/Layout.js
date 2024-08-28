@@ -11,8 +11,9 @@ import CursorWrapper from './CursorWrapper'
 import NavDesk from './NavDesk'
 import NavMob from './NavMob'
 import Footer from './Footer'
-import favicon from '../helpers/faviconSelector'
+// import favicon from '../helpers/faviconSelector'
 import IdleScreen from './IdleScreen'
+import iconFavicon from  '../images/favicons/favicon.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -141,7 +142,7 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
     <div className={`layout ${themeColor}`}>
       <Helmet>
       <html lang='en'/>
-        <link rel="icon" type="image/x-icon" href={favicon()}/>
+        <link rel="icon" type="image/x-icon" href={iconFavicon}/>
         <script type="application/ld+json">
           {JSON.stringify(contactAddress)}
         </script>
