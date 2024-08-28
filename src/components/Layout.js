@@ -17,6 +17,7 @@ import iconFavicon from  '../images/favicons/favicon.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
 
   if (!seo) seo = {}
