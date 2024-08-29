@@ -13,10 +13,12 @@ import NavMob from './NavMob'
 import Footer from './Footer'
 // import favicon from '../helpers/faviconSelector'
 import IdleScreen from './IdleScreen'
-import iconFavicon from  '../images/favicons/favicon.png'
-import iconAppleTouch from  '../images/favicons/apple-touch-icon.png'
-import iconFavicon32 from  '../images/favicons/favicon-32x32.png'
-import iconFavicon16 from  '../images/favicons/favicon-16x16.png'
+import iconFavicon from  '../../public/favicon.png'
+import iconAppleTouch from  '../../public/apple-touch-icon.png'
+import iconFavicon32 from  '../../public/favicon-32x32.png'
+import iconFavicon16 from  '../../public/favicon-16x16.png'
+import iconFaviconIco from  '../../public/favicon.ico'
+import iconFaviconSafari from  '../../public/safari-pinned-tab.svg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -150,7 +152,12 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
         <link rel="apple-touch-icon" sizes="180x180" href={iconAppleTouch} />
         <link rel="icon" type="image/png" sizes="32x32" href={iconFavicon32} />
         <link rel="icon" type="image/png" sizes="16x16" href={iconFavicon16} />
-        <link rel="manifest" href="../images/favicons/site.webmanifest" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href={iconFaviconSafari} color="#5bbad5" />
+        <link rel="shortcut icon" href={iconFaviconIco} />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="theme-color" content="#ffffff" />
         <script type="application/ld+json">
           {JSON.stringify(contactAddress)}
         </script>
