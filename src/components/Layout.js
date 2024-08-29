@@ -13,12 +13,6 @@ import NavMob from './NavMob'
 import Footer from './Footer'
 // import favicon from '../helpers/faviconSelector'
 import IdleScreen from './IdleScreen'
-import iconFavicon from  '../images/favicons/favicon.png'
-import iconAppleTouch from  '../images/favicons/apple-touch-icon.png'
-import iconFavicon32 from  '../images/favicons/favicon-32x32.png'
-import iconFavicon16 from  '../images/favicons/favicon-16x16.png'
-import iconFaviconIco from  '../images/favicons/favicon.ico'
-import iconFaviconSafari from  '../images/favicons/safari-pinned-tab.svg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -148,13 +142,13 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
     <div className={`layout ${themeColor}`}>
       <Helmet>
       <html lang='en'/>
-        <link rel="icon" type="image/x-icon" href={iconFavicon}/>
-        <link rel="apple-touch-icon" sizes="180x180" href={iconAppleTouch} />
-        <link rel="icon" type="image/png" sizes="32x32" href={iconFavicon32} />
-        <link rel="icon" type="image/png" sizes="16x16" href={iconFavicon16} />
+        <link rel="icon" type="image/x-icon" href="/favicon.png"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href={iconFaviconSafari} color="#5bbad5" />
-        <link rel="shortcut icon" href={iconFaviconIco} />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="theme-color" content="#ffffff" />
