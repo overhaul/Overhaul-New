@@ -13,12 +13,12 @@ import NavMob from './NavMob'
 import Footer from './Footer'
 // import favicon from '../helpers/faviconSelector'
 import IdleScreen from './IdleScreen'
-import iconFavicon from  '../../public/favicon.png'
-import iconAppleTouch from  '../../public/apple-touch-icon.png'
-import iconFavicon32 from  '../../public/favicon-32x32.png'
-import iconFavicon16 from  '../../public/favicon-16x16.png'
-import iconFaviconIco from  '../../public/favicon.ico'
-import iconFaviconSafari from  '../../public/safari-pinned-tab.svg'
+import iconFavicon from  '../images/favicons/favicon.png'
+import iconAppleTouch from  '../images/favicons/apple-touch-icon.png'
+import iconFavicon32 from  '../images/favicons/favicon-32x32.png'
+import iconFavicon16 from  '../images/favicons/favicon-16x16.png'
+import iconFaviconIco from  '../images/favicons/favicon.ico'
+import iconFaviconSafari from  '../images/favicons/safari-pinned-tab.svg'
 
 gsap.registerPlugin(ScrollTrigger);
 
