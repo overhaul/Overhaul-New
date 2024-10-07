@@ -22,8 +22,8 @@ const IndexPage = ({data}) => {
   const seo = data?.wpPage?.seo || {}
 
   const titleSlideText = [
-    'You have this long to make an impression.',
-    'Stand out,',
+    'You have this long to make an impression. ',
+    'Stand out, ',
     'or sit on the bench.',
   ]
 
