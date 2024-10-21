@@ -84,8 +84,6 @@ class WorkPage extends Component {
     const categoriesToShow = this.state.showAllCategories ? categories : categories.slice(0, 3);
     const activeCategory = this.state.currentCategory !== -1 ? categories[this.state.currentCategory] : null;
 
-    console.log(categoriesToShow);
-
     return (
       <Layout seo={this.props.data.wpPage.seo}>
         <PageTitle title="Building brands that matter." />
