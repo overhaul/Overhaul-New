@@ -308,6 +308,7 @@
 }
 
 .work-filter{
+	
 
 	&s{
 		display: flex;
@@ -327,6 +328,7 @@
 		margin: 0;
     	display: flex;
     	flex-direction: row;
+		flex-wrap: wrap;
 
 		@media(max-width: $mobile){
 			flex-direction: column;
@@ -336,18 +338,9 @@
 		&:hover{
 			
 			.work-filter_item{
-				padding-left: 1.5em;
-				width: auto;
-				opacity: 1;
-				pointer-events: all;
-				transition: 0.3s ease;
 
 				@media(max-width: $mobile){
-					padding-left: 0em;
-					height: auto;
-					opacity: 1;
-					padding-top: 0.5em;
-					cursor: pointer;
+					
 				}
 
 				&.first{
@@ -358,23 +351,28 @@
 	}
 
 	&_item{
-		padding-left: 0em;
-		width: 0;
-		opacity: 0;
-		pointer-events: none;
-		transition: 0.3s ease;
+		opacity: 1;
+		color: $light-grey;
+		font-size: 40px;
+		line-height: 48px;
 		
 		a{
 			color: $light-grey;
-
+			text-decoration: underline;
+			text-decoration-thickness: 2px;
+			text-underline-offset: 3px;
+			
 			&:hover{
 				color: $red;
+				text-decoration: none;
 			}
 		}
 
 		@media(max-width: $mobile){
 			flex-direction : column;
 			height: 0;
+			font-size: 16px;
+			line-height: 24px;
 		}
 
 		&--off{
@@ -386,7 +384,7 @@
 		}
 
 		&:hover{
-			color: $grey;
+			// color: $grey;
 		}
 
 		&.first{
@@ -398,5 +396,43 @@
 				color: $black;
 			}
 		}
+
+		&.show-less {
+			width: 100%;
+		}
 	}
 }
+
+.work-card-categories {
+	padding: 10px 0 0;
+}
+
+.category-pill {
+	background: none;
+	border: 1px solid $grey;
+	padding: 2px 10px;
+	margin: 0 5px 0 0;
+	border-radius: 20px;
+	cursor: pointer;
+  }
+  
+  .category-pill:hover {
+	background-color: #ddd;
+  }
+
+  .work-filter_item.active-category {
+	display: flex;
+	align-items: center;
+  }
+  
+  .work-filter_item.active-category button {
+	margin-left: 10px;
+	background: none;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  .work-filter_item.active-category button:hover {
+	color: red; /* Example hover effect */
+  }

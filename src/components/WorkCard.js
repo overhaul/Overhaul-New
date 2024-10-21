@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from "gatsby-image"
 
-function WorkCard({title, url, featuredImage, excerpt, gatsbyImageData}) {
+function WorkCard({title, url, featuredImage, excerpt, gatsbyImageData, categories, onCategoryClick}) {
 	return(
 		<div className="col-xs-12 col-md-6 grid_card">
 		  <article className="work_card">
@@ -15,6 +15,17 @@ function WorkCard({title, url, featuredImage, excerpt, gatsbyImageData}) {
 		        {excerpt}
 		      </p>
 		    </Link>
+			<div className="work-card-categories">
+				{categories?.map((category, index) => (
+					<button 
+						key={index} 
+						onClick={() => onCategoryClick(category)} // Trigger filter update on click
+						className="category-pill"
+					>
+						{category}
+					</button>
+				))}
+			</div>
 		  </article>
 		</div>
 	)

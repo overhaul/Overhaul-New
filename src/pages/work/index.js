@@ -8,39 +8,47 @@ import WorkListItem from '../../components/WorkListItem'
 import BlockCallToAction from '../../components/BlockCallToAction'
 
 class WorkPage extends Component {
-
   constructor() {
-    super()
+    super();
     this.state = {
       listIsOpen: true,
       currentCategory: -1,
-    }
-    this.toggleView = this.toggleView.bind(this)
-    this.updateCategory = this.updateCategory.bind(this)
-    this.fitlerNode = this.fitlerNode.bind(this)
+      showAllCategories: false,
+    };
+    this.toggleView = this.toggleView.bind(this);
+    this.updateCategory = this.updateCategory.bind(this);
+    this.clearCategoryFilter = this.clearCategoryFilter.bind(this); // Reset filter
+    this.fitlerNode = this.fitlerNode.bind(this);
   }
 
   toggleView(view) {
     if (window.ScrollTriggerInstance) {
-      window.ScrollTriggerInstance.refresh(true)
+      window.ScrollTriggerInstance.refresh(true);
     }
 
     this.setState({
-      listIsOpen: view === 'list'
-    })
+      listIsOpen: view === 'list',
+    });
   }
 
-  updateCategory(index){
+  updateCategory(index) {
     this.setState({
-      currentCategory: index
-    })
+      currentCategory: index,
+      showAllCategories: false, // Hide all categories once one is selected
+    });
+  }
+
+  clearCategoryFilter() {
+    this.setState({
+      currentCategory: -1, // Reset filter
+    });
   }
 
   fitlerNode(node) {
-    if (this.state.currentCategory === -1) return true
-    const currentCategoryObject = this.categoryList()[this.state.currentCategory]
-    const currentCategoryTitle = currentCategoryObject?.title
-    return (node.categories.nodes || []).find((cat) => cat.name === currentCategoryTitle)
+    if (this.state.currentCategory === -1) return true;
+    const currentCategoryObject = this.categoryList()[this.state.currentCategory];
+    const currentCategoryTitle = currentCategoryObject?.title;
+    return (node.categories.nodes || []).find((cat) => cat.name === currentCategoryTitle);
   }
 
   categoryList() {
@@ -50,100 +58,113 @@ class WorkPage extends Component {
       for (let i = 0; i < post.categories.nodes.length; i++) {
         if (!usedCategories[post.categories.nodes[i].slug]) {
           usedCategories[post.categories.nodes[i].slug] = 
-            post.categories.nodes[i].name
+            post.categories.nodes[i].name;
         }
       }
-      return usedCategories
-    }, {})
+      return usedCategories;
+    }, {});
 
-    return Object.keys(workPostCategories).map((cat) => {
-      return {
-        title: workPostCategories[cat],
-        slug: cat,
-      }
-    })
+    return Object.keys(workPostCategories).map((cat) => ({
+      title: workPostCategories[cat],
+      slug: cat,
+    }));
   }
+
+  toggleShowAllCategories = () => {
+    this.setState({ showAllCategories: !this.state.showAllCategories });
+  };
+
+  updateCategoryFilter = (category) => {
+    this.updateCategory(this.categoryList().map(cat => cat.title).indexOf(category))
+  };
 
   render() {
     const { nodes: workNodes } = this.props.data.allWpPost;
+    const categories = this.categoryList();
+    const categoriesToShow = this.state.showAllCategories ? categories : categories.slice(0, 3);
+    const activeCategory = this.state.currentCategory !== -1 ? categories[this.state.currentCategory] : null;
+
+    console.log(categoriesToShow);
+
     return (
       <Layout seo={this.props.data.wpPage.seo}>
-        <PageTitle
-          title='Building brands that matter.'
-        />
+        <PageTitle title="Building brands that matter." />
         <div className="container row">
-          <div className="col-xs-12 work-filters">
+          <div className="col-xs-12 col-md-6 work-filters">
             <div className="work-filter">
               <ul className="work-filter_items">
-                <li className="work-filter_item first">
-                  <a onClick={ () => this.updateCategory(-1)}>
-                    Work &mdash; &nbsp; 
-                    {this.categoryList()[this.state.currentCategory]?.title ?? 'All'}
-                  </a>
-                </li>
-                <li className={'work-filter_item ' + (this.state.currentCategory === -1 ? 'work-filter_item--off' : '')}>
-                  <a onClick={ () => this.updateCategory(-1)}>All</a>
-                </li>
-                {this.categoryList().map((category, index) => (
-                  <li className={'work-filter_item ' + (this.state.currentCategory === index ? 'work-filter_item--off' : '')} key={index}>
-                    <a onClick={ () => this.updateCategory(index)}>{category.title}</a>
+                <li className="work-filter_item first">We deal with &nbsp;</li>
+
+                {activeCategory && !this.state.showAllCategories ? (
+                  // Show only the active category with an "X" to reset the filter
+                  <li className="work-filter_item active-category">
+                    <button onClick={this.clearCategoryFilter}>X</button>
+                    <span>{activeCategory.title}</span>
+                    
                   </li>
-                ))}
+                ) : (
+                  <>
+                  {activeCategory && <li className="work-filter_item active-category">
+                    <button onClick={this.clearCategoryFilter}>X</button>
+                    <span>{activeCategory.title}</span>
+                    {',\u00A0'}
+                  </li>}
+                  
+                  {categoriesToShow.map((category, index) => (
+                    <li
+                      className={
+                        'work-filter_item ' +
+                        (this.state.currentCategory === index ? 'work-filter_item--off' : '')
+                      }
+                      key={index}
+                    >
+                      <a onClick={() => this.updateCategory(index)}>{category.title}</a>
+                      {index < categoriesToShow.length - 1 ? ',\u00A0' : this.state.showAllCategories ? '.\u00A0' : ''}
+                    </li>
+                  ))}
+                  </>
+                )}
+
+                {/* Show "and more" link if more than 3 categories */}
+                {categories.length > 3 && !this.state.showAllCategories && (
+                  <li className="work-filter_item">
+                    {',\u00A0'}
+                    <a onClick={this.toggleShowAllCategories}>and more.</a>
+                  </li>
+                )}
+
+                {/* Show "show less" link when all categories are shown */}
+                {this.state.showAllCategories && (
+                  <li className="work-filter_item show-less">
+                    <a onClick={this.toggleShowAllCategories}>Show less.</a>
+                  </li>
+                )}
               </ul>
-            </div>
-            <div className="work-toggle">
-              <div className="work-toggle_buttons">
-                  <button className={`work-toggle_button list ${this.state.listIsOpen ? '' : 'active'}`}
-                      onClick={() => this.toggleView('grid')}
-                      onKeyDown={() => this.toggleView('grid')}
-                      >
-                      <p>List</p>
-                  </button>
-                  <button className={`work-toggle_button grid ${this.state.listIsOpen ? 'active' : ''}`}
-                      onClick={() => this.toggleView('list')}
-                      onKeyDown={() => this.toggleView('list')}
-                      > 
-                      <p>Grid</p>
-                  </button>
-              </div>
             </div>
           </div>
         </div>
 
         <div className={`work container row grid ${this.state.listIsOpen ? 'grid-view' : 'list-view'}`}>
-          {
-            workNodes.filter(this.fitlerNode).map((node, index) => {
-              return (
-                <WorkCard
-                  key={node.id}
-                  title={node.title}
-                  url={`/work/${node.slug.toLowerCase()}`}
-                  featuredImage={node.featuredImage}
-                  gatsbyImageData={node.featuredImage?.node.localFile.childImageSharp}
-                  excerpt={node.workSubtitle.subTitle}
-                />
-              )
-            })
-          }
+          {workNodes.filter(this.fitlerNode).map((node) => (
+            <WorkCard
+              key={node.id}
+              title={node.title}
+              url={`/work/${node.slug.toLowerCase()}`}
+              featuredImage={node.featuredImage}
+              gatsbyImageData={node.featuredImage?.node.localFile.childImageSharp}
+              excerpt={node.workSubtitle.subTitle}
+              categories={node.categories.nodes.map((cat) => cat.name)}
+              onCategoryClick={this.updateCategoryFilter}
+            />
+          ))}
         </div>
 
-        <div className={`work container row list ${this.state.listIsOpen ? 'grid-view' : 'list-view'}`}>
-          {
-            workNodes.filter(this.fitlerNode).map((node, index) => (
-              <WorkListItem {...node} key={index} />
-            ))
-          }
-        </div>
-
-        <BlockCallToAction
-          title='Look like something you need?'
-          cta='Start the conversation.'
-          link='/contact'
-        />
+        <BlockCallToAction title="Look like something you need?" cta="Start the conversation." link="/contact" />
       </Layout>
-    )
+    );
   }
 }
+
 
 export const query = graphql `
   query WorkPage {
