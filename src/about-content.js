@@ -14,7 +14,7 @@ import Macleans from '../src/images/clients/logo-macleans.png'
 
 export const aboutImage = {
     image : (<AsciiArt
-        image={
+        imageChild={
           <StaticImage
             className="ascii-image"
             src="../src/images/OverhaulOffice.jpg"
@@ -27,7 +27,7 @@ export const aboutImage = {
 
 export const approachImage = {
     imageSrc: (<AsciiArt
-        image={
+        imageChild={
             <StaticImage className="block-approach_image" src='../src/images/our-approach.jpg' alt='The OverhaulMedia Approach' placehodeler='blurred'/>
         }
       />)

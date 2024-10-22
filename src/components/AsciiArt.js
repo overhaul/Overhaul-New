@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 
-const AsciiArt = ({image}) => {
+const AsciiArt = ({imageChild}) => {
     const isTouchDevice = () => 'ontouchstart' in window;
     const container = useRef(null);
     const [imageLoaded, setImageLoaded] = useState(false);
@@ -10,16 +9,22 @@ const AsciiArt = ({image}) => {
         let image = container.current.querySelector('picture img');
         const timer = setInterval(() => {
             image = container.current.querySelector('picture img');
+            
             if (image) {
-                image.addEventListener('load', () => {
-                    console.log('image loaded');
+                if (image.complete) {
                     setImageLoaded(true);
                     clearInterval(timer);
-                });
+                } else {
+                    image.onload = () => {
+                        setImageLoaded(true);
+                        clearInterval(timer);
+                    };
+                }
             }
         }, 100)
         
         if (!imageLoaded) return;
+        clearInterval(timer);
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
         const asciiContainer = document.createElement('pre'); // Container for ASCII art
@@ -154,7 +159,7 @@ const AsciiArt = ({image}) => {
             }
             return ascii;
         }
-    }, [container.current, imageLoaded]);
+    }, [imageLoaded]);
 
     
 
@@ -172,7 +177,7 @@ const AsciiArt = ({image}) => {
         alt="The OverhaulMedia Boardroom"
         placeholder="blurred"
       /> */}
-      {image}
+      {imageChild}
     </div>
   );
 };
