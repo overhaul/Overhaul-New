@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
+import AsciiArt from './components/AsciiArt'
 
 import Cbc from '../src/images/clients/logo-cbc.png'
 import Haven from '../src/images/clients/logo-haven.png'
@@ -12,11 +13,24 @@ import Tonal from '../src/images/clients/tonal-logo-white.png'
 import Macleans from '../src/images/clients/logo-macleans.png'
 
 export const aboutImage = {
-    image : (<StaticImage src='../src/images/OverhaulOffice.jpg' alt='The OverhaulMedia Boardroom' placehodeler='blurred'/>)
+    image : (<AsciiArt
+        image={
+          <StaticImage
+            className="ascii-image"
+            src="../src/images/OverhaulOffice.jpg"
+            alt="The OverhaulMedia Boardroom"
+            placeholder="blurred"
+          />
+        }
+      />)
 }
 
 export const approachImage = {
-    imageSrc: (<StaticImage className="block-approach_image" src='../src/images/our-approach.jpg' alt='The OverhaulMedia Approach' placehodeler='blurred'/>)
+    imageSrc: (<AsciiArt
+        image={
+            <StaticImage className="block-approach_image" src='../src/images/our-approach.jpg' alt='The OverhaulMedia Approach' placehodeler='blurred'/>
+        }
+      />)
 }
 
 export const team =[

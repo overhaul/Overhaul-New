@@ -165,3 +165,32 @@ header {
     margin-bottom: 25px;
 }
 
+.ascii-image-container {
+    position: relative;
+
+    &:hover img {
+        opacity: 1 !important;
+        transition: opacity 0.7s ease, filter 1.5s ease, visibility 0.7s ease;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 0 !important;
+        transition: opacity 0.7s ease, filter 1s ease, visibility 0.7s ease;
+    }
+    pre {
+        font-family: monospace;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+        margin: 0;
+        font-size: 8px;
+        line-height: 8px;
+        color: #ccc;
+    }
+}
