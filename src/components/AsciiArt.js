@@ -92,7 +92,7 @@ const AsciiArt = ({imageChild}) => {
         });
 
         window.addEventListener('scroll', function (e) {
-            if (isTouchDevice() && window.scrollY + window.outerHeight/2 > container.current.offsetTop && !container.current.classList.contains('section-active')) {
+            if (isTouchDevice() && window.scrollY + window.outerHeight/2 > container.current.getBoundingClientRect().top + container.current.offsetHeight && !container.current.classList.contains('section-active')) {
                 container.current.classList.add('section-active');
                 clearInterval(animationInterval); // Clear any existing animation interval
                 animateBrightness(imageData, asciiContainer, 1, -1, 300); // Revert back to normal brightness
