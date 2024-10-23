@@ -168,6 +168,13 @@ header {
 .ascii-image-container {
     position: relative;
 
+    &.section-active {
+        img {
+            opacity: 1 !important;
+            transition: opacity 0.7s ease, filter 1.5s ease, visibility 0.7s ease;
+        }
+    }
+
     &:hover img {
         opacity: 1 !important;
         transition: opacity 0.7s ease, filter 1.5s ease, visibility 0.7s ease;
@@ -192,5 +199,10 @@ header {
         font-size: 8px;
         line-height: 8px;
         color: #ccc;
+
+        @media(max-width: $mobile) {
+            font-size: 3px;
+            line-height: 3px;
+        }
     }
 }

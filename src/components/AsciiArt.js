@@ -6,6 +6,8 @@ const AsciiArt = ({imageChild}) => {
     const [imageLoaded, setImageLoaded] = useState(false);
 
     useEffect(() => {
+        let scaleX = 4.81;
+        let scaleY = 0.61;
         let image = container.current.querySelector('picture img');
         const timer = setInterval(() => {
             image = container.current.querySelector('picture img');
@@ -21,7 +23,7 @@ const AsciiArt = ({imageChild}) => {
                     };
                 }
             }
-        }, 100)
+        }, 100);
         
         if (!imageLoaded) return;
         clearInterval(timer);
@@ -30,13 +32,18 @@ const AsciiArt = ({imageChild}) => {
         const asciiContainer = document.createElement('pre'); // Container for ASCII art
         container.current.appendChild(asciiContainer);
 
+        if (window.innerWidth < 660) {
+            scaleX =1.61;
+            scaleY = 0.61;
+        }
+
         // Dynamically calculate ASCII width based on image width (pixels)
         const imageWidth = image.width;
         const imageHeight = image.height;
 
         // Adjust ASCII width based on desired resolution and scale factor
-        const asciiWidth = Math.floor(imageWidth / 4.81); // Reduce width to create more manageable ASCII resolution
-        const asciiHeight = Math.floor(asciiWidth * (imageHeight / imageWidth) * 0.61); // Adjust height based on aspect ratio
+        const asciiWidth = Math.floor(imageWidth / scaleX); // Reduce width to create more manageable ASCII resolution
+        const asciiHeight = Math.floor(asciiWidth * (imageHeight / imageWidth) * scaleY); // Adjust height based on aspect ratio
 
         canvas.width = asciiWidth;
         canvas.height = asciiHeight;
@@ -78,17 +85,29 @@ const AsciiArt = ({imageChild}) => {
         });
 
         document.addEventListener('click', function (e) {
-            if (isTouchDevice() && e.target !== asciiContainer) {
+            if (isTouchDevice() && e.target !== asciiContainer && !container.current.classList.contains('section-active')) {
                 clearInterval(animationInterval); // Clear any existing animation interval
                 animateBrightness(imageData, asciiContainer, -1, 1, 300); // Revert back to normal brightness
             }
         });
 
+        window.addEventListener('scroll', function (e) {
+            if (isTouchDevice() && window.scrollY + window.outerHeight/2 > container.current.offsetTop && !container.current.classList.contains('section-active')) {
+                container.current.classList.add('section-active');
+                clearInterval(animationInterval); // Clear any existing animation interval
+                animateBrightness(imageData, asciiContainer, 1, -1, 300); // Revert back to normal brightness
+            }
+        });
+
         window.addEventListener('resize', function () {
+            if (window.innerWidth < 660) {
+                scaleX =1.61;
+                scaleY = 0.61;
+            }
             const imageWidth = image.width;
             const imageHeight = image.height;
-            const asciiWidth = Math.floor(imageWidth / 4.81); // Reduce width to create more manageable ASCII resolution
-            const asciiHeight = Math.floor(asciiWidth * (imageHeight / imageWidth) * 0.61); // Adjust height based on aspect ratio
+            const asciiWidth = Math.floor(imageWidth / scaleX); // Reduce width to create more manageable ASCII resolution
+            const asciiHeight = Math.floor(asciiWidth * (imageHeight / imageWidth) * scaleY); // Adjust height based on aspect ratio
             canvas.width = asciiWidth;
             canvas.height = asciiHeight;
             ctx.drawImage(image, 0, 0, asciiWidth, asciiHeight);
@@ -127,7 +146,8 @@ const AsciiArt = ({imageChild}) => {
         // Function to convert image data to ASCII art with adjustable brightness
         function convertToAscii(imageData, brightnessLevel, progress, isBrightening) {
             // 4-bit grayscale ASCII characters set from dark to light
-            const asciiChars = ['N', 'N', 'N', '%', '?', '*', '+', ';', ':', '.', ' '].reverse(); // More space for lighter effect
+            // const asciiChars = ['N', 'N', 'N', '%', '?', '*', '+', ';', ':', '.', ' '].reverse(); // More space for lighter effect
+            const asciiChars = ['N', 'N', 'N', '%', '?', '*', '+', ';', ':', '.', ' '].reverse();
             const pixels = imageData.data;
             let ascii = '';
 
