@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import PageTitle from '../../components/PageTitle'
 import WorkCard from '../../components/WorkCard'
-import WorkListItem from '../../components/WorkListItem'
+// import WorkListItem from '../../components/WorkListItem'
 import BlockCallToAction from '../../components/BlockCallToAction'
 
 class WorkPage extends Component {
