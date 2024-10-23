@@ -52,7 +52,7 @@ class BlockServices extends React.Component {
                                     <a href={'mailto:info@overhaulmedia.com'} 
                                        target="_blank" 
                                        rel="noreferrer"
-                                       class="cursor-text--Reach_Out"
+                                       className="cursor-text--Reach_Out"
                                     >
                                     Ask us if we’re a good fit.
                                    </a>

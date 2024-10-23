@@ -36,6 +36,11 @@ class WorkPage extends Component {
       currentCategory: index,
       showAllCategories: false, // Hide all categories once one is selected
     });
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   }
 
   clearCategoryFilter() {
@@ -91,14 +96,14 @@ class WorkPage extends Component {
           <div className="col-xs-12 col-md-6 work-filters">
             <div className="work-filter">
               <ul className="work-filter_items">
-                <li className="work-filter_item first">We deal with &nbsp;</li>
+                <li className="work-filter_item first">We deal with&nbsp;</li>
 
                 {activeCategory && !this.state.showAllCategories ? (
                   // Show only the active category with an "X" to reset the filter
                   <li className="work-filter_item active-category">
                     <button onClick={this.clearCategoryFilter}>X</button>
                     <span>{activeCategory.title}</span>
-                    
+                    {',\u00A0'}
                   </li>
                 ) : (
                   <>
@@ -117,7 +122,7 @@ class WorkPage extends Component {
                       key={index}
                     >
                       <a onClick={() => this.updateCategory(index)}>{category.title}</a>
-                      {index < categoriesToShow.length - 1 ? ',\u00A0' : this.state.showAllCategories ? '.\u00A0' : ''}
+                      {index <= categoriesToShow.length - 1 ? ',\u00A0' : this.state.showAllCategories ? '.\u00A0' : ''}
                     </li>
                   ))}
                   </>
@@ -126,7 +131,7 @@ class WorkPage extends Component {
                 {/* Show "and more" link if more than 3 categories */}
                 {categories.length > 3 && !this.state.showAllCategories && (
                   <li className="work-filter_item">
-                    {',\u00A0'}
+                    
                     <a onClick={this.toggleShowAllCategories}>and more.</a>
                   </li>
                 )}
@@ -153,6 +158,7 @@ class WorkPage extends Component {
               excerpt={node.workSubtitle.subTitle}
               categories={node.categories.nodes.map((cat) => cat.name)}
               onCategoryClick={this.updateCategoryFilter}
+              activeCategory={activeCategory}
             />
           ))}
         </div>
