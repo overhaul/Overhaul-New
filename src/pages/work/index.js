@@ -108,7 +108,7 @@ class WorkPage extends Component {
                 ) : (
                   <>
                   {activeCategory && <li className="work-filter_item active-category">
-                    <button onClick={this.clearCategoryFilter}>X</button>
+                    <button onClick={this.clearCategoryFilter}>X&nbsp;</button>
                     <span>{activeCategory.title}</span>
                     {',\u00A0'}
                   </li>}
