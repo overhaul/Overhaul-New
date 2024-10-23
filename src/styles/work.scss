@@ -362,8 +362,11 @@
 			text-underline-offset: 3px;
 			
 			&:hover{
-				color: $red;
-				text-decoration: none;
+				@media(min-width: $mobile) {
+					color: $red;
+					text-decoration: none;
+				}
+				
 			}
 
 			@media(max-width: $mobile) {
