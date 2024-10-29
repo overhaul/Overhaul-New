@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import Cbc from '../src/images/clients/logo-cbc.png'
@@ -414,7 +415,7 @@ export const serviceAbilities =[
         title: 'Digital',
     },
     {
-        title: 'eCommerce',
+        link: <Link to="/ecommerce-agency" hrefLang="en" rel="alternate">eCommerce</Link>,
     },
     {
         title: 'Photography',

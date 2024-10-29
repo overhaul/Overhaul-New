@@ -44,7 +44,7 @@ class BlockServices extends React.Component {
                             <h2 className="col-md-4 col-xs-12">Our Core Abilities:</h2>
                             <ul className="col-md-8 col-xs-12">
                                 {serviceItems.map((serviceItem, index) => (
-                                    <li key={index}>{serviceItem.title}</li>
+                                    <li key={index}>{serviceItem.title ?? serviceItem.link}</li>
                                 ))}
                             </ul>
                             <div className="block-services_list_cta col-md-8 col-xs-12 col-md-offset-4 col-xs-offset-0">
