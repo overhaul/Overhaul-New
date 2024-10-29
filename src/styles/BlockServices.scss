@@ -74,8 +74,11 @@
 			  -moz-columns: 1;
 		  }
 
-			li{
-
+			li {
+				a {
+					text-decoration: none;
+				}
+				
 		 		&:before{
 		 			display: none;
 		 		}
