@@ -4,8 +4,13 @@
   color: $black;
   padding: 2em 0;
 
-  p{
-  	margin-bottom: 1em;
+  &_text {
+	  p{
+		  margin-bottom: 1em;
+		a {
+			text-decoration: none;
+		}
+	  }
   }
 
   &_image{

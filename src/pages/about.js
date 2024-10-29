@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 
 import PageTitle from '../components/PageTitle'
@@ -16,6 +16,10 @@ import { awards, areas, listItems, serviceAbilities, clients, ourApproach, appro
 
 const AboutPage = ({ data }) => {
     const seo = data?.wpPage?.seo || {}
+    const haven = <Link to="/work/haven" hrefLang="en" rel="alternate">HAVEN</Link>
+    const beljan = <Link to="/work/beljan-development" hrefLang="en" rel="alternate">Beljan Development</Link>
+    const epic = <Link to="/work/epic-investment-services" hrefLang="en" rel="alternate">Epic Investment Services</Link>
+
     return (
         <Layout themeColor="dark" seo={seo}>
             <PageTitle
@@ -24,9 +28,10 @@ const AboutPage = ({ data }) => {
             <BlockImageText
                 image={aboutImage}
                 imageAlt='The Overhaul Office'
-                paragraph="<p>We are a design agency in Edmonton that helps business redefine the way they connect with their customers. Our services range from creative direction, design & development, to marketing and communications. The aim is simple: deliver original ideas, push the boundaries of technology, and contribute work that matters.</p><p>From the original concept to the finished product, we work with clients large and small to reinforce their core brand value and define their distinct voice in the market. Our aim is to help businesses see design as a competitive advantage; helping brands move beyond conventional marketing activities to deliver messages and ideas that elevate the customer experience.</p>
-<p>Founded in 2006, Overhaul has built a client list that includes Beljan Development, Naked & Famous Denim, HAVEN, CBC, City of Edmonton, Government of Alberta, Epic Investment Services and more.</p>"
-            />
+            >
+                <p>We are a design agency in Edmonton that helps business redefine the way they connect with their customers. Our services range from creative direction, design & development, to marketing and communications. The aim is simple: deliver original ideas, push the boundaries of technology, and contribute work that matters.</p><p>From the original concept to the finished product, we work with clients large and small to reinforce their core brand value and define their distinct voice in the market. Our aim is to help businesses see design as a competitive advantage; helping brands move beyond conventional marketing activities to deliver messages and ideas that elevate the customer experience.</p>
+                <p>Founded in 2006, Overhaul has built a client list that includes {beljan}, Naked & Famous Denim, {haven}, CBC, City of Edmonton, Government of Alberta, {epic} and more.</p>
+            </BlockImageText>
             <BlockClients 
                 title="Selected Clients"
                 clients={clients}

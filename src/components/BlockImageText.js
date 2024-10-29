@@ -3,7 +3,7 @@ import * as React from 'react'
 class BlockImageText extends React.Component {
 
     render() {
-        const { image, paragraph } = this.props
+        const { image, children } = this.props
         return (
             <div className="block-image-text gsap-fade-in">
                 <div className="container row">
@@ -11,7 +11,7 @@ class BlockImageText extends React.Component {
                       { image.image ? image.image : ''}
                     </div>
                     <div className="col-xs-12 col-md-6 block-image-text_text">
-                        { paragraph ? <div dangerouslySetInnerHTML={{ __html:paragraph}}></div> : ''}
+                        { children }
                     </div>
                 </div>
             </div>
