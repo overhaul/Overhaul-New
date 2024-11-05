@@ -18,7 +18,11 @@
             width: 100%;
             position: absolute;
             overflow: visible;
-            animation: marquee 15s linear infinite;
+            animation: marquee 60s linear infinite;
+
+            @media(max-width: $tablet){
+                animation: marquee 30s linear infinite;
+            }
     
             &:hover {
                 -moz-animation-play-state: paused;
