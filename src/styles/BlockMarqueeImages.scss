@@ -23,12 +23,6 @@
             @media(max-width: $tablet){
                 animation: marquee 30s linear infinite;
             }
-    
-            &:hover {
-                -moz-animation-play-state: paused;
-                -webkit-animation-play-state: paused;
-                animation-play-state: paused;
-            }
         }
 
         &_item {
