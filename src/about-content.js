@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
+//client logos
 import Cbc from '../src/images/clients/logo-cbc.png'
 import Haven from '../src/images/clients/logo-haven.png'
 import Naked from '../src/images/clients/logo-naked.png'
@@ -11,6 +12,14 @@ import Edmonton from '../src/images/clients/logo-edmonton.png'
 import Katz from '../src/images/clients/logo-katz.png'
 import Tonal from '../src/images/clients/tonal-logo-white.png'
 import Macleans from '../src/images/clients/logo-macleans.png'
+
+// awards logos
+import CA from '../src/images/awards/ca-logo.png'
+import Fwa from '../src/images/awards/fwa-logo.png'
+import Awwwards from '../src/images/awards/awwwards-logo.png'
+import Ace from '../src/images/awards/ace-logo.png'
+import AppliedArts from '../src/images/awards/applied-arts-logo.png'
+import Ampia from '../src/images/awards/ampia-logo.png'
 
 export const aboutImage = {
     image : (<StaticImage src='../src/images/OverhaulOffice.jpg' alt='The OverhaulMedia Boardroom' placehodeler='blurred'/>)
@@ -350,6 +359,33 @@ export const awards =[
         year: "2012",
         project:"Share Hope",
         link:"/work/share-hope"
+    },
+]
+
+export const awardsLogos = [
+    {
+        src: CA,
+        alt: 'Communication Arts magazine',
+    },
+    {
+        src: Fwa,
+        alt: 'Favourite Website Awards',
+    },
+    {
+        src: Awwwards,
+        alt: 'Awwwards',
+    },
+    {
+        src: Ace,
+        alt: 'ACE Award',
+    },
+    {
+        src: AppliedArts,
+        alt: 'Applied Arts Award',
+    },
+    {
+        src: Ampia,
+        alt: 'Alberta Media Production Industries Association Award',
     },
 ]
 
