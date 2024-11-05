@@ -12,8 +12,9 @@
             min-height: 75px;
         }
 
-        div {
+        > div {
             display: flex;
+            align-items: center;
             width: 100%;
             position: absolute;
             overflow: visible;
@@ -26,13 +27,26 @@
             }
         }
 
-        &_image {
-            margin: 0 6em;
-            max-height: 50px;
-            width: auto;
+        &_item {
+            height: 126px;
+            width: 177px;
+            display: contents;
     
             @media(max-width: $tablet){
                 margin: 0 3em;
+                max-height: 30px;
+            }
+        }
+
+        &_image {
+            margin: 1em 5vw;
+            max-height: 50px;
+            height: auto;
+            max-width: 120px;
+            width: auto;
+    
+            @media(max-width: $tablet){
+                margin: 0 7vw;
                 max-height: 30px;
             }
         }
