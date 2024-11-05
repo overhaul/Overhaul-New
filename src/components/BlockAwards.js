@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Icon from '../components/Icons'
+import MarqueeImages from './BlockMarqueeImages'
 
 class BlockAwards extends React.Component {
 
@@ -22,7 +23,7 @@ class BlockAwards extends React.Component {
          )
     }
     render() {
-        const { title, awards } = this.props
+        const { title, awards, logos } = this.props
         return (
             <div className="block-awards gsap-fade-in">
                 <div className="container row">
@@ -34,6 +35,11 @@ class BlockAwards extends React.Component {
                         </button>
                     </div>
                     <div className={`accordion col-xs-12 ${this.state.accordionIsOpen ? 'open' : ''}`}>
+                        <div className='block-awards_logos'>
+                            <MarqueeImages 
+                                images={logos}
+                            />
+                        </div>
                         <div className="block-awards_table gsap-fade-in">
                             <div className="block-awards_table-head row">
                                 <p className="block-awards_table-title col-xs-6">Award</p>
