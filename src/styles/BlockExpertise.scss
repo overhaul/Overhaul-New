@@ -126,6 +126,10 @@
       object-fit: contain;
       pointer-events: none;
 
+      img {
+        object-fit: contain !important;
+      }
+
       &:before{
         
       }

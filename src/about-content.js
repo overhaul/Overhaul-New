@@ -80,12 +80,20 @@ export const areas =[
         paragraph: '<p>We’ve got extensive experience with DTC and traditional retail for lifestyle, fashion and beauty products. Even some that made the switch along the way.</p>',
         client: [
             {
-                title: 'Haven',
-                staticAsset: (<StaticImage src='../src/images/expertise/expertise-haven.jpg' alt='Haven Menswear Canada' height={150} placeholder='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                title: 'gravitypope',
+                staticAsset: (<StaticImage src='../src/images/expertise/expertise-gravitypope.jpg' alt='gravitypope' width={300} placeholder='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            },
+            {
+                title: 'Sugarlash PRO',
+                staticAsset: (<StaticImage src='../src/images/expertise/expertise-sugarlashpro.jpg' alt='Sugarlash PRO' width={300} placeholder='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Helm',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-helm.jpg' alt='Helm Menswear' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-thehelm.jpg' alt='Helm Menswear' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            },
+            {
+                title: 'Haven',
+                staticAsset: (<StaticImage src='../src/images/expertise/expertise-haven.jpg' alt='Haven Menswear Canada' width={300} placeholder='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Goldsquare',
@@ -105,7 +113,7 @@ export const areas =[
             },
             {
                 title: 'SOHO Hair',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-soho.jpg' alt='soho hair salon' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-sohohair.jpg' alt='soho hair salon' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Publish Brand',
@@ -114,7 +122,11 @@ export const areas =[
             {
                 title: 'Naked and Famous',
                 staticAsset :(<StaticImage src='../src/images/expertise/expertise-nakedandfamous.jpg' alt='naked and famous demin' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
-            }
+            },
+            {
+                title: 'Nalata Nalata',
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-nalatanalata.jpg' alt='Nalata Nalata' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            },
         ]
     },
     {
@@ -127,11 +139,11 @@ export const areas =[
             },
             {
                 title: 'Farrow',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-farrow.jpg' alt='farrow sandwiches' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-farrow.jpg' alt='Farrow sandwiches' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Three Boars',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-threeboars.jpg' alt='three boars eatery' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-threeboars.jpg' alt='Three Boars eatery' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'HighDough',
@@ -139,15 +151,15 @@ export const areas =[
             },
             {
                 title: 'Press’d',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-pressd.jpg' alt='pressd sandwiches' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-pressd.jpg' alt='Pressd sandwiches' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'North 53',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-north53.jpg' alt='north 53 cocktail place' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-north53.jpg' alt='North 53 cocktail place' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Wishbone',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-wishbone.jpg' alt='wishbone restaurent' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-wishbone.jpg' alt='Wishbone restaurent' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Baiju',
@@ -155,14 +167,26 @@ export const areas =[
             },
             {
                 title: 'Malt and Mortar',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-maltandmortar.jpg' alt='malt and mortar pub' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
-            }
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-maltandmortar.jpg' alt='Malt and Mortar pub' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            },
+            // {
+            //     title: 'Vine arts',
+            //     staticAsset :(<StaticImage src='../src/images/expertise/expertise-maltandmortar.jpg' alt='Vine Arts Wine and Spirits' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            // },
+            {
+                title: 'DOSC',
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-dosc.jpg' alt='DOSC restaurant' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            },
         ]
     },
     {
         title: 'Commercial real estate (CRE), property and asset management. ',
         paragraph: 'Creating desire, adding value, placemaking for meaningful relationships with the built environment. ',
         client: [
+            {
+                title: 'KV Capital',
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-kvcapital.jpg' alt='KV Capital' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            },
             {
                 title: 'Canada ICI',
                 staticAsset :(<StaticImage src='../src/images/expertise/expertise-canadaici.jpg' alt='canada ici' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
@@ -177,7 +201,7 @@ export const areas =[
             },
             {
                 title: 'Currents of Windermere',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-currentsofwindermere.jpg' alt='currents of wondermere' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-currentsofwindermere.jpg' alt='currents of windermere' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Beljan',
@@ -195,10 +219,6 @@ export const areas =[
                 title: 'North District',
                 staticAsset :(<StaticImage src='../src/images/expertise/expertise-northdistrict.jpg' alt='north district edmonton' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
-            {
-                title: 'DOSC',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-dosc.jpg' alt='dosc pub and club' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
-            }
         ]
     },
     {
@@ -206,12 +226,16 @@ export const areas =[
         paragraph: 'As creatives we feel it’s important to support the arts and culture. Helping artists, storytellers tell their story and express themselves in a new way.',
         client: [
             {
+                title: 'Maclean’s',
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-macleans.jpg' alt='Maclean’s magazine' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            },
+            {
                 title: 'Theater Network',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-theaternetwork.jpg' alt='theater network edmonton' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-theatrenetwork.jpg' alt='theater network edmonton' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Georgie Magazine',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-georgiemagazine.jpg' alt='georgie magazine' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-georgie.jpg' alt='georgie magazine' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Human Odyssey',
@@ -228,8 +252,12 @@ export const areas =[
         paragraph: 'Wether its a site for a national campaign about STD’s, forests in Alberta or our beloved Edmonton’s annual budget. We’ve worked in politics, arms length government orgnaizations.',
         client: [
             {
+                title: 'Love AB Forests Campaign Site',
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-afpacampaign.jpg' alt='love alberta forests virtual reality tour' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            },
+            {
                 title: 'Love AB Forests VR Tour',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-loveabvr.jpg' alt='love alberta forests virtual reality tour' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-afpavr.jpg' alt='love alberta forests virtual reality tour' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'YEG City Budget',
@@ -237,7 +265,7 @@ export const areas =[
             },
             {
                 title: 'Report to the City',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-reportotthecity.jpg' alt='a report for hte city of edmonton' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-reportothecity.jpg' alt='a report for hte city of edmonton' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'Invest Alberta Corporation',
@@ -245,7 +273,7 @@ export const areas =[
             },
             {
                 title: 'Alberta Forest Products Association',
-                staticAsset :(<StaticImage src='../src/images/expertise/expertise-afpa.jpg' alt='albert forestry products association' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-afpacorp.jpg' alt='albert forestry products association' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
             },
             {
                 title: 'City of Leduc',
@@ -257,6 +285,26 @@ export const areas =[
         title: 'Professional, healthcare and medical',
         paragraph: 'Old school professions are rapidly evolving in practice. We’re well equipt to help navigate though that transition into today’s modern world. Be it technically, strategically or visually.',
         client: [
+            {
+                title: 'HSEA',
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-hsea.jpg' alt='Hodgson Schilf Evans Architects' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            },
+            {
+                title: 'holo-blok',
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-holoblok.jpg' alt='holo-blok architecture' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            },
+            // {
+            //     title: 'Vignettes',
+            //     staticAsset :(<StaticImage src='../src/images/expertise/expertise-____.jpg' alt='cure md' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            // },
+            {
+                title: 'Workun Garrick',
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-workungarrick.jpg' alt='Workun Garrick' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            },
+            {
+                title: 'Green Impact Partners',
+                staticAsset :(<StaticImage src='../src/images/expertise/expertise-gip.jpg' alt='Green Impact Partners' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
+            },
             {
                 title: 'Cure MD',
                 staticAsset :(<StaticImage src='../src/images/expertise/expertise-curemd.jpg' alt='cure md' width={300} placehodeler='blurred' layout='fixed' className='block-expertise_content-image'/>),
