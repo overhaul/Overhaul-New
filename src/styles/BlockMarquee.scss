@@ -43,7 +43,17 @@
             font-size: 42px;
             line-height: 56px;
         }
-      }
+    }
+
+    .cursor-text--Reach_Out span {
+        font-size: 7rem;
+        line-height: 7rem;
+        
+        @media(max-width: $tablet){
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+    }
 }
   
   
