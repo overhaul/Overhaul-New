@@ -17,7 +17,7 @@ const Marquee = ({text, linkText, link}) => {
     }
     return(
         <>
-        <div class="marquee">
+        <div className="marquee">
             <div>
                 <a className={'cursor-text--' + linkText } href={link}><span>{marqueeText}&nbsp;</span></a>
             </div>
