@@ -19,7 +19,7 @@ const MarqueeImages = ({images}) => {
             <div>
                 { marqueeImages.map((image, index) => (
                     <div className='marquee-images_item' key={index}>
-                        <img src={image.src} alt={image.alt} width='140' placehodeler='blurred' layout='fixed' className='marquee-images_image' />
+                        <img src={image.src} alt={image.alt} width='140' placeholder='blurred' layout='fixed' className={'marquee-images_image '+ image.slug} />
                     </div>
                 ))}
             </div>

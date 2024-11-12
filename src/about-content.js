@@ -19,7 +19,7 @@ import Fwa from '../src/images/awards/fwa-logo.png'
 import Awwwards from '../src/images/awards/awwwards-logo.png'
 import Ace from '../src/images/awards/ace-logo.png'
 import AppliedArts from '../src/images/awards/applied-arts-logo.png'
-import Ampia from '../src/images/awards/ampia-logo.png'
+
 
 export const aboutImage = {
     image : (<StaticImage src='../src/images/OverhaulOffice.jpg' alt='The OverhaulMedia Boardroom' placehodeler='blurred'/>)
@@ -366,26 +366,27 @@ export const awardsLogos = [
     {
         src: CA,
         alt: 'Communication Arts magazine',
+        slug: 'ca',
     },
     {
         src: Fwa,
         alt: 'Favourite Website Awards',
+        slug: 'fwa',
     },
     {
         src: Awwwards,
         alt: 'Awwwards',
+        slug: 'awwwards',
     },
     {
         src: Ace,
         alt: 'ACE Award',
+        slug: 'ace',
     },
     {
         src: AppliedArts,
         alt: 'Applied Arts Award',
-    },
-    {
-        src: Ampia,
-        alt: 'Alberta Media Production Industries Association Award',
+        slug: 'appliedarts',
     },
 ]
 
