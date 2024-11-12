@@ -12,7 +12,7 @@ import BlockApproach from '../components/BlockApproach'
 import BlockImageText from '../components/BlockImageText'
 import BlockExpertise from '../components/BlockExpertise'
 
-import { awards, areas, listItems, serviceAbilities, clients, ourApproach, approachImage , aboutImage} from '../about-content'
+import { awards, awardsLogos, areas, listItems, serviceAbilities, clients, ourApproach, approachImage , aboutImage} from '../about-content'
 
 const AboutPage = ({ data }) => {
     const seo = data?.wpPage?.seo || {}
@@ -64,6 +64,7 @@ const AboutPage = ({ data }) => {
             />
             <BlockAwards
                 title="Awards"
+                logos={awardsLogos}
                 awards={awards}
             />
         </Layout>
