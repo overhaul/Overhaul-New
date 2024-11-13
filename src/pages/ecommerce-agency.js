@@ -75,9 +75,9 @@ const EcommPage = () => {
             />
             <BlockCaseStudies/>
             <Marquee 
-                text='Curious about our process or capabilities?'
+                text="Let's see if we're a fit"
                 linkText="Reach_Out"
-                link="mailto:info@overhaulmedia.com"
+                link="mailto:business@overhaulmedia.com"
             />
         </Layout>
     )
