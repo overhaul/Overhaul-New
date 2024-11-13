@@ -36,7 +36,7 @@ const IndexPage = ({data}) => {
       />
       <FixedSlides slides={slides} />
       <BlockMarquee
-        text="Have a specific need? Ask us if we're a good fit."
+        text="Let's see if we're a fit."
         link="/contact"
         linkText="Reach_Out"
       />
