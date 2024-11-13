@@ -33,7 +33,7 @@
         white-space: nowrap;
         will-change: transform;
         text-align: center;
-        color: $white;
+        color: $black;
         font-weight: 300;
         font-size: 128px;
         line-height: 147px;
@@ -43,9 +43,24 @@
             font-size: 42px;
             line-height: 56px;
         }
-      }
+    }
+
+    .cursor-text--Reach_Out span {
+        font-size: 7rem;
+        line-height: 7rem;
+        
+        @media(max-width: $tablet){
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+    }
 }
   
+.dark .marquee {
+    span {
+        color: $white;
+    }
+}
   
 @keyframes marquee {
     0% { left: 0; }

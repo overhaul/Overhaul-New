@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import FixedSlides from '../components/FixedSlides'
 import TypingSlide from '../components/TypingSlide'
-import BlockCallToAction from '../components/BlockCallToAction'
+import BlockMarquee from '../components/BlockMarquee'
 
 const IndexPage = ({data}) => {
 
@@ -35,10 +35,10 @@ const IndexPage = ({data}) => {
         nextSlide={slides[0]}
       />
       <FixedSlides slides={slides} />
-      <BlockCallToAction
-        title="Have a specific need? Don't see what you're after?"
+      <BlockMarquee
+        text="Have a specific need? Ask us if we're a good fit."
         link="/contact"
-        cta="Ask us if we're a good fit."
+        linkText="Reach_Out"
       />
     </Layout>
   )

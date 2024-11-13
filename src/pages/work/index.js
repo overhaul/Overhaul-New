@@ -5,7 +5,7 @@ import Layout from '../../components/Layout'
 import PageTitle from '../../components/PageTitle'
 import WorkCard from '../../components/WorkCard'
 // import WorkListItem from '../../components/WorkListItem'
-import BlockCallToAction from '../../components/BlockCallToAction'
+import BlockMarquee from '../../components/BlockMarquee'
 
 class WorkPage extends Component {
   constructor() {
@@ -163,7 +163,7 @@ class WorkPage extends Component {
           ))}
         </div>
 
-        <BlockCallToAction title="Look like something you need?" cta="Start the conversation." link="/contact" />
+        <BlockMarquee text="Look like something you need? Start the conversation." link="/contact" linkText='Reach_Out' />
       </Layout>
     );
   }
