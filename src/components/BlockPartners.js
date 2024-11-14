@@ -12,7 +12,7 @@ class BlockPartners extends React.Component {
                     <div className='container title'>{title}</div>
                     <div className="container row">
                         {partners.map((logo, i ) => (
-                            <div className="logo">
+                            <div className="logo" key={i}>
                             { logo.image ? logo.image : 
                                 <img 
                                     className=""

@@ -163,7 +163,11 @@ class WorkPage extends Component {
           ))}
         </div>
 
-        <BlockMarquee text="Look like something you need? Start the conversation." link="/contact" linkText='Reach_Out' />
+        <BlockMarquee
+          text="Let's see if we're a fit."
+          link="/contact"
+          linkText="Reach_Out"
+        />
       </Layout>
     );
   }

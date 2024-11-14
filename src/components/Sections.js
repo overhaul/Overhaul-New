@@ -60,6 +60,7 @@ function Sections ({ sections }) {
           <PageTitle
             title={title}
             subTitle={subtitle}
+            key={index}
           />
         )
       case 'om_page_hero' :
@@ -77,6 +78,7 @@ function Sections ({ sections }) {
               )}
             title={hero_title}
             subTitle={sub_title}
+            key={index}
           />
         )
       default:

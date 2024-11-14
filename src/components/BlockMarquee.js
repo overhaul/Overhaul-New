@@ -19,7 +19,7 @@ const Marquee = ({text, linkText, link}) => {
         <>
         <div className="marquee">
             <div>
-                <a className={'cursor-text--' + linkText } href={link}><span>{marqueeText}&nbsp;</span></a>
+                <a className={'cursor-text--' + linkText } href={link}><span>{marqueeText}&nbsp;</span><span>{marqueeText}&nbsp;</span></a>
             </div>
         </div>
         </>
