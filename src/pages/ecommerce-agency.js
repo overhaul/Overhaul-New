@@ -36,8 +36,8 @@ const EcommPage = () => {
         }
     
     const titleSlideText = [
-        'Your online store is more than just a sales channel,',
-        'It’s an expression of your brand,',
+        'Your online store is more than just a sales channel, ',
+        'It’s an expression of your brand, ',
         'your products and your relationship with customers.'
     ]
 
