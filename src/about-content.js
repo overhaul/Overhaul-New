@@ -12,6 +12,9 @@ import Edmonton from '../src/images/clients/logo-edmonton.png'
 import Katz from '../src/images/clients/logo-katz.png'
 import Tonal from '../src/images/clients/tonal-logo-white.png'
 import Macleans from '../src/images/clients/logo-macleans.png'
+import KVCapital from '../src/images/clients/logo-kvcapital.png'
+// import holoblok from '../src/images/clients/'
+// import OnPurpose from '../src/images/clients/'
 
 // awards logos
 import CA from '../src/images/awards/ca-logo.png'
@@ -334,45 +337,66 @@ export const testimonials = [
         title: 'KV Capital',
         quote: `We are very happy with the final product and appreciate how collaborative you were with our broader team, we know there are a lot of opinions in the room with our projects and you handled it with a lot of professionalism and really, a very admirable state of calmness.`,
         quotee: 'Catherine O’Neill, Director of Marketing',
-        logo: ''
+        image: {
+            src: KVCapital,
+            alt: 'KVCapital'
+        }
     },
     {
         title: 'Tonal',
         quote: `Matt and the Overhaul team made the entire process seamless and so easy to navigate. We appreciate all your hard work and partnership!`,
         quotee: 'Molly Ritterbeck, Vice President, Content',
-        logo: ''
+        image: {
+            src: Tonal,
+            alt: 'Tonal'
+        }
     },
     {
         title: 'holo-blok',
         quote: `Many others have tried in the past and failed. Overhaul accepted the challenge and brought the vision to fruition. Hooray!`,
         quotee: 'Dan Kern, Producer',
-        logo: ''
+        image: {
+            // src: holoblok,
+            // alt: 'holo-blok'
+        }
     },
     {
         title: 'OnPurpose',
         quote: `From a communication and service standpoint, you guys are amazing. I also think your design capabilities are excellent!`,
         quotee: 'Faaiza Ramji, Principal',
-        logo: ''
+        image: {
+            // src: OnPurpose,
+            // alt: 'OnPurpose'
+        }
     },
-    {
-        title: 'HSEA',
-        quote: `We are an architecture/ interior design firm. We tasked Overhaul with building us a new website that better reflected the spaces and experiences that are a result of our our work instead of the fact we do buildings. We also wanted to reflect that the success of the work is because of our people- who are creative, talented and enjoy working with each other and our clients/ consultants etc. The website needed to be a resource for potential clients but we also needed our website to be a tool to recruit talent. The end result better reflects us as a firm and has done what we tasked Overhaul to do. We find both future clients and potential employees better informed on us as a firm.
+//  {
+//         title: 'HSEA',
+//         quote: `We are an architecture/ interior design firm. We tasked Overhaul with building us a new website that better reflected the spaces and experiences that are a result of our our work instead of the fact we do buildings. We also wanted to reflect that the success of the work is because of our people- who are creative, talented and enjoy working with each other and our clients/ consultants etc. The website needed to be a resource for potential clients but we also needed our website to be a tool to recruit talent. The end result better reflects us as a firm and has done what we tasked Overhaul to do. We find both future clients and potential employees better informed on us as a firm.
 
-Overhaul also gave us a minor brand refresh. Our previous name contained the founding partners' names. As we looked to the future where those partners were not involved we revised the name to an Initialism. While most of our clients etc. referred us by that already, not all would recognize us as the same firm so we wanted only a minor refresh to our logo so that would still be recognizable. Overhaul did a great job with the refresh with a branding we can build on.`,
-        quotee: 'Ian Evans, Principal ',
-        logo: ''
-    },
+// Overhaul also gave us a minor brand refresh. Our previous name contained the founding partners' names. As we looked to the future where those partners were not involved we revised the name to an Initialism. While most of our clients etc. referred us by that already, not all would recognize us as the same firm so we wanted only a minor refresh to our logo so that would still be recognizable. Overhaul did a great job with the refresh with a branding we can build on.`,
+//         quotee: 'Ian Evans, Principal ',
+//         image: {
+//              src: null,
+//              alt: ''
+//         }
+//     },
     {
         title: 'HAVEN',
         quote: `Matt and his team at Overhaul are amazing to work with. They really know shopify well and have helped us build a very custom website that isn't your typical cookie-cutter site. Because of this we've been able to stand out in the crowd and push our business to new heights. They are very professional and know how to get the job done.`,
         quotee: 'Arthur Chmielewski, Co-Founder and Creative Director',
-        logo: ''
+        image: {
+            src: Haven,
+            alt: 'Haven'
+        }
     },
     // {
-    //     title: '', //company name - link
-    //     quote: ``,
-    //     quotee: '',
-    //     logo: ''
+    //     title: '',  // company name - link
+    //     quote: ``,  // quoted text
+    //     quotee: '', // quoted person, job title
+    //     image: { // company logo
+    //          src: image,//import
+    //          alt: ''
+    //      }   
     // },
 ]
 
