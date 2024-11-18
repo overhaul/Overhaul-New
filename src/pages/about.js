@@ -11,8 +11,9 @@ import BlockAwards from '../components/BlockAwards'
 import BlockApproach from '../components/BlockApproach'
 import BlockImageText from '../components/BlockImageText'
 import BlockExpertise from '../components/BlockExpertise'
+import BlockTestimonials from '../components/BlockTestimonials'
 
-import { awards, awardsLogos, areas, listItems, serviceAbilities, clients, ourApproach, approachImage , aboutImage} from '../about-content'
+import { awards, awardsLogos, areas, listItems, serviceAbilities, clients, ourApproach, approachImage, aboutImage, testimonials } from '../about-content'
 
 const AboutPage = ({ data }) => {
     const seo = data?.wpPage?.seo || {}
@@ -61,6 +62,10 @@ const AboutPage = ({ data }) => {
                 image={approachImage}
                 alt="Our Team hard at work"
                 content={ourApproach}
+            />
+            <BlockTestimonials
+                title="Testimonials"
+                content={testimonials}
             />
             <BlockAwards
                 title="Awards"
