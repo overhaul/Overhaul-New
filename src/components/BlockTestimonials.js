@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
 import Icon from '../components/Icons'
 
-import { Pagination } from 'swiper';
+import { Pagination, EffectFade } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
+
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
 const BlockTestimonials = ({title, content}) => {
     const [isActive, setIsActive] = useState(false);
@@ -35,9 +36,10 @@ const BlockTestimonials = ({title, content}) => {
                 <div className={`block-testimonials_content accordion col-md-9 col-xs-12 ${isActive ? 'open' : ''}`}>
                      <Swiper
                         pagination={pagination}
-                        modules={[Pagination]}
+                        modules={[Pagination, EffectFade]}
                         className="testimonials-swiper"
                         navigation={false}
+                        effect="fade"
                     >
                         {content.map((slide, index) => (
                             <SwiperSlide key={index} aria-labelledby={labelledBy(slide.title)}>

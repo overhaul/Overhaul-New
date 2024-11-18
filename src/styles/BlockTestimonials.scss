@@ -83,6 +83,11 @@
 			margin-top: 2rem;
 
 			.swiper-slide{
+				opacity: 0 !important;
+
+				&-active {
+					opacity: 1 !important;
+				}
 
 				blockquote{
 					color:$white;
