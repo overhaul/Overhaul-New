@@ -335,7 +335,7 @@ export const areas =[
 export const testimonials = [
     {
         title: 'KV Capital',
-        quote: `We are very happy with the final product and appreciate how collaborative you were with our broader team, we know there are a lot of opinions in the room with our projects and you handled it with a lot of professionalism and really, a very admirable state of calmness.`,
+        quote: `We are very happy with the final product and appreciate how collaborative you were with our broader team, we know there are a lot of opinions in the room with our projects...`,
         quotee: 'Catherine O’Neill, Director of Marketing',
         image: {
             src: KVCapital,
@@ -382,7 +382,7 @@ export const testimonials = [
 //     },
     {
         title: 'HAVEN',
-        quote: `Matt and his team at Overhaul are amazing to work with. They really know shopify well and have helped us build a very custom website that isn't your typical cookie-cutter site. Because of this we've been able to stand out in the crowd and push our business to new heights. They are very professional and know how to get the job done.`,
+        quote: `Matt and his team at Overhaul are amazing to work with. They really know shopify well and have helped us build a very custom website that isn't your typical cookie-cutter site. Because of this we've been able to stand out in the crowd...`,
         quotee: 'Arthur Chmielewski, Co-Founder and Creative Director',
         image: {
             src: Haven,
