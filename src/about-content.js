@@ -12,17 +12,16 @@ import Edmonton from '../src/images/clients/logo-edmonton.png'
 import Katz from '../src/images/clients/logo-katz.png'
 import Tonal from '../src/images/clients/tonal-logo-white.png'
 import Macleans from '../src/images/clients/logo-macleans.png'
-import KVCapital from '../src/images/clients/logo-kvcapital.png'
+import KVCapital from '../src/images/clients/logo-kvcapital.svg'
 import holoblok from '../src/images/clients/holoblok.svg'
 import OnPurpose from '../src/images/clients/logo-OnPurpose.png'
 
 // awards logos
-import CA from '../src/images/awards/ca-logo.png'
-import Fwa from '../src/images/awards/fwa-logo.png'
-import Awwwards from '../src/images/awards/awwwards-logo.png'
-import Ace from '../src/images/awards/ace-logo.png'
+import CA from '../src/images/awards/ca-logo.svg'
+import Fwa from '../src/images/awards/fwa-logo.svg'
+import Awwwards from '../src/images/awards/awwwards-logo.svg'
+import Ace from '../src/images/awards/ace-logo.svg'
 import AppliedArts from '../src/images/awards/applied-arts-logo.png'
-
 
 export const aboutImage = {
     image : (<StaticImage src='../src/images/OverhaulOffice.jpg' alt='The OverhaulMedia Boardroom' placeholder='blurred'/>)
@@ -339,7 +338,8 @@ export const testimonials = [
         quotee: 'Catherine O’Neill, Director of Marketing',
         image: {
             src: KVCapital,
-            alt: 'KVCapital'
+            alt: 'KVCapital',
+            width: 140,
         }
     },
     {
@@ -348,7 +348,8 @@ export const testimonials = [
         quotee: 'Molly Ritterbeck, Vice President, Content',
         image: {
             src: Tonal,
-            alt: 'Tonal'
+            alt: 'Tonal',
+            width: 160
         }
     },
     {
@@ -357,7 +358,8 @@ export const testimonials = [
         quotee: 'Dan Kern, Producer',
         image: {
             src: holoblok,
-            alt: 'holo-blok'
+            alt: 'holo-blok',
+            width: 50
         }
     },
     {
@@ -366,7 +368,8 @@ export const testimonials = [
         quotee: 'Faaiza Ramji, Principal',
         image: {
             src: OnPurpose,
-            alt: 'OnPurpose'
+            alt: 'OnPurpose',
+            width: 214
         }
     },
 //  {
@@ -386,7 +389,8 @@ export const testimonials = [
         quotee: 'Arthur Chmielewski, Co-Founder and Creative Director',
         image: {
             src: Haven,
-            alt: 'Haven'
+            alt: 'Haven',
+            width: 140
         }
     },
     // {

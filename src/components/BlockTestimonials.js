@@ -22,7 +22,8 @@ const BlockTestimonials = ({title, content}) => {
         renderBullet: function (index, className) {
           return '<button id="' + (labelledBy((content[index].title))) + '" class="testimonials-navigation ' + className + '">' + (content[index].title) + '</button>';
         },
-      };
+    };
+    
     return (
         <div className="block-testimonials gsap-fade-in">
             <div className="container row">
@@ -46,7 +47,7 @@ const BlockTestimonials = ({title, content}) => {
                                 <div>
                                     <blockquote>{slide.quote}</blockquote>
                                     <p>{slide.quotee}</p>
-                                    <img src={slide.image.src} alt={slide.image.alt}/>
+                                    <img src={slide.image.src} alt={slide.image.alt} width={slide.image.width}/>
                                 </div>
                             </SwiperSlide>
                         ))}
