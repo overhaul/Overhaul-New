@@ -13,8 +13,8 @@ import Katz from '../src/images/clients/logo-katz.png'
 import Tonal from '../src/images/clients/tonal-logo-white.png'
 import Macleans from '../src/images/clients/logo-macleans.png'
 import KVCapital from '../src/images/clients/logo-kvcapital.png'
-// import holoblok from '../src/images/clients/'
-// import OnPurpose from '../src/images/clients/'
+import holoblok from '../src/images/clients/holoblok.svg'
+import OnPurpose from '../src/images/clients/logo-OnPurpose.png'
 
 // awards logos
 import CA from '../src/images/awards/ca-logo.png'
@@ -356,8 +356,8 @@ export const testimonials = [
         quote: `Many others have tried in the past and failed. Overhaul accepted the challenge and brought the vision to fruition. Hooray!`,
         quotee: 'Dan Kern, Producer',
         image: {
-            // src: holoblok,
-            // alt: 'holo-blok'
+            src: holoblok,
+            alt: 'holo-blok'
         }
     },
     {
@@ -365,8 +365,8 @@ export const testimonials = [
         quote: `From a communication and service standpoint, you guys are amazing. I also think your design capabilities are excellent!`,
         quotee: 'Faaiza Ramji, Principal',
         image: {
-            // src: OnPurpose,
-            // alt: 'OnPurpose'
+            src: OnPurpose,
+            alt: 'OnPurpose'
         }
     },
 //  {
