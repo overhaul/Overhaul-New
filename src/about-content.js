@@ -24,7 +24,7 @@ import Ace from '../src/images/awards/ace-logo.svg'
 import AppliedArts from '../src/images/awards/applied-arts-logo.png'
 
 export const aboutImage = {
-    image : (<StaticImage src='../src/images/OverhaulOffice.jpg' alt='The OverhaulMedia Boardroom' placeholder='blurred'/>)
+    image : (<StaticImage src='../src/images/overhaul-branding-agency-2025.jpg' alt='The OverhaulMedia Boardroom' placeholder='blurred'/>)
 }
 
 export const approachImage = {
