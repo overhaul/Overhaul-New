@@ -64,6 +64,7 @@ exports.onPostBuild = () => {
     { src: 'src/images/favicons/android-chrome-192x192.png', dest: 'public/android-chrome-192x192.png' },
     { src: 'src/images/favicons/android-chrome-512x512.png', dest: 'public/android-chrome-512x512.png' },
     { src: 'src/images/favicons/mstile-150x150.png', dest: 'public/mstile-150x150.png' },
+    { src: 'src/_redirects', dest: 'public/_redirects' },
   ];
 
   filesToCopy.forEach(file => {
