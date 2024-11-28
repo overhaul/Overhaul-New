@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/ecommerce"
+  to = "/ecommerce-agency/"
+  status = 301
