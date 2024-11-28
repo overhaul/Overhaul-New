@@ -1,6 +1,8 @@
 node_modules/
 .cache/
-public
+public/~partytown
+public/page-data
+public/static
 .DS_Store
 .wordpress-cache
 .idea/
