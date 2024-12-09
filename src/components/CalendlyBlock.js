@@ -1,31 +1,35 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
-const CalendlyBlock = ({className}) => {
-    const [showCalendly, setShowCalendly] = useState(true);
+const CalendlyBlock = ({ className }) => {
+    const [isMinimized, setIsMinimized] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
+    // Load the minimized state from localStorage (if exists)
     useEffect(() => {
-        document.cookie = "calendlyClosed=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
-        // Check if the cookie is set
-        const calendlyClosed = document.cookie.split('; ').find(row => row.startsWith('calendlyClosed='));
-        if (calendlyClosed) {
-            setShowCalendly(false);
+        const savedMinimizedState = localStorage.getItem('calendlyMinimized');
+        if (savedMinimizedState !== null) {
+            setIsMinimized(JSON.parse(savedMinimizedState));
         }
 
-        // Load the Calendly CSS
+        // Set a timeout to show the Calendly block after 10 seconds
+        const timeout = setTimeout(() => {
+            setIsVisible(true);
+        }, 10000); // 10 seconds
+
+        // Load Calendly CSS and widget script
         const link = document.createElement('link');
         link.href = 'https://assets.calendly.com/assets/external/widget.css';
         link.rel = 'stylesheet';
         document.head.appendChild(link);
-    
-        // Load the Calendly widget script
+
         const script = document.createElement('script');
         script.src = 'https://assets.calendly.com/assets/external/widget.js';
         script.type = 'text/javascript';
         script.async = true;
         document.body.appendChild(script);
-    
+
         return () => {
-            // Clean up the script and link when the component unmounts
+            clearTimeout(timeout);
             if (document.head.contains(link)) {
                 document.head.removeChild(link);
             }
@@ -34,37 +38,52 @@ const CalendlyBlock = ({className}) => {
             }
         };
     }, []);
-    
+
+    // Save the minimized state to localStorage whenever it changes
+    useEffect(() => {
+        localStorage.setItem('calendlyMinimized', JSON.stringify(isMinimized));
+    }, [isMinimized]);
+
     const handleCalendlyClick = (e) => {
-        // Initialize the Calendly popup widget
         e.preventDefault();
         if (window.Calendly) {
-          window.Calendly.initPopupWidget({ url: 'https://calendly.com/overhaulmatt/di-30-minute-call' });
+            window.Calendly.initPopupWidget({ url: 'https://calendly.com/overhaulmatt/di-30-minute-call' });
         }
     };
 
     const handleClosePopup = (e) => {
-        // Hide the Calendly block when the user clicks "No Thanks."
         e.preventDefault();
-        document.cookie = `calendlyClosed=true; path=/;`;
-        setShowCalendly(false);
+        setIsMinimized(true);
+    };
+
+    const handleInquireClick = (e) => {
+        e.preventDefault();
+        setIsMinimized(false);
     };
 
     return (
-        showCalendly && (
+        isVisible && ( // Only render the Calendly block when isVisible is true
             <div className={`calendly-block ${className}`}>
-                <p>Book a free discovery call or let’s grab a coffee.</p>
-                <div className="buttons">
-                    <a href="#" onClick={handleCalendlyClick} className='btn-calendly'>
-                        Let’s do it!
-                    </a>
-                    <a href="#" onClick={handleClosePopup} className='btn-close'>
-                        No Thanks.
-                    </a>
+                <div className={`calendly-block-container ${isMinimized ? 'minimized' : ''}`}>
+                    <p>Book a free discovery call or let’s grab a coffee.</p>
+                    <div className="buttons">
+                        <a href="#" onClick={handleCalendlyClick} className="btn-calendly">
+                            Let’s do it!
+                        </a>
+                        <a href="#" onClick={handleClosePopup} className="btn-close">
+                            No Thanks.
+                        </a>
+                    </div>
                 </div>
+                <button
+                    className={`btn-inquire ${isMinimized ? '' : 'hidden'}`}
+                    onClick={handleInquireClick}
+                >
+                    Inquire
+                </button>
             </div>
         )
-    )
+    );
 };
 
-export default CalendlyBlock
+export default CalendlyBlock;
