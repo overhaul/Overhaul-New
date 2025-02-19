@@ -17,7 +17,7 @@ class Footer extends React.Component {
 										<div itemProp="address" dangerouslySetInnerHTML={{ __html:address}}/>
 								</div>
 								<div className="mob-1">
-										<p><a itemProp="telephone" href={'tel:' + phone} rel="noreferrer" target="_blank" hrefLang="en">{phone}</a></p>
+										<!--p><a itemProp="telephone" href={'tel:' + phone} rel="noreferrer" target="_blank" hrefLang="en">{phone}</a></p-->
 										<p><a itemProp="email" href={'mailto:' + email} rel="noreferrer" target="_blank" hrefLang="en">{ email }</a></p>
 								</div>
 							</div>
