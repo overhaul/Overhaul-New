@@ -8,19 +8,8 @@ class Contact extends React.Component {
   	 return (
   	 	<div className="contact">
 	  	 	<div className="contact_content row container">
-	  	 		<h2 className="contact_content-title col-md-6 col-xs-12">Office</h2>
-	  	 		<div className="contact_content-info col-md-6 col-xs-12">
-	  	 			<h2>780 758 8642</h2>
-	  	 			<h2>7347 104 Street NW</h2>
-	  	 			<h2>Edmonton, AB T6E 4B9</h2>
-	  	 			<a href="mailto:hello@overhaulmedia.com" target="_blank" rel="noreferrer" hrefLang="en"><h2>hello@overhaulmedia.com</h2></a>
-	  	 		</div>
-	  	 	</div>
-	  	 	<div className="contact_content row container">
 	  	 		<h2 className="contact_content-title col-md-6 col-xs-12">New Business Inquiries</h2>
 	  	 		<div className="contact_content-info col-md-6 col-xs-12">
-	  	 			<h2>Mathew Janzen</h2>
-	  	 			<h2>780 758 8642</h2>
 	  	 			<h2><a href="mailto:business@overhaulmedia.com" target="_blank" rel="noreferrer" hrefLang="en">business@overhaulmedia.com</a></h2>
 	  	 		</div>
 	  	 	</div>
