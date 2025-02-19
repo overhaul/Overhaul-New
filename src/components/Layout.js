@@ -13,7 +13,7 @@ import NavMob from './NavMob'
 import Footer from './Footer'
 // import favicon from '../helpers/faviconSelector'
 import IdleScreen from './IdleScreen'
-import CalendlyBlock from './CalendlyBlock'
+// import CalendlyBlock from './CalendlyBlock'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -199,7 +199,7 @@ function Layout({children, themeColor, pageTitle, seo, startNavWhite = false}) {
           phone="780 758 8642"
           email="hello@overhaulmedia.com"
         />
-        <CalendlyBlock className={!isBelowFold && startNavWhite ? 'dark' : 'light'} />
+        {/* <CalendlyBlock className={!isBelowFold && startNavWhite ? 'dark' : 'light'} /> */}
       </CursorWrapper>
     </div>
   )
