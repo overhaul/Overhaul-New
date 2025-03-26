@@ -1,0 +1,7 @@
+{
+  "name": "overhaul-new",
+  "compatibility_date": "2024-03-25",
+  "site": {
+    "bucket": "./public"
+  }
+}
