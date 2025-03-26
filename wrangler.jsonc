@@ -1,5 +1,5 @@
 {
-  "name": "overhaul-new",
+  "name": "my-gatsby-site",
   "compatibility_date": "2024-03-25",
   "site": {
     "bucket": "./public"
